@@ -13,6 +13,18 @@
 		A4AC97451F25AFDA002A376B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A4AC97431F25AFDA002A376B /* Main.storyboard */; };
 		A4AC97471F25AFDA002A376B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A4AC97461F25AFDA002A376B /* Assets.xcassets */; };
 		A4AC974A1F25AFDA002A376B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A4AC97481F25AFDA002A376B /* LaunchScreen.storyboard */; };
+		A4AC97521F25D57C002A376B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A4AC97511F25D57C002A376B /* GoogleService-Info.plist */; };
+		A4AC97F71F40F2C0002A376B /* MasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A4AC97EF1F40F2C0002A376B /* MasterViewController.m */; };
+		A4AC97F81F40F2C0002A376B /* News.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A4AC97F01F40F2C0002A376B /* News.storyboard */; };
+		A4AC97F91F40F2C0002A376B /* NewsItem.m in Sources */ = {isa = PBXBuildFile; fileRef = A4AC97F21F40F2C0002A376B /* NewsItem.m */; };
+		A4AC97FA1F40F2C0002A376B /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = A4AC97F41F40F2C0002A376B /* Reachability.m */; };
+		A4AC97FB1F40F2C0002A376B /* RSSParserDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A4AC97F61F40F2C0002A376B /* RSSParserDelegate.m */; };
+		A4AC97FF1F40F691002A376B /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A4AC97FE1F40F691002A376B /* DetailViewController.m */; };
+		A4AC98091F419938002A376B /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A4AC98081F419938002A376B /* MapViewController.m */; };
+		A4AC980C1F419955002A376B /* MyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A4AC980B1F419955002A376B /* MyViewController.m */; };
+		A4F740B01F41CECA00949287 /* PushPhoto.m in Sources */ = {isa = PBXBuildFile; fileRef = A4F740AF1F41CECA00949287 /* PushPhoto.m */; };
+		A4F740B31F41CF1200949287 /* GetPhoto.m in Sources */ = {isa = PBXBuildFile; fileRef = A4F740B21F41CF1200949287 /* GetPhoto.m */; };
+		A4F740B81F41D72800949287 /* StyleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A4F740B71F41D72800949287 /* StyleViewController.m */; };
 		B2EC88BA3ABF4A3677B14135 /* libPods-MLHair.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B6D47F66E92AF32F2CFFE40 /* libPods-MLHair.a */; };
 /* End PBXBuildFile section */
 
@@ -30,6 +42,30 @@
 		A4AC97461F25AFDA002A376B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A4AC97491F25AFDA002A376B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A4AC974B1F25AFDA002A376B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A4AC97511F25D57C002A376B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		A4AC97C11F383A70002A376B /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
+		A4AC97C31F383A78002A376B /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		A4AC97EE1F40F2C0002A376B /* MasterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MasterViewController.h; sourceTree = "<group>"; };
+		A4AC97EF1F40F2C0002A376B /* MasterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MasterViewController.m; sourceTree = "<group>"; };
+		A4AC97F01F40F2C0002A376B /* News.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = News.storyboard; sourceTree = "<group>"; };
+		A4AC97F11F40F2C0002A376B /* NewsItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewsItem.h; sourceTree = "<group>"; };
+		A4AC97F21F40F2C0002A376B /* NewsItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsItem.m; sourceTree = "<group>"; };
+		A4AC97F31F40F2C0002A376B /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
+		A4AC97F41F40F2C0002A376B /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
+		A4AC97F51F40F2C0002A376B /* RSSParserDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSSParserDelegate.h; sourceTree = "<group>"; };
+		A4AC97F61F40F2C0002A376B /* RSSParserDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSSParserDelegate.m; sourceTree = "<group>"; };
+		A4AC97FD1F40F691002A376B /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
+		A4AC97FE1F40F691002A376B /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
+		A4AC98071F419938002A376B /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
+		A4AC98081F419938002A376B /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
+		A4AC980A1F419955002A376B /* MyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyViewController.h; sourceTree = "<group>"; };
+		A4AC980B1F419955002A376B /* MyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyViewController.m; sourceTree = "<group>"; };
+		A4F740AE1F41CEC900949287 /* PushPhoto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PushPhoto.h; sourceTree = "<group>"; };
+		A4F740AF1F41CECA00949287 /* PushPhoto.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PushPhoto.m; sourceTree = "<group>"; };
+		A4F740B11F41CF1200949287 /* GetPhoto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GetPhoto.h; sourceTree = "<group>"; };
+		A4F740B21F41CF1200949287 /* GetPhoto.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GetPhoto.m; sourceTree = "<group>"; };
+		A4F740B61F41D72800949287 /* StyleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StyleViewController.h; sourceTree = "<group>"; };
+		A4F740B71F41D72800949287 /* StyleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StyleViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,13 +110,25 @@
 		A4AC97391F25AFDA002A376B /* MLHair */ = {
 			isa = PBXGroup;
 			children = (
+				A4F740B51F41CFD100949287 /* User */,
+				A4F740B41F41CFAB00949287 /* Style */,
+				A4AC98011F413ED7002A376B /* Map */,
+				A4AC98001F413E9D002A376B /* News */,
+				A4AC97551F25D63E002A376B /* Controller */,
+				A4AC97541F25D62F002A376B /* View */,
+				A4AC97531F25D623002A376B /* Model */,
 				A4AC973D1F25AFDA002A376B /* AppDelegate.h */,
 				A4AC973E1F25AFDA002A376B /* AppDelegate.m */,
 				A4AC97401F25AFDA002A376B /* ViewController.h */,
 				A4AC97411F25AFDA002A376B /* ViewController.m */,
 				A4AC97431F25AFDA002A376B /* Main.storyboard */,
+				A4AC98071F419938002A376B /* MapViewController.h */,
+				A4AC98081F419938002A376B /* MapViewController.m */,
+				A4AC980A1F419955002A376B /* MyViewController.h */,
+				A4AC980B1F419955002A376B /* MyViewController.m */,
 				A4AC97461F25AFDA002A376B /* Assets.xcassets */,
 				A4AC97481F25AFDA002A376B /* LaunchScreen.storyboard */,
+				A4AC97511F25D57C002A376B /* GoogleService-Info.plist */,
 				A4AC974B1F25AFDA002A376B /* Info.plist */,
 				A4AC973A1F25AFDA002A376B /* Supporting Files */,
 			);
@@ -95,9 +143,77 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		A4AC97531F25D623002A376B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		A4AC97541F25D62F002A376B /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		A4AC97551F25D63E002A376B /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		A4AC98001F413E9D002A376B /* News */ = {
+			isa = PBXGroup;
+			children = (
+				A4AC97EE1F40F2C0002A376B /* MasterViewController.h */,
+				A4AC97EF1F40F2C0002A376B /* MasterViewController.m */,
+				A4AC97FD1F40F691002A376B /* DetailViewController.h */,
+				A4AC97FE1F40F691002A376B /* DetailViewController.m */,
+				A4AC97F01F40F2C0002A376B /* News.storyboard */,
+				A4AC97F11F40F2C0002A376B /* NewsItem.h */,
+				A4AC97F21F40F2C0002A376B /* NewsItem.m */,
+				A4AC97F31F40F2C0002A376B /* Reachability.h */,
+				A4AC97F41F40F2C0002A376B /* Reachability.m */,
+				A4AC97F51F40F2C0002A376B /* RSSParserDelegate.h */,
+				A4AC97F61F40F2C0002A376B /* RSSParserDelegate.m */,
+			);
+			name = News;
+			sourceTree = "<group>";
+		};
+		A4AC98011F413ED7002A376B /* Map */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Map;
+			sourceTree = "<group>";
+		};
+		A4F740B41F41CFAB00949287 /* Style */ = {
+			isa = PBXGroup;
+			children = (
+				A4F740B61F41D72800949287 /* StyleViewController.h */,
+				A4F740B71F41D72800949287 /* StyleViewController.m */,
+				A4F740AE1F41CEC900949287 /* PushPhoto.h */,
+				A4F740AF1F41CECA00949287 /* PushPhoto.m */,
+				A4F740B11F41CF1200949287 /* GetPhoto.h */,
+				A4F740B21F41CF1200949287 /* GetPhoto.m */,
+			);
+			name = Style;
+			sourceTree = "<group>";
+		};
+		A4F740B51F41CFD100949287 /* User */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = User;
+			sourceTree = "<group>";
+		};
 		B70035D5C6DCC78829FBEF18 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				A4AC97C31F383A78002A376B /* SystemConfiguration.framework */,
+				A4AC97C11F383A70002A376B /* WebKit.framework */,
 				8B6D47F66E92AF32F2CFFE40 /* libPods-MLHair.a */,
 			);
 			name = Frameworks;
@@ -138,6 +254,7 @@
 					A4AC97361F25AFDA002A376B = {
 						CreatedOnToolsVersion = 8.3.2;
 						DevelopmentTeam = 7Z26T3ZJ8X;
+						LastSwiftMigration = 0830;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -166,6 +283,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				A4AC974A1F25AFDA002A376B /* LaunchScreen.storyboard in Resources */,
+				A4AC97521F25D57C002A376B /* GoogleService-Info.plist in Resources */,
+				A4AC97F81F40F2C0002A376B /* News.storyboard in Resources */,
 				A4AC97471F25AFDA002A376B /* Assets.xcassets in Resources */,
 				A4AC97451F25AFDA002A376B /* Main.storyboard in Resources */,
 			);
@@ -226,9 +345,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A4AC980C1F419955002A376B /* MyViewController.m in Sources */,
 				A4AC97421F25AFDA002A376B /* ViewController.m in Sources */,
 				A4AC973F1F25AFDA002A376B /* AppDelegate.m in Sources */,
+				A4AC97FF1F40F691002A376B /* DetailViewController.m in Sources */,
+				A4F740B01F41CECA00949287 /* PushPhoto.m in Sources */,
+				A4AC97F71F40F2C0002A376B /* MasterViewController.m in Sources */,
+				A4AC97FA1F40F2C0002A376B /* Reachability.m in Sources */,
+				A4AC97F91F40F2C0002A376B /* NewsItem.m in Sources */,
 				A4AC973C1F25AFDA002A376B /* main.m in Sources */,
+				A4F740B81F41D72800949287 /* StyleViewController.m in Sources */,
+				A4AC98091F419938002A376B /* MapViewController.m in Sources */,
+				A4F740B31F41CF1200949287 /* GetPhoto.m in Sources */,
+				A4AC97FB1F40F2C0002A376B /* RSSParserDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -351,11 +480,14 @@
 			baseConfigurationReference = 72710AD18279D973399A25D9 /* Pods-MLHair.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = 7Z26T3ZJ8X;
 				INFOPLIST_FILE = MLHair/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.sammi.MLHair;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -364,11 +496,13 @@
 			baseConfigurationReference = 4A606BEE648606EF106F4E30 /* Pods-MLHair.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = 7Z26T3ZJ8X;
 				INFOPLIST_FILE = MLHair/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.sammi.MLHair;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
@@ -391,6 +525,7 @@
 				A4AC97501F25AFDA002A376B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
