@@ -12,5 +12,7 @@ target 'MLHair' do
   pod 'FBSDKShareKit'
   pod 'FBSDKLoginKit'
   pod 'Google/SignIn'
+  pod 'AFNetworking'
+  pod 'FMDB'
 
 end

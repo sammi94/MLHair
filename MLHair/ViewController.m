@@ -19,15 +19,18 @@
 
 
 
-@interface ViewController ()
+@interface ViewController ()<FBSDKLoginButtonDelegate>
+
 {
+    
+    NSString *userName;//從FB取得
     NSUserDefaults *localUser;
 
 
 }
 
 
-
+//prepare googlesignin
 
 @property (weak, nonatomic) IBOutlet GIDSignInButton *signInButton;
 - (IBAction)singInBtn:(id)sender;
@@ -46,13 +49,15 @@
     }
     
     // Do any additional setup after loading the view, typically from a nib.
-    FBSDKLoginButton *loginButton = [[FBSDKLoginButton alloc] init];
+    FBSDKLoginButton *loginButton = [[FBSDKLoginButton alloc] initWithFrame:CGRectMake(100, 400, 200, 50)];
     // Optional: Place the button in the center of your view.
-    loginButton.center = self.view.center;
+    _loginButton.center = self.view.center;
+    
     [self.view addSubview:loginButton];
     
-    loginButton.readPermissions =
+    _loginButton.readPermissions =
     @[@"public_profile", @"email", @"user_friends"];
+    _loginButton.delegate = self;
     
     [GIDSignIn sharedInstance].uiDelegate = self;
 }
@@ -62,13 +67,16 @@
     
    
     localUser = [NSUserDefaults standardUserDefaults];
-    {
-    NSLog(@"Welcome");
-        
+    if ([FBSDKAccessToken currentAccessToken]) {
+        // User is logged in, do work such as go to next view controller.
         dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
             [self nextPage];
         });
+
+        NSLog(@"Welcome uid%@",[localUser objectForKey:@"uid"]);
     }
+    
+    NSLog(@"not login");
 }
 
 
@@ -82,14 +90,21 @@
 
 -(void)nextPage{
     UIStoryboard * mainstorybord = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
-    StyleViewController * styleVC =[mainstorybord instantiateViewControllerWithIdentifier:@"tabBar"];
+    MyViewController * myVC =[mainstorybord instantiateViewControllerWithIdentifier:@"tabBar"];
     
     NSMutableArray *viewcontrollers = [NSMutableArray arrayWithArray:[[self navigationController] viewControllers]];
     
     [viewcontrollers removeLastObject];
-    [viewcontrollers addObject:styleVC];
+    [viewcontrollers addObject:myVC];
     [self presentViewController:[viewcontrollers firstObject] animated:YES completion:nil];
     
+
+}
+
+-(void)loginButton:(FBSDKLoginButton *)loginButton didCompleteWithResult:(FBSDKLoginManagerLoginResult *)result error:(NSError *)error{
+    
+    NSLog(@"----------- test");
+    [self  nextPage];
 
 }
 

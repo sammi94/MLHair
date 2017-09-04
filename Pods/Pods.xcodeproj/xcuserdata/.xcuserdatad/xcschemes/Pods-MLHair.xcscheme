@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '207B22478900FF19ED0CF2EAEFF41912'
+               BlueprintIdentifier = '1740365B36EF5406DF77644DBCBDB019'
                BlueprintName = 'Pods-MLHair'
                ReferencedContainer = 'container:Pods.xcodeproj'
                BuildableName = 'libPods-MLHair.a'>

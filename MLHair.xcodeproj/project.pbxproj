@@ -25,6 +25,10 @@
 		A4F740B01F41CECA00949287 /* PushPhoto.m in Sources */ = {isa = PBXBuildFile; fileRef = A4F740AF1F41CECA00949287 /* PushPhoto.m */; };
 		A4F740B31F41CF1200949287 /* GetPhoto.m in Sources */ = {isa = PBXBuildFile; fileRef = A4F740B21F41CF1200949287 /* GetPhoto.m */; };
 		A4F740B81F41D72800949287 /* StyleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A4F740B71F41D72800949287 /* StyleViewController.m */; };
+		A4F7414F1F468A5100949287 /* StyleViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A4F7414E1F468A5100949287 /* StyleViewCell.m */; };
+		A4F741551F55A9D400949287 /* User.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A4F741541F55A9D400949287 /* User.storyboard */; };
+		A4F741581F55ACF800949287 /* MyTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A4F741571F55ACF800949287 /* MyTableViewController.m */; };
+		A4F7415B1F55AE0200949287 /* MyTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A4F7415A1F55AE0200949287 /* MyTableViewCell.m */; };
 		B2EC88BA3ABF4A3677B14135 /* libPods-MLHair.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B6D47F66E92AF32F2CFFE40 /* libPods-MLHair.a */; };
 /* End PBXBuildFile section */
 
@@ -66,6 +70,14 @@
 		A4F740B21F41CF1200949287 /* GetPhoto.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GetPhoto.m; sourceTree = "<group>"; };
 		A4F740B61F41D72800949287 /* StyleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StyleViewController.h; sourceTree = "<group>"; };
 		A4F740B71F41D72800949287 /* StyleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StyleViewController.m; sourceTree = "<group>"; };
+		A4F740B91F43A4C200949287 /* MLHair-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MLHair-Bridging-Header.h"; sourceTree = "<group>"; };
+		A4F7414D1F468A5100949287 /* StyleViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StyleViewCell.h; sourceTree = "<group>"; };
+		A4F7414E1F468A5100949287 /* StyleViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StyleViewCell.m; sourceTree = "<group>"; };
+		A4F741541F55A9D400949287 /* User.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = User.storyboard; sourceTree = "<group>"; };
+		A4F741561F55ACF800949287 /* MyTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyTableViewController.h; sourceTree = "<group>"; };
+		A4F741571F55ACF800949287 /* MyTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyTableViewController.m; sourceTree = "<group>"; };
+		A4F741591F55AE0200949287 /* MyTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyTableViewCell.h; sourceTree = "<group>"; };
+		A4F7415A1F55AE0200949287 /* MyTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyTableViewCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +122,7 @@
 		A4AC97391F25AFDA002A376B /* MLHair */ = {
 			isa = PBXGroup;
 			children = (
+				A4D97F121F5D5AA500D37FD7 /* Designer */,
 				A4F740B51F41CFD100949287 /* User */,
 				A4F740B41F41CFAB00949287 /* Style */,
 				A4AC98011F413ED7002A376B /* Map */,
@@ -124,13 +137,12 @@
 				A4AC97431F25AFDA002A376B /* Main.storyboard */,
 				A4AC98071F419938002A376B /* MapViewController.h */,
 				A4AC98081F419938002A376B /* MapViewController.m */,
-				A4AC980A1F419955002A376B /* MyViewController.h */,
-				A4AC980B1F419955002A376B /* MyViewController.m */,
 				A4AC97461F25AFDA002A376B /* Assets.xcassets */,
 				A4AC97481F25AFDA002A376B /* LaunchScreen.storyboard */,
 				A4AC97511F25D57C002A376B /* GoogleService-Info.plist */,
 				A4AC974B1F25AFDA002A376B /* Info.plist */,
 				A4AC973A1F25AFDA002A376B /* Supporting Files */,
+				A4F740B91F43A4C200949287 /* MLHair-Bridging-Header.h */,
 			);
 			path = MLHair;
 			sourceTree = "<group>";
@@ -189,11 +201,20 @@
 			name = Map;
 			sourceTree = "<group>";
 		};
+		A4D97F121F5D5AA500D37FD7 /* Designer */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Designer;
+			sourceTree = "<group>";
+		};
 		A4F740B41F41CFAB00949287 /* Style */ = {
 			isa = PBXGroup;
 			children = (
 				A4F740B61F41D72800949287 /* StyleViewController.h */,
 				A4F740B71F41D72800949287 /* StyleViewController.m */,
+				A4F7414D1F468A5100949287 /* StyleViewCell.h */,
+				A4F7414E1F468A5100949287 /* StyleViewCell.m */,
 				A4F740AE1F41CEC900949287 /* PushPhoto.h */,
 				A4F740AF1F41CECA00949287 /* PushPhoto.m */,
 				A4F740B11F41CF1200949287 /* GetPhoto.h */,
@@ -205,6 +226,13 @@
 		A4F740B51F41CFD100949287 /* User */ = {
 			isa = PBXGroup;
 			children = (
+				A4AC980A1F419955002A376B /* MyViewController.h */,
+				A4AC980B1F419955002A376B /* MyViewController.m */,
+				A4F741541F55A9D400949287 /* User.storyboard */,
+				A4F741591F55AE0200949287 /* MyTableViewCell.h */,
+				A4F7415A1F55AE0200949287 /* MyTableViewCell.m */,
+				A4F741561F55ACF800949287 /* MyTableViewController.h */,
+				A4F741571F55ACF800949287 /* MyTableViewController.m */,
 			);
 			name = User;
 			sourceTree = "<group>";
@@ -287,6 +315,7 @@
 				A4AC97F81F40F2C0002A376B /* News.storyboard in Resources */,
 				A4AC97471F25AFDA002A376B /* Assets.xcassets in Resources */,
 				A4AC97451F25AFDA002A376B /* Main.storyboard in Resources */,
+				A4F741551F55A9D400949287 /* User.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -347,9 +376,12 @@
 			files = (
 				A4AC980C1F419955002A376B /* MyViewController.m in Sources */,
 				A4AC97421F25AFDA002A376B /* ViewController.m in Sources */,
+				A4F7414F1F468A5100949287 /* StyleViewCell.m in Sources */,
 				A4AC973F1F25AFDA002A376B /* AppDelegate.m in Sources */,
 				A4AC97FF1F40F691002A376B /* DetailViewController.m in Sources */,
+				A4F7415B1F55AE0200949287 /* MyTableViewCell.m in Sources */,
 				A4F740B01F41CECA00949287 /* PushPhoto.m in Sources */,
+				A4F741581F55ACF800949287 /* MyTableViewController.m in Sources */,
 				A4AC97F71F40F2C0002A376B /* MasterViewController.m in Sources */,
 				A4AC97FA1F40F2C0002A376B /* Reachability.m in Sources */,
 				A4AC97F91F40F2C0002A376B /* NewsItem.m in Sources */,
@@ -486,6 +518,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.sammi.MLHair;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "MLHair/MLHair-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
@@ -502,6 +535,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.sammi.MLHair;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "MLHair/MLHair-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
