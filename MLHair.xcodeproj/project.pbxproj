@@ -22,6 +22,7 @@
 		A4AC97FF1F40F691002A376B /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A4AC97FE1F40F691002A376B /* DetailViewController.m */; };
 		A4AC98091F419938002A376B /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A4AC98081F419938002A376B /* MapViewController.m */; };
 		A4AC980C1F419955002A376B /* MyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A4AC980B1F419955002A376B /* MyViewController.m */; };
+		A4D97F141F5D5D4B00D37FD7 /* Designer.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A4D97F131F5D5D4B00D37FD7 /* Designer.storyboard */; };
 		A4F740B01F41CECA00949287 /* PushPhoto.m in Sources */ = {isa = PBXBuildFile; fileRef = A4F740AF1F41CECA00949287 /* PushPhoto.m */; };
 		A4F740B31F41CF1200949287 /* GetPhoto.m in Sources */ = {isa = PBXBuildFile; fileRef = A4F740B21F41CF1200949287 /* GetPhoto.m */; };
 		A4F740B81F41D72800949287 /* StyleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A4F740B71F41D72800949287 /* StyleViewController.m */; };
@@ -64,6 +65,7 @@
 		A4AC98081F419938002A376B /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
 		A4AC980A1F419955002A376B /* MyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyViewController.h; sourceTree = "<group>"; };
 		A4AC980B1F419955002A376B /* MyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyViewController.m; sourceTree = "<group>"; };
+		A4D97F131F5D5D4B00D37FD7 /* Designer.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Designer.storyboard; sourceTree = "<group>"; };
 		A4F740AE1F41CEC900949287 /* PushPhoto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PushPhoto.h; sourceTree = "<group>"; };
 		A4F740AF1F41CECA00949287 /* PushPhoto.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PushPhoto.m; sourceTree = "<group>"; };
 		A4F740B11F41CF1200949287 /* GetPhoto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GetPhoto.h; sourceTree = "<group>"; };
@@ -204,6 +206,7 @@
 		A4D97F121F5D5AA500D37FD7 /* Designer */ = {
 			isa = PBXGroup;
 			children = (
+				A4D97F131F5D5D4B00D37FD7 /* Designer.storyboard */,
 			);
 			name = Designer;
 			sourceTree = "<group>";
@@ -316,6 +319,7 @@
 				A4AC97471F25AFDA002A376B /* Assets.xcassets in Resources */,
 				A4AC97451F25AFDA002A376B /* Main.storyboard in Resources */,
 				A4F741551F55A9D400949287 /* User.storyboard in Resources */,
+				A4D97F141F5D5D4B00D37FD7 /* Designer.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
