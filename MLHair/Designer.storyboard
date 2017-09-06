@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -20,7 +22,58 @@
                     <view key="view" contentMode="scaleToFill" id="ucp-gc-g1R">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="QE8-Lz-aRt">
+                                <rect key="frame" x="16" y="64" width="343" height="603"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="IvW-k3-wCo">
+                                    <size key="itemSize" width="193" height="185"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="DesignerVCell" id="eNt-02-Mgl" customClass="DesignerVCell">
+                                        <rect key="frame" x="75" y="0.0" width="193" height="185"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="193" height="185"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="9u3-af-G3x">
+                                                    <rect key="frame" x="23.5" y="-8" width="145" height="139"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1號： 設計師" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YeS-Cw-diW">
+                                                    <rect key="frame" x="46.5" y="151.5" width="99" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstItem="9u3-af-G3x" firstAttribute="centerX" secondItem="eNt-02-Mgl" secondAttribute="centerX" id="8E8-XH-wsn"/>
+                                            <constraint firstItem="YeS-Cw-diW" firstAttribute="centerY" secondItem="eNt-02-Mgl" secondAttribute="centerY" multiplier="7/4" id="JQh-Rd-gva"/>
+                                            <constraint firstItem="YeS-Cw-diW" firstAttribute="centerX" secondItem="eNt-02-Mgl" secondAttribute="centerX" id="KE2-No-deU"/>
+                                            <constraint firstItem="9u3-af-G3x" firstAttribute="width" secondItem="eNt-02-Mgl" secondAttribute="width" multiplier="3/4" id="cDE-vY-slF"/>
+                                            <constraint firstItem="9u3-af-G3x" firstAttribute="centerY" secondItem="eNt-02-Mgl" secondAttribute="centerY" multiplier="2/3" id="okt-vx-tGO"/>
+                                            <constraint firstItem="9u3-af-G3x" firstAttribute="height" secondItem="eNt-02-Mgl" secondAttribute="height" multiplier="3/4" id="xpb-Cm-fe7"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="name" destination="YeS-Cw-diW" id="Gy4-RD-Rov"/>
+                                            <outlet property="photo" destination="9u3-af-G3x" id="78l-5a-qUt"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="GAS-SG-BK2" firstAttribute="top" secondItem="QE8-Lz-aRt" secondAttribute="bottom" id="2nq-Yv-1sb"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="QE8-Lz-aRt" secondAttribute="trailing" id="Eac-hw-Ya4"/>
+                            <constraint firstItem="QE8-Lz-aRt" firstAttribute="leading" secondItem="ucp-gc-g1R" secondAttribute="leadingMargin" id="FhY-ti-xKD"/>
+                            <constraint firstItem="QE8-Lz-aRt" firstAttribute="top" secondItem="Asp-cS-fHr" secondAttribute="bottom" id="x4F-rN-k9H"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="bwA-Tn-XXu"/>
                 </viewController>

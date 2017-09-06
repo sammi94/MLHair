@@ -13,6 +13,8 @@
 		45834E6B1F5D837700B9B28A /* MLHairDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = 45834E6A1F5D837700B9B28A /* MLHairDatabase.m */; };
 		45834E6E1F5D875600B9B28A /* BookingVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 45834E6D1F5D875600B9B28A /* BookingVC.m */; };
 		45834E701F5D87B300B9B28A /* Booking.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 45834E6F1F5D87B300B9B28A /* Booking.storyboard */; };
+		45834E731F60266D00B9B28A /* my.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 45834E711F60266D00B9B28A /* my.storyboard */; };
+		45834E761F602A5F00B9B28A /* AvatorTViCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 45834E751F602A5F00B9B28A /* AvatorTViCell.m */; };
 		A4AC973C1F25AFDA002A376B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A4AC973B1F25AFDA002A376B /* main.m */; };
 		A4AC973F1F25AFDA002A376B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A4AC973E1F25AFDA002A376B /* AppDelegate.m */; };
 		A4AC97421F25AFDA002A376B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A4AC97411F25AFDA002A376B /* ViewController.m */; };
@@ -33,7 +35,6 @@
 		A4F740B31F41CF1200949287 /* GetPhoto.m in Sources */ = {isa = PBXBuildFile; fileRef = A4F740B21F41CF1200949287 /* GetPhoto.m */; };
 		A4F740B81F41D72800949287 /* StyleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A4F740B71F41D72800949287 /* StyleViewController.m */; };
 		A4F7414F1F468A5100949287 /* StyleViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A4F7414E1F468A5100949287 /* StyleViewCell.m */; };
-		A4F741551F55A9D400949287 /* User.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A4F741541F55A9D400949287 /* User.storyboard */; };
 		A4F741581F55ACF800949287 /* MyTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A4F741571F55ACF800949287 /* MyTableViewController.m */; };
 		A4F7415B1F55AE0200949287 /* MyTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A4F7415A1F55AE0200949287 /* MyTableViewCell.m */; };
 		B2EC88BA3ABF4A3677B14135 /* libPods-MLHair.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B6D47F66E92AF32F2CFFE40 /* libPods-MLHair.a */; };
@@ -51,6 +52,9 @@
 		45834E6C1F5D875600B9B28A /* BookingVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BookingVC.h; sourceTree = "<group>"; };
 		45834E6D1F5D875600B9B28A /* BookingVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BookingVC.m; sourceTree = "<group>"; };
 		45834E6F1F5D87B300B9B28A /* Booking.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Booking.storyboard; sourceTree = "<group>"; };
+		45834E721F60266D00B9B28A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/my.storyboard; sourceTree = "<group>"; };
+		45834E741F602A5F00B9B28A /* AvatorTViCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AvatorTViCell.h; sourceTree = "<group>"; };
+		45834E751F602A5F00B9B28A /* AvatorTViCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AvatorTViCell.m; sourceTree = "<group>"; };
 		4A606BEE648606EF106F4E30 /* Pods-MLHair.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MLHair.release.xcconfig"; path = "Pods/Target Support Files/Pods-MLHair/Pods-MLHair.release.xcconfig"; sourceTree = "<group>"; };
 		72710AD18279D973399A25D9 /* Pods-MLHair.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MLHair.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MLHair/Pods-MLHair.debug.xcconfig"; sourceTree = "<group>"; };
 		8B6D47F66E92AF32F2CFFE40 /* libPods-MLHair.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MLHair.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -92,7 +96,6 @@
 		A4F740B91F43A4C200949287 /* MLHair-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MLHair-Bridging-Header.h"; sourceTree = "<group>"; };
 		A4F7414D1F468A5100949287 /* StyleViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StyleViewCell.h; sourceTree = "<group>"; };
 		A4F7414E1F468A5100949287 /* StyleViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StyleViewCell.m; sourceTree = "<group>"; };
-		A4F741541F55A9D400949287 /* User.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = User.storyboard; sourceTree = "<group>"; };
 		A4F741561F55ACF800949287 /* MyTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyTableViewController.h; sourceTree = "<group>"; };
 		A4F741571F55ACF800949287 /* MyTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyTableViewController.m; sourceTree = "<group>"; };
 		A4F741591F55AE0200949287 /* MyTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyTableViewCell.h; sourceTree = "<group>"; };
@@ -142,7 +145,7 @@
 			isa = PBXGroup;
 			children = (
 				A4D97F121F5D5AA500D37FD7 /* Designer */,
-				A4F740B51F41CFD100949287 /* User */,
+				A4F740B51F41CFD100949287 /* My */,
 				A4F740B41F41CFAB00949287 /* Style */,
 				A4AC98011F413ED7002A376B /* Map */,
 				A4AC98001F413E9D002A376B /* News */,
@@ -254,18 +257,20 @@
 			name = Style;
 			sourceTree = "<group>";
 		};
-		A4F740B51F41CFD100949287 /* User */ = {
+		A4F740B51F41CFD100949287 /* My */ = {
 			isa = PBXGroup;
 			children = (
+				45834E711F60266D00B9B28A /* my.storyboard */,
+				45834E741F602A5F00B9B28A /* AvatorTViCell.h */,
+				45834E751F602A5F00B9B28A /* AvatorTViCell.m */,
 				A4AC980A1F419955002A376B /* MyViewController.h */,
 				A4AC980B1F419955002A376B /* MyViewController.m */,
-				A4F741541F55A9D400949287 /* User.storyboard */,
 				A4F741591F55AE0200949287 /* MyTableViewCell.h */,
 				A4F7415A1F55AE0200949287 /* MyTableViewCell.m */,
 				A4F741561F55ACF800949287 /* MyTableViewController.h */,
 				A4F741571F55ACF800949287 /* MyTableViewController.m */,
 			);
-			name = User;
+			name = My;
 			sourceTree = "<group>";
 		};
 		B70035D5C6DCC78829FBEF18 /* Frameworks */ = {
@@ -343,11 +348,11 @@
 			files = (
 				A4AC974A1F25AFDA002A376B /* LaunchScreen.storyboard in Resources */,
 				A4AC97521F25D57C002A376B /* GoogleService-Info.plist in Resources */,
+				45834E731F60266D00B9B28A /* my.storyboard in Resources */,
 				45834E701F5D87B300B9B28A /* Booking.storyboard in Resources */,
 				A4AC97F81F40F2C0002A376B /* News.storyboard in Resources */,
 				A4AC97471F25AFDA002A376B /* Assets.xcassets in Resources */,
 				A4AC97451F25AFDA002A376B /* Main.storyboard in Resources */,
-				A4F741551F55A9D400949287 /* User.storyboard in Resources */,
 				A4D97F141F5D5D4B00D37FD7 /* Designer.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -407,6 +412,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				45834E761F602A5F00B9B28A /* AvatorTViCell.m in Sources */,
 				A4AC980C1F419955002A376B /* MyViewController.m in Sources */,
 				45834E5F1F5D794600B9B28A /* DesignerVC.m in Sources */,
 				A4AC97421F25AFDA002A376B /* ViewController.m in Sources */,
@@ -434,6 +440,14 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		45834E711F60266D00B9B28A /* my.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				45834E721F60266D00B9B28A /* Base */,
+			);
+			name = my.storyboard;
+			sourceTree = "<group>";
+		};
 		A4AC97431F25AFDA002A376B /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (

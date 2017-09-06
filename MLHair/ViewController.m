@@ -16,10 +16,11 @@
 #import <FBSDKLoginKit/FBSDKLoginKit.h>
 #import "StyleViewController.h"
 #import "MyViewController.h"
+#import <GoogleSignIn/GoogleSignIn.h>
 
 
 
-@interface ViewController ()<FBSDKLoginButtonDelegate>
+@interface ViewController ()<FBSDKLoginButtonDelegate,UISplitViewControllerDelegate>
 
 {
     
@@ -40,9 +41,24 @@
 
 @implementation ViewController
 
+- (void)signIn:(GIDSignIn *)signIn
+didSignInForUser:(GIDGoogleUser *)user
+     withError:(NSError *)error {
+    // Perform any operations on signed in user here.
+    //    NSString *userId = user.userID;                  // For client-side use only!
+    //    NSString *idToken = user.authentication.idToken; // Safe to send to the server
+//        NSString *fullName = user.profile.name;
+    //    NSString *givenName = user.profile.givenName;
+    //    NSString *familyName = user.profile.familyName;
+    //    NSString *email = user.profile.email;
+    // ...
+    [self nextPage];
+}
+
+
 - (void)viewDidLoad {
     [super viewDidLoad];
-    //
+//    [GIDSignIn sharedInstance].delegate = self;
     if ([FBSDKAccessToken currentAccessToken]) {
         // User is logged in, do work such as go to next view controller.
         NSLog(@"Welcome");
@@ -65,7 +81,16 @@
 -(void)viewWillAppear:(BOOL)animated{
     //FB login
     
-   
+    if ([GIDSignIn sharedInstance].shouldFetchBasicProfile) {
+        NSLog(@"\n現在呢");
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+            [self nextPage];
+        });
+        return;
+    }
+       
+    
+    
     localUser = [NSUserDefaults standardUserDefaults];
     if ([FBSDKAccessToken currentAccessToken]) {
         // User is logged in, do work such as go to next view controller.
