@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="nw7-6u-qG3">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="nw7-6u-qG3">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -167,42 +167,13 @@
                         <segue destination="CgS-0t-YeV" kind="relationship" relationship="viewControllers" id="0b6-LJ-gxG"/>
                         <segue destination="f3X-C1-oNb" kind="relationship" relationship="viewControllers" id="pSS-Wl-98h"/>
                         <segue destination="ywn-aZ-ysU" kind="relationship" relationship="viewControllers" id="YYm-qe-6Rj"/>
-                        <segue destination="p9q-uc-1vn" kind="relationship" relationship="viewControllers" id="7gk-v2-zKx"/>
                         <segue destination="k0P-Fj-SyL" kind="relationship" relationship="viewControllers" id="qpC-X9-Xh4"/>
+                        <segue destination="f12-xK-Jeu" kind="relationship" relationship="viewControllers" id="bnH-4S-17Z"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PBG-Bb-BJd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="136.80000000000001" y="138.98050974512745"/>
-        </scene>
-        <!--My-->
-        <scene sceneID="iFn-US-wJ6">
-            <objects>
-                <navigationController storyboardIdentifier="navMyViewController" automaticallyAdjustsScrollViewInsets="NO" id="p9q-uc-1vn" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="My" id="uWD-Qh-tY2"/>
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="BxQ-sK-Apn">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="O8s-Fi-eNQ" kind="relationship" relationship="rootViewController" id="dcc-fj-t3Y"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="CCv-nh-S3N" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="310" y="1312"/>
-        </scene>
-        <!--User-->
-        <scene sceneID="Hyq-8k-KT0">
-            <objects>
-                <viewControllerPlaceholder storyboardName="User" id="O8s-Fi-eNQ" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" id="i8Q-8c-mG8"/>
-                </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ZXY-Aj-PyD" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1076" y="1312"/>
         </scene>
         <!--Map-->
         <scene sceneID="lyr-uB-sNF">
@@ -337,6 +308,16 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Mjo-ea-q94" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1076" y="7"/>
+        </scene>
+        <!--my-->
+        <scene sceneID="N51-qr-x5D">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="my" storyboardName="my" referencedIdentifier="my" id="f12-xK-Jeu" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="iLj-3r-vqG"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ffl-Tk-RCC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137" y="920"/>
         </scene>
     </scenes>
 </document>
