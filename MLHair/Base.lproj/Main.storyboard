@@ -166,8 +166,8 @@
                     <connections>
                         <segue destination="CgS-0t-YeV" kind="relationship" relationship="viewControllers" id="0b6-LJ-gxG"/>
                         <segue destination="f3X-C1-oNb" kind="relationship" relationship="viewControllers" id="pSS-Wl-98h"/>
-                        <segue destination="ywn-aZ-ysU" kind="relationship" relationship="viewControllers" id="YYm-qe-6Rj"/>
                         <segue destination="k0P-Fj-SyL" kind="relationship" relationship="viewControllers" id="qpC-X9-Xh4"/>
+                        <segue destination="ywn-aZ-ysU" kind="relationship" relationship="viewControllers" id="YYm-qe-6Rj"/>
                         <segue destination="f12-xK-Jeu" kind="relationship" relationship="viewControllers" id="bnH-4S-17Z"/>
                     </connections>
                 </tabBarController>
@@ -181,7 +181,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ywn-aZ-ysU" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Map" id="a5X-nN-GaW"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="5eF-lh-m1Y">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="5eF-lh-m1Y">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -296,7 +296,7 @@
                 <navigationController storyboardIdentifier="navstyle" automaticallyAdjustsScrollViewInsets="NO" id="CgS-0t-YeV" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Style" id="Qw5-HR-ukz"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="m2B-Xs-drI">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="m2B-Xs-drI">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
