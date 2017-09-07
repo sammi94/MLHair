@@ -11,10 +11,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--DesignerVC-->
         <scene sceneID="v0b-eB-pFj">
             <objects>
-                <viewController id="fM5-Td-UXu" sceneMemberID="viewController">
+                <viewController id="fM5-Td-UXu" customClass="DesignerVC" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Asp-cS-fHr"/>
                         <viewControllerLayoutGuide type="bottom" id="GAS-SG-BK2"/>
@@ -23,7 +23,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="QE8-Lz-aRt">
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="QE8-Lz-aRt">
                                 <rect key="frame" x="16" y="64" width="343" height="603"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="IvW-k3-wCo">
@@ -51,6 +51,7 @@
                                                 </label>
                                             </subviews>
                                         </view>
+                                        <color key="backgroundColor" red="0.65490556929999999" green="0.53574916890000002" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstItem="9u3-af-G3x" firstAttribute="centerX" secondItem="eNt-02-Mgl" secondAttribute="centerX" id="8E8-XH-wsn"/>
                                             <constraint firstItem="YeS-Cw-diW" firstAttribute="centerY" secondItem="eNt-02-Mgl" secondAttribute="centerY" multiplier="7/4" id="JQh-Rd-gva"/>
@@ -76,6 +77,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="bwA-Tn-XXu"/>
+                    <connections>
+                        <outlet property="designerCV" destination="QE8-Lz-aRt" id="oEJ-10-KZ4"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="k0S-Zs-VZo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

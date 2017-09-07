@@ -10,4 +10,8 @@
 
 @interface MyTableViewCell : UITableViewCell
 
+@property (weak, nonatomic) IBOutlet UILabel *titleLabel;
+
+
+
 @end

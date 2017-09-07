@@ -15,6 +15,7 @@
 {
     MLHairDatabase *data;
 }
+@property (weak, nonatomic) IBOutlet UICollectionView *designerCV;
 
 
 
@@ -25,6 +26,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     data = [MLHairDatabase stand];
+    _designerCV.delegate = self;
+    _designerCV.dataSource = self;
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -36,7 +40,7 @@
                   layout:(UICollectionViewLayout*)collectionViewLayout
   sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
     
-    return CGSizeMake(self.view.frame.size.width * .4, self.view.frame.size.height * .4);
+    return CGSizeMake(self.view.frame.size.width * .4, self.view.frame.size.width * .4);
 }
 
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView {
@@ -44,7 +48,8 @@
 }
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
-    return data.designerList.count;
+//    return data.designerList.count;
+    return 20;
 }
 
 - (__kindof UICollectionViewCell *)collectionView:(UICollectionView *)collectionView
@@ -52,10 +57,10 @@
     DesignerVCell *cell = [collectionView
                                   dequeueReusableCellWithReuseIdentifier:@"DesignerVCell"
                                   forIndexPath:indexPath];
-    NSURL *url = [NSURL URLWithString:data.designerList[indexPath.row].URLphoto];
-    NSData *imageData = [NSData dataWithContentsOfURL:url];
-    cell.photo.image = [UIImage imageWithData:imageData];
-    cell.name.text = data.designerList[indexPath.row].name;
+//    NSURL *url = [NSURL URLWithString:data.designerList[indexPath.row].URLphoto];
+//    NSData *imageData = [NSData dataWithContentsOfURL:url];
+//    cell.photo.image = [UIImage imageWithData:imageData];
+//    cell.name.text = data.designerList[indexPath.row].name;
     
     return cell;
 }

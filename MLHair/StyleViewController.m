@@ -16,8 +16,8 @@
 @property (strong, nonatomic) IBOutlet UICollectionView *CollectionView;
 
 
-@property NSArray *image;
-@property NSArray *label;
+@property NSMutableArray <NSString*>*image;
+@property NSMutableArray <NSString*>*label;
 
 @end
 
@@ -35,13 +35,40 @@
     layout.minimumLineSpacing=10;
     
     //设置item的间距
-    layout.minimumInteritemSpacing=1;
+    layout.minimumInteritemSpacing=10;
     //设置section的边距
-    layout.sectionInset=UIEdgeInsetsMake(5, 5, 5, 5);
+    layout.sectionInset=UIEdgeInsetsMake(15, 15, 10, 10);
     
-    _image = @[@"image1",@"image2",@"image3"];
-    _label = @[@"one",@"two",@"three"];
+    _image = [NSMutableArray new];
+    _label = [NSMutableArray new];
+    
+    for (int i = 0; i < 30; i++) {
+        switch (i % 3) {
+            case 0:
+                [_image addObject:@"image1"];
+                break;
+            case 1:
+                [_image addObject:@"image2"];
+                break;
+            case 2:
+                [_image addObject:@"image3"];
+                break;
+                
+            default:
+                break;
+        }
+        [_label addObject:[NSString stringWithFormat:@"%d號 造型",i+1]];
+    }
+    
+    
 }
+
+//- (CGSize)collectionView:(UICollectionView *)collectionView
+//                  layout:(UICollectionViewLayout*)collectionViewLayout
+//  sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
+//    
+//    return CGSizeMake(self.view.frame.size.width * .3, self.view.frame.size.height * .3);
+//}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
@@ -64,7 +91,7 @@
 // The cell that is returned must be retrieved from a call to -dequeueReusableCellWithReuseIdentifier:forIndexPath:
 - (__kindof UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
     
-    StyleViewCell * cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"Cell" forIndexPath:indexPath];
+    StyleViewCell * cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"StyleViewCell" forIndexPath:indexPath];
     
     cell.imageCell.image = [UIImage imageNamed:[_image objectAtIndex:indexPath.row]];
     
@@ -74,7 +101,7 @@
 
 
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView{
-    return 3;
+    return 1;
 
 }
 

@@ -8,6 +8,7 @@
 
 #import "MyTableViewController.h"
 #import "MyTableViewCell.h"
+#import "AvatorTViCell.h"
 
 @interface MyTableViewController ()
 
@@ -33,24 +34,44 @@
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-#warning Incomplete implementation, return the number of sections
-    return 2;
+
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-#warning Incomplete implementation, return the number of rows
-    return 2;
+    
+    return 4;
 }
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-//    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"" forIndexPath:indexPath];
-    MyTableViewCell *mytablecell = [[MyTableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:@"cell"];
-    mytablecell.textLabel.text = @"123";
-    // Configure the cell...
     
-    return mytablecell;
+    UITableViewCell *cell;
+    if (indexPath.row == 0) {
+        AvatorTViCell *mytablecell = [self.tableView dequeueReusableCellWithIdentifier:@"AvatorTViCell" forIndexPath:indexPath];
+        cell = mytablecell;
+    } else {
+    MyTableViewCell *mytablecell = [self.tableView dequeueReusableCellWithIdentifier:@"MyTableViewCell" forIndexPath:indexPath];
+        
+        switch (indexPath.row) {
+            case 1:
+                mytablecell.titleLabel.text = @"修改密碼";
+                break;
+            case 2:
+                mytablecell.titleLabel.text = @"收藏造型";
+                break;
+            case 3:
+                mytablecell.titleLabel.text = @"喜愛設計";
+                break;
+            default:
+                break;
+        }
+        cell = mytablecell;
+    }
+
+    return cell;
 }
+
 
 
 /*
