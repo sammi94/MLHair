@@ -17,6 +17,7 @@
 		45834E761F602A5F00B9B28A /* AvatorTViCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 45834E751F602A5F00B9B28A /* AvatorTViCell.m */; };
 		45834E791F61631300B9B28A /* StyleVO.m in Sources */ = {isa = PBXBuildFile; fileRef = 45834E781F61631300B9B28A /* StyleVO.m */; };
 		45834E7D1F6175DC00B9B28A /* Style.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 45834E7B1F6175DC00B9B28A /* Style.storyboard */; };
+		45834E801F62509D00B9B28A /* MemberVO.m in Sources */ = {isa = PBXBuildFile; fileRef = 45834E7F1F62509D00B9B28A /* MemberVO.m */; };
 		A4AC973C1F25AFDA002A376B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A4AC973B1F25AFDA002A376B /* main.m */; };
 		A4AC973F1F25AFDA002A376B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A4AC973E1F25AFDA002A376B /* AppDelegate.m */; };
 		A4AC97421F25AFDA002A376B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A4AC97411F25AFDA002A376B /* ViewController.m */; };
@@ -59,6 +60,8 @@
 		45834E781F61631300B9B28A /* StyleVO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StyleVO.m; sourceTree = "<group>"; };
 		45834E7A1F6172D300B9B28A /* Define.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Define.h; sourceTree = "<group>"; };
 		45834E7C1F6175DC00B9B28A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Style.storyboard; sourceTree = "<group>"; };
+		45834E7E1F62509D00B9B28A /* MemberVO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MemberVO.h; sourceTree = "<group>"; };
+		45834E7F1F62509D00B9B28A /* MemberVO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MemberVO.m; sourceTree = "<group>"; };
 		4A606BEE648606EF106F4E30 /* Pods-MLHair.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MLHair.release.xcconfig"; path = "Pods/Target Support Files/Pods-MLHair/Pods-MLHair.release.xcconfig"; sourceTree = "<group>"; };
 		72710AD18279D973399A25D9 /* Pods-MLHair.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MLHair.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MLHair/Pods-MLHair.debug.xcconfig"; sourceTree = "<group>"; };
 		8B6D47F66E92AF32F2CFFE40 /* libPods-MLHair.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MLHair.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -157,11 +160,11 @@
 				45834E7A1F6172D300B9B28A /* Define.h */,
 				45834E691F5D837700B9B28A /* MLHairDatabase.h */,
 				45834E6A1F5D837700B9B28A /* MLHairDatabase.m */,
+				45834E7E1F62509D00B9B28A /* MemberVO.h */,
+				45834E7F1F62509D00B9B28A /* MemberVO.m */,
+				A4AC97431F25AFDA002A376B /* Main.storyboard */,
 				A4AC97401F25AFDA002A376B /* ViewController.h */,
 				A4AC97411F25AFDA002A376B /* ViewController.m */,
-				A4AC97431F25AFDA002A376B /* Main.storyboard */,
-				A4AC98071F419938002A376B /* MapViewController.h */,
-				A4AC98081F419938002A376B /* MapViewController.m */,
 				A4AC97461F25AFDA002A376B /* Assets.xcassets */,
 				A4AC97481F25AFDA002A376B /* LaunchScreen.storyboard */,
 				A4AC97511F25D57C002A376B /* GoogleService-Info.plist */,
@@ -222,6 +225,8 @@
 		A4AC98011F413ED7002A376B /* Map */ = {
 			isa = PBXGroup;
 			children = (
+				A4AC98071F419938002A376B /* MapViewController.h */,
+				A4AC98081F419938002A376B /* MapViewController.m */,
 			);
 			name = Map;
 			sourceTree = "<group>";
@@ -415,6 +420,7 @@
 			files = (
 				45834E761F602A5F00B9B28A /* AvatorTViCell.m in Sources */,
 				A4AC980C1F419955002A376B /* MyViewController.m in Sources */,
+				45834E801F62509D00B9B28A /* MemberVO.m in Sources */,
 				45834E5F1F5D794600B9B28A /* DesignerVC.m in Sources */,
 				A4AC97421F25AFDA002A376B /* ViewController.m in Sources */,
 				A4F7414F1F468A5100949287 /* StyleViewCell.m in Sources */,

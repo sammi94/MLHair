@@ -26,6 +26,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    _CollectionView.delegate = self;
+    _CollectionView.dataSource = self;
+    
     UICollectionViewFlowLayout *layout = [UICollectionViewFlowLayout new];
     layout.scrollDirection = UICollectionViewScrollDirectionVertical;
     

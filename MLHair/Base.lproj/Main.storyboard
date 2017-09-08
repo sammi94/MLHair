@@ -31,7 +31,7 @@
         <!--Map-->
         <scene sceneID="cpJ-qz-8ad">
             <objects>
-                <viewController title="Map" id="92E-6X-RkA" customClass="MapViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MapViewController" title="Map" id="92E-6X-RkA" customClass="MapViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Ro8-ml-w65"/>
                         <viewControllerLayoutGuide type="bottom" id="NSU-P1-as0"/>
@@ -185,7 +185,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ywn-aZ-ysU" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Map" id="a5X-nN-GaW"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="5eF-lh-m1Y">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="5eF-lh-m1Y">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
