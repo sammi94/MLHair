@@ -13,13 +13,31 @@
 #define HttpExchange @"ML_Hair"
 
 // json hot code
+
+// Shop
+#define ShopId @"shopId"
+#define ShopName @"shopName"
+#define ShopAddress @"shopAddress"
+#define ShopPhone @"shopPhone"
+#define ShopDesignerList @"shopDesignerList"
+
+// s Designer
+#define DesignerId @"designerId"
+#define DesignerPhotoURL @"designerPhotoURL"
+#define DesignerName @"designerName"
+#define DesignerPhone @"designerPhone"
+#define DesignerFB @"designerFB"
+#define DesignerLine @"designerLine"
+
 // Style
 #define PhotoURL NSLocalizedString(@"photoURL", @"photoURL")
 #define PhotoDescription @"photoDescription"
 #define ModelAuthority @"modelAuthority"
 #define ModelId @"modelId"
-#define DesignerId @"designerId"
+//designerId
 #define StyleId @"styleId"
+
+
 
 // Member
 #define SignInType @"signInType"

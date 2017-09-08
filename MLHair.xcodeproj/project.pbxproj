@@ -20,6 +20,9 @@
 		45834E861F62683E00B9B28A /* DesignerVO.m in Sources */ = {isa = PBXBuildFile; fileRef = 45834E851F62683E00B9B28A /* DesignerVO.m */; };
 		45834E891F627C8700B9B28A /* Http.m in Sources */ = {isa = PBXBuildFile; fileRef = 45834E881F627C8700B9B28A /* Http.m */; };
 		45834E8C1F62849D00B9B28A /* AdvanceImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 45834E8B1F62849D00B9B28A /* AdvanceImageView.m */; };
+		45834E8F1F62A67500B9B28A /* Map.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 45834E8D1F62A67500B9B28A /* Map.storyboard */; };
+		45834E921F62A75300B9B28A /* Location.m in Sources */ = {isa = PBXBuildFile; fileRef = 45834E911F62A75300B9B28A /* Location.m */; };
+		45834E951F62C0F400B9B28A /* MLHairShopVO.m in Sources */ = {isa = PBXBuildFile; fileRef = 45834E941F62C0F400B9B28A /* MLHairShopVO.m */; };
 		A4AC973C1F25AFDA002A376B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A4AC973B1F25AFDA002A376B /* main.m */; };
 		A4AC973F1F25AFDA002A376B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A4AC973E1F25AFDA002A376B /* AppDelegate.m */; };
 		A4AC97421F25AFDA002A376B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A4AC97411F25AFDA002A376B /* ViewController.m */; };
@@ -68,6 +71,11 @@
 		45834E881F627C8700B9B28A /* Http.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Http.m; sourceTree = "<group>"; };
 		45834E8A1F62849D00B9B28A /* AdvanceImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdvanceImageView.h; sourceTree = "<group>"; };
 		45834E8B1F62849D00B9B28A /* AdvanceImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AdvanceImageView.m; sourceTree = "<group>"; };
+		45834E8E1F62A67500B9B28A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Map.storyboard; sourceTree = "<group>"; };
+		45834E901F62A75300B9B28A /* Location.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Location.h; sourceTree = "<group>"; };
+		45834E911F62A75300B9B28A /* Location.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Location.m; sourceTree = "<group>"; };
+		45834E931F62C0F400B9B28A /* MLHairShopVO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MLHairShopVO.h; sourceTree = "<group>"; };
+		45834E941F62C0F400B9B28A /* MLHairShopVO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MLHairShopVO.m; sourceTree = "<group>"; };
 		4A606BEE648606EF106F4E30 /* Pods-MLHair.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MLHair.release.xcconfig"; path = "Pods/Target Support Files/Pods-MLHair/Pods-MLHair.release.xcconfig"; sourceTree = "<group>"; };
 		72710AD18279D973399A25D9 /* Pods-MLHair.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MLHair.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MLHair/Pods-MLHair.debug.xcconfig"; sourceTree = "<group>"; };
 		8B6D47F66E92AF32F2CFFE40 /* libPods-MLHair.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MLHair.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -166,6 +174,8 @@
 				45834E7A1F6172D300B9B28A /* Define.h */,
 				45834E691F5D837700B9B28A /* MLHairDatabase.h */,
 				45834E6A1F5D837700B9B28A /* MLHairDatabase.m */,
+				45834E931F62C0F400B9B28A /* MLHairShopVO.h */,
+				45834E941F62C0F400B9B28A /* MLHairShopVO.m */,
 				45834E7E1F62509D00B9B28A /* MemberVO.h */,
 				45834E7F1F62509D00B9B28A /* MemberVO.m */,
 				A4AC97431F25AFDA002A376B /* Main.storyboard */,
@@ -235,8 +245,11 @@
 		A4AC98011F413ED7002A376B /* Map */ = {
 			isa = PBXGroup;
 			children = (
+				45834E8D1F62A67500B9B28A /* Map.storyboard */,
 				A4AC98071F419938002A376B /* MapViewController.h */,
 				A4AC98081F419938002A376B /* MapViewController.m */,
+				45834E901F62A75300B9B28A /* Location.h */,
+				45834E911F62A75300B9B28A /* Location.m */,
 			);
 			name = Map;
 			sourceTree = "<group>";
@@ -368,6 +381,7 @@
 				45834E701F5D87B300B9B28A /* Booking.storyboard in Resources */,
 				A4AC97F81F40F2C0002A376B /* News.storyboard in Resources */,
 				A4AC97471F25AFDA002A376B /* Assets.xcassets in Resources */,
+				45834E8F1F62A67500B9B28A /* Map.storyboard in Resources */,
 				A4AC97451F25AFDA002A376B /* Main.storyboard in Resources */,
 				A4D97F141F5D5D4B00D37FD7 /* Designer.storyboard in Resources */,
 			);
@@ -439,6 +453,7 @@
 				A4AC973F1F25AFDA002A376B /* AppDelegate.m in Sources */,
 				A4AC97FF1F40F691002A376B /* DetailViewController.m in Sources */,
 				A4F7415B1F55AE0200949287 /* MyTableViewCell.m in Sources */,
+				45834E921F62A75300B9B28A /* Location.m in Sources */,
 				45834E791F61631300B9B28A /* StyleVO.m in Sources */,
 				45834E6B1F5D837700B9B28A /* MLHairDatabase.m in Sources */,
 				45834E8C1F62849D00B9B28A /* AdvanceImageView.m in Sources */,
@@ -452,6 +467,7 @@
 				A4F740B81F41D72800949287 /* StyleViewController.m in Sources */,
 				A4AC98091F419938002A376B /* MapViewController.m in Sources */,
 				A4AC97FB1F40F2C0002A376B /* RSSParserDelegate.m in Sources */,
+				45834E951F62C0F400B9B28A /* MLHairShopVO.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -472,6 +488,14 @@
 				45834E7C1F6175DC00B9B28A /* Base */,
 			);
 			name = Style.storyboard;
+			sourceTree = "<group>";
+		};
+		45834E8D1F62A67500B9B28A /* Map.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				45834E8E1F62A67500B9B28A /* Base */,
+			);
+			name = Map.storyboard;
 			sourceTree = "<group>";
 		};
 		A4AC97431F25AFDA002A376B /* Main.storyboard */ = {

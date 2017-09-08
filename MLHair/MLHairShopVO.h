@@ -1,5 +1,5 @@
 //
-//  DesignerVO.h
+//  MLHairShopVO.h
 //  MLHair
 //
 //  Created by Ｍasqurin on 2017/9/8.
@@ -7,16 +7,15 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "DesignerVO.h"
 
-@interface DesignerVO : NSObject
+@interface MLHairShopVO : NSObject
 
-@property (nonatomic,assign) int designerId;
 @property (nonatomic,assign) int shopId;
-@property (nonatomic,assign) NSString *photoURL;
 @property (nonatomic,strong) NSString *name;
+@property (nonatomic,strong) NSString *address;
 @property (nonatomic,strong) NSString *phone;
-@property (nonatomic,strong) NSString *facebook;
-@property (nonatomic,strong) NSString *line;
+@property (nonatomic,strong) NSArray <DesignerVO*>*designerList;
 
 -(instancetype)initWithData:(NSDictionary*)data;
 

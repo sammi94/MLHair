@@ -45,7 +45,10 @@
 
 -(void)facebooksetting {
     loginButton.readPermissions =
-    @[@"public_profile", @"email", @"user_friends"];
+    @[@"public_profile",
+      @"email",
+      @"user_friends"
+      ];
     loginButton.delegate = self;
 }
 
@@ -70,8 +73,9 @@
 
 -(void)nextPage{
     [[MLHairDatabase stand] getRemoteData:^(bool havedat) {
+        
         if (!havedat) {
-#warning test only
+        #warning test only
             [self setDummyData];
         }
         
@@ -88,12 +92,14 @@
 }
 
 -(void)setDummyData {
-    
+    NSLog(@"\n準備設架資料");
 }
 
 //fb 登入 拿資料
--(void)loginButton:(FBSDKLoginButton *)loginButton didCompleteWithResult:(FBSDKLoginManagerLoginResult *)result
+-(void)loginButton:(FBSDKLoginButton *)loginButton
+didCompleteWithResult:(FBSDKLoginManagerLoginResult *)result
              error:(NSError *)error{
+    
     [self checkSignIn];
 }
 

@@ -41,7 +41,7 @@
                   layout:(UICollectionViewLayout*)collectionViewLayout
   sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
     
-    return CGSizeMake(self.view.frame.size.width * .45, self.view.frame.size.width * .45);
+    return CGSizeMake(self.view.frame.size.width * .42, self.view.frame.size.height * .4);
 }
 
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView {

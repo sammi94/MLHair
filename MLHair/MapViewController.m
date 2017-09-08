@@ -7,8 +7,15 @@
 //
 
 #import "MapViewController.h"
+#import "Location.h"
+#import <MapKit/MapKit.h>
 
-@interface MapViewController ()
+@interface MapViewController ()<MKMapViewDelegate,CLLocationManagerDelegate>
+{
+    CLLocationManager *manager;
+}
+@property (weak, nonatomic) IBOutlet MKMapView *map;
+
 
 @end
 
@@ -16,12 +23,16 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    manager = [Location stand].manager;
+    _map.delegate = self;
+    _map.userTrackingMode = MKUserTrackingModeFollowWithHeading;
+//    manager.allowsBackgroundLocationUpdates = true;
+    
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    
 }
 
 /*

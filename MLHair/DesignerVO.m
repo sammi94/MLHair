@@ -7,7 +7,23 @@
 //
 
 #import "DesignerVO.h"
+#import "Define.h"
 
 @implementation DesignerVO
+
+-(instancetype)initWithData:(NSDictionary *)data {
+    self = [super init];
+    
+    _shopId = [data[ShopId] intValue];
+    _designerId = [data[DesignerId] intValue];
+    _photoURL = data[DesignerPhotoURL];
+    _name = data[DesignerName];
+    _phone = data[DesignerPhone];
+    _facebook = data[DesignerFB];
+    _line = data[DesignerLine];
+    
+    return self;
+}
+
 
 @end

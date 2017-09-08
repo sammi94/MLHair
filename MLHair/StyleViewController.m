@@ -33,12 +33,12 @@
     layout.scrollDirection = UICollectionViewScrollDirectionVertical;
     
     //设置每一行的间距
-    layout.minimumLineSpacing = 10;
+    layout.minimumLineSpacing = 15;
     
     //设置item的间距
-    layout.minimumInteritemSpacing = 10;
+    layout.minimumInteritemSpacing = 5;
     //设置section的边距
-    layout.sectionInset=UIEdgeInsetsMake(15, 15, 10, 10);
+    layout.sectionInset=UIEdgeInsetsMake(5, 5, 0,0 );
     
     _image = [NSMutableArray new];
     _label = [NSMutableArray new];
@@ -68,7 +68,7 @@
                   layout:(UICollectionViewLayout*)collectionViewLayout
   sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
     
-    return CGSizeMake(self.view.frame.size.width * .45, self.view.frame.size.width * .45);
+    return CGSizeMake(self.view.frame.size.width * .43, self.view.frame.size.height * .4);
 }
 
 - (void)didReceiveMemoryWarning {
