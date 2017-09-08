@@ -7,6 +7,7 @@
 //
 
 #import "MLHairDatabase.h"
+#import "Http.h"
 
 MLHairDatabase *data = nil;
 
@@ -16,8 +17,15 @@ MLHairDatabase *data = nil;
     if (data == nil) {
         data = [MLHairDatabase new];
         data.designerList = [NSArray new];
+        
     }
     return data;
+}
+
+-(void)getRemoteData:(Havedata)done {
+    if (done) {
+        done(false);
+    }
 }
 
 @end

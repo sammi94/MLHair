@@ -12,7 +12,7 @@
 
 
 
-@interface StyleViewController ()<UICollectionViewDataSource,UICollectionViewDelegate>
+@interface StyleViewController ()<UICollectionViewDataSource,UICollectionViewDelegate,UICollectionViewDelegateFlowLayout>
 @property (strong, nonatomic) IBOutlet UICollectionView *CollectionView;
 
 
@@ -64,12 +64,12 @@
     
 }
 
-//- (CGSize)collectionView:(UICollectionView *)collectionView
-//                  layout:(UICollectionViewLayout*)collectionViewLayout
-//  sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
-//    
-//    return CGSizeMake(self.view.frame.size.width * .3, self.view.frame.size.height * .3);
-//}
+- (CGSize)collectionView:(UICollectionView *)collectionView
+                  layout:(UICollectionViewLayout*)collectionViewLayout
+  sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
+    
+    return CGSizeMake(self.view.frame.size.width * .45, self.view.frame.size.width * .45);
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

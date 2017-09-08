@@ -9,14 +9,14 @@
 #import "ViewController.h"
 #import <FBSDKCoreKit/FBSDKCoreKit.h>
 #import <FBSDKLoginKit/FBSDKLoginKit.h>
-#import "StyleViewController.h"
 #import "MyViewController.h"
 #import <GoogleSignIn/GoogleSignIn.h>
+#import "MLHairDatabase.h"
 
-@interface ViewController ()<FBSDKLoginButtonDelegate,UISplitViewControllerDelegate>
+@interface ViewController ()<FBSDKLoginButtonDelegate,UISplitViewControllerDelegate,GIDSignInUIDelegate>
 {
+    FBSDKLoginButton *loginButton;
     NSString *userName;//從FB取得
-    NSUserDefaults *localUser;
 }
 //prepare googlesignin
 @property (weak, nonatomic) IBOutlet GIDSignInButton *signInButton;
@@ -28,54 +28,77 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    [self layout];
+    [self googleSetting];
+    [self facebooksetting];
+    
+}
+
+-(void)layout {
     // Do any additional setup after loading the view, typically from a nib.
-    FBSDKLoginButton *loginButton = [[FBSDKLoginButton alloc]
+    loginButton = [[FBSDKLoginButton alloc]
                                      initWithFrame:CGRectMake(100, 400, 200, 50)];
+    
     // Optional: Place the button in the center of your view.
-    _loginButton.center = self.view.center;
-    
     [self.view addSubview:loginButton];
-    
-    _loginButton.readPermissions =
+}
+
+-(void)facebooksetting {
+    loginButton.readPermissions =
     @[@"public_profile", @"email", @"user_friends"];
-    _loginButton.delegate = self;
-    
+    loginButton.delegate = self;
+}
+
+-(void)googleSetting {
     [GIDSignIn sharedInstance].delegate = (id)self;
     [GIDSignIn sharedInstance].uiDelegate = self;
 }
 
+
 -(void)viewWillAppear:(BOOL)animated{
-    
+    [self checkSignIn];
+}
+
+-(void)checkSignIn {
     BOOL signIn = [FBSDKAccessToken currentAccessToken] ||
-    [GIDSignIn sharedInstance].shouldFetchBasicProfile;
-    
-    localUser = [NSUserDefaults standardUserDefaults];
+    [[GIDSignIn sharedInstance] hasAuthInKeychain];
     
     if (signIn) {
-        NSLog(@"Welcome uid%@",[localUser objectForKey:@"uid"]);
         [self nextPage];
     }
-    
 }
 
 -(void)nextPage{
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        MyViewController * myVC =[self.storyboard
-                                  instantiateViewControllerWithIdentifier:@"tabBar"];
-        [self presentViewController:myVC animated:YES completion:nil];
+    [[MLHairDatabase stand] getRemoteData:^(bool havedat) {
+        if (!havedat) {
+#warning test only
+            [self setDummyData];
+        }
         
-    });
-    [self dismissViewControllerAnimated:true completion:nil];
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+            MyViewController * myVC =[self.storyboard
+                                      instantiateViewControllerWithIdentifier:@"tabBar"];
+            [self presentViewController:myVC animated:YES completion:nil];
+            
+        });
+        [self dismissViewControllerAnimated:true completion:nil];
+        
+    }];
+    
+}
+
+-(void)setDummyData {
+    
 }
 
 //fb 登入 拿資料
--(void)loginButton:(FBSDKLoginButton *)loginButton didCompleteWithResult:(FBSDKLoginManagerLoginResult *)result error:(NSError *)error{
-    //    [self  nextPage];
+-(void)loginButton:(FBSDKLoginButton *)loginButton didCompleteWithResult:(FBSDKLoginManagerLoginResult *)result
+             error:(NSError *)error{
+    [self checkSignIn];
 }
 
 //google 登入 拿資料
-- (void)signIn:(GIDSignIn *)signIn
-didSignInForUser:(GIDGoogleUser *)user
+- (void)signIn:(GIDSignIn *)signIn didSignInForUser:(GIDGoogleUser *)user
      withError:(NSError *)error {
     // Perform any operations on signed in user here.
     //    NSString *userId = user.userID;                  // For client-side use only!
@@ -85,6 +108,7 @@ didSignInForUser:(GIDGoogleUser *)user
     //    NSString *familyName = user.profile.familyName;
     //    NSString *email = user.profile.email;
     // ...
+    [self checkSignIn];
 }
 
 //fb登出
@@ -104,7 +128,7 @@ didSignInForUser:(GIDGoogleUser *)user
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    
 }
 
 

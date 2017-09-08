@@ -7,13 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
-#import <Google/SignIn.h>
-#import "MasterViewController.h"
-#import <FBSDKLoginKit/FBSDKLoginKit.h>
 
-@interface ViewController : UIViewController<GIDSignInUIDelegate>
-
-@property (weak, nonatomic) IBOutlet FBSDKLoginButton *loginButton;
+@interface ViewController : UIViewController
 
 @end
 

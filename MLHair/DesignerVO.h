@@ -2,7 +2,7 @@
 //  DesignerVO.h
 //  MLHair
 //
-//  Created by Ｍasqurin on 2017/9/4.
+//  Created by Ｍasqurin on 2017/9/8.
 //  Copyright © 2017年 sammi. All rights reserved.
 //
 
@@ -10,7 +10,12 @@
 
 @interface DesignerVO : NSObject
 
+@property (nonatomic,assign) int designerId;
 @property (nonatomic,strong) NSString *name;
-@property (nonatomic,strong) NSString *URLphoto;
+@property (nonatomic,strong) NSString *address;
+@property (nonatomic,strong) NSString *phone;
+@property (nonatomic,strong) NSString *facebook;
+@property (nonatomic,strong) NSString *line;
+
 
 @end

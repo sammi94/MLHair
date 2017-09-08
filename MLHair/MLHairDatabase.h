@@ -8,11 +8,19 @@
 
 #import <Foundation/Foundation.h>
 #import "DesignerVO.h"
+#import "MemberVO.h"
+#import "StyleVO.h"
+
+typedef void (^Havedata)(bool havedat);
 
 @interface MLHairDatabase : NSObject
 
 @property (nonatomic,strong) NSArray <DesignerVO*>*designerList;
+@property (nonatomic,strong) NSArray <StyleVO*>*styleList;
+@property (nonatomic,strong) MemberVO *member;
 
 +(instancetype)stand;
+
+-(void)getRemoteData:(Havedata)done;
 
 @end
