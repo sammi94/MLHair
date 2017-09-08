@@ -14,5 +14,6 @@
 #define PhotoDescription @"photoDescription"
 #define ModelId @"modelId"
 #define DesignerId @"designerId"
+#define StyleId @"styleId"
 
 #endif /* Define_h */

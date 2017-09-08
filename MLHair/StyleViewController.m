@@ -23,19 +23,17 @@
 
 @implementation StyleViewController
 
-
-
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    
     UICollectionViewFlowLayout *layout = [UICollectionViewFlowLayout new];
     layout.scrollDirection = UICollectionViewScrollDirectionVertical;
     
     //设置每一行的间距
-    layout.minimumLineSpacing=10;
+    layout.minimumLineSpacing = 10;
     
     //设置item的间距
-    layout.minimumInteritemSpacing=10;
+    layout.minimumInteritemSpacing = 10;
     //设置section的边距
     layout.sectionInset=UIEdgeInsetsMake(15, 15, 10, 10);
     

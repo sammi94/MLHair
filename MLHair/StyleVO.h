@@ -14,6 +14,7 @@
 @property (nonatomic,strong) NSString *photoDescription;
 @property (nonatomic,assign) int modelId;
 @property (nonatomic,assign) int designerId;
+@property (nonatomic,assign) int styleId;
 
 -(instancetype) initWithData:(NSDictionary*)data;
 

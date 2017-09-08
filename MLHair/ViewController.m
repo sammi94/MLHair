@@ -7,35 +7,19 @@
 //
 
 #import "ViewController.h"
-
-
-
-// Add this to the header of your file, e.g. in ViewController.m
-// after #import "ViewController.h"
 #import <FBSDKCoreKit/FBSDKCoreKit.h>
 #import <FBSDKLoginKit/FBSDKLoginKit.h>
 #import "StyleViewController.h"
 #import "MyViewController.h"
 #import <GoogleSignIn/GoogleSignIn.h>
 
-
-
 @interface ViewController ()<FBSDKLoginButtonDelegate,UISplitViewControllerDelegate>
-
 {
-    
     NSString *userName;//從FB取得
     NSUserDefaults *localUser;
-
-
 }
-
-
 //prepare googlesignin
-
 @property (weak, nonatomic) IBOutlet GIDSignInButton *signInButton;
-- (IBAction)singInBtn:(id)sender;
-
 
 @end
 
@@ -114,14 +98,18 @@ didSignInForUser:(GIDGoogleUser *)user
 }
 
 -(void)nextPage{
-    UIStoryboard * mainstorybord = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
-    MyViewController * myVC =[mainstorybord instantiateViewControllerWithIdentifier:@"tabBar"];
+//    UIStoryboard *mainstorybord = [UIStoryboard
+//                                   storyboardWithName:@"Main"
+//                                   bundle:nil];
+    MyViewController * myVC =[self.storyboard
+                              instantiateViewControllerWithIdentifier:@"tabBar"];
     
-    NSMutableArray *viewcontrollers = [NSMutableArray arrayWithArray:[[self navigationController] viewControllers]];
+//    NSMutableArray *viewcontrollers = [NSMutableArray
+//                                       arrayWithArray:[[self navigationController] viewControllers]];
     
-    [viewcontrollers removeLastObject];
-    [viewcontrollers addObject:myVC];
-    [self presentViewController:[viewcontrollers firstObject] animated:YES completion:nil];
+//    [viewcontrollers removeLastObject];
+//    [viewcontrollers addObject:myVC];
+    [self presentViewController:myVC animated:YES completion:nil];
     
 
 }
@@ -132,8 +120,6 @@ didSignInForUser:(GIDGoogleUser *)user
     [self  nextPage];
 
 }
-
-
 
 - (BOOL)validateAccount:(NSString *)account{
     NSString *regex = @"[A-Z0-9a-z]{1,18}";
@@ -146,8 +132,11 @@ didSignInForUser:(GIDGoogleUser *)user
     NSPredicate *predicate = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", regex];
     return [predicate evaluateWithObject:password];
 }
+
 - (IBAction)singInBtn:(id)sender {
     
     
 }
+
+
 @end

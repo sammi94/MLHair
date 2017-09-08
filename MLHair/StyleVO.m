@@ -17,6 +17,7 @@
     _photoDescription = data[PhotoDescription];
     _modelId = [data[ModelId] intValue];
     _designerId = [data[DesignerId] intValue];
+    _styleId = [data[StyleId] intValue];
     return self;
 }
 

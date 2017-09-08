@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "StyleVO.h"
 
 @interface StyleViewController : UIViewController
+
+@property (nonatomic,strong) NSArray <StyleVO*>*styleLst;
 
 @end
