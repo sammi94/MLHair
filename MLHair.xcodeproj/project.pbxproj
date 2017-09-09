@@ -161,6 +161,7 @@
 		A4AC97391F25AFDA002A376B /* MLHair */ = {
 			isa = PBXGroup;
 			children = (
+				A4D97F151F637E6000D37FD7 /* TestImage */,
 				A4F740B41F41CFAB00949287 /* Style */,
 				A4AC98001F413E9D002A376B /* News */,
 				A4D97F121F5D5AA500D37FD7 /* Designer */,
@@ -269,6 +270,13 @@
 				45834E851F62683E00B9B28A /* DesignerVO.m */,
 			);
 			name = Designer;
+			sourceTree = "<group>";
+		};
+		A4D97F151F637E6000D37FD7 /* TestImage */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = TestImage;
 			sourceTree = "<group>";
 		};
 		A4F740B41F41CFAB00949287 /* Style */ = {
