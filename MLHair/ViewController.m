@@ -100,7 +100,7 @@
                            ShopName : @"林森店",
                            ShopTime : @"AM 10:30 - PM 20：30",
                            ShopAddress : @"台北市中山區林森北路105號2樓",
-                           ShopPhone : @"(02)25513680",
+                           ShopPhone : @"02-25513680",
                            ShopLat : @"25.050210",
                            ShopLon : @"121.524996",
                            ShopDesignerList : arr};

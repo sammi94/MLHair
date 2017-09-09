@@ -119,10 +119,9 @@ numberOfRowsInSection:(NSInteger)section {
     //        result.pinColor = MKPinAnnotationColorGreen;
     //        result.pinTintColor = [UIColor brownColor];
     
-    UIButton *btnPhone = [UIButton buttonWithType:UIButtonTypeRoundedRect];
-    btnPhone.translatesAutoresizingMaskIntoConstraints = false;
-    [[btnPhone.widthAnchor constraintEqualToConstant:50] setActive:true];
-    [[btnPhone.heightAnchor constraintEqualToConstant:50] setActive:true];
+    UIButton *btnPhone = [UIButton buttonWithType:UIButtonTypeSystem];
+    [btnPhone setTitle:@"打電話" forState:UIControlStateNormal];
+    [btnPhone sizeToFit];
     [btnPhone addTarget:self
                  action:@selector(callphone)
        forControlEvents:UIControlEventTouchUpInside];
@@ -131,9 +130,9 @@ numberOfRowsInSection:(NSInteger)section {
     UIButton *goNavigationBTN = [UIButton buttonWithType:UIButtonTypeSystem];
     [goNavigationBTN setTitle:@"導航" forState:UIControlStateNormal];
     [goNavigationBTN sizeToFit];
-        [goNavigationBTN addTarget:self
-                             action:@selector(goNavigation)
-                   forControlEvents:UIControlEventTouchUpInside];
+    [goNavigationBTN addTarget:self
+                        action:@selector(goNavigation)
+              forControlEvents:UIControlEventTouchUpInside];
     result.rightCalloutAccessoryView = goNavigationBTN;
     return result;
     
@@ -144,10 +143,13 @@ numberOfRowsInSection:(NSInteger)section {
     NSURL *phoneURL = [NSURL
                        URLWithString:[NSString
                                       stringWithFormat:@"tel:%@",tel]];
-    UIWebView *phoneCallWebView = [[UIWebView alloc]
-                                   initWithFrame:CGRectZero];
-    
-    [phoneCallWebView loadRequest:[NSURLRequest requestWithURL:phoneURL]];
+//    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:[NSString stringWithFormat:@"telprompt:%@",@"0928584466"]]];
+    [[UIApplication sharedApplication]
+     openURL:phoneURL
+     options:@{}
+     completionHandler:^(BOOL success) {
+        
+    }];
     
 }
 
