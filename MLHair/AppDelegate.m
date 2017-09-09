@@ -7,11 +7,8 @@
 //
 
 #import "AppDelegate.h"
-//  AppDelegate.m
 #import <FBSDKCoreKit/FBSDKCoreKit.h>
 #import "DetailViewController.h"
-
-
 
 @interface AppDelegate ()<UISplitViewControllerDelegate>
 
@@ -29,16 +26,9 @@ didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
     [GIDSignIn sharedInstance].delegate = self;
     
-    
     [[FBSDKApplicationDelegate sharedInstance] application:application
                              didFinishLaunchingWithOptions:launchOptions];
-    // Add any custom logic here.
-    
-    
-//    UISplitViewController *splitViewController = (UISplitViewController *)self.window.rootViewController;
-//    UINavigationController *navigationController = [splitViewController.viewControllers lastObject];
-//    navigationController.topViewController.navigationItem.leftBarButtonItem = splitViewController.displayModeButtonItem;
-//    splitViewController.delegate = self;
+ 
     
     return YES;
 }

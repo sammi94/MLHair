@@ -28,6 +28,12 @@
     _map.userTrackingMode = MKUserTrackingModeFollowWithHeading;
 //    manager.allowsBackgroundLocationUpdates = true;
     
+    MKCoordinateRegion region;
+//    region.center = userLoc.coordinate;
+    region.span = MKCoordinateSpanMake(.01, .01);
+    [_map setRegion:region animated:true];
+    
+    
 }
 
 - (void)didReceiveMemoryWarning {

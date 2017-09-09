@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "DesignerVO.h"
+
 #import "MemberVO.h"
 #import "StyleVO.h"
 
