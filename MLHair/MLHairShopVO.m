@@ -8,6 +8,7 @@
 
 #import "MLHairShopVO.h"
 #import "Define.h"
+#import "Location.h"
 
 @implementation MLHairShopVO
 
@@ -16,9 +17,13 @@
     
     _shopId = [data[ShopId] intValue];
     _name = data[ShopName];
+    _time = data[ShopTime];
     _address = data[ShopAddress];
     _phone = data[ShopPhone];
     _designerList = data[ShopDesignerList];
+    _lat = [data[ShopLat] floatValue];
+    _lon = [data[ShopLon] floatValue];
+    _distance = [[Location stand] getDistanceWithLat:_lat lon:_lon];
     
     NSMutableArray <DesignerVO*>*designerData = [NSMutableArray new];
     for (NSDictionary *data in _designerList) {

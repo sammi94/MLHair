@@ -22,6 +22,7 @@ static Location *location = nil;
         location.manager = [CLLocationManager new];
         location.manager.delegate = (id)location;
         [location.manager requestAlwaysAuthorization];
+        [location.manager startUpdatingLocation];
         
     }
     return location;
@@ -104,5 +105,87 @@ static Location *location = nil;
         
     }];
 }
+
+-(void)getPlacemarkWithAddress:(NSString *)address
+                     placemark:(GetPlacemark)done {
+    
+    [[CLGeocoder new] geocodeAddressString:address completionHandler:^(NSArray<CLPlacemark *> * _Nullable placemarks, NSError * _Nullable error) {
+        if (done) {
+            if (error) {
+                done(error,placemarks.lastObject);
+            }
+            if (placemarks.lastObject) {
+                done(nil,placemarks.lastObject);
+            }else {
+                done(nil,placemarks.lastObject);
+            }
+        }
+        
+    }];
+}
+
+-(MKMapItem*)getMapItemWithClPlacemark:(CLPlacemark*)placemark{
+    return [[MKMapItem alloc]
+            initWithPlacemark:[[MKPlacemark alloc]
+                               initWithPlacemark:placemark]];
+}
+
+-(void)getRouteWithAddress:(NSString *)address
+                     route:(GetRoute)done {
+    [self getPlacemarkWithAddress:address placemark:^(NSError *error, CLPlacemark *placemark) {
+        MKMapItem *start = [self getMapItemWithClPlacemark:_userPlacemark];
+        MKMapItem *end = [self getMapItemWithClPlacemark:placemark];
+        MKDirectionsRequest *request = [MKDirectionsRequest new];
+        request.source = start;
+        request.destination = end;
+        MKDirections *directions = [[MKDirections alloc] initWithRequest:request];
+        [directions calculateDirectionsWithCompletionHandler:^(MKDirectionsResponse * _Nullable response, NSError * _Nullable error) {
+            if (!error) {
+                for (MKRoute *route in response.routes) {
+                    if (done) {
+                        done(nil,route);
+                    }
+//                    NSLog(@"里程:%f公里; 預計時間:%f小時",route.distance/1000, route.expectedTravelTime/3600);
+                    //steps
+//                    for (MKRouteStep *step in route.steps) {
+//                        NSLog(@"每個step描述:%@; step距離:%f", step.instructions, step.distance);
+
+//                    }
+                }
+            }
+        }];
+    }];
+    
+    
+}
+
+-(void)locationManager:(CLLocationManager *)manager
+    didUpdateLocations:(NSArray<CLLocation *> *)locations {
+    _userLoction = locations.lastObject;
+    
+    [[CLGeocoder new]
+     reverseGeocodeLocation:locations.lastObject
+     completionHandler:^(NSArray<CLPlacemark *> * _Nullable placemarks, NSError * _Nullable error) {
+         
+         if (error) {
+             return ;
+         }
+         if (!placemarks) {
+             return;
+         }
+         _userPlacemark = placemarks.lastObject;
+         
+     }];
+}
+
+-(CGFloat)getDistanceWithLat:(CGFloat)lat
+                         lon:(CGFloat)lon {
+    CLLocation *loc = [[CLLocation alloc]
+                       initWithLatitude:lat
+                       longitude:lon];
+    CGFloat distance = [loc distanceFromLocation:_userLoction];
+    return distance;
+}
+
 
 @end

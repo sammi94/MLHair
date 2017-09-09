@@ -9,25 +9,6 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--My-->
-        <scene sceneID="jVM-Eg-j9t">
-            <objects>
-                <viewController storyboardIdentifier="MyViewController" title="My" id="ECW-gl-YwV" customClass="MyViewController" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="K5j-w7-9Kf"/>
-                        <viewControllerLayoutGuide type="bottom" id="tZR-pz-gi8"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="hMb-yv-60O">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="zdd-Tn-MjE"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="yLP-8F-gcf" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="3175" y="1372"/>
-        </scene>
         <!--news-->
         <scene sceneID="z6a-Ea-zXx">
             <objects>
@@ -37,7 +18,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x8M-It-n4B" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="137" y="-427"/>
+            <point key="canvasLocation" x="669" y="34"/>
         </scene>
         <!--designer-->
         <scene sceneID="9s6-8U-JLL">
@@ -47,7 +28,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8rh-OL-Qbn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="709" y="-450"/>
+            <point key="canvasLocation" x="838" y="139"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="BVk-36-u25">
@@ -157,7 +138,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ffl-Tk-RCC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="137" y="920"/>
+            <point key="canvasLocation" x="137" y="613"/>
         </scene>
         <!--navstyle-->
         <scene sceneID="Ohl-jQ-qJ4">
@@ -167,33 +148,17 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Eop-o5-iO3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="759" y="139"/>
+            <point key="canvasLocation" x="694" y="273"/>
         </scene>
-        <!--StyleViewController-->
-        <scene sceneID="Z9W-9U-LuW">
-            <objects>
-                <viewControllerPlaceholder storyboardIdentifier="StyleViewController" storyboardName="Style" referencedIdentifier="StyleViewController" id="uDQ-ot-fLG" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="TWA-6P-SS6" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2514.4000000000001" y="-68.815592203898049"/>
-        </scene>
-        <!--UINavigationController-ywn-aZ-ysU-->
+        <!--Shop-->
         <scene sceneID="WS9-5b-nI9">
             <objects>
-                <viewControllerPlaceholder storyboardName="Map" referencedIdentifier="UINavigationController-ywn-aZ-ysU" id="vkc-oB-uVI" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardName="Shop" id="vkc-oB-uVI" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="iBR-ht-Wb9"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yXP-jv-FN5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1076" y="681"/>
-        </scene>
-        <!--MapViewController-->
-        <scene sceneID="3Ov-Sq-SS2">
-            <objects>
-                <viewControllerPlaceholder storyboardIdentifier="MapViewController" storyboardName="Map" referencedIdentifier="MapViewController" id="wWP-sS-NeS" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="CYZ-EI-6mT" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1790" y="681"/>
+            <point key="canvasLocation" x="423" y="585"/>
         </scene>
     </scenes>
 </document>

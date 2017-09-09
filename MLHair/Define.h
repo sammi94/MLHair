@@ -12,12 +12,19 @@
 // http exchange
 #define HttpExchange @"ML_Hair"
 
+//string
+//ShopVC
+#define CalculateMileage @"Calculate mileage"
+
 // json hot code
 
 // Shop
 #define ShopId @"shopId"
 #define ShopName @"shopName"
 #define ShopAddress @"shopAddress"
+#define ShopLat @"shopLat"
+#define ShopLon @"shopLon"
+#define ShopTime @"shopTime"
 #define ShopPhone @"shopPhone"
 #define ShopDesignerList @"shopDesignerList"
 

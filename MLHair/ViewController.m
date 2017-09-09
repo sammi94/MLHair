@@ -17,6 +17,7 @@
 {
     FBSDKLoginButton *loginButton;
     NSString *userName;//從FB取得
+    Location *loc;
 }
 //prepare googlesignin
 @property (weak, nonatomic) IBOutlet GIDSignInButton *signInButton;
@@ -31,6 +32,7 @@
     [self layout];
     [self googleSetting];
     [self facebooksetting];
+    loc = [Location stand];
     
 }
 
@@ -93,6 +95,20 @@
 
 -(void)setDummyData {
     NSLog(@"\n準備設架資料");
+    NSMutableArray *arr = [NSMutableArray new];
+    NSDictionary *data = @{ShopId : @(1),
+                           ShopName : @"林森店",
+                           ShopTime : @"AM 10:30 - PM 20：30",
+                           ShopAddress : @"台北市中山區林森北路105號2樓",
+                           ShopPhone : @"(02)25513680",
+                           ShopLat : @"25.050210",
+                           ShopLon : @"121.524996",
+                           ShopDesignerList : arr};
+    
+    MLHairShopVO *shop = [[MLHairShopVO alloc] initWithData:data];
+    NSMutableArray <MLHairShopVO*>*shopList = [NSMutableArray new];
+    [shopList addObject:shop];
+    [MLHairDatabase stand].shopList = shopList;
 }
 
 //fb 登入 拿資料

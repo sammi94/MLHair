@@ -10,6 +10,9 @@
 
 #import "MemberVO.h"
 #import "StyleVO.h"
+#import "MLHairShopVO.h"
+#import "Define.h"
+#import "Location.h"
 
 typedef void (^Havedata)(bool havedat);
 
@@ -17,6 +20,7 @@ typedef void (^Havedata)(bool havedat);
 
 @property (nonatomic,strong) NSArray <DesignerVO*>*designerList;
 @property (nonatomic,strong) NSArray <StyleVO*>*styleList;
+@property (nonatomic,strong) NSArray <MLHairShopVO*>*shopList;
 @property (nonatomic,strong) MemberVO *member;
 
 +(instancetype)stand;

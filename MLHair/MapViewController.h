@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "MLHairDatabase.h"
 
 @interface MapViewController : UIViewController
+
+@property (nonatomic,strong) MLHairShopVO *shop;
 
 @end
