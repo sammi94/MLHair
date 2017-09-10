@@ -28,6 +28,8 @@
 		45834EA71F64233200B9B28A /* MLAnnotion.m in Sources */ = {isa = PBXBuildFile; fileRef = 45834EA61F64233200B9B28A /* MLAnnotion.m */; };
 		45834EAA1F644E6300B9B28A /* HotDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 45834EA91F644E6300B9B28A /* HotDelegate.m */; };
 		45834EAD1F644FF900B9B28A /* HotCVCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 45834EAC1F644FF900B9B28A /* HotCVCell.m */; };
+		45834EB31F65309E00B9B28A /* SignInVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 45834EB21F65309E00B9B28A /* SignInVC.m */; };
+		45834EB61F65398300B9B28A /* SignIn.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 45834EB41F65398300B9B28A /* SignIn.storyboard */; };
 		A4AC973C1F25AFDA002A376B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A4AC973B1F25AFDA002A376B /* main.m */; };
 		A4AC973F1F25AFDA002A376B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A4AC973E1F25AFDA002A376B /* AppDelegate.m */; };
 		A4AC97421F25AFDA002A376B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A4AC97411F25AFDA002A376B /* ViewController.m */; };
@@ -89,6 +91,9 @@
 		45834EA91F644E6300B9B28A /* HotDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HotDelegate.m; sourceTree = "<group>"; };
 		45834EAB1F644FF900B9B28A /* HotCVCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HotCVCell.h; sourceTree = "<group>"; };
 		45834EAC1F644FF900B9B28A /* HotCVCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HotCVCell.m; sourceTree = "<group>"; };
+		45834EB11F65309E00B9B28A /* SignInVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignInVC.h; sourceTree = "<group>"; };
+		45834EB21F65309E00B9B28A /* SignInVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignInVC.m; sourceTree = "<group>"; };
+		45834EB51F65398300B9B28A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/SignIn.storyboard; sourceTree = "<group>"; };
 		4A606BEE648606EF106F4E30 /* Pods-MLHair.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MLHair.release.xcconfig"; path = "Pods/Target Support Files/Pods-MLHair/Pods-MLHair.release.xcconfig"; sourceTree = "<group>"; };
 		72710AD18279D973399A25D9 /* Pods-MLHair.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MLHair.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MLHair/Pods-MLHair.debug.xcconfig"; sourceTree = "<group>"; };
 		8B6D47F66E92AF32F2CFFE40 /* libPods-MLHair.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MLHair.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -313,6 +318,9 @@
 		A4F740B51F41CFD100949287 /* My */ = {
 			isa = PBXGroup;
 			children = (
+				45834EB41F65398300B9B28A /* SignIn.storyboard */,
+				45834EB11F65309E00B9B28A /* SignInVC.h */,
+				45834EB21F65309E00B9B28A /* SignInVC.m */,
 				45834E711F60266D00B9B28A /* my.storyboard */,
 				45834E741F602A5F00B9B28A /* AvatorTViCell.h */,
 				45834E751F602A5F00B9B28A /* AvatorTViCell.m */,
@@ -403,6 +411,7 @@
 				45834E731F60266D00B9B28A /* my.storyboard in Resources */,
 				45834E701F5D87B300B9B28A /* Booking.storyboard in Resources */,
 				A4AC97F81F40F2C0002A376B /* News.storyboard in Resources */,
+				45834EB61F65398300B9B28A /* SignIn.storyboard in Resources */,
 				A4AC97471F25AFDA002A376B /* Assets.xcassets in Resources */,
 				45834E8F1F62A67500B9B28A /* Shop.storyboard in Resources */,
 				A4AC97451F25AFDA002A376B /* Main.storyboard in Resources */,
@@ -467,6 +476,7 @@
 			files = (
 				45834E761F602A5F00B9B28A /* AvatorTViCell.m in Sources */,
 				45834E801F62509D00B9B28A /* MemberVO.m in Sources */,
+				45834EB31F65309E00B9B28A /* SignInVC.m in Sources */,
 				45834E5F1F5D794600B9B28A /* DesignerVC.m in Sources */,
 				A4AC97421F25AFDA002A376B /* ViewController.m in Sources */,
 				A4F7414F1F468A5100949287 /* StyleViewCell.m in Sources */,
@@ -522,6 +532,14 @@
 				45834E8E1F62A67500B9B28A /* Base */,
 			);
 			name = Shop.storyboard;
+			sourceTree = "<group>";
+		};
+		45834EB41F65398300B9B28A /* SignIn.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				45834EB51F65398300B9B28A /* Base */,
+			);
+			name = SignIn.storyboard;
 			sourceTree = "<group>";
 		};
 		A4AC97431F25AFDA002A376B /* Main.storyboard */ = {
