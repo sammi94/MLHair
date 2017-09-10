@@ -9,6 +9,7 @@
 #import "DesignerVC.h"
 #import "DesignerVCell.h"
 #import "MLHairDatabase.h"
+#import "BookingVC.h"
 
 
 @interface DesignerVC ()<UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout>
@@ -28,6 +29,7 @@
     data = [MLHairDatabase stand];
     _designerCV.delegate = self;
     _designerCV.dataSource = self;
+    self.automaticallyAdjustsScrollViewInsets = false;
     
 }
 
@@ -68,6 +70,8 @@
 
 -(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
     
+    BookingVC *booking = [self.storyboard instantiateViewControllerWithIdentifier:@"BookingVC"];
+    [self.navigationController pushViewController:booking animated:true];
     
 }
 

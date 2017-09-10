@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="cji-zn-ZvH">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -24,79 +24,79 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="dS0-QY-Iz4">
-                                <rect key="frame" x="37" y="53" width="60" height="60"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="image3" translatesAutoresizingMaskIntoConstraints="NO" id="dS0-QY-Iz4">
+                                <rect key="frame" x="37" y="15.5" width="60" height="60"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="dS0-QY-Iz4" secondAttribute="height" multiplier="1:1" id="hmh-ak-SBe"/>
                                     <constraint firstAttribute="width" constant="60" id="ver-G9-n5j"/>
                                 </constraints>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="GYI-hI-ggd">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="image2" translatesAutoresizingMaskIntoConstraints="NO" id="GYI-hI-ggd">
                                 <rect key="frame" x="37" y="166.5" width="300" height="167"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="設計師" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fWM-i6-uyv">
-                                <rect key="frame" x="142.5" y="66" width="90" height="35"/>
-                                <fontDescription key="fontDescription" name=".SFNSDisplay" family=".SF NS Display" pointSize="30"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xHR-p5-WbZ">
-                                <rect key="frame" x="242.5" y="68.5" width="31" height="30"/>
+                                <rect key="frame" x="242.5" y="30.5" width="31" height="30"/>
                                 <state key="normal" title="收藏"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KIX-tu-ybe">
-                                <rect key="frame" x="316.5" y="68.5" width="31" height="30"/>
+                                <rect key="frame" x="316.5" y="30.5" width="31" height="30"/>
                                 <state key="normal" title="分享"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ohO-74-Zb0">
-                                <rect key="frame" x="172" y="359.5" width="31" height="30"/>
+                                <rect key="frame" x="172" y="362.5" width="31" height="30"/>
                                 <state key="normal" title="店位"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fS3-gq-eoL">
-                                <rect key="frame" x="155" y="502" width="64" height="30"/>
+                                <rect key="frame" x="155" y="515" width="64" height="30"/>
                                 <state key="normal" title="FB粉絲頁"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="epA-N4-HvY">
-                                <rect key="frame" x="155" y="577.5" width="64" height="30"/>
+                                <rect key="frame" x="155" y="595.5" width="64" height="30"/>
                                 <state key="normal" title="Line 聯絡"/>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Line ID :123456789" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0YZ-JL-3W1">
-                                <rect key="frame" x="37" y="636" width="151" height="21"/>
+                                <rect key="frame" x="37" y="657" width="151" height="0.0"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="contactAdd" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0ts-Pj-ML9">
-                                <rect key="frame" x="283.5" y="72.5" width="22" height="22"/>
+                                <rect key="frame" x="283.5" y="34.5" width="22" height="22"/>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ymP-Zy-Pz9">
-                                <rect key="frame" x="37" y="415" width="61.5" height="62"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="image1" translatesAutoresizingMaskIntoConstraints="NO" id="ymP-Zy-Pz9">
+                                <rect key="frame" x="37" y="420" width="66.5" height="67"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="ymP-Zy-Pz9" secondAttribute="height" multiplier="1:1" id="VhG-ad-Nut"/>
                                 </constraints>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="aPK-mP-6I3">
-                                <rect key="frame" x="37" y="343.5" width="61.5" height="61.5"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="image1" translatesAutoresizingMaskIntoConstraints="NO" id="aPK-mP-6I3">
+                                <rect key="frame" x="37" y="343.5" width="66.5" height="66.5"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="aPK-mP-6I3" secondAttribute="height" multiplier="1:1" id="QXw-O5-QTh"/>
                                 </constraints>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="H2z-fH-3iS">
-                                <rect key="frame" x="37" y="487" width="61.5" height="61.5"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="image1" translatesAutoresizingMaskIntoConstraints="NO" id="H2z-fH-3iS">
+                                <rect key="frame" x="37" y="497" width="66.5" height="67"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="H2z-fH-3iS" secondAttribute="height" multiplier="1:1" id="VW7-hF-p2v"/>
                                 </constraints>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="qXE-NH-FpA">
-                                <rect key="frame" x="37" y="558.5" width="61.5" height="67.5"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="image1" translatesAutoresizingMaskIntoConstraints="NO" id="qXE-NH-FpA">
+                                <rect key="frame" x="37" y="574" width="66.5" height="73"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="qXE-NH-FpA" secondAttribute="height" multiplier="32:35" id="Swp-QF-Zmc"/>
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DBe-Xj-843">
-                                <rect key="frame" x="164.5" y="431" width="46" height="30"/>
+                                <rect key="frame" x="164.5" y="439" width="46" height="30"/>
                                 <state key="normal" title="電話："/>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="設計師" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fWM-i6-uyv">
+                                <rect key="frame" x="142" y="28" width="90" height="35"/>
+                                <fontDescription key="fontDescription" name=".SFNSDisplay" family=".SF NS Display" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -129,11 +129,11 @@
                             <constraint firstItem="H2z-fH-3iS" firstAttribute="width" secondItem="ymP-Zy-Pz9" secondAttribute="width" id="m2u-u1-Gfv"/>
                             <constraint firstItem="KIX-tu-ybe" firstAttribute="centerY" secondItem="0ts-Pj-ML9" secondAttribute="centerY" id="ozh-zY-vNm"/>
                             <constraint firstItem="qXE-NH-FpA" firstAttribute="width" secondItem="H2z-fH-3iS" secondAttribute="width" id="sWo-mJ-2cn"/>
-                            <constraint firstItem="fWM-i6-uyv" firstAttribute="centerY" secondItem="A50-x7-qsP" secondAttribute="centerY" multiplier="1/4" id="tJA-9C-X32"/>
                             <constraint firstItem="qXE-NH-FpA" firstAttribute="leading" secondItem="H2z-fH-3iS" secondAttribute="leading" id="tOl-rK-ssP"/>
                             <constraint firstItem="aPK-mP-6I3" firstAttribute="top" secondItem="GYI-hI-ggd" secondAttribute="bottom" constant="10" id="uvG-P8-HY0"/>
                             <constraint firstItem="fWM-i6-uyv" firstAttribute="centerX" secondItem="A50-x7-qsP" secondAttribute="centerX" id="vQY-FG-cNQ"/>
                             <constraint firstItem="ymP-Zy-Pz9" firstAttribute="width" secondItem="aPK-mP-6I3" secondAttribute="width" id="wLI-GQ-rZ9"/>
+                            <constraint firstItem="fWM-i6-uyv" firstAttribute="top" secondItem="7vi-8a-vJs" secondAttribute="bottom" constant="8" id="x7K-Lq-Apc"/>
                             <constraint firstItem="xHR-p5-WbZ" firstAttribute="centerY" secondItem="fWM-i6-uyv" secondAttribute="centerY" id="y3f-Ik-UHT"/>
                             <constraint firstItem="dS0-QY-Iz4" firstAttribute="leading" secondItem="GYI-hI-ggd" secondAttribute="leading" id="yrq-bz-vam"/>
                         </constraints>
@@ -147,4 +147,9 @@
             <point key="canvasLocation" x="1460" y="-280.20989505247377"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="image1" width="999" height="539"/>
+        <image name="image2" width="300" height="168"/>
+        <image name="image3" width="720" height="720"/>
+    </resources>
 </document>

@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -24,7 +25,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="QE8-Lz-aRt">
-                                <rect key="frame" x="16" y="64" width="343" height="603"/>
+                                <rect key="frame" x="16" y="110" width="343" height="557"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="15" minimumInteritemSpacing="5" id="IvW-k3-wCo">
                                     <size key="itemSize" width="193" height="185"/>
@@ -67,13 +68,29 @@
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IzP-HS-eWV">
+                                <rect key="frame" x="16" y="72" width="163.5" height="30"/>
+                                <color key="backgroundColor" red="0.99158578350000004" green="1" blue="0.4595206677" alpha="0.49491087150000002" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="直接預約"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cum-Wn-MT0">
+                                <rect key="frame" x="195.5" y="72" width="163.5" height="30"/>
+                                <color key="backgroundColor" red="0.99158578350000004" green="1" blue="0.4595206677" alpha="0.49491087150000002" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="找設計師"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="GAS-SG-BK2" firstAttribute="top" secondItem="QE8-Lz-aRt" secondAttribute="bottom" id="2nq-Yv-1sb"/>
+                            <constraint firstItem="IzP-HS-eWV" firstAttribute="trailing" secondItem="ucp-gc-g1R" secondAttribute="centerX" constant="-8" id="5D4-8f-UUY"/>
+                            <constraint firstItem="IzP-HS-eWV" firstAttribute="top" secondItem="Asp-cS-fHr" secondAttribute="bottom" constant="8" id="9UU-GT-eqs"/>
                             <constraint firstAttribute="trailingMargin" secondItem="QE8-Lz-aRt" secondAttribute="trailing" id="Eac-hw-Ya4"/>
                             <constraint firstItem="QE8-Lz-aRt" firstAttribute="leading" secondItem="ucp-gc-g1R" secondAttribute="leadingMargin" id="FhY-ti-xKD"/>
-                            <constraint firstItem="QE8-Lz-aRt" firstAttribute="top" secondItem="Asp-cS-fHr" secondAttribute="bottom" id="x4F-rN-k9H"/>
+                            <constraint firstItem="IzP-HS-eWV" firstAttribute="leading" secondItem="ucp-gc-g1R" secondAttribute="leadingMargin" id="MnA-3B-TwY"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="cum-Wn-MT0" secondAttribute="trailing" id="Ohq-fd-Dhm"/>
+                            <constraint firstItem="cum-Wn-MT0" firstAttribute="top" secondItem="Asp-cS-fHr" secondAttribute="bottom" constant="8" id="fKb-pB-VIB"/>
+                            <constraint firstItem="QE8-Lz-aRt" firstAttribute="top" secondItem="cum-Wn-MT0" secondAttribute="bottom" constant="8" id="lam-md-jfH"/>
+                            <constraint firstItem="cum-Wn-MT0" firstAttribute="leading" secondItem="ucp-gc-g1R" secondAttribute="centerX" constant="8" id="xXW-al-Yv5"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="bwA-Tn-XXu"/>
@@ -84,6 +101,14 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="k0S-Zs-VZo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="743.20000000000005" y="-280.20989505247377"/>
+        </scene>
+        <!--Booking-->
+        <scene sceneID="uwC-UG-OGY">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="BookingVC" storyboardName="Booking" id="sxM-kn-XLX" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Bsr-cD-rLi" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1232" y="-586"/>
         </scene>
         <!--designer-->
         <scene sceneID="Ohp-Vd-lQP">

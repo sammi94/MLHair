@@ -10,4 +10,11 @@
 
 @implementation HotCVCell
 
+- (void)awakeFromNib {
+    [super awakeFromNib];
+    
+    _photo.layer.cornerRadius = _photo.frame.size.width/2;
+    
+}
+
 @end
