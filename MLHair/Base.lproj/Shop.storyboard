@@ -31,7 +31,7 @@
                                         <rect key="frame" x="0.0" y="28" width="343" height="142"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="2U6-bN-udi" id="MPv-Yf-pMe">
-                                            <rect key="frame" x="0.0" y="0.0" width="343" height="141.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="343" height="141"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="林森店" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vve-9x-9gZ">

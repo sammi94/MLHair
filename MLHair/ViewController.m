@@ -9,7 +9,7 @@
 #import "ViewController.h"
 #import <FBSDKCoreKit/FBSDKCoreKit.h>
 #import <FBSDKLoginKit/FBSDKLoginKit.h>
-#import "MyViewController.h"
+
 #import <GoogleSignIn/GoogleSignIn.h>
 #import "MLHairDatabase.h"
 
@@ -82,7 +82,7 @@
         }
         
         dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-            MyViewController * myVC =[self.storyboard
+            UIViewController * myVC =[self.storyboard
                                       instantiateViewControllerWithIdentifier:@"tabBar"];
             [self presentViewController:myVC animated:YES completion:nil];
             
@@ -105,8 +105,9 @@
                            ShopLon : @"121.524996",
                            ShopDesignerList : arr};
     
-    MLHairShopVO *shop = [[MLHairShopVO alloc] initWithData:data];
     NSMutableArray <MLHairShopVO*>*shopList = [NSMutableArray new];
+    MLHairShopVO *shop = [[MLHairShopVO alloc] initWithData:data];
+    
     [shopList addObject:shop];
     [MLHairDatabase stand].shopList = shopList;
 }

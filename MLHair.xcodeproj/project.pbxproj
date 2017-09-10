@@ -25,8 +25,9 @@
 		45834E951F62C0F400B9B28A /* MLHairShopVO.m in Sources */ = {isa = PBXBuildFile; fileRef = 45834E941F62C0F400B9B28A /* MLHairShopVO.m */; };
 		45834E9E1F63C12500B9B28A /* ShopVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 45834E9D1F63C12500B9B28A /* ShopVC.m */; };
 		45834EA11F63C1CD00B9B28A /* ShopTVCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 45834EA01F63C1CD00B9B28A /* ShopTVCell.m */; };
-		45834EA41F63C7A400B9B28A /* Map.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 45834EA21F63C7A400B9B28A /* Map.storyboard */; };
 		45834EA71F64233200B9B28A /* MLAnnotion.m in Sources */ = {isa = PBXBuildFile; fileRef = 45834EA61F64233200B9B28A /* MLAnnotion.m */; };
+		45834EAA1F644E6300B9B28A /* HotDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 45834EA91F644E6300B9B28A /* HotDelegate.m */; };
+		45834EAD1F644FF900B9B28A /* HotCVCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 45834EAC1F644FF900B9B28A /* HotCVCell.m */; };
 		A4AC973C1F25AFDA002A376B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A4AC973B1F25AFDA002A376B /* main.m */; };
 		A4AC973F1F25AFDA002A376B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A4AC973E1F25AFDA002A376B /* AppDelegate.m */; };
 		A4AC97421F25AFDA002A376B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A4AC97411F25AFDA002A376B /* ViewController.m */; };
@@ -40,8 +41,6 @@
 		A4AC97FA1F40F2C0002A376B /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = A4AC97F41F40F2C0002A376B /* Reachability.m */; };
 		A4AC97FB1F40F2C0002A376B /* RSSParserDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A4AC97F61F40F2C0002A376B /* RSSParserDelegate.m */; };
 		A4AC97FF1F40F691002A376B /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A4AC97FE1F40F691002A376B /* DetailViewController.m */; };
-		A4AC98091F419938002A376B /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A4AC98081F419938002A376B /* MapViewController.m */; };
-		A4AC980C1F419955002A376B /* MyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A4AC980B1F419955002A376B /* MyViewController.m */; };
 		A4D97F141F5D5D4B00D37FD7 /* Designer.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A4D97F131F5D5D4B00D37FD7 /* Designer.storyboard */; };
 		A4F740B81F41D72800949287 /* StyleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A4F740B71F41D72800949287 /* StyleViewController.m */; };
 		A4F7414F1F468A5100949287 /* StyleViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A4F7414E1F468A5100949287 /* StyleViewCell.m */; };
@@ -84,9 +83,12 @@
 		45834E9D1F63C12500B9B28A /* ShopVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShopVC.m; sourceTree = "<group>"; };
 		45834E9F1F63C1CD00B9B28A /* ShopTVCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShopTVCell.h; sourceTree = "<group>"; };
 		45834EA01F63C1CD00B9B28A /* ShopTVCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShopTVCell.m; sourceTree = "<group>"; };
-		45834EA31F63C7A400B9B28A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Map.storyboard; sourceTree = "<group>"; };
 		45834EA51F64233200B9B28A /* MLAnnotion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MLAnnotion.h; sourceTree = "<group>"; };
 		45834EA61F64233200B9B28A /* MLAnnotion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MLAnnotion.m; sourceTree = "<group>"; };
+		45834EA81F644E6300B9B28A /* HotDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HotDelegate.h; sourceTree = "<group>"; };
+		45834EA91F644E6300B9B28A /* HotDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HotDelegate.m; sourceTree = "<group>"; };
+		45834EAB1F644FF900B9B28A /* HotCVCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HotCVCell.h; sourceTree = "<group>"; };
+		45834EAC1F644FF900B9B28A /* HotCVCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HotCVCell.m; sourceTree = "<group>"; };
 		4A606BEE648606EF106F4E30 /* Pods-MLHair.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MLHair.release.xcconfig"; path = "Pods/Target Support Files/Pods-MLHair/Pods-MLHair.release.xcconfig"; sourceTree = "<group>"; };
 		72710AD18279D973399A25D9 /* Pods-MLHair.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MLHair.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MLHair/Pods-MLHair.debug.xcconfig"; sourceTree = "<group>"; };
 		8B6D47F66E92AF32F2CFFE40 /* libPods-MLHair.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MLHair.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -114,10 +116,6 @@
 		A4AC97F61F40F2C0002A376B /* RSSParserDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSSParserDelegate.m; sourceTree = "<group>"; };
 		A4AC97FD1F40F691002A376B /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
 		A4AC97FE1F40F691002A376B /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
-		A4AC98071F419938002A376B /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
-		A4AC98081F419938002A376B /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
-		A4AC980A1F419955002A376B /* MyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyViewController.h; sourceTree = "<group>"; };
-		A4AC980B1F419955002A376B /* MyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyViewController.m; sourceTree = "<group>"; };
 		A4D97F131F5D5D4B00D37FD7 /* Designer.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Designer.storyboard; sourceTree = "<group>"; };
 		A4F740B61F41D72800949287 /* StyleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StyleViewController.h; sourceTree = "<group>"; };
 		A4F740B71F41D72800949287 /* StyleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StyleViewController.m; sourceTree = "<group>"; };
@@ -183,20 +181,9 @@
 				A4AC97531F25D623002A376B /* Model */,
 				A4AC973D1F25AFDA002A376B /* AppDelegate.h */,
 				A4AC973E1F25AFDA002A376B /* AppDelegate.m */,
-				45834E7A1F6172D300B9B28A /* Define.h */,
-				45834E691F5D837700B9B28A /* MLHairDatabase.h */,
-				45834E6A1F5D837700B9B28A /* MLHairDatabase.m */,
-				45834E931F62C0F400B9B28A /* MLHairShopVO.h */,
-				45834E941F62C0F400B9B28A /* MLHairShopVO.m */,
-				45834E7E1F62509D00B9B28A /* MemberVO.h */,
-				45834E7F1F62509D00B9B28A /* MemberVO.m */,
 				A4AC97431F25AFDA002A376B /* Main.storyboard */,
 				A4AC97401F25AFDA002A376B /* ViewController.h */,
 				A4AC97411F25AFDA002A376B /* ViewController.m */,
-				45834E8A1F62849D00B9B28A /* AdvanceImageView.h */,
-				45834E8B1F62849D00B9B28A /* AdvanceImageView.m */,
-				45834E871F627C8700B9B28A /* Http.h */,
-				45834E881F627C8700B9B28A /* Http.m */,
 				A4AC97461F25AFDA002A376B /* Assets.xcassets */,
 				A4AC97481F25AFDA002A376B /* LaunchScreen.storyboard */,
 				A4AC97511F25D57C002A376B /* GoogleService-Info.plist */,
@@ -218,6 +205,17 @@
 		A4AC97531F25D623002A376B /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				45834E901F62A75300B9B28A /* Location.h */,
+				45834E911F62A75300B9B28A /* Location.m */,
+				45834E8A1F62849D00B9B28A /* AdvanceImageView.h */,
+				45834E8B1F62849D00B9B28A /* AdvanceImageView.m */,
+				45834E871F627C8700B9B28A /* Http.h */,
+				45834E881F627C8700B9B28A /* Http.m */,
+				45834E7A1F6172D300B9B28A /* Define.h */,
+				45834E691F5D837700B9B28A /* MLHairDatabase.h */,
+				45834E6A1F5D837700B9B28A /* MLHairDatabase.m */,
+				45834E7E1F62509D00B9B28A /* MemberVO.h */,
+				45834E7F1F62509D00B9B28A /* MemberVO.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -264,11 +262,8 @@
 				45834EA61F64233200B9B28A /* MLAnnotion.m */,
 				45834E9F1F63C1CD00B9B28A /* ShopTVCell.h */,
 				45834EA01F63C1CD00B9B28A /* ShopTVCell.m */,
-				45834EA21F63C7A400B9B28A /* Map.storyboard */,
-				A4AC98071F419938002A376B /* MapViewController.h */,
-				A4AC98081F419938002A376B /* MapViewController.m */,
-				45834E901F62A75300B9B28A /* Location.h */,
-				45834E911F62A75300B9B28A /* Location.m */,
+				45834E931F62C0F400B9B28A /* MLHairShopVO.h */,
+				45834E941F62C0F400B9B28A /* MLHairShopVO.m */,
 			);
 			name = Map;
 			sourceTree = "<group>";
@@ -303,6 +298,10 @@
 				45834E7B1F6175DC00B9B28A /* Style.storyboard */,
 				A4F740B61F41D72800949287 /* StyleViewController.h */,
 				A4F740B71F41D72800949287 /* StyleViewController.m */,
+				45834EA81F644E6300B9B28A /* HotDelegate.h */,
+				45834EA91F644E6300B9B28A /* HotDelegate.m */,
+				45834EAB1F644FF900B9B28A /* HotCVCell.h */,
+				45834EAC1F644FF900B9B28A /* HotCVCell.m */,
 				A4F7414D1F468A5100949287 /* StyleViewCell.h */,
 				A4F7414E1F468A5100949287 /* StyleViewCell.m */,
 				45834E771F61631300B9B28A /* StyleVO.h */,
@@ -317,8 +316,6 @@
 				45834E711F60266D00B9B28A /* my.storyboard */,
 				45834E741F602A5F00B9B28A /* AvatorTViCell.h */,
 				45834E751F602A5F00B9B28A /* AvatorTViCell.m */,
-				A4AC980A1F419955002A376B /* MyViewController.h */,
-				A4AC980B1F419955002A376B /* MyViewController.m */,
 				A4F741591F55AE0200949287 /* MyTableViewCell.h */,
 				A4F7415A1F55AE0200949287 /* MyTableViewCell.m */,
 				A4F741561F55ACF800949287 /* MyTableViewController.h */,
@@ -407,7 +404,6 @@
 				45834E701F5D87B300B9B28A /* Booking.storyboard in Resources */,
 				A4AC97F81F40F2C0002A376B /* News.storyboard in Resources */,
 				A4AC97471F25AFDA002A376B /* Assets.xcassets in Resources */,
-				45834EA41F63C7A400B9B28A /* Map.storyboard in Resources */,
 				45834E8F1F62A67500B9B28A /* Shop.storyboard in Resources */,
 				A4AC97451F25AFDA002A376B /* Main.storyboard in Resources */,
 				A4D97F141F5D5D4B00D37FD7 /* Designer.storyboard in Resources */,
@@ -470,7 +466,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				45834E761F602A5F00B9B28A /* AvatorTViCell.m in Sources */,
-				A4AC980C1F419955002A376B /* MyViewController.m in Sources */,
 				45834E801F62509D00B9B28A /* MemberVO.m in Sources */,
 				45834E5F1F5D794600B9B28A /* DesignerVC.m in Sources */,
 				A4AC97421F25AFDA002A376B /* ViewController.m in Sources */,
@@ -485,6 +480,7 @@
 				45834E921F62A75300B9B28A /* Location.m in Sources */,
 				45834E791F61631300B9B28A /* StyleVO.m in Sources */,
 				45834E6B1F5D837700B9B28A /* MLHairDatabase.m in Sources */,
+				45834EAD1F644FF900B9B28A /* HotCVCell.m in Sources */,
 				45834E8C1F62849D00B9B28A /* AdvanceImageView.m in Sources */,
 				A4F741581F55ACF800949287 /* MyTableViewController.m in Sources */,
 				A4AC97F71F40F2C0002A376B /* MasterViewController.m in Sources */,
@@ -495,8 +491,8 @@
 				45834E9E1F63C12500B9B28A /* ShopVC.m in Sources */,
 				45834E651F5D7E0900B9B28A /* DesignerVCell.m in Sources */,
 				A4F740B81F41D72800949287 /* StyleViewController.m in Sources */,
-				A4AC98091F419938002A376B /* MapViewController.m in Sources */,
 				A4AC97FB1F40F2C0002A376B /* RSSParserDelegate.m in Sources */,
+				45834EAA1F644E6300B9B28A /* HotDelegate.m in Sources */,
 				45834E951F62C0F400B9B28A /* MLHairShopVO.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -526,14 +522,6 @@
 				45834E8E1F62A67500B9B28A /* Base */,
 			);
 			name = Shop.storyboard;
-			sourceTree = "<group>";
-		};
-		45834EA21F63C7A400B9B28A /* Map.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				45834EA31F63C7A400B9B28A /* Base */,
-			);
-			name = Map.storyboard;
 			sourceTree = "<group>";
 		};
 		A4AC97431F25AFDA002A376B /* Main.storyboard */ = {

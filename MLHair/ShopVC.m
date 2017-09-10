@@ -8,7 +8,6 @@
 
 #import "ShopVC.h"
 #import "ShopTVCell.h"
-#import "MapViewController.h"
 #import "MLHairDatabase.h"
 #import "MLAnnotion.h"
 
@@ -80,9 +79,11 @@ didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
                        longitude:shopList[indexPath.row].lon];
     CGFloat distance = [loc distanceFromLocation:locData.userLoction];
     if (distance > 1000) {
-        cell.distance.text = [NSString stringWithFormat:@"%.2fKm",[loc distanceFromLocation:locData.userLoction]/1000];
+        cell.distance.text = [NSString
+                              stringWithFormat:@"%.2fKm",[loc distanceFromLocation:locData.userLoction]/1000];
     } else {
-        cell.distance.text = [NSString stringWithFormat:@"%.2fm",[loc distanceFromLocation:locData.userLoction]];
+        cell.distance.text = [NSString
+                              stringWithFormat:@"%.2fm",[loc distanceFromLocation:locData.userLoction]];
     }
     
     return cell;
@@ -96,11 +97,13 @@ numberOfRowsInSection:(NSInteger)section {
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    
 }
 
 #pragma - map
--(MKAnnotationView *)mapView:(MKMapView *)mapView viewForAnnotation:(id<MKAnnotation>)annotation{
+-(MKAnnotationView *)mapView:(MKMapView *)mapView
+           viewForAnnotation:(id<MKAnnotation>)annotation{
+    
     if (annotation == mapView.userLocation){
         return nil;
     }
@@ -143,7 +146,7 @@ numberOfRowsInSection:(NSInteger)section {
     NSURL *phoneURL = [NSURL
                        URLWithString:[NSString
                                       stringWithFormat:@"tel:%@",tel]];
-//    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:[NSString stringWithFormat:@"telprompt:%@",@"0928584466"]]];
+
     [[UIApplication sharedApplication]
      openURL:phoneURL
      options:@{}

@@ -8,12 +8,17 @@
 
 #import "StyleViewController.h"
 #import "StyleViewCell.h"
+#import "HotDelegate.h"
 #import <AFNetworking.h>
 
 
 
 @interface StyleViewController ()<UICollectionViewDataSource,UICollectionViewDelegate,UICollectionViewDelegateFlowLayout>
+{
+    HotDelegate *hot;
+}
 @property (strong, nonatomic) IBOutlet UICollectionView *CollectionView;
+@property (weak, nonatomic) IBOutlet UICollectionView *hotCV;
 
 
 @property NSMutableArray <NSString*>*image;
@@ -28,17 +33,21 @@
     
     _CollectionView.delegate = self;
     _CollectionView.dataSource = self;
+    self.automaticallyAdjustsScrollViewInsets = false;
     
+    hot = [HotDelegate new];
+    _hotCV.delegate = (id)hot;
+    _hotCV.dataSource = (id)hot;
     UICollectionViewFlowLayout *layout = [UICollectionViewFlowLayout new];
     layout.scrollDirection = UICollectionViewScrollDirectionVertical;
     
     //设置每一行的间距
-    layout.minimumLineSpacing = 15;
+    layout.minimumLineSpacing = 8;
     
     //设置item的间距
-    layout.minimumInteritemSpacing = 5;
+    layout.minimumInteritemSpacing = 8;
     //设置section的边距
-    layout.sectionInset=UIEdgeInsetsMake(5, 5, 0,0 );
+//    layout.sectionInset=UIEdgeInsetsMake(5, 5, 0,0 );
     
     _image = [NSMutableArray new];
     _label = [NSMutableArray new];
@@ -68,7 +77,7 @@
                   layout:(UICollectionViewLayout*)collectionViewLayout
   sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
     
-    return CGSizeMake(self.view.frame.size.width * .43, self.view.frame.size.height * .4);
+    return CGSizeMake((self.view.frame.size.width - 50) / 2, self.view.frame.size.height * .4);
 }
 
 - (void)didReceiveMemoryWarning {
@@ -90,9 +99,12 @@
 }
 
 // The cell that is returned must be retrieved from a call to -dequeueReusableCellWithReuseIdentifier:forIndexPath:
-- (__kindof UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
+- (__kindof UICollectionViewCell *)collectionView:(UICollectionView *)collectionView
+                           cellForItemAtIndexPath:(NSIndexPath *)indexPath{
     
-    StyleViewCell * cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"StyleViewCell" forIndexPath:indexPath];
+    StyleViewCell * cell = [collectionView
+                            dequeueReusableCellWithReuseIdentifier:@"StyleViewCell"
+                            forIndexPath:indexPath];
     
     cell.imageCell.image = [UIImage imageNamed:[_image objectAtIndex:indexPath.row]];
     
