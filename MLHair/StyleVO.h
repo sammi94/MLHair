@@ -12,6 +12,7 @@
 
 @property (nonatomic,strong) NSString *photoURL;
 @property (nonatomic,strong) NSString *photoDescription;
+@property (nonatomic,assign) int gender;
 @property (nonatomic,assign) int modelId;
 @property (nonatomic,assign) int modelAuthority;
 @property (nonatomic,assign) int designerId;

@@ -1,34 +1,26 @@
 //
-//  SignInVC.m
+//  SignUpVC.m
 //  MLHair
 //
 //  Created by Ｍasqurin on 2017/9/10.
 //  Copyright © 2017年 sammi. All rights reserved.
 //
 
-#import "SignInVC.h"
+#import "SignUpVC.h"
 
-@interface SignInVC ()
-{
-    
-}
-@property (weak, nonatomic) IBOutlet UITextField *mail;
-@property (weak, nonatomic) IBOutlet UITextField *password;
+@interface SignUpVC ()
+
 @property (weak, nonatomic) IBOutlet UIImageView *botton;
+
+
 
 @end
 
-@implementation SignInVC
+@implementation SignUpVC
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-}
-
--(void)viewDidAppear:(BOOL)animated {
-    [super viewDidAppear:animated];
-    
-
 }
 
 -(void)viewDidLayoutSubviews {
@@ -36,24 +28,14 @@
     _botton.transform = CGAffineTransformMakeRotation(M_PI);
 }
 
+-(void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    
+}
+
 -(void)touchesBegan:(NSSet<UITouch *> *)touches
           withEvent:(UIEvent *)event {
     [self.view endEditing:true];
-}
-
-
-- (IBAction)signUp:(id)sender {
-}
-
-
-- (IBAction)google:(id)sender {
-}
-
-
-- (IBAction)fb:(id)sender {
-}
-
-- (IBAction)signIn:(id)sender {
 }
 
 

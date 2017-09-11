@@ -94,7 +94,7 @@
 }
 
 -(void)setDummyData {
-    NSLog(@"\n準備設架資料");
+    NSLog(@"\n準備假資料");
     NSMutableArray *arr = [NSMutableArray new];
     NSDictionary *data = @{ShopId : @(1),
                            ShopName : @"林森店",

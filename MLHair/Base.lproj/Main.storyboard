@@ -9,10 +9,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--news-->
+        <!--News-->
         <scene sceneID="z6a-Ea-zXx">
             <objects>
-                <viewControllerPlaceholder storyboardIdentifier="News" storyboardName="News" referencedIdentifier="news" id="f3X-C1-oNb" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardIdentifier="News" storyboardName="News" id="f3X-C1-oNb" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="uCb-rZ-tzC"/>
                     <navigationItem key="navigationItem" id="1uV-th-jIr"/>
                 </viewControllerPlaceholder>
@@ -124,6 +124,8 @@
                         <segue destination="k0P-Fj-SyL" kind="relationship" relationship="viewControllers" id="qpC-X9-Xh4"/>
                         <segue destination="vkc-oB-uVI" kind="relationship" relationship="viewControllers" id="YYm-qe-6Rj"/>
                         <segue destination="f12-xK-Jeu" kind="relationship" relationship="viewControllers" id="bnH-4S-17Z"/>
+                        <segue destination="uSG-Ff-uJe" kind="relationship" relationship="viewControllers" id="YMS-47-GPq"/>
+                        <segue destination="1Ed-18-UVo" kind="relationship" relationship="viewControllers" id="kgO-HM-2xf"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PBG-Bb-BJd" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -159,6 +161,26 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yXP-jv-FN5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="423" y="585"/>
+        </scene>
+        <!--SignUp-->
+        <scene sceneID="K7q-5R-8Us">
+            <objects>
+                <viewControllerPlaceholder storyboardName="SignUp" id="1Ed-18-UVo" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="cA4-Bo-Ybn"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="s2k-zd-rAk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="908" y="431"/>
+        </scene>
+        <!--SignIn-->
+        <scene sceneID="IAA-3h-Cnr">
+            <objects>
+                <viewControllerPlaceholder storyboardName="SignIn" id="uSG-Ff-uJe" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="6Ls-Wt-4Cv"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gv6-nU-QVM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="805" y="561"/>
         </scene>
     </scenes>
 </document>

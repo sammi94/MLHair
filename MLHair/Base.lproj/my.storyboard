@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="wIN-K8-dQ4">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="0e2-h7-mLf">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -12,7 +12,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--My-->
+        <!--個人專區-->
         <scene sceneID="e9t-z7-HSh">
             <objects>
                 <tableViewController id="wIN-K8-dQ4" customClass="MyTableViewController" sceneMemberID="viewController">
@@ -28,7 +28,7 @@
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="137.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="0AE-n7-jLM">
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="image2" translatesAutoresizingMaskIntoConstraints="NO" id="0AE-n7-jLM">
                                             <rect key="frame" x="53.5" y="28" width="81" height="81"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" secondItem="0AE-n7-jLM" secondAttribute="height" multiplier="1:1" id="iUI-40-tIG"/>
@@ -62,7 +62,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nEk-LL-Gwj">
-                                            <rect key="frame" x="150.5" y="14.5" width="42" height="20.5"/>
+                                            <rect key="frame" x="150" y="14.5" width="42" height="20.5"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
@@ -83,12 +83,35 @@
                             <outlet property="delegate" destination="wIN-K8-dQ4" id="jb3-EH-oLy"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="My" id="YP5-Vu-SHt"/>
+                    <navigationItem key="navigationItem" title="個人專區" id="62y-Vy-CEO"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sKc-F8-ojk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1076" y="919.79010494752629"/>
+        </scene>
+        <!--個人專區-->
+        <scene sceneID="naY-90-pL3">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="0e2-h7-mLf" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="個人專區" image="個人專區" id="YP5-Vu-SHt"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="iah-2Y-XbP">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="wIN-K8-dQ4" kind="relationship" relationship="rootViewController" id="RDm-Dt-v3a"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KuI-Ks-b36" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
             <point key="canvasLocation" x="136.80000000000001" y="919.79010494752629"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="image2" width="300" height="168"/>
+        <image name="個人專區" width="23" height="17"/>
+    </resources>
 </document>

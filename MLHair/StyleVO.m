@@ -15,6 +15,7 @@
     self = [super init];
     _photoURL = data[PhotoURL];
     _photoDescription = data[PhotoDescription];
+    _gender = [data[Gender] intValue];
     _modelId = [data[ModelId] intValue];
     _modelAuthority = [data[ModelAuthority] intValue];
     _designerId = [data[DesignerId] intValue];

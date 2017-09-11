@@ -6,7 +6,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
-        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -25,7 +24,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="oLy-mD-vnd">
-                                <rect key="frame" x="16" y="247" width="343" height="371"/>
+                                <rect key="frame" x="16" y="229" width="343" height="389"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <inset key="scrollIndicatorInsets" minX="0.0" minY="0.0" maxX="8" maxY="0.0"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="5" minimumInteritemSpacing="5" id="0x8-gM-iBr">
@@ -53,7 +52,7 @@
                                                 </label>
                                             </subviews>
                                         </view>
-                                        <color key="backgroundColor" red="0.65490556929999999" green="0.53574916890000002" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="backgroundColor" red="1" green="0.75843066969999995" blue="0.79994248079999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstItem="MHk-zs-HGK" firstAttribute="top" secondItem="wgV-y0-S3U" secondAttribute="top" constant="8" id="Yf1-hc-dJB"/>
                                             <constraint firstAttribute="bottomMargin" secondItem="MHk-zs-HGK" secondAttribute="bottom" constant="30" id="Zah-Gp-zKH"/>
@@ -75,7 +74,7 @@
                             </collectionView>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Ogd-n4-57i">
                                 <rect key="frame" x="0.0" y="101" width="375" height="100"/>
-                                <color key="backgroundColor" red="0.65490556929999999" green="0.53574916890000002" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="0.96475595235824585" green="0.75336259603500366" blue="0.79738157987594604" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="100" id="KYo-zN-JBR"/>
                                 </constraints>
@@ -129,37 +128,32 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wFt-Bw-s2w">
-                                <rect key="frame" x="191.5" y="209" width="167.5" height="30"/>
-                                <color key="backgroundColor" red="0.99158578350000004" green="1" blue="0.4595206677" alpha="0.49491087150000002" colorSpace="custom" customColorSpace="sRGB"/>
-                                <state key="normal" title="女性模特兒"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UJh-2E-zbF">
-                                <rect key="frame" x="16" y="209" width="167.5" height="30"/>
-                                <color key="backgroundColor" red="0.99158578350000004" green="1" blue="0.4595206677" alpha="0.49491087150000002" colorSpace="custom" customColorSpace="sRGB"/>
-                                <state key="normal" title="男性模特兒"/>
-                            </button>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="f3f-Dr-KnW">
+                                <rect key="frame" x="0.0" y="201" width="375" height="29"/>
+                                <segments>
+                                    <segment title="女性"/>
+                                    <segment title="男性"/>
+                                </segments>
+                                <color key="tintColor" red="0.39471524953842163" green="0.66152185201644897" blue="0.76868635416030884" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </segmentedControl>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="oLy-mD-vnd" firstAttribute="top" secondItem="f3f-Dr-KnW" secondAttribute="bottom" id="2Rc-We-fVA"/>
                             <constraint firstItem="oLy-mD-vnd" firstAttribute="leading" secondItem="Rgr-FR-beU" secondAttribute="leadingMargin" id="5NZ-n7-v4i"/>
                             <constraint firstAttribute="trailingMargin" secondItem="oLy-mD-vnd" secondAttribute="trailing" id="7GS-He-5eQ"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="wFt-Bw-s2w" secondAttribute="trailing" id="7mO-QZ-tMj"/>
+                            <constraint firstAttribute="trailing" secondItem="f3f-Dr-KnW" secondAttribute="trailing" id="9xz-yl-gjD"/>
                             <constraint firstItem="Ogd-n4-57i" firstAttribute="leading" secondItem="Rgr-FR-beU" secondAttribute="leading" id="Bas-gd-lBx"/>
-                            <constraint firstItem="UJh-2E-zbF" firstAttribute="leading" secondItem="Rgr-FR-beU" secondAttribute="leadingMargin" id="D60-a3-gk0"/>
                             <constraint firstItem="oLy-mD-vnd" firstAttribute="bottom" secondItem="IfF-AQ-yGm" secondAttribute="top" id="NEK-kU-j9Z"/>
+                            <constraint firstItem="f3f-Dr-KnW" firstAttribute="top" secondItem="Ogd-n4-57i" secondAttribute="bottom" id="NwT-oV-eHb"/>
                             <constraint firstItem="Ogd-n4-57i" firstAttribute="top" secondItem="He0-0b-fEc" secondAttribute="bottom" constant="8" id="SiG-3o-zEQ"/>
+                            <constraint firstItem="f3f-Dr-KnW" firstAttribute="leading" secondItem="Rgr-FR-beU" secondAttribute="leading" id="X9Y-1O-iDm"/>
                             <constraint firstItem="Ogd-n4-57i" firstAttribute="trailing" secondItem="Rgr-FR-beU" secondAttribute="trailing" id="bDz-zB-1MV"/>
-                            <constraint firstItem="UJh-2E-zbF" firstAttribute="trailing" secondItem="Rgr-FR-beU" secondAttribute="centerX" constant="-4" id="dn7-zF-3Fn"/>
                             <constraint firstItem="He0-0b-fEc" firstAttribute="top" secondItem="QfY-vg-Ocb" secondAttribute="bottom" constant="8" id="f1K-AL-qPs"/>
-                            <constraint firstItem="wFt-Bw-s2w" firstAttribute="top" secondItem="Ogd-n4-57i" secondAttribute="bottom" constant="8" id="i7D-Gz-lGC"/>
-                            <constraint firstItem="wFt-Bw-s2w" firstAttribute="leading" secondItem="Rgr-FR-beU" secondAttribute="centerX" constant="4" id="o1L-Cq-3xa"/>
-                            <constraint firstItem="UJh-2E-zbF" firstAttribute="top" secondItem="Ogd-n4-57i" secondAttribute="bottom" constant="8" id="oFU-k9-xil"/>
                             <constraint firstItem="He0-0b-fEc" firstAttribute="centerX" secondItem="Rgr-FR-beU" secondAttribute="centerX" id="ruW-hh-yG4"/>
-                            <constraint firstItem="oLy-mD-vnd" firstAttribute="top" secondItem="wFt-Bw-s2w" secondAttribute="bottom" constant="8" id="y4g-Gg-0dN"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Style" id="7D5-cv-5au"/>
+                    <navigationItem key="navigationItem" title="流行參考" id="7D5-cv-5au"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="CollectionView" destination="oLy-mD-vnd" id="P4y-TI-8a3"/>
@@ -170,11 +164,11 @@
             </objects>
             <point key="canvasLocation" x="1877.5999999999999" y="6.746626686656672"/>
         </scene>
-        <!--Style-->
+        <!--流行參考-->
         <scene sceneID="KjA-gq-q63">
             <objects>
                 <navigationController storyboardIdentifier="navstyle" automaticallyAdjustsScrollViewInsets="NO" id="CgS-0t-YeV" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Style" id="Qw5-HR-ukz"/>
+                    <tabBarItem key="tabBarItem" title="流行參考" image="流行參考" id="Qw5-HR-ukz"/>
                     <toolbarItems/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="m2B-Xs-drI">
@@ -193,5 +187,6 @@
     </scenes>
     <resources>
         <image name="image3" width="720" height="720"/>
+        <image name="流行參考" width="20" height="20"/>
     </resources>
 </document>

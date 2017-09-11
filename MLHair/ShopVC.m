@@ -108,19 +108,21 @@ numberOfRowsInSection:(NSInteger)section {
         return nil;
     }
     NSString *identifier = annotation.subtitle;
-    MKPinAnnotationView *result = (MKPinAnnotationView*)[mapView dequeueReusableAnnotationViewWithIdentifier:identifier];
-    //    MKAnnotationView *result = [mapView dequeueReusableAnnotationViewWithIdentifier:identifier];
+//    MKPinAnnotationView *result = (MKPinAnnotationView*)[mapView dequeueReusableAnnotationViewWithIdentifier:identifier];
+        MKAnnotationView *result = [mapView dequeueReusableAnnotationViewWithIdentifier:identifier];
     if(result == nil){
-        result = [[MKPinAnnotationView alloc]initWithAnnotation:annotation
-                                                reuseIdentifier:identifier];
-        //        result = [[MKAnnotationView alloc]initWithAnnotation:annotation reuseIdentifier:identifier];
+//        result = [[MKPinAnnotationView alloc]initWithAnnotation:annotation
+//                                                reuseIdentifier:identifier];
+                result = [[MKAnnotationView alloc]initWithAnnotation:annotation reuseIdentifier:identifier];
     }else{
         result.annotation = annotation;
     }
     result.canShowCallout = true;
+    UIImage *image = [UIImage imageNamed:@"圖釘.png"];
+    result.image = image;
     
-    //        result.pinColor = MKPinAnnotationColorGreen;
-    //        result.pinTintColor = [UIColor brownColor];
+//            result.pinColor = MKPinAnnotationColorGreen;
+//            result.pinTintColor = [UIColor brownColor];
     
     UIButton *btnPhone = [UIButton buttonWithType:UIButtonTypeSystem];
     [btnPhone setTitle:@"打電話" forState:UIControlStateNormal];

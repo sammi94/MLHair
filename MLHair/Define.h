@@ -37,6 +37,7 @@
 #define DesignerLine @"designerLine"
 
 // Style
+#define Gender @"gender"
 #define PhotoURL NSLocalizedString(@"photoURL", @"photoURL")
 #define PhotoDescription @"photoDescription"
 #define ModelAuthority @"modelAuthority"

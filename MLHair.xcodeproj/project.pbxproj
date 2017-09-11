@@ -30,6 +30,9 @@
 		45834EAD1F644FF900B9B28A /* HotCVCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 45834EAC1F644FF900B9B28A /* HotCVCell.m */; };
 		45834EB31F65309E00B9B28A /* SignInVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 45834EB21F65309E00B9B28A /* SignInVC.m */; };
 		45834EB61F65398300B9B28A /* SignIn.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 45834EB41F65398300B9B28A /* SignIn.storyboard */; };
+		45834EB91F653A4A00B9B28A /* SignUpVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 45834EB81F653A4A00B9B28A /* SignUpVC.m */; };
+		45834EBC1F6542DC00B9B28A /* SignUp.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 45834EBA1F6542DC00B9B28A /* SignUp.storyboard */; };
+		45834EBF1F661BF700B9B28A /* NewsTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 45834EBE1F661BF700B9B28A /* NewsTVC.m */; };
 		A4AC973C1F25AFDA002A376B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A4AC973B1F25AFDA002A376B /* main.m */; };
 		A4AC973F1F25AFDA002A376B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A4AC973E1F25AFDA002A376B /* AppDelegate.m */; };
 		A4AC97421F25AFDA002A376B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A4AC97411F25AFDA002A376B /* ViewController.m */; };
@@ -37,7 +40,6 @@
 		A4AC97471F25AFDA002A376B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A4AC97461F25AFDA002A376B /* Assets.xcassets */; };
 		A4AC974A1F25AFDA002A376B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A4AC97481F25AFDA002A376B /* LaunchScreen.storyboard */; };
 		A4AC97521F25D57C002A376B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A4AC97511F25D57C002A376B /* GoogleService-Info.plist */; };
-		A4AC97F71F40F2C0002A376B /* MasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A4AC97EF1F40F2C0002A376B /* MasterViewController.m */; };
 		A4AC97F81F40F2C0002A376B /* News.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A4AC97F01F40F2C0002A376B /* News.storyboard */; };
 		A4AC97F91F40F2C0002A376B /* NewsItem.m in Sources */ = {isa = PBXBuildFile; fileRef = A4AC97F21F40F2C0002A376B /* NewsItem.m */; };
 		A4AC97FA1F40F2C0002A376B /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = A4AC97F41F40F2C0002A376B /* Reachability.m */; };
@@ -94,6 +96,11 @@
 		45834EB11F65309E00B9B28A /* SignInVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignInVC.h; sourceTree = "<group>"; };
 		45834EB21F65309E00B9B28A /* SignInVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignInVC.m; sourceTree = "<group>"; };
 		45834EB51F65398300B9B28A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/SignIn.storyboard; sourceTree = "<group>"; };
+		45834EB71F653A4A00B9B28A /* SignUpVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignUpVC.h; sourceTree = "<group>"; };
+		45834EB81F653A4A00B9B28A /* SignUpVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignUpVC.m; sourceTree = "<group>"; };
+		45834EBB1F6542DC00B9B28A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/SignUp.storyboard; sourceTree = "<group>"; };
+		45834EBD1F661BF700B9B28A /* NewsTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewsTVC.h; sourceTree = "<group>"; };
+		45834EBE1F661BF700B9B28A /* NewsTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsTVC.m; sourceTree = "<group>"; };
 		4A606BEE648606EF106F4E30 /* Pods-MLHair.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MLHair.release.xcconfig"; path = "Pods/Target Support Files/Pods-MLHair/Pods-MLHair.release.xcconfig"; sourceTree = "<group>"; };
 		72710AD18279D973399A25D9 /* Pods-MLHair.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MLHair.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MLHair/Pods-MLHair.debug.xcconfig"; sourceTree = "<group>"; };
 		8B6D47F66E92AF32F2CFFE40 /* libPods-MLHair.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MLHair.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -110,8 +117,6 @@
 		A4AC97511F25D57C002A376B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		A4AC97C11F383A70002A376B /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		A4AC97C31F383A78002A376B /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
-		A4AC97EE1F40F2C0002A376B /* MasterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MasterViewController.h; sourceTree = "<group>"; };
-		A4AC97EF1F40F2C0002A376B /* MasterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MasterViewController.m; sourceTree = "<group>"; };
 		A4AC97F01F40F2C0002A376B /* News.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = News.storyboard; sourceTree = "<group>"; };
 		A4AC97F11F40F2C0002A376B /* NewsItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewsItem.h; sourceTree = "<group>"; };
 		A4AC97F21F40F2C0002A376B /* NewsItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsItem.m; sourceTree = "<group>"; };
@@ -210,13 +215,13 @@
 		A4AC97531F25D623002A376B /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				45834E7A1F6172D300B9B28A /* Define.h */,
 				45834E901F62A75300B9B28A /* Location.h */,
 				45834E911F62A75300B9B28A /* Location.m */,
 				45834E8A1F62849D00B9B28A /* AdvanceImageView.h */,
 				45834E8B1F62849D00B9B28A /* AdvanceImageView.m */,
 				45834E871F627C8700B9B28A /* Http.h */,
 				45834E881F627C8700B9B28A /* Http.m */,
-				45834E7A1F6172D300B9B28A /* Define.h */,
 				45834E691F5D837700B9B28A /* MLHairDatabase.h */,
 				45834E6A1F5D837700B9B28A /* MLHairDatabase.m */,
 				45834E7E1F62509D00B9B28A /* MemberVO.h */,
@@ -242,11 +247,11 @@
 		A4AC98001F413E9D002A376B /* News */ = {
 			isa = PBXGroup;
 			children = (
-				A4AC97EE1F40F2C0002A376B /* MasterViewController.h */,
-				A4AC97EF1F40F2C0002A376B /* MasterViewController.m */,
+				A4AC97F01F40F2C0002A376B /* News.storyboard */,
+				45834EBD1F661BF700B9B28A /* NewsTVC.h */,
+				45834EBE1F661BF700B9B28A /* NewsTVC.m */,
 				A4AC97FD1F40F691002A376B /* DetailViewController.h */,
 				A4AC97FE1F40F691002A376B /* DetailViewController.m */,
-				A4AC97F01F40F2C0002A376B /* News.storyboard */,
 				A4AC97F11F40F2C0002A376B /* NewsItem.h */,
 				A4AC97F21F40F2C0002A376B /* NewsItem.m */,
 				A4AC97F31F40F2C0002A376B /* Reachability.h */,
@@ -321,6 +326,9 @@
 				45834EB41F65398300B9B28A /* SignIn.storyboard */,
 				45834EB11F65309E00B9B28A /* SignInVC.h */,
 				45834EB21F65309E00B9B28A /* SignInVC.m */,
+				45834EBA1F6542DC00B9B28A /* SignUp.storyboard */,
+				45834EB71F653A4A00B9B28A /* SignUpVC.h */,
+				45834EB81F653A4A00B9B28A /* SignUpVC.m */,
 				45834E711F60266D00B9B28A /* my.storyboard */,
 				45834E741F602A5F00B9B28A /* AvatorTViCell.h */,
 				45834E751F602A5F00B9B28A /* AvatorTViCell.m */,
@@ -407,6 +415,7 @@
 			files = (
 				45834E7D1F6175DC00B9B28A /* Style.storyboard in Resources */,
 				A4AC974A1F25AFDA002A376B /* LaunchScreen.storyboard in Resources */,
+				45834EBC1F6542DC00B9B28A /* SignUp.storyboard in Resources */,
 				A4AC97521F25D57C002A376B /* GoogleService-Info.plist in Resources */,
 				45834E731F60266D00B9B28A /* my.storyboard in Resources */,
 				45834E701F5D87B300B9B28A /* Booking.storyboard in Resources */,
@@ -485,15 +494,16 @@
 				45834E861F62683E00B9B28A /* DesignerVO.m in Sources */,
 				A4AC973F1F25AFDA002A376B /* AppDelegate.m in Sources */,
 				A4AC97FF1F40F691002A376B /* DetailViewController.m in Sources */,
+				45834EB91F653A4A00B9B28A /* SignUpVC.m in Sources */,
 				A4F7415B1F55AE0200949287 /* MyTableViewCell.m in Sources */,
 				45834EA71F64233200B9B28A /* MLAnnotion.m in Sources */,
+				45834EBF1F661BF700B9B28A /* NewsTVC.m in Sources */,
 				45834E921F62A75300B9B28A /* Location.m in Sources */,
 				45834E791F61631300B9B28A /* StyleVO.m in Sources */,
 				45834E6B1F5D837700B9B28A /* MLHairDatabase.m in Sources */,
 				45834EAD1F644FF900B9B28A /* HotCVCell.m in Sources */,
 				45834E8C1F62849D00B9B28A /* AdvanceImageView.m in Sources */,
 				A4F741581F55ACF800949287 /* MyTableViewController.m in Sources */,
-				A4AC97F71F40F2C0002A376B /* MasterViewController.m in Sources */,
 				A4AC97FA1F40F2C0002A376B /* Reachability.m in Sources */,
 				A4AC97F91F40F2C0002A376B /* NewsItem.m in Sources */,
 				45834E891F627C8700B9B28A /* Http.m in Sources */,
@@ -540,6 +550,14 @@
 				45834EB51F65398300B9B28A /* Base */,
 			);
 			name = SignIn.storyboard;
+			sourceTree = "<group>";
+		};
+		45834EBA1F6542DC00B9B28A /* SignUp.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				45834EBB1F6542DC00B9B28A /* Base */,
+			);
+			name = SignUp.storyboard;
 			sourceTree = "<group>";
 		};
 		A4AC97431F25AFDA002A376B /* Main.storyboard */ = {
