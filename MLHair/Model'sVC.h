@@ -7,12 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "StyleVO.h"
 
 
 @interface Model_sVC : UIViewController
 
-
-
-
+@property (nonatomic,strong) StyleVO *data;
 
 @end

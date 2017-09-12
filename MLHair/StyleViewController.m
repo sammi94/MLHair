@@ -13,8 +13,6 @@
 #import "Model'sVC.h"
 #import <AFNetworking.h>
 
-
-
 @interface StyleViewController ()<UICollectionViewDataSource,UICollectionViewDelegate,UICollectionViewDelegateFlowLayout>
 {
     HotDesignerCVD *hotDesignerCVD;
@@ -25,9 +23,6 @@
 @property (strong, nonatomic) IBOutlet UICollectionView *CollectionView;
 @property (weak, nonatomic) IBOutlet UICollectionView *hotCV;
 
-
-@property NSMutableArray <NSString*>*image;
-@property NSMutableArray <NSString*>*label;
 
 @end
 
@@ -58,26 +53,7 @@
     //设置section的边距
     //layout.sectionInset=UIEdgeInsetsMake(5, 5, 0,0 );
     
-    _image = [NSMutableArray new];
-    _label = [NSMutableArray new];
     
-    for (int i = 0; i < 30; i++) {
-        switch (i % 3) {
-            case 0:
-                [_image addObject:@"image1"];
-                break;
-            case 1:
-                [_image addObject:@"image2"];
-                break;
-            case 2:
-                [_image addObject:@"image3"];
-                break;
-                
-            default:
-                break;
-        }
-        [_label addObject:[NSString stringWithFormat:@"%d號 造型",i+1]];
-    }
     
     
 }
@@ -121,6 +97,7 @@ didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
 
     Model_sVC *model = [self.storyboard
                         instantiateViewControllerWithIdentifier:@"Model_sVC"];
+    model.data = hotStyleList[indexPath.row];
     [self.navigationController
      pushViewController:model
      animated:true];
@@ -157,11 +134,39 @@ didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
     
 }
 
+- (IBAction)chooseSex:(id)sender {
+    if ([sender selectedSegmentIndex] == 0) {
+        [self setGirlStyle];
+    } else {
+        [self setBoyStyle];
+    }
+    [_CollectionView reloadData];
+}
 
 
+-(void)setBoyStyle {
+    NSMutableArray <StyleVO*>*list = [NSMutableArray new];
+    for (StyleVO *style in hotStyleList) {
+        if (style.gender == 1) {
+            [list addObject:style];
+        }
+    }
+    hotStyleList = list;
+}
 
+-(void)setGirlStyle {
+    NSMutableArray <StyleVO*>*list = [NSMutableArray new];
+    for (StyleVO *style in hotStyleList) {
+        if (style.gender == 0) {
+            [list addObject:style];
+        }
+    }
+    hotStyleList = list;
+}
 
-
+-(void)shotArray {
+    
+}
 
 
 

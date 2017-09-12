@@ -38,6 +38,7 @@
 		45834ECD1F66D06300B9B28A /* WorksTVCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 45834ECC1F66D06300B9B28A /* WorksTVCell.m */; };
 		45834ED01F67312200B9B28A /* HotDesignerCVD.m in Sources */ = {isa = PBXBuildFile; fileRef = 45834ECF1F67312200B9B28A /* HotDesignerCVD.m */; };
 		45834ED31F6743F500B9B28A /* Model.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 45834ED11F6743F500B9B28A /* Model.storyboard */; };
+		45834ED61F67A56E00B9B28A /* ModelCVCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 45834ED51F67A56E00B9B28A /* ModelCVCell.m */; };
 		A4AC973C1F25AFDA002A376B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A4AC973B1F25AFDA002A376B /* main.m */; };
 		A4AC973F1F25AFDA002A376B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A4AC973E1F25AFDA002A376B /* AppDelegate.m */; };
 		A4AC97421F25AFDA002A376B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A4AC97411F25AFDA002A376B /* ViewController.m */; };
@@ -114,6 +115,8 @@
 		45834ECE1F67312200B9B28A /* HotDesignerCVD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HotDesignerCVD.h; sourceTree = "<group>"; };
 		45834ECF1F67312200B9B28A /* HotDesignerCVD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HotDesignerCVD.m; sourceTree = "<group>"; };
 		45834ED21F6743F500B9B28A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Model.storyboard; sourceTree = "<group>"; };
+		45834ED41F67A56E00B9B28A /* ModelCVCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ModelCVCell.h; sourceTree = "<group>"; };
+		45834ED51F67A56E00B9B28A /* ModelCVCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ModelCVCell.m; sourceTree = "<group>"; };
 		4A606BEE648606EF106F4E30 /* Pods-MLHair.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MLHair.release.xcconfig"; path = "Pods/Target Support Files/Pods-MLHair/Pods-MLHair.release.xcconfig"; sourceTree = "<group>"; };
 		72710AD18279D973399A25D9 /* Pods-MLHair.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MLHair.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MLHair/Pods-MLHair.debug.xcconfig"; sourceTree = "<group>"; };
 		8B6D47F66E92AF32F2CFFE40 /* libPods-MLHair.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MLHair.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -337,6 +340,8 @@
 				45834ED11F6743F500B9B28A /* Model.storyboard */,
 				45834EC01F66746500B9B28A /* Model'sVC.h */,
 				45834EC11F66746500B9B28A /* Model'sVC.m */,
+				45834ED41F67A56E00B9B28A /* ModelCVCell.h */,
+				45834ED51F67A56E00B9B28A /* ModelCVCell.m */,
 			);
 			name = Style;
 			sourceTree = "<group>";
@@ -514,6 +519,7 @@
 				A4F7414F1F468A5100949287 /* StyleViewCell.m in Sources */,
 				45834E6E1F5D875600B9B28A /* BookingVC.m in Sources */,
 				45834EA11F63C1CD00B9B28A /* ShopTVCell.m in Sources */,
+				45834ED61F67A56E00B9B28A /* ModelCVCell.m in Sources */,
 				45834E861F62683E00B9B28A /* DesignerVO.m in Sources */,
 				45834ED01F67312200B9B28A /* HotDesignerCVD.m in Sources */,
 				A4AC973F1F25AFDA002A376B /* AppDelegate.m in Sources */,

@@ -41,6 +41,7 @@
 // Style
 #define Gender @"gender"
 #define PhotoURL NSLocalizedString(@"photoURL", @"photoURL")
+#define PhotoList @"photoList"
 #define PhotoDescription @"photoDescription"
 #define ModelAuthority @"modelAuthority"
 #define ModelId @"modelId"

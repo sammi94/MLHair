@@ -7,14 +7,16 @@
 //
 
 #import "Model'sVC.h"
+#import "AdvanceImageView.h"
+#import "ModelCVCell.h"
 
-@interface Model_sVC ()<UICollectionViewDelegate,UICollectionViewDataSource>
+@interface Model_sVC ()<UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout>
 {
     
 }
 @property (weak, nonatomic) IBOutlet UICollectionView *collection;
-
-
+@property (weak, nonatomic) IBOutlet UILabel *designer;
+@property (weak, nonatomic) IBOutlet AdvanceImageView *photo;
 
 @end
 
@@ -25,14 +27,24 @@
     
     _collection.delegate = self;
     _collection.dataSource = self;
+    NSLog(@"\n我遇到什麼%@",_data.photoList);
+    NSURL *url = [NSURL URLWithString:_data.photoList[0]];
+    [_photo loadImageWithURL:url];
+    _designer.text = _data.designerName;
     
+}
+
+- (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
+    return CGSizeMake(self.view.frame.size.height/7, self.view.frame.size.height/7);
 }
 
 -(UICollectionViewCell *)collectionView:(UICollectionView *)collectionView
                  cellForItemAtIndexPath:(NSIndexPath *)indexPath {
-    UICollectionViewCell *cell = [collectionView
-                                  dequeueReusableCellWithReuseIdentifier:@"cell"
+    ModelCVCell *cell = [collectionView
+                                  dequeueReusableCellWithReuseIdentifier:@"ModelCVCell"
                                   forIndexPath:indexPath];
+    NSURL *url = [NSURL URLWithString:_data.photoList[indexPath.row]];
+    [cell.photo loadImageWithURL:url];
     return cell;
     
 }
@@ -43,13 +55,20 @@
 
 -(NSInteger)collectionView:(UICollectionView *)collectionView
     numberOfItemsInSection:(NSInteger)section {
-    return 30;
+    return _data.photoList.count;
 }
 
 - (IBAction)shard:(id)sender {
 }
 
 - (IBAction)like:(id)sender {
+}
+
+-(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
+    
+    NSURL *url = [NSURL URLWithString:_data.photoList[indexPath.row]];
+    [_photo loadImageWithURL:url];
+    
 }
 
 - (void)didReceiveMemoryWarning {

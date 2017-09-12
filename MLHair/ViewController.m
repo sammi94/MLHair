@@ -130,6 +130,7 @@
             [designer setObject:[self fackGirlImg] forKey:DesignerPhotoURL];
             [designer setObject:[self fackGirlName] forKey:DesignerName];
         } else {
+            
             [designer setObject:[self fackBoyImg] forKey:DesignerPhotoURL];
             [designer setObject:[self fackBoyName] forKey:DesignerName];
         }
@@ -148,13 +149,22 @@
         NSMutableDictionary *works = [NSMutableDictionary new];
         int sex = arc4random_uniform(2);
         [works setObject:@(sex) forKey:Gender];
+        NSMutableArray <NSString*>*photoList = [NSMutableArray new];
+        int photoNumber = arc4random_uniform(100) + 1;
         if (sex == 0) {
+            for (int i = 0; i < photoNumber; i++) {
+                [photoList addObject:[self fackBoyImg]];
+            }
             [works setObject:[self fackGirlImg] forKey:PhotoURL];
             [works setObject:[self fackGirlName] forKey:PhotoDescription];
         } else {
+            for (int i = 0; i < photoNumber; i++) {
+                [photoList addObject:[self fackGirlImg]];
+            }
             [works setObject:[self fackBoyImg] forKey:PhotoURL];
             [works setObject:[self fackBoyName] forKey:PhotoDescription];
         }
+        [works setObject:photoList forKey:PhotoList];
         [works setObject:@(arc4random_uniform(10000)) forKey:ModelId];
         [works setObject:@(1) forKey:ModelAuthority];
         [works setObject:@(designerId) forKey:DesignerId];
@@ -167,7 +177,7 @@
 
 -(NSString*)fackBoyName {
     NSString *name;
-    int i = arc4random_uniform(100);
+    int i = arc4random_uniform(3);
     switch (i) {
         case 0:
             name = @"山下智久";
@@ -184,7 +194,7 @@
 
 -(NSString*)fackBoyImg {
     NSString *img;
-    int i = arc4random_uniform(100);
+    int i = arc4random_uniform(2);
     switch (i) {
         case 0:
             img = @"https://cdn2-mf-techbang.pixfs.net/system/images/57274/medium/5c1b06608a94101a057c75aae42e527e.jpg?1491895286";
@@ -199,7 +209,7 @@
 
 -(NSString*)fackGirlName {
     NSString *name;
-    int i = arc4random_uniform(2);
+    int i = arc4random_uniform(3);
     switch (i) {
         case 0:
             name = @"田馥甄";

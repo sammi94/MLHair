@@ -134,6 +134,9 @@
                                     <segment title="男生"/>
                                 </segments>
                                 <color key="tintColor" red="0.39471524953842163" green="0.66152185201644897" blue="0.76868635416030884" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <action selector="chooseSex:" destination="476-ZM-W7m" eventType="valueChanged" id="UJF-rJ-U5W"/>
+                                </connections>
                             </segmentedControl>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>

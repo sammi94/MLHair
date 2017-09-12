@@ -27,6 +27,7 @@
     NSMutableArray <StyleVO*>*scapegoat = [NSMutableArray new];
     for (NSDictionary *styleData in worksList) {
         StyleVO *style = [[StyleVO alloc] initWithData:styleData];
+        style.designerName = _name;
         [scapegoat addObject:style];
     }
     

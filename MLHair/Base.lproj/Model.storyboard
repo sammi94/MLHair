@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Model sVC-->
+        <scene sceneID="3ub-Bt-hEZ">
+            <objects>
+                <viewController storyboardIdentifier="Model_sVC" automaticallyAdjustsScrollViewInsets="NO" id="YRe-xf-btQ" customClass="Model_sVC" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="v7K-jG-BBv"/>
+                        <viewControllerLayoutGuide type="bottom" id="cjG-AH-8HA"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="2bT-TT-YXg">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="QRi-IS-ddm">
+                                <rect key="frame" x="16" y="564.5" width="343" height="102.5"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="U9a-fZ-gul">
+                                    <size key="itemSize" width="132" height="126"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ModelCVCell" id="rj8-DS-Q3h" customClass="ModelCVCell">
+                                        <rect key="frame" x="0.0" y="-12" width="132" height="126"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="132" height="126"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="S2I-9f-csj" customClass="AdvanceImageView">
+                                                    <rect key="frame" x="0.0" y="0.0" width="132" height="126"/>
+                                                </imageView>
+                                            </subviews>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstItem="S2I-9f-csj" firstAttribute="top" secondItem="rj8-DS-Q3h" secondAttribute="top" id="10z-en-fFf"/>
+                                            <constraint firstItem="S2I-9f-csj" firstAttribute="leading" secondItem="rj8-DS-Q3h" secondAttribute="leading" id="AUh-MK-zoB"/>
+                                            <constraint firstAttribute="bottom" secondItem="S2I-9f-csj" secondAttribute="bottom" id="MbY-MM-dUM"/>
+                                            <constraint firstAttribute="trailing" secondItem="S2I-9f-csj" secondAttribute="trailing" id="Pd2-BS-GcL"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="photo" destination="S2I-9f-csj" id="EvQ-FY-eNR"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tfQ-Iz-Fqv">
+                                <rect key="frame" x="286" y="31.5" width="32" height="29"/>
+                                <state key="normal" image="添加喜愛"/>
+                                <connections>
+                                    <action selector="like:" destination="YRe-xf-btQ" eventType="touchUpInside" id="bV4-UF-cxS"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ak9-JB-fje">
+                                <rect key="frame" x="326" y="28" width="33" height="36"/>
+                                <state key="normal" image="分享"/>
+                                <connections>
+                                    <action selector="shard:" destination="YRe-xf-btQ" eventType="touchUpInside" id="NPh-Xd-k7E"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dug-BP-n8g">
+                                <rect key="frame" x="16" y="78" width="343" height="444.5"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Isn-Ub-btc" customClass="AdvanceImageView">
+                                        <rect key="frame" x="8" y="0.0" width="327" height="444.5"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="設計師：淑惠" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nP8-Bg-Jpk">
+                                        <rect key="frame" x="8" y="-29" width="104" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="Isn-Ub-btc" firstAttribute="centerY" secondItem="dug-BP-n8g" secondAttribute="centerY" id="7Ms-51-CRW"/>
+                                    <constraint firstItem="nP8-Bg-Jpk" firstAttribute="leading" secondItem="Isn-Ub-btc" secondAttribute="leading" id="7Q5-xT-HyY"/>
+                                    <constraint firstItem="Isn-Ub-btc" firstAttribute="leading" secondItem="dug-BP-n8g" secondAttribute="leadingMargin" id="H0f-SK-X8J"/>
+                                    <constraint firstItem="Isn-Ub-btc" firstAttribute="height" secondItem="dug-BP-n8g" secondAttribute="height" id="Prk-Mp-u9B"/>
+                                    <constraint firstAttribute="trailingMargin" secondItem="Isn-Ub-btc" secondAttribute="trailing" id="a4k-u3-dpp"/>
+                                    <constraint firstItem="Isn-Ub-btc" firstAttribute="top" secondItem="nP8-Bg-Jpk" secondAttribute="bottom" constant="8" id="xtm-oa-7gy"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="tfQ-Iz-Fqv" firstAttribute="centerY" secondItem="Ak9-JB-fje" secondAttribute="centerY" id="0Pu-Xx-asE"/>
+                            <constraint firstItem="dug-BP-n8g" firstAttribute="centerY" secondItem="2bT-TT-YXg" secondAttribute="centerY" multiplier="9/10" id="2Gy-It-1yI"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="QRi-IS-ddm" secondAttribute="trailing" id="2L8-AH-kX8"/>
+                            <constraint firstItem="QRi-IS-ddm" firstAttribute="height" secondItem="2bT-TT-YXg" secondAttribute="height" multiplier="1/6.5" id="4S5-gp-GDu"/>
+                            <constraint firstItem="dug-BP-n8g" firstAttribute="leading" secondItem="2bT-TT-YXg" secondAttribute="leadingMargin" id="5PJ-NC-CFX"/>
+                            <constraint firstItem="cjG-AH-8HA" firstAttribute="top" secondItem="QRi-IS-ddm" secondAttribute="bottom" id="6i2-Lt-Qxx"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="dug-BP-n8g" secondAttribute="trailing" id="9Ae-gJ-kOG"/>
+                            <constraint firstItem="QRi-IS-ddm" firstAttribute="leading" secondItem="2bT-TT-YXg" secondAttribute="leadingMargin" id="S0f-zp-gDb"/>
+                            <constraint firstItem="dug-BP-n8g" firstAttribute="height" secondItem="2bT-TT-YXg" secondAttribute="height" multiplier="4/6" id="Zf3-tR-LXV"/>
+                            <constraint firstItem="Ak9-JB-fje" firstAttribute="leading" secondItem="tfQ-Iz-Fqv" secondAttribute="trailing" constant="8" id="ht6-r8-BQI"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Ak9-JB-fje" secondAttribute="trailing" id="leK-GB-s8n"/>
+                            <constraint firstItem="Ak9-JB-fje" firstAttribute="top" secondItem="v7K-jG-BBv" secondAttribute="bottom" constant="8" id="pVP-oV-57m"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="collection" destination="QRi-IS-ddm" id="pDD-nB-p3L"/>
+                        <outlet property="designer" destination="nP8-Bg-Jpk" id="HTx-v0-4bu"/>
+                        <outlet property="photo" destination="Isn-Ub-btc" id="zf2-jL-H52"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dT6-xx-KUE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1877.5999999999999" y="-654.42278860569718"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="分享" width="33" height="36"/>
+        <image name="添加喜愛" width="32" height="29"/>
+    </resources>
+</document>
