@@ -135,6 +135,7 @@ didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
 }
 
 - (IBAction)chooseSex:(id)sender {
+    [self dataProcessing];
     if ([sender selectedSegmentIndex] == 0) {
         [self setGirlStyle];
     } else {
@@ -145,6 +146,7 @@ didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
 
 
 -(void)setBoyStyle {
+    [self dataProcessing];
     NSMutableArray <StyleVO*>*list = [NSMutableArray new];
     for (StyleVO *style in hotStyleList) {
         if (style.gender == 1) {

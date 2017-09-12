@@ -64,7 +64,7 @@
                                         </segments>
                                         <color key="tintColor" red="0.39471524953842163" green="0.66152185201644897" blue="0.76868635416030884" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </segmentedControl>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo" translatesAutoresizingMaskIntoConstraints="NO" id="Bfv-Jn-TJT">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo_1" translatesAutoresizingMaskIntoConstraints="NO" id="Bfv-Jn-TJT">
                                         <rect key="frame" x="126" y="84.5" width="112" height="113"/>
                                     </imageView>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="X5c-y3-BGl">
@@ -149,7 +149,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Logo" width="112" height="113"/>
+        <image name="Logo_1" width="112" height="113"/>
         <image name="SignIn" width="264" height="36"/>
         <image name="登入刷毛" width="367" height="90"/>
     </resources>

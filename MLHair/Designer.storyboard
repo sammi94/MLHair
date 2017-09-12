@@ -24,7 +24,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="QE8-Lz-aRt">
-                                <rect key="frame" x="16" y="92" width="343" height="526"/>
+                                <rect key="frame" x="16" y="138" width="343" height="480"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="15" minimumInteritemSpacing="5" id="IvW-k3-wCo">
                                     <size key="itemSize" width="193" height="185"/>
@@ -75,16 +75,70 @@
                                 </segments>
                                 <color key="tintColor" red="0.39471524949999998" green="0.66152185200000002" blue="0.76868635419999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </segmentedControl>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pN5-vO-ZcR">
+                                <rect key="frame" x="16" y="100" width="343" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZEo-tu-UBN">
+                                <rect key="frame" x="16" y="92" width="343" height="526"/>
+                                <subviews>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="日期" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9YK-tU-scY">
+                                        <rect key="frame" x="39.5" y="104" width="264" height="36"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="時間" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XQd-iJ-Zaw">
+                                        <rect key="frame" x="39.5" y="168" width="264" height="36"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="店家" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pOJ-ET-nkG">
+                                        <rect key="frame" x="39.5" y="245" width="264" height="36"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="設計師" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Oc0-cn-iV3">
+                                        <rect key="frame" x="39.5" y="337" width="264" height="36"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleAspectFit" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T4d-4E-jeQ">
+                                        <rect key="frame" x="39.5" y="448" width="264" height="36"/>
+                                        <state key="normal" image="確定送出"/>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="T4d-4E-jeQ" firstAttribute="centerX" secondItem="ZEo-tu-UBN" secondAttribute="centerX" id="bNi-UA-X5V"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="GAS-SG-BK2" firstAttribute="top" secondItem="QE8-Lz-aRt" secondAttribute="bottom" id="2nq-Yv-1sb"/>
-                            <constraint firstItem="QE8-Lz-aRt" firstAttribute="top" secondItem="rOl-9a-653" secondAttribute="bottom" id="D25-xM-OLd"/>
                             <constraint firstAttribute="trailingMargin" secondItem="QE8-Lz-aRt" secondAttribute="trailing" id="Eac-hw-Ya4"/>
                             <constraint firstItem="QE8-Lz-aRt" firstAttribute="leading" secondItem="ucp-gc-g1R" secondAttribute="leadingMargin" id="FhY-ti-xKD"/>
+                            <constraint firstItem="ZEo-tu-UBN" firstAttribute="top" secondItem="rOl-9a-653" secondAttribute="bottom" id="S50-Ri-0nD"/>
+                            <constraint firstItem="pN5-vO-ZcR" firstAttribute="leading" secondItem="ucp-gc-g1R" secondAttribute="leadingMargin" id="Wxc-NM-D2M"/>
                             <constraint firstAttribute="trailing" secondItem="rOl-9a-653" secondAttribute="trailing" id="XRL-B9-x9e"/>
                             <constraint firstItem="rOl-9a-653" firstAttribute="leading" secondItem="ucp-gc-g1R" secondAttribute="leading" id="bZA-aV-Ixq"/>
+                            <constraint firstItem="ZEo-tu-UBN" firstAttribute="trailing" secondItem="ucp-gc-g1R" secondAttribute="trailingMargin" id="dPU-6Q-Ln5"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="pN5-vO-ZcR" secondAttribute="trailing" id="fpC-JY-OiH"/>
                             <constraint firstItem="rOl-9a-653" firstAttribute="top" secondItem="Asp-cS-fHr" secondAttribute="bottom" id="gFm-uN-YT2"/>
+                            <constraint firstItem="pN5-vO-ZcR" firstAttribute="top" secondItem="rOl-9a-653" secondAttribute="bottom" constant="8" id="gbQ-MB-blC"/>
+                            <constraint firstItem="QE8-Lz-aRt" firstAttribute="top" secondItem="pN5-vO-ZcR" secondAttribute="bottom" constant="8" id="iI5-xB-xHb"/>
+                            <constraint firstItem="GAS-SG-BK2" firstAttribute="top" secondItem="ZEo-tu-UBN" secondAttribute="bottom" id="nCj-fe-sYe"/>
+                            <constraint firstItem="ZEo-tu-UBN" firstAttribute="leading" secondItem="ucp-gc-g1R" secondAttribute="leadingMargin" id="qW6-Dr-oMP"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="預約設計" id="bwA-Tn-XXu"/>
@@ -127,6 +181,7 @@
     </scenes>
     <resources>
         <image name="image2" width="300" height="168"/>
+        <image name="確定送出" width="264" height="36"/>
         <image name="預約設計" width="23" height="21"/>
     </resources>
 </document>
