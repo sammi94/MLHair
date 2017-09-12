@@ -17,6 +17,7 @@
 @property (nonatomic,assign) int modelAuthority;
 @property (nonatomic,assign) int designerId;
 @property (nonatomic,assign) int styleId;
+@property (nonatomic,assign) int collected;
 
 -(instancetype) initWithData:(NSDictionary*)data;
 

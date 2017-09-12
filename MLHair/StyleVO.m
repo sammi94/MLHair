@@ -20,6 +20,7 @@
     _modelAuthority = [data[ModelAuthority] intValue];
     _designerId = [data[DesignerId] intValue];
     _styleId = [data[StyleId] intValue];
+    _collected = [data[Collected] intValue];
     return self;
 }
 

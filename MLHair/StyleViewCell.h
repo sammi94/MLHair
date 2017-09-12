@@ -7,9 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "AdvanceImageView.h"
 
 @interface StyleViewCell : UICollectionViewCell
-@property (weak, nonatomic) IBOutlet UIImageView *imageCell;
+@property (weak, nonatomic) IBOutlet AdvanceImageView *imageCell;
 @property (weak, nonatomic) IBOutlet UILabel *labelCell;
 
 @end

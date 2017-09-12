@@ -7,10 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "DesignerVO.h"
 
 
 @interface BookingVC : UIViewController
 
-
+@property (nonatomic,strong) DesignerVO *data;
 
 @end

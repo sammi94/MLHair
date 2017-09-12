@@ -81,12 +81,17 @@
         [loadingView removeFromSuperview];
     }
     
-    CGRect loadingViewFrame = CGRectMake(0, 0, self.frame.size.width, self.frame.size.height);
+    
+    
     loadingView = [[UIActivityIndicatorView alloc]
                    initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhiteLarge];
     
     loadingView.color = [UIColor darkGrayColor];
-    loadingView.frame = loadingViewFrame;
+    dispatch_async(dispatch_get_main_queue(), ^{
+        CGRect loadingViewFrame = CGRectMake(0, 0, self.frame.size.width, self.frame.size.height);
+            loadingView.frame = loadingViewFrame;
+    });
+    
     loadingView.hidesWhenStopped = true;
     [self addSubview:loadingView];
 }

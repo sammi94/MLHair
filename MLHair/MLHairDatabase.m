@@ -16,7 +16,7 @@ MLHairDatabase *data = nil;
 +(instancetype)stand {
     if (data == nil) {
         data = [MLHairDatabase new];
-        data.designerList = [NSArray new];
+        data.shopList = [NSArray new];
         
     }
     return data;

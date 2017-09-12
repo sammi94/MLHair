@@ -31,6 +31,8 @@
 // s Designer
 #define DesignerId @"designerId"
 #define DesignerPhotoURL @"designerPhotoURL"
+#define DesignerFollowed @"designerFollowed"
+#define DesignerWorksList @"designreWorksList"
 #define DesignerName @"designerName"
 #define DesignerPhone @"designerPhone"
 #define DesignerFB @"designerFB"
@@ -44,6 +46,7 @@
 #define ModelId @"modelId"
 //designerId
 #define StyleId @"styleId"
+#define Collected @"collected"
 
 
 

@@ -118,7 +118,7 @@ numberOfRowsInSection:(NSInteger)section {
         result.annotation = annotation;
     }
     result.canShowCallout = true;
-    UIImage *image = [UIImage imageNamed:@"圖釘.png"];
+    UIImage *image = [UIImage imageNamed:@"剪刀圖釘.png"];
     result.image = image;
     
 //            result.pinColor = MKPinAnnotationColorGreen;

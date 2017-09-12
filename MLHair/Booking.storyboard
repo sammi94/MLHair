@@ -34,13 +34,13 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="image2" translatesAutoresizingMaskIntoConstraints="NO" id="GYI-hI-ggd">
                                 <rect key="frame" x="37" y="166.5" width="300" height="167"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xHR-p5-WbZ">
-                                <rect key="frame" x="242.5" y="30.5" width="31" height="30"/>
-                                <state key="normal" title="收藏"/>
+                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xHR-p5-WbZ">
+                                <rect key="frame" x="242" y="31.5" width="32" height="29"/>
+                                <state key="normal" image="添加喜愛"/>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KIX-tu-ybe">
-                                <rect key="frame" x="316.5" y="30.5" width="31" height="30"/>
-                                <state key="normal" title="分享"/>
+                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KIX-tu-ybe">
+                                <rect key="frame" x="317" y="27.5" width="33" height="36"/>
+                                <state key="normal" image="分享"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ohO-74-Zb0">
                                 <rect key="frame" x="172" y="362.5" width="31" height="30"/>
@@ -61,7 +61,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="contactAdd" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0ts-Pj-ML9">
-                                <rect key="frame" x="283.5" y="34.5" width="22" height="22"/>
+                                <rect key="frame" x="284" y="34.5" width="22" height="22"/>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="image1" translatesAutoresizingMaskIntoConstraints="NO" id="ymP-Zy-Pz9">
                                 <rect key="frame" x="37" y="420" width="66.5" height="67"/>
@@ -97,6 +97,11 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7z7-kY-dfx">
+                                <rect key="frame" x="292" y="362" width="31" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="作品"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -151,5 +156,7 @@
         <image name="image1" width="999" height="539"/>
         <image name="image2" width="300" height="168"/>
         <image name="image3" width="720" height="720"/>
+        <image name="分享" width="33" height="36"/>
+        <image name="添加喜愛" width="32" height="29"/>
     </resources>
 </document>

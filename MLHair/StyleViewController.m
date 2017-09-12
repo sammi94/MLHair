@@ -7,15 +7,20 @@
 //
 
 #import "StyleViewController.h"
+#import "MLHairDatabase.h"
 #import "StyleViewCell.h"
-#import "HotDelegate.h"
+#import "HotDesignerCVD.h"
+#import "Model'sVC.h"
 #import <AFNetworking.h>
 
 
 
 @interface StyleViewController ()<UICollectionViewDataSource,UICollectionViewDelegate,UICollectionViewDelegateFlowLayout>
 {
-    HotDelegate *hot;
+    HotDesignerCVD *hotDesignerCVD;
+    
+    NSArray <DesignerVO*>*hotDesignerList;
+    NSArray <StyleVO*>*hotStyleList;
 }
 @property (strong, nonatomic) IBOutlet UICollectionView *CollectionView;
 @property (weak, nonatomic) IBOutlet UICollectionView *hotCV;
@@ -31,23 +36,27 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    [self dataProcessing];
+    
     _CollectionView.delegate = self;
     _CollectionView.dataSource = self;
     self.automaticallyAdjustsScrollViewInsets = false;
     
-    hot = [HotDelegate new];
-    _hotCV.delegate = (id)hot;
-    _hotCV.dataSource = (id)hot;
+    hotDesignerCVD = [HotDesignerCVD new];
+    _hotCV.delegate = (id)hotDesignerCVD;
+    _hotCV.dataSource = (id)hotDesignerCVD;
+    hotDesignerCVD.VC = self;
+    hotDesignerCVD.designerList = hotDesignerList;
+    
+    
     UICollectionViewFlowLayout *layout = [UICollectionViewFlowLayout new];
     layout.scrollDirection = UICollectionViewScrollDirectionVertical;
-    
     //设置每一行的间距
     layout.minimumLineSpacing = 8;
-    
     //设置item的间距
     layout.minimumInteritemSpacing = 8;
     //设置section的边距
-//    layout.sectionInset=UIEdgeInsetsMake(5, 5, 0,0 );
+    //layout.sectionInset=UIEdgeInsetsMake(5, 5, 0,0 );
     
     _image = [NSMutableArray new];
     _label = [NSMutableArray new];
@@ -82,23 +91,12 @@
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section{
-    return _image.count;
+    return hotStyleList.count;
 }
 
-// The cell that is returned must be retrieved from a call to -dequeueReusableCellWithReuseIdentifier:forIndexPath:
 - (__kindof UICollectionViewCell *)collectionView:(UICollectionView *)collectionView
                            cellForItemAtIndexPath:(NSIndexPath *)indexPath{
     
@@ -106,49 +104,76 @@
                             dequeueReusableCellWithReuseIdentifier:@"StyleViewCell"
                             forIndexPath:indexPath];
     
-    cell.imageCell.image = [UIImage imageNamed:[_image objectAtIndex:indexPath.row]];
-    
-    cell.labelCell.text = [_label objectAtIndex:indexPath.row];
+    NSURL *url = [NSURL URLWithString:hotStyleList[indexPath.row].photoURL];
+    [cell.imageCell loadImageWithURL:url];
+    cell.labelCell.text = hotStyleList[indexPath.row].photoDescription;
     return cell;
 }
 
 
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView{
+    
     return 1;
+}
 
+-(void)collectionView:(UICollectionView *)collectionView
+didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
+
+    Model_sVC *model = [self.storyboard
+                        instantiateViewControllerWithIdentifier:@"Model_sVC"];
+    [self.navigationController
+     pushViewController:model
+     animated:true];
+}
+
+-(void)dataProcessing {
+    
+    MLHairDatabase *data = [MLHairDatabase stand];
+    NSMutableArray <DesignerVO*>*designerList = [NSMutableArray new];
+    NSMutableArray <StyleVO*>*styleList = [NSMutableArray new];
+    for (MLHairShopVO *shop in data.shopList) {
+        for (DesignerVO *designer in shop.designerList) {
+            for (StyleVO *style in designer.worksList) {
+                [styleList addObject:style];
+            }
+            [designerList addObject:designer];
+        }
+    }
+    NSSortDescriptor *sortDescriptor = [NSSortDescriptor
+                                        sortDescriptorWithKey:@"followed"
+                                        ascending:true];
+    hotDesignerList = [designerList
+     sortedArrayUsingDescriptors:[NSArray arrayWithObject:sortDescriptor]];
+    
+    
+    sortDescriptor = nil;
+    sortDescriptor = [NSSortDescriptor
+                      sortDescriptorWithKey:@"collected"
+                      ascending:true];
+    hotStyleList = [styleList
+                    sortedArrayUsingDescriptors:[NSArray arrayWithObject:sortDescriptor]];
+    
+    
+    
 }
 
 
 
--(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
 
-    NSLog(@"點了第%ld個item" , (long)indexPath.row);
-}
 
-/*
--(void)updateImage {
-    
-    //進行連線的設定
-    AFHTTPSessionManager *manager  = [AFHTTPSessionManager manager];
-    manager.responseSerializer = [AFHTTPResponseSerializer serializer];
-    NSString *imageUrl =[NSString stringWithFormat:@"/upload_image.php"];
 
-    [manager POST:imageUrl parameters:key constructingBodyWithBlock:^(id<AFMultipartFormData>  _Nonnull formData) {
-        //..
-        [formData appendPartWithFormData:data name:@"imageArray"];
-        
-    } progress:^(NSProgress * _Nonnull uploadProgress) {}
-    //成功
-    success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-        //..
-    //失敗
-    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-        //..
-    }];
-    
-    
-}
-*/
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

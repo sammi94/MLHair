@@ -18,8 +18,6 @@ typedef void (^Havedata)(bool havedat);
 
 @interface MLHairDatabase : NSObject
 
-@property (nonatomic,strong) NSArray <DesignerVO*>*designerList;
-@property (nonatomic,strong) NSArray <StyleVO*>*styleList;
 @property (nonatomic,strong) NSArray <MLHairShopVO*>*shopList;
 @property (nonatomic,strong) MemberVO *member;
 
