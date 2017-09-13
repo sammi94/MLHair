@@ -53,7 +53,7 @@
     //设置section的边距
     //layout.sectionInset=UIEdgeInsetsMake(5, 5, 0,0 );
     
-    
+    _CollectionView.collectionViewLayout = layout;
     
     
 }
@@ -64,6 +64,9 @@
     
     return CGSizeMake((self.view.frame.size.width - 50) / 2, self.view.frame.size.height * .4);
 }
+
+
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

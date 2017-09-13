@@ -153,13 +153,13 @@
         int photoNumber = arc4random_uniform(100) + 1;
         if (sex == 0) {
             for (int i = 0; i < photoNumber; i++) {
-                [photoList addObject:[self fackBoyImg]];
+                [photoList addObject:[self fackGirlImg]];
             }
             [works setObject:[self fackGirlImg] forKey:PhotoURL];
             [works setObject:[self fackGirlName] forKey:PhotoDescription];
         } else {
             for (int i = 0; i < photoNumber; i++) {
-                [photoList addObject:[self fackGirlImg]];
+                [photoList addObject:[self fackBoyImg]];
             }
             [works setObject:[self fackBoyImg] forKey:PhotoURL];
             [works setObject:[self fackBoyName] forKey:PhotoDescription];
