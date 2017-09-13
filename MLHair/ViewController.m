@@ -94,26 +94,48 @@
 }
 
 -(void)setDummyData {
-    NSLog(@"\n準備假資料");
+    int number = arc4random_uniform(100) + 1;
+    [self fackShopWithShopNumber:number];
+}
+
+-(void)fackShopWithShopNumber:(int)shopNumber {
     
-    for (int i = 0; i < 30; i++) {
-        StyleVO * style = [StyleVO new];
-        style.photoURL = [self fackGirlImg];
-    }
+    NSMutableArray <MLHairShopVO*>*shopList = [NSMutableArray new];
     
     NSDictionary *data = @{ShopId : @(1),
-                           ShopName : @"林森店",
+                           ShopName : @"名留林森",
                            ShopTime : @"AM 10:30 - PM 20：30",
                            ShopAddress : @"台北市中山區林森北路105號2樓",
                            ShopPhone : @"02-25513680",
                            ShopLat : @"25.050210",
                            ShopLon : @"121.524996",
                            ShopDesignerList : [self fackDesignerWithShopId:1]};
-    
-    NSMutableArray <MLHairShopVO*>*shopList = [NSMutableArray new];
     MLHairShopVO *shop = [[MLHairShopVO alloc] initWithData:data];
-    
     [shopList addObject:shop];
+    
+    data = @{ShopId : @(2),
+                           ShopName : @"名留民權",
+                           ShopTime : @" AM10:00 - PM8:30",
+                           ShopAddress : @"台北市中山區天祥路70號2樓",
+                           ShopPhone : @"02-25223535",
+                           ShopLat : @"25.0624011",
+                           ShopLon : @"121.5186504",
+                           ShopDesignerList : [self fackDesignerWithShopId:2]};
+    shop = [[MLHairShopVO alloc] initWithData:data];
+    [shopList addObject:shop];
+    
+    data = @{ShopId : @(3),
+                           ShopName : @"名留名揚",
+                           ShopTime : @"AM10:00～ PM10:00",
+                           ShopAddress : @"台北市中山區農安街261號1樓",
+                           ShopPhone : @"02-25513680",
+                           ShopLat : @"25.0648654",
+                           ShopLon : @"121.5334365",
+                           ShopDesignerList : [self fackDesignerWithShopId:3]};
+    shop = [[MLHairShopVO alloc] initWithData:data];
+    [shopList addObject:shop];
+    
+    
     [MLHairDatabase stand].shopList = shopList;
 }
 
@@ -295,6 +317,148 @@
     return img;
 }
 
+-(void) styles {
+    NSDictionary *style1 = @{@"name" : @"m1",
+                             @"discription" : @"蓬鬆捲度+霧面薰衣草紫灰",
+                             @"photo1" : @"https://cdn.hair-map.com/post/photo/normal/86051.jpg",
+                             @"photo2" : @"https://cdn.hair-map.com/post/photo/normal/86054.jpg",
+                             @"photo3" : @"https://cdn.hair-map.com/post/photo/normal/86052.jpg",
+                             };
+    NSDictionary *style2 = @{@"name" : @"m2",
+                             @"discription" : @"中長髮燙",
+                             @"photo1" : @"https://cdn.hair-map.com/post/photo/normal/77937.jpg",
+                             @"photo2" : @"https://cdn.hair-map.com/post/photo/normal/77938.jpg",
+                             @"photo3" : @"https://cdn.hair-map.com/post/photo/normal/77940.jpg",
+                             @"photo4" : @"https://cdn.hair-map.com/post/photo/normal/77939.jpg",
+                             };
+    NSDictionary *style3 = @{@"name" : @"m3",
+                             @"discription" : @"深棕挑染灰！",
+                             @"photo1" : @"https://cdn.hair-map.com/post/photo/normal/4399.jpg",
+                             @"photo2" : @"https://cdn.hair-map.com/post/photo/normal/6055.jpg",
+                             @"photo3" : @"https://cdn.hair-map.com/post/photo/normal/6056.jpg",
+                             };
+    NSDictionary *style4 = @{@"name" : @"m4",
+                             @"discription" : @"超好整理的浪漫燙髮、冷霧棕色",
+                             @"photo1" : @"https://cdn.hair-map.com/post/photo/normal/59557.jpg",
+                             };
+    NSDictionary *style5 = @{@"name" : @"m5",
+                             @"discription" : @"粉紫漸層灰藍x戀愛指數爆表的顏色",
+                             @"photo1" : @"https://cdn.hair-map.com/post/photo/normal/28689.jpg",
+                             @"photo2" : @"https://cdn.hair-map.com/post/photo/normal/28690.jpg",
+                             };
+    NSDictionary *style6 = @{@"name" : @"m6",
+                             @"discription" : @"個性短瀏海搭配霧霧的可可色",
+                             @"photo1" : @"https://cdn.hair-map.com/post/photo/normal/16641.jpg",
+                             @"photo2" : @"https://cdn.hair-map.com/post/photo/normal/16642.jpg",
+                             @"photo3" : @"https://cdn.hair-map.com/post/photo/normal/16644.jpg",
+                             @"photo4" : @"https://cdn.hair-map.com/post/photo/normal/16643.jpg",
+                             };
+    NSDictionary *style7 = @{@"name" : @"m7",
+                             @"discription" : @"韓式微卷髮",
+                             @"photo1" : @"https://cdn.hair-map.com/post/photo/normal/57682.jpg",
+                             @"photo2" : @"https://cdn.hair-map.com/post/photo/normal/57683.jpg",
+                             @"photo3" : @"https://cdn.hair-map.com/post/photo/normal/57684.jpg",
+                             @"photo4" : @"https://cdn.hair-map.com/post/photo/normal/57686.jpg",
+                             };
+    NSDictionary *style8 = @{@"name" : @"m8",
+                             @"discription" : @"歐美系挑染",
+                             @"photo1" : @"https://cdn.hair-map.com/post/photo/normal/81073.jpg",
+                             @"photo2" : @"https://cdn.hair-map.com/post/photo/normal/81075.jpg",
+                             @"photo3" : @"https://cdn.hair-map.com/post/photo/normal/81074.jpg",
+                             };
+    NSDictionary *style9 = @{@"name" : @"m9",
+                             @"discription" : @"灰棕摩卡手刷紫灰 藍灰",
+                             @"photo1" : @"https://cdn.hair-map.com/post/photo/normal/90330.jpg",
+                             @"photo2" : @"https://cdn.hair-map.com/post/photo/normal/90331.jpg",
+                             @"photo3" : @"https://cdn.hair-map.com/post/photo/normal/90332.jpg",
+                             };
+    NSDictionary *style10 = @{@"name" : @"m10",
+                              @"discription" : @"霧灰咖啡 加點不一樣的葡萄紫",
+                              @"photo1" : @"https://cdn.hair-map.com/post/photo/normal/73562.jpg",
+                              @"photo2" : @"https://cdn.hair-map.com/post/photo/normal/73563.jpg",
+                              };
+    NSDictionary *style11 = @{@"name" : @"m11",
+                              @"discription" : @"#韓式燙髮#手繞撥乾#電棒感覺",
+                              @"photo1" : @"https://cdn.hair-map.com/post/photo/normal/83761.jpg",
+                              @"photo2" : @"https://cdn.hair-map.com/post/photo/normal/83762.jpg",
+                              @"photo3" : @"https://cdn.hair-map.com/post/photo/normal/83763.jpg",
+                              };
+}
+
+-(void) designer {
+    NSDictionary *dssigner1 = @{@"name" : @"Q號妤韓設計師",
+                                @"tel" : @"0927977966",
+                                @"phtoURL" : @"http://www.ml-hair.com.tw/upload/designer/%EF%BC%B1%E8%99%9F1.jpg",
+                                @"lineID" : @"abc",
+                                @"fb" : @"URL",
+                                @"shopName" : @"林森"};
+    NSDictionary *dssigner2 = @{@"name" : @"9號于瑄設計師",
+                                @"tel" : @"0930757009",
+                                @"phtoURL" : @"http://www.ml-hair.com.tw/upload/designer/IMG_2589_%E5%89%AF%E6%9C%AC.jpg",
+                                @"lineID" : @"abc",
+                                @"fb" : @"URL",
+                                @"shopName" : @"林森"};
+    NSDictionary *dssigner3 = @{@"name" : @"6號阿龔設計師",
+                                @"tel" : @"0923803231",
+                                @"phtoURL" : @"http://www.ml-hair.com.tw/upload/designer/%E9%98%BF%E9%BE%941.JPG",
+                                @"lineID" : @"abc",
+                                @"fb" : @"URL",
+                                @"shopName" : @"林森"};
+    NSDictionary *dssigner4 = @{@"name" : @"12佳穎號設計師",
+                                @"tel" : @"0922290635",
+                                @"phtoURL" : @"http://www.ml-hair.com.tw/upload/designer/%E5%8F%B0%EF%BC%A11.jpg",
+                                @"lineID" : @"abc",
+                                @"fb" : @"URL",
+                                @"shopName" : @"林森"};
+    NSDictionary *dssigner5 = @{@"name" : @"7號妹妹設計師",
+                                @"tel" : @"0926893841",
+                                @"phtoURL" : @"http://www.ml-hair.com.tw/upload/designer/%E5%A6%B9%E5%A6%B9.JPG",
+                                @"lineID" : @"abc",
+                                @"fb" : @"URL",
+                                @"shopName" : @"林森"};
+    NSDictionary *dssigner6 = @{@"name" : @"1號Joyce設計師",
+                                @"tel" : @"0937006052",
+                                @"phtoURL" : @"http://www.ml-hair.com.tw/upload/designer/%E7%8E%89%E4%BD%A91.jpg",
+                                @"lineID" : @"abc",
+                                @"fb" : @"URL",
+                                @"shopName" : @"林森"};
+    NSDictionary *dssigner7 = @{@"name" : @"15號妙妙設計師",
+                                @"tel" : @"0932502930",
+                                @"phtoURL" : @"http://www.ml-hair.com.tw/upload/designer/%E5%A6%99%E5%A6%991.jpg",
+                                @"lineID" : @"abc",
+                                @"fb" : @"URL",
+                                @"shopName" : @"林森"};
+    NSDictionary *dssigner8 = @{@"name" : @"16號A-Ki設計師",
+                                @"tel" : @"0989413869",
+                                @"phtoURL" : @"http://www.ml-hair.com.tw/upload/designer/%E6%84%8F%E5%A6%821.jpg",
+                                @"lineID" : @"abc",
+                                @"fb" : @"URL",
+                                @"shopName" : @"林森"};
+    NSDictionary *dssigner9 = @{@"name" : @"B號月月設計師",
+                                @"tel" : @"0989135639",
+                                @"phtoURL" : @"http://www.ml-hair.com.tw/upload/designer/%E6%9C%88%E6%9C%881.jpg",
+                                @"lineID" : @"abc",
+                                @"fb" : @"URL",
+                                @"shopName" : @"林森"};
+    NSDictionary *dssigner10 = @{@"name" : @"10號歐麥設計師",
+                                 @"tel" : @"0967025878",
+                                 @"phtoURL" : @"http://www.ml-hair.com.tw/upload/designer/%E6%AD%90%E9%BA%A51.jpg",
+                                 @"lineID" : @"abc",
+                                 @"fb" : @"URL",
+                                 @"shopName" : @"林森"};
+    NSDictionary *dssigner11 = @{@"name" : @"2號Apple設計師",
+                                 @"tel" : @"0981570203",
+                                 @"phtoURL" : @"http://www.ml-hair.com.tw/upload/designer/apple.JPG",
+                                 @"lineID" : @"abc",
+                                 @"fb" : @"URL",
+                                 @"shopName" : @"林森"};
+    NSDictionary *dssigner12 = @{@"name" : @"4號貴珍設計師",
+                                 @"tel" : @"0937010319",
+                                 @"phtoURL" : @"http://www.ml-hair.com.tw/upload/designer/%E8%B2%B4%E7%8F%8D1.jpg",
+                                 @"lineID" : @"abc",
+                                 @"fb" : @"URL",
+                                 @"shopName" : @"林森"};
+}
 
 //fb 登入 拿資料
 -(void)loginButton:(FBSDKLoginButton *)loginButton

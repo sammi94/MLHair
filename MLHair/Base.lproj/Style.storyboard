@@ -128,7 +128,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="f3f-Dr-KnW">
-                                <rect key="frame" x="0.0" y="201" width="375" height="29"/>
+                                <rect key="frame" x="16" y="201" width="343" height="29"/>
                                 <segments>
                                     <segment title="女生"/>
                                     <segment title="男生"/>
@@ -144,12 +144,12 @@
                             <constraint firstItem="oLy-mD-vnd" firstAttribute="top" secondItem="f3f-Dr-KnW" secondAttribute="bottom" id="2Rc-We-fVA"/>
                             <constraint firstItem="oLy-mD-vnd" firstAttribute="leading" secondItem="Rgr-FR-beU" secondAttribute="leadingMargin" id="5NZ-n7-v4i"/>
                             <constraint firstAttribute="trailingMargin" secondItem="oLy-mD-vnd" secondAttribute="trailing" id="7GS-He-5eQ"/>
-                            <constraint firstAttribute="trailing" secondItem="f3f-Dr-KnW" secondAttribute="trailing" id="9xz-yl-gjD"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="f3f-Dr-KnW" secondAttribute="trailing" id="9xz-yl-gjD"/>
                             <constraint firstItem="Ogd-n4-57i" firstAttribute="leading" secondItem="Rgr-FR-beU" secondAttribute="leading" id="Bas-gd-lBx"/>
                             <constraint firstItem="oLy-mD-vnd" firstAttribute="bottom" secondItem="IfF-AQ-yGm" secondAttribute="top" id="NEK-kU-j9Z"/>
                             <constraint firstItem="f3f-Dr-KnW" firstAttribute="top" secondItem="Ogd-n4-57i" secondAttribute="bottom" id="NwT-oV-eHb"/>
                             <constraint firstItem="Ogd-n4-57i" firstAttribute="top" secondItem="He0-0b-fEc" secondAttribute="bottom" constant="8" id="SiG-3o-zEQ"/>
-                            <constraint firstItem="f3f-Dr-KnW" firstAttribute="leading" secondItem="Rgr-FR-beU" secondAttribute="leading" id="X9Y-1O-iDm"/>
+                            <constraint firstItem="f3f-Dr-KnW" firstAttribute="leading" secondItem="Rgr-FR-beU" secondAttribute="leadingMargin" id="X9Y-1O-iDm"/>
                             <constraint firstItem="Ogd-n4-57i" firstAttribute="trailing" secondItem="Rgr-FR-beU" secondAttribute="trailing" id="bDz-zB-1MV"/>
                             <constraint firstItem="He0-0b-fEc" firstAttribute="top" secondItem="QfY-vg-Ocb" secondAttribute="bottom" constant="8" id="f1K-AL-qPs"/>
                             <constraint firstItem="He0-0b-fEc" firstAttribute="centerX" secondItem="Rgr-FR-beU" secondAttribute="centerX" id="ruW-hh-yG4"/>
@@ -181,7 +181,7 @@
                     <tabBarItem key="tabBarItem" title="流行參考" image="流行參考" id="Qw5-HR-ukz"/>
                     <toolbarItems/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="m2B-Xs-drI">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="m2B-Xs-drI">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>

@@ -7,9 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "MLHairDatabase.h"
 
 @interface DesignerVC : UIViewController
 
+@property (nonatomic,strong) NSArray <MLHairShopVO*>*shopList;
+@property (weak, nonatomic) IBOutlet UITextField *findShop;
+@property (weak, nonatomic) IBOutlet UICollectionView *designerCollectionView;
 
 
 @end

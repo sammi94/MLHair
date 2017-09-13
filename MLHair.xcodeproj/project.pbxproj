@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		452858181F6909C500934AF9 /* FindShopPickerDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 452858171F6909C500934AF9 /* FindShopPickerDelegate.m */; };
 		45834E5F1F5D794600B9B28A /* DesignerVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 45834E5E1F5D794600B9B28A /* DesignerVC.m */; };
 		45834E651F5D7E0900B9B28A /* DesignerVCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 45834E641F5D7E0900B9B28A /* DesignerVCell.m */; };
 		45834E6B1F5D837700B9B28A /* MLHairDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = 45834E6A1F5D837700B9B28A /* MLHairDatabase.m */; };
@@ -60,6 +61,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		452858161F6909C500934AF9 /* FindShopPickerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FindShopPickerDelegate.h; sourceTree = "<group>"; };
+		452858171F6909C500934AF9 /* FindShopPickerDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FindShopPickerDelegate.m; sourceTree = "<group>"; };
 		45834E5D1F5D794600B9B28A /* DesignerVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DesignerVC.h; sourceTree = "<group>"; };
 		45834E5E1F5D794600B9B28A /* DesignerVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DesignerVC.m; sourceTree = "<group>"; };
 		45834E631F5D7E0900B9B28A /* DesignerVCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DesignerVCell.h; sourceTree = "<group>"; };
@@ -304,6 +307,8 @@
 				A4D97F131F5D5D4B00D37FD7 /* Designer.storyboard */,
 				45834E5D1F5D794600B9B28A /* DesignerVC.h */,
 				45834E5E1F5D794600B9B28A /* DesignerVC.m */,
+				452858161F6909C500934AF9 /* FindShopPickerDelegate.h */,
+				452858171F6909C500934AF9 /* FindShopPickerDelegate.m */,
 				45834E631F5D7E0900B9B28A /* DesignerVCell.h */,
 				45834E641F5D7E0900B9B28A /* DesignerVCell.m */,
 				45834E6F1F5D87B300B9B28A /* Booking.storyboard */,
@@ -546,6 +551,7 @@
 				A4F740B81F41D72800949287 /* StyleViewController.m in Sources */,
 				A4AC97FB1F40F2C0002A376B /* RSSParserDelegate.m in Sources */,
 				45834E951F62C0F400B9B28A /* MLHairShopVO.m in Sources */,
+				452858181F6909C500934AF9 /* FindShopPickerDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

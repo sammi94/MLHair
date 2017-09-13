@@ -10,13 +10,27 @@
 #import "DesignerVCell.h"
 #import "MLHairDatabase.h"
 #import "BookingVC.h"
+#import "FindShopPickerDelegate.h"
 
 
-@interface DesignerVC ()<UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout>
+
+@interface DesignerVC ()<UICollectionViewDelegate,
+                        UICollectionViewDataSource,
+                        UICollectionViewDelegateFlowLayout>
 {
     MLHairDatabase *data;
+    FindShopPickerDelegate *pickerDelegate;
 }
 @property (weak, nonatomic) IBOutlet UICollectionView *designerCV;
+@property (weak, nonatomic) IBOutlet UIView *findpage;
+@property (weak, nonatomic) IBOutlet UIView *bookingPage;
+@property (weak, nonatomic) IBOutlet UIStackView *stack;
+@property (weak, nonatomic) IBOutlet UIButton *bookingBtn;
+@property (weak, nonatomic) IBOutlet UITextField *chooseDay;
+@property (weak, nonatomic) IBOutlet UITextField *chooseTime;
+@property (weak, nonatomic) IBOutlet UITextField *chooseShop;
+@property (weak, nonatomic) IBOutlet UITextField *chooseDesigner;
+
 
 
 
@@ -27,10 +41,66 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     data = [MLHairDatabase stand];
-    _designerCV.delegate = self;
-    _designerCV.dataSource = self;
-    self.automaticallyAdjustsScrollViewInsets = false;
+    _shopList = data.shopList;
+    _bookingPage.hidden = true;
     
+    UIPickerView *picker = [UIPickerView new];
+    pickerDelegate = [FindShopPickerDelegate new];
+    pickerDelegate.data = self;
+    picker.delegate = (id)pickerDelegate;
+    picker.dataSource = (id)pickerDelegate;
+    _findShop.inputView = picker;
+    
+    UIDatePicker *dayPicker = [UIDatePicker new];
+    dayPicker.locale = [[NSLocale alloc] initWithLocaleIdentifier:@"zh_TW"];
+    dayPicker.timeZone = [[NSTimeZone alloc] initWithName:@"GMT"];
+    dayPicker.datePickerMode = UIDatePickerModeDate;
+    [dayPicker
+     addTarget:self
+     action:@selector(chooseDate:)
+     forControlEvents:UIControlEventValueChanged];
+    _chooseDay.inputView = dayPicker;
+    
+    UIDatePicker *timePicker = [UIDatePicker new];
+    timePicker.locale = [[NSLocale alloc] initWithLocaleIdentifier:@"zh_TW"];
+    timePicker.timeZone = [[NSTimeZone alloc] initWithName:@"GTM"];
+    timePicker.datePickerMode = UIDatePickerModeTime;
+    [timePicker addTarget:self
+                   action:@selector(chooseTime:)
+         forControlEvents:UIControlEventValueChanged];
+    _chooseTime.inputView = timePicker;
+}
+
+-(void)chooseDate:(UIDatePicker *)datePicker {
+    NSDate *date = datePicker.date;
+    NSDateFormatter *df = [NSDateFormatter new];
+    [df setDateFormat:@"YYYY/MM/dd"];
+    _chooseDay.text = [df stringFromDate:date];
+}
+
+-(void)chooseTime:(UIDatePicker*)time {
+    
+}
+
+-(void)viewDidLayoutSubviews {
+    [super viewDidLayoutSubviews];
+    _stack.spacing = _bookingBtn.frame.size.height;
+}
+
+- (IBAction)chooseMode:(id)sender {
+    [self.view endEditing:true];
+    if ([sender selectedSegmentIndex] == 0) {
+        _bookingPage.hidden = true;
+        _findpage.hidden = false;
+    } else {
+        _bookingPage.hidden = false;
+        _findpage.hidden = true;
+    }
+}
+
+-(void)touchesBegan:(NSSet<UITouch *> *)touches
+          withEvent:(UIEvent *)event {
+    [self.view endEditing:true];
 }
 
 
@@ -43,27 +113,33 @@
                   layout:(UICollectionViewLayout*)collectionViewLayout
   sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
     
-    return CGSizeMake(self.view.frame.size.width * .42, self.view.frame.size.height * .4);
+    return CGSizeMake(self.view.frame.size.width * .49, self.view.frame.size.height * .4);
 }
 
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView {
-    return 1;
+    
+    return _shopList.count;
 }
 
-- (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
-//    return data.designerList.count;
-    return 20;
+- (NSInteger)collectionView:(UICollectionView *)collectionView
+     numberOfItemsInSection:(NSInteger)section {
+    
+    return _shopList[section].designerList.count;
 }
+
+
 
 - (__kindof UICollectionViewCell *)collectionView:(UICollectionView *)collectionView
                            cellForItemAtIndexPath:(NSIndexPath *)indexPath {
+    
     DesignerVCell *cell = [collectionView
                                   dequeueReusableCellWithReuseIdentifier:@"DesignerVCell"
                                   forIndexPath:indexPath];
-//    NSURL *url = [NSURL URLWithString:data.designerList[indexPath.row].URLphoto];
-//    NSData *imageData = [NSData dataWithContentsOfURL:url];
-//    cell.photo.image = [UIImage imageWithData:imageData];
-//    cell.name.text = data.designerList[indexPath.row].name;
+    
+    NSString *urlString = data.shopList[indexPath.section].designerList[indexPath.row].photoURL;
+    NSURL *url = [NSURL URLWithString:urlString];
+    [cell.photo loadImageWithURL:url];
+    cell.name.text = data.shopList[indexPath.section].designerList[indexPath.item].name;
     
     return cell;
 }
