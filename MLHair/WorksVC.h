@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "StyleVO.h"
 
 @interface WorksVC : UIViewController
+
+@property (weak, nonatomic) NSArray <StyleVO*>*worksList;
 
 @end

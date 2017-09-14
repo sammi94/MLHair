@@ -125,7 +125,8 @@ numberOfRowsInSection:(NSInteger)section {
 //            result.pinTintColor = [UIColor brownColor];
     
     UIButton *btnPhone = [UIButton buttonWithType:UIButtonTypeSystem];
-    [btnPhone setTitle:@"打電話" forState:UIControlStateNormal];
+//    [btnPhone setTitle:@"打電話" forState:UIControlStateNormal];
+    [btnPhone setImage:[UIImage imageNamed:@"callPhone.png"] forState:UIControlStateNormal];
     [btnPhone sizeToFit];
     [btnPhone addTarget:self
                  action:@selector(callphone)
@@ -133,7 +134,8 @@ numberOfRowsInSection:(NSInteger)section {
     result.leftCalloutAccessoryView = btnPhone;
     
     UIButton *goNavigationBTN = [UIButton buttonWithType:UIButtonTypeSystem];
-    [goNavigationBTN setTitle:@"導航" forState:UIControlStateNormal];
+//    [goNavigationBTN setTitle:@"導航" forState:UIControlStateNormal];
+    [goNavigationBTN setImage:[UIImage imageNamed:@"navigation.png"] forState:UIControlStateNormal];
     [goNavigationBTN sizeToFit];
     [goNavigationBTN addTarget:self
                         action:@selector(goNavigation)

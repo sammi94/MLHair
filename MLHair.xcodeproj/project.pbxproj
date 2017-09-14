@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		452858181F6909C500934AF9 /* FindShopPickerDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 452858171F6909C500934AF9 /* FindShopPickerDelegate.m */; };
 		4528581F1F6A520F00934AF9 /* BookingVO.m in Sources */ = {isa = PBXBuildFile; fileRef = 4528581E1F6A520F00934AF9 /* BookingVO.m */; };
+		452858221F6AC9A100934AF9 /* WorksCVCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 452858211F6AC9A100934AF9 /* WorksCVCell.m */; };
 		45834E5F1F5D794600B9B28A /* DesignerVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 45834E5E1F5D794600B9B28A /* DesignerVC.m */; };
 		45834E651F5D7E0900B9B28A /* DesignerVCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 45834E641F5D7E0900B9B28A /* DesignerVCell.m */; };
 		45834E6B1F5D837700B9B28A /* MLHairDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = 45834E6A1F5D837700B9B28A /* MLHairDatabase.m */; };
@@ -66,6 +67,8 @@
 		452858171F6909C500934AF9 /* FindShopPickerDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FindShopPickerDelegate.m; sourceTree = "<group>"; };
 		4528581D1F6A520F00934AF9 /* BookingVO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BookingVO.h; sourceTree = "<group>"; };
 		4528581E1F6A520F00934AF9 /* BookingVO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BookingVO.m; sourceTree = "<group>"; };
+		452858201F6AC9A100934AF9 /* WorksCVCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WorksCVCell.h; sourceTree = "<group>"; };
+		452858211F6AC9A100934AF9 /* WorksCVCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WorksCVCell.m; sourceTree = "<group>"; };
 		45834E5D1F5D794600B9B28A /* DesignerVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DesignerVC.h; sourceTree = "<group>"; };
 		45834E5E1F5D794600B9B28A /* DesignerVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DesignerVC.m; sourceTree = "<group>"; };
 		45834E631F5D7E0900B9B28A /* DesignerVCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DesignerVCell.h; sourceTree = "<group>"; };
@@ -332,6 +335,8 @@
 				45834EC91F66CCD900B9B28A /* WorksVC.m */,
 				45834ECB1F66D06300B9B28A /* WorksTVCell.h */,
 				45834ECC1F66D06300B9B28A /* WorksTVCell.m */,
+				452858201F6AC9A100934AF9 /* WorksCVCell.h */,
+				452858211F6AC9A100934AF9 /* WorksCVCell.m */,
 			);
 			name = Designer;
 			sourceTree = "<group>";
@@ -560,6 +565,7 @@
 				A4AC97F91F40F2C0002A376B /* NewsItem.m in Sources */,
 				45834E891F627C8700B9B28A /* Http.m in Sources */,
 				A4AC973C1F25AFDA002A376B /* main.m in Sources */,
+				452858221F6AC9A100934AF9 /* WorksCVCell.m in Sources */,
 				45834E9E1F63C12500B9B28A /* ShopVC.m in Sources */,
 				45834E651F5D7E0900B9B28A /* DesignerVCell.m in Sources */,
 				A4F740B81F41D72800949287 /* StyleViewController.m in Sources */,
