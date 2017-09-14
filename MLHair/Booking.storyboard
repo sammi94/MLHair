@@ -47,10 +47,16 @@
                                     <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pbh-U3-5X6" userLabel="line">
                                         <rect key="frame" x="66" y="415" width="232" height="47"/>
                                         <state key="normal" image="Line"/>
+                                        <connections>
+                                            <action selector="schemeLine:" destination="cji-zn-ZvH" eventType="touchUpInside" id="XTR-GF-3ya"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9ou-XA-5q7" userLabel="tel">
                                         <rect key="frame" x="66" y="470" width="232" height="46"/>
                                         <state key="normal" image="設計師電話"/>
+                                        <connections>
+                                            <action selector="callDesigner:" destination="cji-zn-ZvH" eventType="touchUpInside" id="iCO-jq-LrI"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ODU-O0-3mf" userLabel="booking">
                                         <rect key="frame" x="190" y="524" width="134" height="46"/>
@@ -75,6 +81,9 @@
                                     <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MNm-zS-Vxu" userLabel="fb">
                                         <rect key="frame" x="66" y="360" width="232" height="47"/>
                                         <state key="normal" image="FB-1"/>
+                                        <connections>
+                                            <action selector="fbscheme:" destination="cji-zn-ZvH" eventType="touchUpInside" id="BlE-pG-KSb"/>
+                                        </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" enabled="NO" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jlB-0S-y0n">
                                         <rect key="frame" x="162" y="493" width="128" height="0.0"/>

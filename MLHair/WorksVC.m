@@ -15,6 +15,7 @@
 }
 @property (weak, nonatomic) IBOutlet UITableView *worksStyle;
 
+
 @end
 
 @implementation WorksVC
@@ -30,14 +31,16 @@
     
 }
 
+
+
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     return 1;
 }
 
 -(NSInteger)tableView:(UITableView *)tableView
 numberOfRowsInSection:(NSInteger)section {
-#warning wait vo
-    return 30;
+
+    return _worksList.count;
 }
 
 -(UITableViewCell *)tableView:(UITableView *)tableView
@@ -46,6 +49,9 @@ numberOfRowsInSection:(NSInteger)section {
     WorksTVCell *cell = [tableView
                          dequeueReusableCellWithIdentifier:@"WorksTVCell"
                          forIndexPath:indexPath];
+    cell.styleName.text = _worksList[indexPath.row].photoDescription;
+    cell.style = _worksList[indexPath.row];
+    cell.vC = self;
     return cell;
 }
 

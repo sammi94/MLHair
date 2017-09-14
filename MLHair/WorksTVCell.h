@@ -7,7 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "StyleVO.h"
 
 @interface WorksTVCell : UITableViewCell
+
+@property (weak, nonatomic) IBOutlet UILabel *styleName;
+@property (weak, nonatomic) StyleVO *style;
+@property (weak, nonatomic) UIViewController *vC;
 
 @end

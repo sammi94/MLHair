@@ -132,7 +132,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Yk5-l1-rwS" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="分店位置" image="分店位置" id="qmi-CN-Kdk"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Wd6-tX-fEK">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="Wd6-tX-fEK">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
