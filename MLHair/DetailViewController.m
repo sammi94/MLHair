@@ -43,9 +43,42 @@
     CGRect webViewFrame = CGRectMake(0, 0, viewSize.width, viewSize.height);
     
     mainWebView = [[WKWebView alloc] initWithFrame:webViewFrame];
+    
     mainWebView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
     [self.view addSubview:mainWebView];
-    
+    mainWebView.translatesAutoresizingMaskIntoConstraints = false;
+    [self.view addConstraint:[NSLayoutConstraint
+                              constraintWithItem:mainWebView
+                              attribute:NSLayoutAttributeLeading
+                              relatedBy:NSLayoutRelationEqual
+                              toItem:self.view
+                              attribute:NSLayoutAttributeLeading
+                              multiplier:1.0
+                              constant:.0]];
+    [self.view addConstraint:[NSLayoutConstraint
+                              constraintWithItem:mainWebView
+                              attribute:NSLayoutAttributeTrailing
+                              relatedBy:NSLayoutRelationEqual
+                              toItem:self.view
+                              attribute:NSLayoutAttributeTrailing
+                              multiplier:1.0
+                              constant:.0]];
+    [self.view addConstraint:[NSLayoutConstraint
+                              constraintWithItem:mainWebView
+                              attribute:NSLayoutAttributeBottom
+                              relatedBy:NSLayoutRelationEqual
+                              toItem:self.view
+                              attribute:NSLayoutAttributeBottom
+                              multiplier:1.0
+                              constant:.0]];
+    [self.view addConstraint:[NSLayoutConstraint
+                              constraintWithItem:mainWebView
+                              attribute:NSLayoutAttributeTop
+                              relatedBy:NSLayoutRelationEqual
+                              toItem:self.topLayoutGuide
+                              attribute:NSLayoutAttributeBottom
+                              multiplier:1.0
+                              constant:.0]];
     
     [self configureView];
 }
