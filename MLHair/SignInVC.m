@@ -7,6 +7,10 @@
 //
 
 #import "SignInVC.h"
+#import "SignUpVC.h"
+#import <FBSDKCoreKit/FBSDKCoreKit.h>
+#import <FBSDKLoginKit/FBSDKLoginKit.h>
+#import <GoogleSignIn/GoogleSignIn.h>
 
 @interface SignInVC ()
 {
@@ -15,6 +19,10 @@
 @property (weak, nonatomic) IBOutlet UITextField *mail;
 @property (weak, nonatomic) IBOutlet UITextField *password;
 @property (weak, nonatomic) IBOutlet UIImageView *botton;
+@property (weak, nonatomic) IBOutlet GIDSignInButton *googleSignInView;
+@property (weak, nonatomic) IBOutlet UIView *background;
+@property (weak, nonatomic) IBOutlet FBSDKLoginButton *fbb;
+
 
 @end
 
@@ -22,7 +30,12 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    
+}
+
+-(void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    self.navigationItem.hidesBackButton = true;
 }
 
 -(void)viewDidAppear:(BOOL)animated {
@@ -34,6 +47,12 @@
 -(void)viewDidLayoutSubviews {
     [super viewDidLayoutSubviews];
     _botton.transform = CGAffineTransformMakeRotation(M_PI);
+    _googleSignInView.layer.cornerRadius = _googleSignInView.frame.size.height/2;
+    [[_googleSignInView.heightAnchor constraintEqualToConstant:_mail.frame.size.height*.8] setActive:true];
+    _fbb.translatesAutoresizingMaskIntoConstraints = false;
+    [[_fbb.widthAnchor constraintEqualToConstant:_mail.frame.size.width*.9] setActive:true];
+    [[_fbb.heightAnchor constraintEqualToConstant:_mail.frame.size.height*.9] setActive:true];
+    
 }
 
 -(void)touchesBegan:(NSSet<UITouch *> *)touches
@@ -43,6 +62,8 @@
 
 
 - (IBAction)signUp:(id)sender {
+    SignUpVC *signUpVC = [self.storyboard instantiateViewControllerWithIdentifier:@"SignUpVC"];
+    [self.navigationController pushViewController:signUpVC animated:true];
 }
 
 
@@ -50,8 +71,7 @@
 }
 
 
-- (IBAction)fb:(id)sender {
-}
+
 
 - (IBAction)signIn:(id)sender {
 }

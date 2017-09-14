@@ -9,7 +9,6 @@
 #import "ViewController.h"
 #import <FBSDKCoreKit/FBSDKCoreKit.h>
 #import <FBSDKLoginKit/FBSDKLoginKit.h>
-
 #import <GoogleSignIn/GoogleSignIn.h>
 #import "MLHairDatabase.h"
 
@@ -94,7 +93,7 @@
 }
 
 -(void)setDummyData {
-    int number = arc4random_uniform(100) + 1;
+    int number = arc4random_uniform(100);
     [self fackShopWithShopNumber:number];
 }
 

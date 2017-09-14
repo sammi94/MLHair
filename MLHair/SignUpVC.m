@@ -7,6 +7,7 @@
 //
 
 #import "SignUpVC.h"
+#import "SignInVC.h"
 
 @interface SignUpVC ()
 
@@ -42,6 +43,9 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+- (IBAction)signIn:(id)sender {
+    [self.navigationController popViewControllerAnimated:true];
 }
 
 /*

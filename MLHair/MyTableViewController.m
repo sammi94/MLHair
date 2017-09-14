@@ -9,6 +9,7 @@
 #import "MyTableViewController.h"
 #import "MyTableViewCell.h"
 #import "AvatorTViCell.h"
+#import "SignInVC.h"
 
 @interface MyTableViewController ()
 
@@ -19,11 +20,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
-    
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    SignInVC *signInVC = [self.storyboard instantiateViewControllerWithIdentifier:@"SignInVC"];
+    [self.navigationController pushViewController:signInVC animated:true];
 }
 
 - (void)didReceiveMemoryWarning {
