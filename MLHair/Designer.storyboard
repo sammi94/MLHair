@@ -247,6 +247,14 @@
             </objects>
             <point key="canvasLocation" x="-196" y="-280.20989505247377"/>
         </scene>
+        <!--BookingDataVC-->
+        <scene sceneID="2fy-5W-xIO">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="BookingDataVC" storyboardName="BookingData" referencedIdentifier="BookingDataVC" id="NKk-dM-Bup" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pQX-X8-wdS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1267" y="-537"/>
+        </scene>
     </scenes>
     <resources>
         <image name="確定送出" width="264" height="36"/>

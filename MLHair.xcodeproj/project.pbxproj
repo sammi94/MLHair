@@ -11,6 +11,9 @@
 		4528581F1F6A520F00934AF9 /* BookingVO.m in Sources */ = {isa = PBXBuildFile; fileRef = 4528581E1F6A520F00934AF9 /* BookingVO.m */; };
 		452858221F6AC9A100934AF9 /* WorksCVCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 452858211F6AC9A100934AF9 /* WorksCVCell.m */; };
 		452858251F6AE69E00934AF9 /* SignInController.m in Sources */ = {isa = PBXBuildFile; fileRef = 452858241F6AE69E00934AF9 /* SignInController.m */; };
+		452858281F6B061500934AF9 /* BookingDataVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 452858271F6B061500934AF9 /* BookingDataVC.m */; };
+		4528582A1F6B063500934AF9 /* BookingData.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 452858291F6B063500934AF9 /* BookingData.storyboard */; };
+		4528582D1F6B0B7F00934AF9 /* BookingDataTVCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4528582C1F6B0B7F00934AF9 /* BookingDataTVCell.m */; };
 		45834E5F1F5D794600B9B28A /* DesignerVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 45834E5E1F5D794600B9B28A /* DesignerVC.m */; };
 		45834E651F5D7E0900B9B28A /* DesignerVCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 45834E641F5D7E0900B9B28A /* DesignerVCell.m */; };
 		45834E6B1F5D837700B9B28A /* MLHairDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = 45834E6A1F5D837700B9B28A /* MLHairDatabase.m */; };
@@ -72,6 +75,11 @@
 		452858211F6AC9A100934AF9 /* WorksCVCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WorksCVCell.m; sourceTree = "<group>"; };
 		452858231F6AE69E00934AF9 /* SignInController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignInController.h; sourceTree = "<group>"; };
 		452858241F6AE69E00934AF9 /* SignInController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignInController.m; sourceTree = "<group>"; };
+		452858261F6B061500934AF9 /* BookingDataVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BookingDataVC.h; sourceTree = "<group>"; };
+		452858271F6B061500934AF9 /* BookingDataVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BookingDataVC.m; sourceTree = "<group>"; };
+		452858291F6B063500934AF9 /* BookingData.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = BookingData.storyboard; sourceTree = "<group>"; };
+		4528582B1F6B0B7F00934AF9 /* BookingDataTVCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BookingDataTVCell.h; sourceTree = "<group>"; };
+		4528582C1F6B0B7F00934AF9 /* BookingDataTVCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BookingDataTVCell.m; sourceTree = "<group>"; };
 		45834E5D1F5D794600B9B28A /* DesignerVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DesignerVC.h; sourceTree = "<group>"; };
 		45834E5E1F5D794600B9B28A /* DesignerVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DesignerVC.m; sourceTree = "<group>"; };
 		45834E631F5D7E0900B9B28A /* DesignerVCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DesignerVCell.h; sourceTree = "<group>"; };
@@ -342,6 +350,11 @@
 				45834ECC1F66D06300B9B28A /* WorksTVCell.m */,
 				452858201F6AC9A100934AF9 /* WorksCVCell.h */,
 				452858211F6AC9A100934AF9 /* WorksCVCell.m */,
+				452858291F6B063500934AF9 /* BookingData.storyboard */,
+				452858261F6B061500934AF9 /* BookingDataVC.h */,
+				452858271F6B061500934AF9 /* BookingDataVC.m */,
+				4528582B1F6B0B7F00934AF9 /* BookingDataTVCell.h */,
+				4528582C1F6B0B7F00934AF9 /* BookingDataTVCell.m */,
 			);
 			name = Designer;
 			sourceTree = "<group>";
@@ -474,6 +487,7 @@
 				A4AC97521F25D57C002A376B /* GoogleService-Info.plist in Resources */,
 				45834EC41F66CC2E00B9B28A /* Works.storyboard in Resources */,
 				45834E731F60266D00B9B28A /* my.storyboard in Resources */,
+				4528582A1F6B063500934AF9 /* BookingData.storyboard in Resources */,
 				45834E701F5D87B300B9B28A /* Booking.storyboard in Resources */,
 				A4AC97F81F40F2C0002A376B /* News.storyboard in Resources */,
 				45834EB61F65398300B9B28A /* SignIn.storyboard in Resources */,
@@ -553,6 +567,7 @@
 				A4AC973F1F25AFDA002A376B /* AppDelegate.m in Sources */,
 				45834EC21F66746500B9B28A /* Model'sVC.m in Sources */,
 				A4AC97FF1F40F691002A376B /* DetailViewController.m in Sources */,
+				452858281F6B061500934AF9 /* BookingDataVC.m in Sources */,
 				45834EB91F653A4A00B9B28A /* SignUpVC.m in Sources */,
 				A4F7415B1F55AE0200949287 /* MyTableViewCell.m in Sources */,
 				45834EA71F64233200B9B28A /* MLAnnotion.m in Sources */,
@@ -564,6 +579,7 @@
 				45834E6B1F5D837700B9B28A /* MLHairDatabase.m in Sources */,
 				45834EAD1F644FF900B9B28A /* HotCVCell.m in Sources */,
 				45834E8C1F62849D00B9B28A /* AdvanceImageView.m in Sources */,
+				4528582D1F6B0B7F00934AF9 /* BookingDataTVCell.m in Sources */,
 				A4F741581F55ACF800949287 /* MyTableViewController.m in Sources */,
 				A4AC97FA1F40F2C0002A376B /* Reachability.m in Sources */,
 				45834ECA1F66CCD900B9B28A /* WorksVC.m in Sources */,

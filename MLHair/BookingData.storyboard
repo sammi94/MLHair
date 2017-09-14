@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Etm-g3-KK0">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Booking DataVC-->
+        <scene sceneID="gVz-0A-tpB">
+            <objects>
+                <viewController storyboardIdentifier="BookingDataVC" automaticallyAdjustsScrollViewInsets="NO" id="Etm-g3-KK0" customClass="BookingDataVC" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="7ef-a9-Zhm"/>
+                        <viewControllerLayoutGuide type="bottom" id="i7c-kE-alj"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="tPW-gU-2gr">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="ceU-em-W9f">
+                                <rect key="frame" x="0.0" y="20" width="375" height="29"/>
+                                <segments>
+                                    <segment title="預約資料"/>
+                                    <segment title="預約記錄"/>
+                                </segments>
+                                <color key="tintColor" red="0.39471524949999998" green="0.66152185200000002" blue="0.76868635419999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </segmentedControl>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="184" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="AnI-aK-zNG">
+                                <rect key="frame" x="0.0" y="48" width="375" height="619"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="BookingDataTVCell" rowHeight="184" id="bHY-t1-VzQ" customClass="BookingDataTVCell">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="184"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="bHY-t1-VzQ" id="XZ6-oL-ccG">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="183.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="成立時間：2017/09/14" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PZb-NX-Xer">
+                                                    <rect key="frame" x="8" y="16" width="359" height="21"/>
+                                                    <color key="backgroundColor" red="0.65490556929999999" green="0.53574916890000002" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="預約門市：林森店" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="82E-8M-hUm">
+                                                    <rect key="frame" x="8" y="53" width="139" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="預約日期：2017/09/15" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8MR-Zl-fI4">
+                                                    <rect key="frame" x="8" y="82" width="173" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="預約時間：13:45" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vXy-rw-GZ8">
+                                                    <rect key="frame" x="8" y="111" width="130" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="預約設計師：Cindy" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="giW-Y1-7bJ">
+                                                    <rect key="frame" x="8" y="140" width="148" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lP2-hm-WAF">
+                                                    <rect key="frame" x="305" y="137.5" width="62" height="30"/>
+                                                    <state key="normal" title="取消預約"/>
+                                                    <connections>
+                                                        <action selector="cancle:" destination="bHY-t1-VzQ" eventType="touchUpInside" id="fe5-q5-qSp"/>
+                                                    </connections>
+                                                </button>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LWe-zh-iLq">
+                                                    <rect key="frame" x="305" y="53" width="62" height="30"/>
+                                                    <state key="normal" title="完成設計"/>
+                                                    <connections>
+                                                        <action selector="done:" destination="bHY-t1-VzQ" eventType="touchUpInside" id="Rt2-50-eyi"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="lP2-hm-WAF" firstAttribute="trailing" secondItem="XZ6-oL-ccG" secondAttribute="trailingMargin" id="77V-lC-axy"/>
+                                                <constraint firstItem="8MR-Zl-fI4" firstAttribute="top" secondItem="82E-8M-hUm" secondAttribute="bottom" constant="8" id="A5S-hL-bOx"/>
+                                                <constraint firstItem="PZb-NX-Xer" firstAttribute="top" secondItem="XZ6-oL-ccG" secondAttribute="topMargin" constant="8" id="D5A-he-ht2"/>
+                                                <constraint firstItem="giW-Y1-7bJ" firstAttribute="top" secondItem="vXy-rw-GZ8" secondAttribute="bottom" constant="8" id="DZG-Ew-R3f"/>
+                                                <constraint firstItem="8MR-Zl-fI4" firstAttribute="leading" secondItem="XZ6-oL-ccG" secondAttribute="leadingMargin" id="Lhr-Md-507"/>
+                                                <constraint firstItem="LWe-zh-iLq" firstAttribute="top" secondItem="PZb-NX-Xer" secondAttribute="bottom" constant="16" id="QRY-GM-5l8"/>
+                                                <constraint firstItem="82E-8M-hUm" firstAttribute="top" secondItem="PZb-NX-Xer" secondAttribute="bottom" constant="16" id="VHv-qa-ORM"/>
+                                                <constraint firstItem="vXy-rw-GZ8" firstAttribute="top" secondItem="8MR-Zl-fI4" secondAttribute="bottom" constant="8" id="e5H-Ux-aLT"/>
+                                                <constraint firstItem="82E-8M-hUm" firstAttribute="leading" secondItem="XZ6-oL-ccG" secondAttribute="leadingMargin" id="eXH-hu-hiX"/>
+                                                <constraint firstItem="giW-Y1-7bJ" firstAttribute="leading" secondItem="XZ6-oL-ccG" secondAttribute="leadingMargin" id="gfz-04-V52"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="LWe-zh-iLq" secondAttribute="trailing" id="ktS-4b-skq"/>
+                                                <constraint firstItem="PZb-NX-Xer" firstAttribute="leading" secondItem="XZ6-oL-ccG" secondAttribute="leadingMargin" id="pd3-Y1-DOA"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="PZb-NX-Xer" secondAttribute="trailing" id="ruz-BZ-GGt"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="lP2-hm-WAF" secondAttribute="bottom" constant="8" id="sQv-lm-o72"/>
+                                                <constraint firstItem="vXy-rw-GZ8" firstAttribute="leading" secondItem="XZ6-oL-ccG" secondAttribute="leadingMargin" id="uMH-Rm-wmg"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="createTime" destination="PZb-NX-Xer" id="ZGz-cs-6Pt"/>
+                                            <outlet property="day" destination="8MR-Zl-fI4" id="rUg-Dq-o1V"/>
+                                            <outlet property="designer" destination="giW-Y1-7bJ" id="xe0-K5-zaR"/>
+                                            <outlet property="shop" destination="82E-8M-hUm" id="3ox-rt-ejI"/>
+                                            <outlet property="time" destination="vXy-rw-GZ8" id="a7m-yZ-CbS"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="AnI-aK-zNG" firstAttribute="leading" secondItem="tPW-gU-2gr" secondAttribute="leading" id="J2u-0I-Tdm"/>
+                            <constraint firstItem="i7c-kE-alj" firstAttribute="top" secondItem="AnI-aK-zNG" secondAttribute="bottom" id="KSE-td-ILf"/>
+                            <constraint firstAttribute="trailing" secondItem="AnI-aK-zNG" secondAttribute="trailing" id="Kn4-Yv-MFx"/>
+                            <constraint firstItem="ceU-em-W9f" firstAttribute="leading" secondItem="tPW-gU-2gr" secondAttribute="leading" id="NPu-G7-lnv"/>
+                            <constraint firstAttribute="trailing" secondItem="ceU-em-W9f" secondAttribute="trailing" id="YFY-on-2SP"/>
+                            <constraint firstItem="AnI-aK-zNG" firstAttribute="top" secondItem="ceU-em-W9f" secondAttribute="bottom" id="ebd-Z4-yAJ"/>
+                            <constraint firstItem="ceU-em-W9f" firstAttribute="top" secondItem="7ef-a9-Zhm" secondAttribute="bottom" id="sJt-8h-3JA"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="bookingTable" destination="tPW-gU-2gr" id="X4w-7W-ku2"/>
+                        <outlet property="chooseData" destination="ceU-em-W9f" id="iZL-3u-ygH"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="q4X-G8-Zs8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1437.5999999999999" y="-283.80809595202402"/>
+        </scene>
+    </scenes>
+</document>
