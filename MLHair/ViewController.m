@@ -520,14 +520,95 @@
                  @"shopName" : @"林森"};
     [designerList addObject:designer];
     
-//    designer = @{DesignerName : @"新增設計師",
-//                 DesignerPhone : @"0937010319",
-//                 DesignerPhotoURL : @"http://www.ml-hair.com.tw/upload/designer/%E8%B2%B4%E7%8F%8D1.jpg",
-//                 DesignerLine : @"abc",
-//                 DesignerFB : @"URL",
-//                 @"shopName" : @"林森"};
-//    [designerList addObject:designer];
     
+    //名揚
+    designer = @{DesignerName : @"Vicky",
+                 DesignerPhone : @"0937010319",
+                 DesignerPhotoURL : @"http://www.ml-hair.com.tw/upload/designer/2013-07-09%2015.57.01.jpg",
+                 DesignerLine : @"abc",
+                 DesignerFB : @"URL",
+                 @"shopName" : @"名揚"};
+    [designerList addObject:designer];
+    
+    designer = @{DesignerName : @"黃于庭",
+                 DesignerPhone : @"0937010319",
+                 DesignerPhotoURL : @"http://www.ml-hair.com.tw/upload/designer/2013-07-09%2015.42.48.jpg",
+                 DesignerLine : @"abc",
+                 DesignerFB : @"URL",
+                 @"shopName" : @"名揚"};
+    [designerList addObject:designer];
+    
+    designer = @{DesignerName : @"joanna",
+                 DesignerPhone : @"0937010319",
+                 DesignerPhotoURL : @"http://www.ml-hair.com.tw/upload/designer/2013-07-09%2015.44.12.jpg",
+                 DesignerLine : @"abc",
+                 DesignerFB : @"URL",
+                 @"shopName" : @"名揚"};
+    [designerList addObject:designer];
+    
+    designer = @{DesignerName : @"Miko",
+                 DesignerPhone : @"0937010319",
+                 DesignerPhotoURL : @"http://www.ml-hair.com.tw/upload/designer/2013-07-09%2015.46.30.jpg",
+                 DesignerLine : @"abc",
+                 DesignerFB : @"URL",
+                 @"shopName" : @"名揚"};
+    [designerList addObject:designer];
+    
+    //民權
+    designer = @{DesignerName : @"5號湘妮",
+                 DesignerPhone : @"0937010319",
+                 DesignerPhotoURL : @"http://www.ml-hair.com.tw/upload/designer/%E4%B8%AD(2).jpg",
+                 DesignerLine : @"abc",
+                 DesignerFB : @"URL",
+                 @"shopName" : @"民權"};
+    
+    [designerList addObject:designer];
+    
+    designer = @{DesignerName : @"10號琳雅",
+                 DesignerPhone : @"0937010319",
+                 DesignerPhotoURL : @"http://www.ml-hair.com.tw/upload/designer/%E7%BF%81%E7%BF%81%E7%BF%81(2).jpg",
+                 DesignerLine : @"abc",
+                 DesignerFB : @"URL",
+                 @"shopName" : @"民權"};
+    
+    [designerList addObject:designer];
+    
+    designer = @{DesignerName : @"3號琪琪",
+                 DesignerPhone : @"0937010319",
+                 DesignerPhotoURL : @"http://www.ml-hair.com.tw/upload/designer/%E7%90%AA%E7%90%AA.jpg",
+                 DesignerLine : @"abc",
+                 DesignerFB : @"URL",
+                 @"shopName" : @"民權"};
+    
+    [designerList addObject:designer];
+    
+    designer = @{DesignerName : @"8號雯雯",
+                 DesignerPhone : @"0937010319",
+                 DesignerPhotoURL : @"http://www.ml-hair.com.tw/upload/designer/%E9%9B%85%E9%9B%AF.JPG",
+                 DesignerLine : @"abc",
+                 DesignerFB : @"URL",
+                 @"shopName" : @"民權"};
+    
+    [designerList addObject:designer];
+    
+    designer = @{DesignerName : @"6號婷婷",
+                 DesignerPhone : @"0937010319",
+                 DesignerPhotoURL : @"http://www.ml-hair.com.tw/upload/designer/%E9%83%81%E5%A9%B7.png",
+                 DesignerLine : @"abc",
+                 DesignerFB : @"URL",
+                 @"shopName" : @"民權"};
+    
+    [designerList addObject:designer];
+    
+    
+    designer = @{DesignerName : @"7號阿水",
+                 DesignerPhone : @"0937010319",
+                 DesignerPhotoURL : @"http://www.ml-hair.com.tw/upload/designer/%E6%9E%97%E6%98%A5%E6%B0%B4.jpg",
+                 DesignerLine : @"abc",
+                 DesignerFB : @"URL",
+                 @"shopName" : @"民權"};
+    
+    [designerList addObject:designer];
     
     return designerList[arc4random_uniform((int)designerList.count)];
 }
@@ -631,6 +712,95 @@
                  DesignerFB : @"URL",
                  @"shopName" : @"林森"};
     [designerList addObject:designer];
+    
+    
+    
+    //名揚
+    designer = @{DesignerName : @"Vicky",
+                 DesignerPhone : @"0937010319",
+                 DesignerPhotoURL : @"http://www.ml-hair.com.tw/upload/designer/2013-07-09%2015.57.01.jpg",
+                 DesignerLine : @"abc",
+                 DesignerFB : @"URL",
+                 @"shopName" : @"名揚"};
+    [designerList addObject:designer];
+    
+    designer = @{DesignerName : @"黃于庭",
+                 DesignerPhone : @"0937010319",
+                 DesignerPhotoURL : @"http://www.ml-hair.com.tw/upload/designer/2013-07-09%2015.42.48.jpg",
+                 DesignerLine : @"abc",
+                 DesignerFB : @"URL",
+                 @"shopName" : @"名揚"};
+    [designerList addObject:designer];
+    
+    designer = @{DesignerName : @"joanna",
+                 DesignerPhone : @"0937010319",
+                 DesignerPhotoURL : @"http://www.ml-hair.com.tw/upload/designer/2013-07-09%2015.44.12.jpg",
+                 DesignerLine : @"abc",
+                 DesignerFB : @"URL",
+                 @"shopName" : @"名揚"};
+    [designerList addObject:designer];
+    
+    designer = @{DesignerName : @"Miko",
+                 DesignerPhone : @"0937010319",
+                 DesignerPhotoURL : @"http://www.ml-hair.com.tw/upload/designer/2013-07-09%2015.46.30.jpg",
+                 DesignerLine : @"abc",
+                 DesignerFB : @"URL",
+                 @"shopName" : @"名揚"};
+    [designerList addObject:designer];
+    
+    //民權
+    designer = @{DesignerName : @"5號湘妮",
+                 DesignerPhone : @"0937010319",
+                 DesignerPhotoURL : @"http://www.ml-hair.com.tw/upload/designer/%E4%B8%AD(2).jpg",
+                 DesignerLine : @"abc",
+                 DesignerFB : @"URL",
+                 @"shopName" : @"民權"};
+    
+    [designerList addObject:designer];
+    
+    designer = @{DesignerName : @"10號琳雅",
+                 DesignerPhone : @"0937010319",
+                 DesignerPhotoURL : @"http://www.ml-hair.com.tw/upload/designer/%E7%BF%81%E7%BF%81%E7%BF%81(2).jpg",
+                 DesignerLine : @"abc",
+                 DesignerFB : @"URL",
+                 @"shopName" : @"民權"};
+    
+    [designerList addObject:designer];
+    
+    designer = @{DesignerName : @"3號琪琪",
+                 DesignerPhone : @"0937010319",
+                 DesignerPhotoURL : @"http://www.ml-hair.com.tw/upload/designer/%E7%90%AA%E7%90%AA.jpg",
+                 DesignerLine : @"abc",
+                 DesignerFB : @"URL",
+                 @"shopName" : @"民權"};
+    
+    [designerList addObject:designer];
+    
+    designer = @{DesignerName : @"8號雯雯",
+                 DesignerPhone : @"0937010319",
+                 DesignerPhotoURL : @"http://www.ml-hair.com.tw/upload/designer/%E9%9B%85%E9%9B%AF.JPG",
+                 DesignerLine : @"abc",
+                 DesignerFB : @"URL",
+                 @"shopName" : @"民權"};
+    
+    [designerList addObject:designer];
+    
+    designer = @{DesignerName : @"6號婷婷",
+                 DesignerPhone : @"0937010319",
+                 DesignerPhotoURL : @"http://www.ml-hair.com.tw/upload/designer/%E9%83%81%E5%A9%B7.png",
+                 DesignerLine : @"abc",
+                 DesignerFB : @"URL",
+                 @"shopName" : @"民權"};
+    
+    [designerList addObject:designer];
+    
+    
+    designer = @{DesignerName : @"7號阿水",
+                 DesignerPhone : @"0937010319",
+                 DesignerPhotoURL : @"http://www.ml-hair.com.tw/upload/designer/%E6%9E%97%E6%98%A5%E6%B0%B4.jpg",
+                 DesignerLine : @"abc",
+                 DesignerFB : @"URL",
+                 @"shopName" : @"民權"};
     
     return designerList[arc4random_uniform((int)designerList.count)];
 }
