@@ -9,7 +9,7 @@
 #import "WorksTVCell.h"
 #import "WorksCVCell.h"
 
-@interface WorksTVCell ()<UICollectionViewDelegate,UICollectionViewDataSource>
+@interface WorksTVCell ()<UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout>
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
 
 @end
@@ -20,6 +20,13 @@
     [super awakeFromNib];
     _collectionView.delegate = self;
     _collectionView.dataSource = self;
+}
+
+-(CGSize)collectionView:(UICollectionView *)collectionView
+                 layout:(UICollectionViewLayout *)collectionViewLayout
+ sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
+    
+    return CGSizeMake(_collectionView.frame.size.height *.48, _collectionView.frame.size.height *.48);
 }
 
 -(NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView {

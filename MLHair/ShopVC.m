@@ -58,6 +58,7 @@ didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     shopAnn.title = shop.name;
     shopAnn.subtitle = shop.time;
     shopAnn.shop = shop;
+    [_map removeAnnotations:_map.annotations];
     [_map addAnnotation:shopAnn];
     
 }

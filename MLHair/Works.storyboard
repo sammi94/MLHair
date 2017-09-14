@@ -47,9 +47,9 @@
                                                     </constraints>
                                                 </view>
                                                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="36n-Ag-3TG">
-                                                    <rect key="frame" x="8" y="35" width="327" height="258.5"/>
+                                                    <rect key="frame" x="8" y="43" width="327" height="250.5"/>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="icf-7P-mZz">
+                                                    <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="icf-7P-mZz">
                                                         <size key="itemSize" width="50" height="50"/>
                                                         <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                                         <size key="footerReferenceSize" width="0.0" height="0.0"/>
@@ -89,7 +89,7 @@
                                                 <constraint firstItem="aVz-LH-bx2" firstAttribute="leading" secondItem="zsm-lc-O8o" secondAttribute="leading" id="Q3v-Xt-g3e"/>
                                                 <constraint firstItem="aVz-LH-bx2" firstAttribute="top" secondItem="fVn-h0-8UG" secondAttribute="bottom" constant="4" id="YFb-fO-LzM"/>
                                                 <constraint firstItem="fVn-h0-8UG" firstAttribute="leading" secondItem="zsm-lc-O8o" secondAttribute="leading" id="ZtE-qK-Vg7"/>
-                                                <constraint firstItem="36n-Ag-3TG" firstAttribute="top" secondItem="aVz-LH-bx2" secondAttribute="bottom" id="ef9-Fa-Fs6"/>
+                                                <constraint firstItem="36n-Ag-3TG" firstAttribute="top" secondItem="aVz-LH-bx2" secondAttribute="bottom" constant="8" id="ef9-Fa-Fs6"/>
                                                 <constraint firstItem="36n-Ag-3TG" firstAttribute="trailing" secondItem="zsm-lc-O8o" secondAttribute="trailingMargin" id="x9i-qp-rM5"/>
                                             </constraints>
                                         </tableViewCellContentView>
