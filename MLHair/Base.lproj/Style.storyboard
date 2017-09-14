@@ -44,8 +44,8 @@
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="MHk-zs-HGK" customClass="AdvanceImageView">
                                                     <rect key="frame" x="8" y="8" width="134" height="104"/>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OUU-DS-Zij">
-                                                    <rect key="frame" x="54" y="113.5" width="42" height="20.5"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OUU-DS-Zij">
+                                                    <rect key="frame" x="8" y="113.5" width="134" height="20.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -56,10 +56,11 @@
                                         <constraints>
                                             <constraint firstItem="MHk-zs-HGK" firstAttribute="top" secondItem="wgV-y0-S3U" secondAttribute="top" constant="8" id="Yf1-hc-dJB"/>
                                             <constraint firstAttribute="bottomMargin" secondItem="MHk-zs-HGK" secondAttribute="bottom" constant="30" id="Zah-Gp-zKH"/>
+                                            <constraint firstAttribute="trailingMargin" secondItem="OUU-DS-Zij" secondAttribute="trailing" id="bA5-tv-yeq"/>
                                             <constraint firstItem="MHk-zs-HGK" firstAttribute="leading" secondItem="wgV-y0-S3U" secondAttribute="leading" constant="8" id="fuX-jb-xkN"/>
                                             <constraint firstAttribute="trailing" secondItem="MHk-zs-HGK" secondAttribute="trailing" constant="8" id="jfr-1L-3dX"/>
+                                            <constraint firstItem="OUU-DS-Zij" firstAttribute="leading" secondItem="wgV-y0-S3U" secondAttribute="leadingMargin" id="tpE-Cn-S4E"/>
                                             <constraint firstAttribute="bottomMargin" secondItem="OUU-DS-Zij" secondAttribute="bottom" constant="8" id="tqG-A6-g1g"/>
-                                            <constraint firstItem="OUU-DS-Zij" firstAttribute="centerX" secondItem="wgV-y0-S3U" secondAttribute="centerX" id="yXs-ZQ-zo0"/>
                                         </constraints>
                                         <connections>
                                             <outlet property="imageCell" destination="MHk-zs-HGK" id="zPb-1a-RAz"/>
@@ -98,8 +99,8 @@
                                                         <constraint firstAttribute="width" secondItem="fXQ-27-Chp" secondAttribute="height" multiplier="1:1" id="Tx8-aX-l7t"/>
                                                     </constraints>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="設計師" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Z8-vx-ePE">
-                                                    <rect key="frame" x="4" y="68" width="52" height="24"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="設計師" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="9Z8-vx-ePE">
+                                                    <rect key="frame" x="0.0" y="68" width="60" height="24"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -107,12 +108,13 @@
                                             </subviews>
                                         </view>
                                         <constraints>
-                                            <constraint firstItem="9Z8-vx-ePE" firstAttribute="centerX" secondItem="jcP-5W-Fes" secondAttribute="centerX" id="2lZ-Xv-eNx"/>
                                             <constraint firstAttribute="trailing" secondItem="fXQ-27-Chp" secondAttribute="trailing" constant="4" id="BEZ-9q-Xuq"/>
+                                            <constraint firstAttribute="trailing" secondItem="9Z8-vx-ePE" secondAttribute="trailing" id="Cii-dM-dme"/>
                                             <constraint firstItem="fXQ-27-Chp" firstAttribute="leading" secondItem="jcP-5W-Fes" secondAttribute="leading" constant="4" id="PVy-Z1-lvb"/>
                                             <constraint firstItem="9Z8-vx-ePE" firstAttribute="top" secondItem="fXQ-27-Chp" secondAttribute="bottom" constant="8" id="QKE-Ld-fgT"/>
                                             <constraint firstAttribute="bottom" secondItem="9Z8-vx-ePE" secondAttribute="bottom" constant="8" id="SDi-uC-OWc"/>
                                             <constraint firstItem="fXQ-27-Chp" firstAttribute="top" secondItem="jcP-5W-Fes" secondAttribute="top" constant="8" id="dXB-tS-0vZ"/>
+                                            <constraint firstItem="9Z8-vx-ePE" firstAttribute="leading" secondItem="jcP-5W-Fes" secondAttribute="leading" id="dky-X4-uPf"/>
                                         </constraints>
                                         <connections>
                                             <outlet property="name" destination="9Z8-vx-ePE" id="2Um-MU-V6i"/>
@@ -181,7 +183,7 @@
                     <tabBarItem key="tabBarItem" title="流行參考" image="流行參考" id="Qw5-HR-ukz"/>
                     <toolbarItems/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="m2B-Xs-drI">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="m2B-Xs-drI">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>

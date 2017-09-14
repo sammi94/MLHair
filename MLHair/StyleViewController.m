@@ -32,7 +32,7 @@
     [super viewDidLoad];
     
     [self dataProcessing];
-    
+    [self setGirlStyle];
     _CollectionView.delegate = self;
     _CollectionView.dataSource = self;
     self.automaticallyAdjustsScrollViewInsets = false;
@@ -46,11 +46,11 @@
     
     UICollectionViewFlowLayout *layout = [UICollectionViewFlowLayout new];
     layout.scrollDirection = UICollectionViewScrollDirectionVertical;
-    //设置每一行的间距
+    
     layout.minimumLineSpacing = 8;
-    //设置item的间距
+    
     layout.minimumInteritemSpacing = 8;
-    //设置section的边距
+    
     //layout.sectionInset=UIEdgeInsetsMake(5, 5, 0,0 );
     
     _CollectionView.collectionViewLayout = layout;
