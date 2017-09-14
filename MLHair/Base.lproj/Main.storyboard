@@ -41,18 +41,8 @@
                     <view key="view" contentMode="scaleToFill" id="Fec-yo-STf">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Azl-oo-JRR" customClass="GIDSignInButton">
-                                <rect key="frame" x="74" y="484" width="240" height="45"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            </view>
-                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <connections>
-                        <outlet property="signInButton" destination="Azl-oo-JRR" id="1tv-i1-8ky"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fou-BN-uIR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

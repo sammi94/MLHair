@@ -10,6 +10,6 @@
 
 @interface SignInController : NSObject
 
-
+-(BOOL)isSignIn;
 
 @end

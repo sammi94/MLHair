@@ -7,7 +7,15 @@
 //
 
 #import "SignInController.h"
+#import <FBSDKCoreKit/FBSDKCoreKit.h>
+#import <FBSDKLoginKit/FBSDKLoginKit.h>
+#import <GoogleSignIn/GoogleSignIn.h>
 
 @implementation SignInController
+
+-(BOOL)isSignIn {
+    return [FBSDKAccessToken currentAccessToken] ||
+    [[GIDSignIn sharedInstance] hasAuthInKeychain];
+}
 
 @end

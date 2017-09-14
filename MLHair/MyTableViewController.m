@@ -10,9 +10,12 @@
 #import "MyTableViewCell.h"
 #import "AvatorTViCell.h"
 #import "SignInVC.h"
+#import "SignInController.h"
 
 @interface MyTableViewController ()
-
+{
+    SignInController *MLhair;
+}
 @end
 
 @implementation MyTableViewController
@@ -20,8 +23,17 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    SignInVC *signInVC = [self.storyboard instantiateViewControllerWithIdentifier:@"SignInVC"];
-    [self.navigationController pushViewController:signInVC animated:true];
+    MLhair = [SignInController new];
+    
+    
+}
+
+-(void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    if (!MLhair.isSignIn) {
+        SignInVC *signInVC = [self.storyboard instantiateViewControllerWithIdentifier:@"SignInVC"];
+        [self.navigationController pushViewController:signInVC animated:false];
+    }
 }
 
 - (void)didReceiveMemoryWarning {

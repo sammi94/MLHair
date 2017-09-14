@@ -12,7 +12,7 @@
 #import <FBSDKLoginKit/FBSDKLoginKit.h>
 #import <GoogleSignIn/GoogleSignIn.h>
 
-@interface SignInVC ()
+@interface SignInVC ()<FBSDKLoginButtonDelegate,GIDSignInUIDelegate>
 {
     
 }
@@ -30,7 +30,23 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [GIDSignIn sharedInstance].uiDelegate = (id)self;
+    [self facebooksetting];
+    [self googleSetting];
+}
+
+-(void)googleSetting {
+    [GIDSignIn sharedInstance].delegate = (id)self;
     
+}
+
+-(void)facebooksetting {
+    _fbb.readPermissions =
+    @[@"public_profile",
+      @"email",
+      @"user_friends"
+      ];
+    _fbb.delegate = (id)self;
 }
 
 -(void)viewWillAppear:(BOOL)animated {
@@ -64,6 +80,43 @@
 - (IBAction)signUp:(id)sender {
     SignUpVC *signUpVC = [self.storyboard instantiateViewControllerWithIdentifier:@"SignUpVC"];
     [self.navigationController pushViewController:signUpVC animated:true];
+}
+
+//fb 登入 拿資料
+-(void)loginButton:(FBSDKLoginButton *)loginButton
+didCompleteWithResult:(FBSDKLoginManagerLoginResult *)result
+             error:(NSError *)error{
+    
+    //    [self checkSignIn];
+}
+
+//google 登入 拿資料
+- (void)signIn:(GIDSignIn *)signIn didSignInForUser:(GIDGoogleUser *)user
+     withError:(NSError *)error {
+    // Perform any operations on signed in user here.
+    //    NSString *userId = user.userID;                  // For client-side use only!
+    //    NSString *idToken = user.authentication.idToken; // Safe to send to the server
+    //        NSString *fullName = user.profile.name;
+    //    NSString *givenName = user.profile.givenName;
+    //    NSString *familyName = user.profile.familyName;
+    //    NSString *email = user.profile.email;
+    // ...
+    //    [self checkSignIn];
+}
+
+//fb登出
+- (void)loginButtonDidLogOut:(FBSDKLoginButton *)loginButton {
+    
+}
+
+//google 登出
+- (IBAction)signOut:(id)sender {
+    [[GIDSignIn sharedInstance] signOut];
+}
+
+//自定登出
+- (IBAction)singInBtn:(id)sender {
+    
 }
 
 
