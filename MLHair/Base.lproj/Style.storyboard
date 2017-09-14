@@ -168,10 +168,10 @@
             </objects>
             <point key="canvasLocation" x="1877.5999999999999" y="6.746626686656672"/>
         </scene>
-        <!--Booking-->
+        <!--BookingVC-->
         <scene sceneID="5F8-vC-ZiT">
             <objects>
-                <viewControllerPlaceholder storyboardIdentifier="BookingVC" storyboardName="Booking" id="Puw-H9-TLx" sceneMemberID="viewController"/>
+                <viewControllerPlaceholder storyboardIdentifier="BookingVC" storyboardName="Booking" referencedIdentifier="BookingVC" id="Puw-H9-TLx" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="smo-aH-hrb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2353" y="-251"/>

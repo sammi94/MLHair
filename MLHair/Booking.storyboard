@@ -32,11 +32,11 @@
                                     </imageView>
                                     <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xHR-p5-WbZ" userLabel="collection">
                                         <rect key="frame" x="283" y="27.5" width="32" height="29"/>
-                                        <state key="normal" image="添加喜愛"/>
+                                        <state key="normal" image="followed"/>
                                     </button>
                                     <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KIX-tu-ybe" userLabel="shard">
                                         <rect key="frame" x="323" y="24" width="33" height="36"/>
-                                        <state key="normal" image="分享"/>
+                                        <state key="normal" image="shard"/>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fWM-i6-uyv" userLabel="designer">
                                         <rect key="frame" x="182" y="42" width="0.0" height="0.0"/>
@@ -55,10 +55,16 @@
                                     <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ODU-O0-3mf" userLabel="booking">
                                         <rect key="frame" x="190" y="503.5" width="134" height="46"/>
                                         <state key="normal" image="預約"/>
+                                        <connections>
+                                            <action selector="booking:" destination="cji-zn-ZvH" eventType="touchUpInside" id="SN1-o2-wqN"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GzJ-CC-LXr">
                                         <rect key="frame" x="40" y="503.5" width="134" height="46"/>
                                         <state key="normal" image="作品"/>
+                                        <connections>
+                                            <action selector="works:" destination="cji-zn-ZvH" eventType="touchUpInside" id="ac8-xX-gAL"/>
+                                        </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nBY-2c-c5T">
                                         <rect key="frame" x="0.0" y="331.5" width="0.0" height="0.0"/>
@@ -129,9 +135,9 @@
     <resources>
         <image name="FB-1" width="232" height="47"/>
         <image name="Line" width="232" height="47"/>
+        <image name="followed" width="32" height="29"/>
+        <image name="shard" width="33" height="36"/>
         <image name="作品" width="134" height="46"/>
-        <image name="分享" width="33" height="36"/>
-        <image name="添加喜愛" width="32" height="29"/>
         <image name="設計師電話" width="232" height="46"/>
         <image name="預約" width="134" height="46"/>
     </resources>

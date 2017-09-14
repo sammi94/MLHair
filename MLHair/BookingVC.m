@@ -36,6 +36,14 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (IBAction)works:(id)sender {
+    
+}
+
+- (IBAction)booking:(id)sender {
+    
+}
+
 /*
 #pragma mark - Navigation
 
