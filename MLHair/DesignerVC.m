@@ -52,8 +52,6 @@
     _findShop.inputView = picker;
     
     UIDatePicker *dayPicker = [UIDatePicker new];
-    dayPicker.locale = [[NSLocale alloc] initWithLocaleIdentifier:@"zh_TW"];
-    dayPicker.timeZone = [[NSTimeZone alloc] initWithName:@"GMT"];
     dayPicker.datePickerMode = UIDatePickerModeDate;
     [dayPicker
      addTarget:self
@@ -62,9 +60,8 @@
     _chooseDay.inputView = dayPicker;
     
     UIDatePicker *timePicker = [UIDatePicker new];
-    timePicker.locale = [[NSLocale alloc] initWithLocaleIdentifier:@"zh_TW"];
-    timePicker.timeZone = [[NSTimeZone alloc] initWithName:@"GTM"];
     timePicker.datePickerMode = UIDatePickerModeTime;
+    timePicker.date = dayPicker.date;
     [timePicker addTarget:self
                    action:@selector(chooseTime:)
          forControlEvents:UIControlEventValueChanged];
@@ -74,12 +71,15 @@
 -(void)chooseDate:(UIDatePicker *)datePicker {
     NSDate *date = datePicker.date;
     NSDateFormatter *df = [NSDateFormatter new];
-    [df setDateFormat:@"YYYY/MM/dd"];
+    [df setDateFormat:@"yyyy/MM/dd"];
     _chooseDay.text = [df stringFromDate:date];
 }
 
 -(void)chooseTime:(UIDatePicker*)time {
-    
+    NSDate *date = time.date;
+    NSDateFormatter *df = [NSDateFormatter new];
+    [df setDateFormat:@"HH:mm"];
+    _chooseTime.text = [df stringFromDate:date];
 }
 
 -(void)viewDidLayoutSubviews {
