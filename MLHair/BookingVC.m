@@ -29,7 +29,16 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    
+    _designer.text = _data.name;
+    _shop.text = _data.shopName;
+    _phoneNumber.text = _data.phone;
+    
+    [_photo loadImageWithURL:[NSURL URLWithString:_data.photoURL]];
+    
+    
+    
+    
 }
 
 - (void)didReceiveMemoryWarning {

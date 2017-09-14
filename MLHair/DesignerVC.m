@@ -159,6 +159,7 @@
     DesignerVO *designer = data.shopList[indexPath.section].designerList[indexPath.row];
     
     booking.data = designer;
+    
     booking.designer.text = designer.name;
     NSURL *url = [NSURL URLWithString:designer.photoURL];
     [booking.photo loadImageWithURL:url];

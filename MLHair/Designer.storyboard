@@ -25,7 +25,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="rOl-9a-653">
-                                <rect key="frame" x="16" y="72" width="343" height="29"/>
+                                <rect key="frame" x="0.0" y="72" width="375" height="29"/>
                                 <segments>
                                     <segment title="找設計師"/>
                                     <segment title="直接預約"/>
@@ -192,12 +192,12 @@
                             <constraint firstItem="GAS-SG-BK2" firstAttribute="top" secondItem="VCa-GX-sCM" secondAttribute="bottom" id="C9T-ES-uNc"/>
                             <constraint firstItem="ZEo-tu-UBN" firstAttribute="top" secondItem="rOl-9a-653" secondAttribute="bottom" constant="8" id="J7B-Qf-ttX"/>
                             <constraint firstItem="GAS-SG-BK2" firstAttribute="top" secondItem="ZEo-tu-UBN" secondAttribute="bottom" id="JaI-d8-4Dh"/>
-                            <constraint firstItem="rOl-9a-653" firstAttribute="leading" secondItem="ucp-gc-g1R" secondAttribute="leadingMargin" id="MDy-RC-Sho"/>
+                            <constraint firstItem="rOl-9a-653" firstAttribute="leading" secondItem="ucp-gc-g1R" secondAttribute="leading" id="MDy-RC-Sho"/>
                             <constraint firstItem="VCa-GX-sCM" firstAttribute="top" secondItem="rOl-9a-653" secondAttribute="bottom" constant="8" id="VuZ-0h-Lgg"/>
                             <constraint firstItem="ZEo-tu-UBN" firstAttribute="centerX" secondItem="ucp-gc-g1R" secondAttribute="centerX" id="ZEs-12-djT"/>
                             <constraint firstItem="VCa-GX-sCM" firstAttribute="leading" secondItem="ucp-gc-g1R" secondAttribute="leading" id="cXw-dH-z7Y"/>
                             <constraint firstItem="9YK-tU-scY" firstAttribute="width" relation="lessThanOrEqual" secondItem="ucp-gc-g1R" secondAttribute="width" multiplier="8/10" id="dpx-LS-GQG"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="rOl-9a-653" secondAttribute="trailing" id="pOh-dp-Rv3"/>
+                            <constraint firstAttribute="trailing" secondItem="rOl-9a-653" secondAttribute="trailing" id="pOh-dp-Rv3"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="預約設計" id="bwA-Tn-XXu"/>

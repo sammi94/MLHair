@@ -46,13 +46,9 @@
     
     UICollectionViewFlowLayout *layout = [UICollectionViewFlowLayout new];
     layout.scrollDirection = UICollectionViewScrollDirectionVertical;
-    
     layout.minimumLineSpacing = 8;
-    
-    layout.minimumInteritemSpacing = 8;
-    
+    layout.minimumInteritemSpacing = 5;
     //layout.sectionInset=UIEdgeInsetsMake(5, 5, 0,0 );
-    
     _CollectionView.collectionViewLayout = layout;
     
     
