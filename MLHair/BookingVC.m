@@ -16,13 +16,6 @@
 }
 
 
-
-
-
-
-
-
-
 @end
 
 @implementation BookingVC
@@ -51,6 +44,58 @@
     
     [self.navigationController pushViewController:works animated:true];
     
+}
+
+- (IBAction)schemeLine:(id)sender {
+    
+//    NSURL *appURL = [NSURL URLWithString:@"line://msg/text/IamHappyMan:)"];
+    NSURL *appURL = [NSURL URLWithString:[NSString stringWithFormat:@"line://ti/p/%@",_data.line]];
+    if ([[UIApplication sharedApplication] canOpenURL: appURL]) {
+        [[UIApplication sharedApplication]
+         openURL:appURL
+         options:@{}
+         completionHandler:^(BOOL success) {
+             
+         }];
+        
+    }
+    else { //如果使用者沒有安裝，連結到App Store
+        NSURL *itunesURL = [NSURL URLWithString:@"itms-apps://itunes.apple.com/app/id443904275"];
+        [[UIApplication sharedApplication]
+         openURL:itunesURL
+         options:@{}
+         completionHandler:^(BOOL success) {
+             
+         }];
+    }
+}
+
+- (IBAction)callDesigner:(id)sender {
+    NSURL *phoneURL = [NSURL
+                       URLWithString:[NSString
+                                      stringWithFormat:@"tel:%@",_data.phone]];
+    
+    [[UIApplication sharedApplication]
+     openURL:phoneURL
+     options:@{}
+     completionHandler:^(BOOL success) {
+         
+     }];
+}
+
+- (IBAction)fbscheme:(id)sender {
+
+    NSURL *url = [NSURL
+                  URLWithString:[NSString
+                                 stringWithFormat:@"fb://profile/%@",_data.facebook]];
+    
+    
+    [[UIApplication sharedApplication]
+     openURL:url
+     options:@{}
+     completionHandler:^(BOOL success) {
+         
+     }];
 }
 
 - (IBAction)booking:(id)sender {
