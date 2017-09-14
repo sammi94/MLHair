@@ -387,6 +387,176 @@
     [fackGirlWorks addObject:works];
     //新增造型 完成
     
+
+    photoList = @[@"https://cdn.hair-map.com/post/photo/normal/74351.jpg",
+                  @"https://cdn.hair-map.com/post/photo/normal/74352.jpg",
+                  @"https://cdn.hair-map.com/post/photo/normal/74353.jpg"
+                  ];
+    works = @{PhotoList : photoList,
+              PhotoDescription :
+                  @"OL個性短髮style"};
+    [fackGirlWorks addObject:works];
+    
+//    -----------------------------------------------------------------------
+    
+    photoList = @[@"https://cdn.hair-map.com/post/photo/normal/33065.jpg",
+                  @"https://cdn.hair-map.com/post/photo/normal/33069.jpg",
+                  @"https://cdn.hair-map.com/post/photo/normal/33068.jpg"
+                  ];
+    works = @{PhotoList : photoList,
+              PhotoDescription :
+                  @"低層次鮑伯搭配深藍髮色"};
+    [fackGirlWorks addObject:works];
+    
+    photoList = @[@"https://cdn.hair-map.com/post/photo/normal/9156.jpg",
+                  @"https://cdn.hair-map.com/post/photo/normal/9157.jpg",
+                  @"https://cdn.hair-map.com/post/photo/normal/9158.jpg"
+                  ];
+    works = @{PhotoList : photoList,
+              PhotoDescription :
+                  @"漸層美人魚綠藍色"};
+    [fackGirlWorks addObject:works];
+    
+    photoList = @[@"https://cdn.hair-map.com/post/photo/normal/8711.jpg",
+                  @"https://cdn.hair-map.com/post/photo/normal/8712.jpg"
+                  ];
+    
+    works = @{PhotoList : photoList,
+              PhotoDescription :
+                  @"#貓系女孩x迷幻混血灰x夢幻感"};
+    [fackGirlWorks addObject:works];
+    
+    photoList = @[@"https://cdn.hair-map.com/post/photo/normal/20779.jpg",
+                  @"https://cdn.hair-map.com/post/photo/normal/20778.jpg",
+                  @"https://cdn.hair-map.com/post/photo/normal/20780.jpg",
+                  @"https://cdn.hair-map.com/post/photo/normal/20777.jpg"
+                  ];
+    
+    works = @{PhotoList : photoList,
+              PhotoDescription :
+                  @"點綴的霧紫色是不是好美好美呀？"};
+    [fackGirlWorks addObject:works];
+    
+    photoList = @[@"https://cdn.hair-map.com/post/photo/normal/82962.jpg",
+                  @"https://cdn.hair-map.com/post/photo/normal/82964.jpg",
+                  @"https://cdn.hair-map.com/post/photo/normal/82963.jpg"
+                  ];
+    
+    works = @{PhotoList : photoList,
+              PhotoDescription :
+                  @"#短髮燙歐美捲"};
+    [fackGirlWorks addObject:works];
+    
+    photoList = @[@"https://cdn.hair-map.com/post/photo/normal/50272.jpg",
+                  @"https://cdn.hair-map.com/post/photo/normal/50273.jpg",
+                  @"https://cdn.hair-map.com/post/photo/normal/50271.jpg"
+                  ];
+    
+    works = @{PhotoList : photoList,
+              PhotoDescription :
+                  @"#韓系個性風格的女孩有福嘍"};
+    [fackGirlWorks addObject:works];
+    
+    photoList = @[@"https://cdn.hair-map.com/post/photo/normal/6048.jpg",
+                  @"https://cdn.hair-map.com/post/photo/normal/6050.jpg",
+                  @"https://cdn.hair-map.com/post/photo/normal/6049.jpg",
+                  @"https://cdn.hair-map.com/post/photo/normal/6051.jpg"
+                  ];
+    
+    works = @{PhotoList : photoList,
+              PhotoDescription :
+                  @"粉色透明系Color"};
+    [fackGirlWorks addObject:works];
+    
+    photoList = @[@"https://cdn.hair-map.com/post/photo/normal/13624.jpg",
+                  @"https://cdn.hair-map.com/post/photo/normal/13627.jpg",
+                  @"https://cdn.hair-map.com/post/photo/normal/13626.jpg",
+                  @"https://cdn.hair-map.com/post/photo/normal/13625.jpg"
+                  ];
+    
+    works = @{PhotoList : photoList,
+              PhotoDescription :
+                  @"經典包伯+眉上劉海"};
+    [fackGirlWorks addObject:works];
+    
+    photoList = @[@"https://cdn.hair-map.com/post/photo/normal/14036.jpg",
+                  @"https://cdn.hair-map.com/post/photo/normal/14037.jpg",
+                  @"https://cdn.hair-map.com/post/photo/normal/14039.jpg",
+                  @"https://cdn.hair-map.com/post/photo/normal/14038.jpg",
+                  @"https://cdn.hair-map.com/post/photo/normal/14040.jpg"
+                  ];
+    
+    works = @{PhotoList : photoList,
+              PhotoDescription :
+                  @"#鮑伯頭 #剪短會上癮 #正妹就是要剪短"};
+    [fackGirlWorks addObject:works];
+    
+    photoList = @[@"https://cdn.hair-map.com/post/photo/normal/57705.jpg",
+                  @"https://cdn.hair-map.com/post/photo/normal/57706.jpg",
+                  @"https://cdn.hair-map.com/post/photo/normal/57707.jpg",
+                  ];
+    
+    works = @{PhotoList : photoList,
+              PhotoDescription :
+                  @"可帥氣 可俏麗 當女神"};
+    [fackGirlWorks addObject:works];
+    
+    photoList = @[@"https://cdn.hair-map.com/post/photo/normal/58616.jpg",
+                  @"https://cdn.hair-map.com/post/photo/normal/58617.jpg",
+                  @"https://cdn.hair-map.com/post/photo/normal/58628.jpg",
+                  ];
+    
+    works = @{PhotoList : photoList,
+              PhotoDescription :
+                  @"夏天到了就是要換個清爽舒服的不敗款髮型"};
+    [fackGirlWorks addObject:works];
+    
+    photoList = @[@"https://cdn.hair-map.com/post/photo/normal/42782.jpg",
+                  @"https://cdn.hair-map.com/post/photo/normal/42783.jpg",
+                  @"https://cdn.hair-map.com/post/photo/normal/42784.jpg"
+                  ];
+    
+    works = @{PhotoList : photoList,
+              PhotoDescription :
+                  @"深色首選適合不喜歡褪色醜醜的妳們"};
+    [fackGirlWorks addObject:works];
+    
+    photoList = @[@"https://cdn.hair-map.com/post/photo/normal/61003.jpg",
+                  @"https://cdn.hair-map.com/post/photo/normal/61004.jpg",
+                  @"https://cdn.hair-map.com/post/photo/normal/61005.jpg",
+                  @"https://cdn.hair-map.com/post/photo/normal/61006.jpg"
+                  ];
+    
+    works = @{PhotoList : photoList,
+              PhotoDescription :
+                  @"美人魚染~~~"};
+    [fackGirlWorks addObject:works];
+    
+    photoList = @[@"https://cdn.hair-map.com/post/photo/normal/70915.jpg",
+                  @"https://cdn.hair-map.com/post/photo/normal/70918.jpg",
+                  @"https://cdn.hair-map.com/post/photo/normal/70919.jpg",
+                  @"https://cdn.hair-map.com/post/photo/normal/70917.jpg",
+                  @"https://cdn.hair-map.com/post/photo/normal/70920.jpg"
+                  ];
+    
+    works = @{PhotoList : photoList,
+              PhotoDescription :
+                  @"眉上瀏海+霧感髮色"};
+    [fackGirlWorks addObject:works];
+    
+    photoList = @[@"https://cdn.hair-map.com/post/photo/normal/1860.jpg",
+                  @"https://cdn.hair-map.com/post/photo/normal/1861.jpg",
+                  @"https://cdn.hair-map.com/post/photo/normal/1862.jpg"
+                  ];
+    
+    works = @{PhotoList : photoList,
+              PhotoDescription :
+                  @"棉花糖霜雞蛋刨冰外加甜甜的島國女孩"};
+    [fackGirlWorks addObject:works];
+    
+    
+
+    
     
     
     return fackGirlWorks[arc4random_uniform((int)fackGirlWorks.count)];
@@ -414,7 +584,473 @@
     [fackGirlWorks addObject:works];
     //新增造型 完成
     
+    //新增
+    photoList = @[@"https://cdn.hair-map.com/post/photo/normal/83761.jpg",
+                  @"https://cdn.hair-map.com/post/photo/normal/83762.jpg",
+                  @"https://cdn.hair-map.com/post/photo/normal/83763.jpg"
+                  ];
+    works = @{PhotoList : photoList,
+              PhotoDescription :
+                  @"#韓式燙髮#手繞撥乾#電棒感覺"};
+    [fackGirlWorks addObject:works];
+//    ------------------------------------------------------------------------
     
+    photoList = @[@"https://cdn.hair-map.com/post/photo/normal/89023.jpg",
+                  @"https://cdn.hair-map.com/post/photo/normal/89024.jpg"
+                  ];
+    works = @{PhotoList : photoList,
+              PhotoDescription :
+                  @"#膨鬆感#男士剪髮#霧面深藍色"};
+    [fackGirlWorks addObject:works];
+//    ------------------------------------------------------------------------
+    
+    photoList = @[@"https://cdn.hair-map.com/post/photo/normal/84910.jpg",
+                  @"https://cdn.hair-map.com/post/photo/normal/84911.jpg",
+                  @"https://cdn.hair-map.com/post/photo/normal/84909.jpg"
+                  ];
+    works = @{PhotoList : photoList,
+              PhotoDescription :
+                  @"#歐美感#男生燙染#霧面冷棕色系"};
+    [fackGirlWorks addObject:works];
+//    ------------------------------------------------------------------------
+    
+    photoList = @[@"https://cdn.hair-map.com/post/photo/normal/62984.jpg",
+                  @"https://cdn.hair-map.com/post/photo/normal/62986.jpg",
+                  @"https://cdn.hair-map.com/post/photo/normal/62985.jpg"
+                  ];
+    works = @{PhotoList : photoList,
+              PhotoDescription :
+                  @"#經典不敗油頭款#男生捲髮#英倫紳士風"};
+    [fackGirlWorks addObject:works];
+//    ------------------------------------------------------------------------
+    
+    photoList = @[@"https://cdn.hair-map.com/post/photo/normal/17229.jpg",
+                  @"https://cdn.hair-map.com/post/photo/normal/17230.jpg",
+                  @"https://cdn.hair-map.com/post/photo/normal/17231.jpg"
+                  ];
+    works = @{PhotoList : photoList,
+              PhotoDescription :
+                  @"#歐美油頭款#男生短髮#英倫紳士風"};
+    [fackGirlWorks addObject:works];
+//    ------------------------------------------------------------------------
+    
+    photoList = @[@"https://cdn.hair-map.com/post/photo/normal/13958.jpg",
+                  @"https://cdn.hair-map.com/post/photo/normal/13959.jpg",
+                  @"https://cdn.hair-map.com/post/photo/normal/13961.jpg"
+                  ];
+    works = @{PhotoList : photoList,
+              PhotoDescription :
+                  @"#歐美油頭款#男生卷髮#超好整理"};
+    [fackGirlWorks addObject:works];
+//    ------------------------------------------------------------------------
+    photoList = @[@"https://cdn.hair-map.com/post/photo/normal/5630.jpg",
+                  @"https://cdn.hair-map.com/post/photo/normal/5631.jpg"
+                  ];
+    works = @{PhotoList : photoList,
+              PhotoDescription :
+                  @"#頹廢感#搖滾感#英倫紳士風"};
+    [fackGirlWorks addObject:works];
+//    ------------------------------------------------------------------------
+    photoList = @[@"https://cdn.hair-map.com/post/photo/normal/80852.jpg",
+                  @"https://cdn.hair-map.com/post/photo/normal/80853.jpg",
+                  @"https://cdn.hair-map.com/post/photo/normal/80854.jpg"
+                  ];
+    works = @{PhotoList : photoList,
+              PhotoDescription :
+                  @"#歐美油頭款#男生短髮#英倫紳士風"};
+    [fackGirlWorks addObject:works];
+//    ------------------------------------------------------------------------
+    photoList = @[@"https://cdn.hair-map.com/post/photo/normal/91533.jpg",
+                  @"https://cdn.hair-map.com/post/photo/normal/91534.jpg"
+                  ];
+    works = @{PhotoList : photoList,
+              PhotoDescription :
+                  @"#型男必備#蓬鬆感#男生剪裁"};
+    [fackGirlWorks addObject:works];
+//    ------------------------------------------------------------------------
+    photoList = @[@"https://cdn.hair-map.com/post/photo/normal/90847.jpg",
+                  @"https://cdn.hair-map.com/post/photo/normal/90848.jpg",
+                  @"https://cdn.hair-map.com/post/photo/normal/90849.jpg"
+                  ];
+    works = @{PhotoList : photoList,
+              PhotoDescription :
+                  @"#蓬鬆感#型男必備#質感"};
+    [fackGirlWorks addObject:works];
+//    ------------------------------------------------------------------------
+    photoList = @[@"https://cdn.hair-map.com/post/photo/normal/69171.jpg",
+                  @"https://cdn.hair-map.com/post/photo/normal/69169.jpg",
+                  @"https://cdn.hair-map.com/post/photo/normal/69170.jpg"
+                  ];
+    works = @{PhotoList : photoList,
+              PhotoDescription :
+                  @"#空氣感層次#清晰輪廓線條#二分區式剪裁"};
+    [fackGirlWorks addObject:works];
+//    ------------------------------------------------------------------------
+    photoList = @[@"https://cdn.hair-map.com/post/photo/normal/77510.jpg",
+                  @"https://cdn.hair-map.com/post/photo/normal/77511.jpg"
+                  ];
+    works = @{PhotoList : photoList,
+              PhotoDescription :
+                  @"#型男必備#蓬鬆感#男生捲髮"};
+    [fackGirlWorks addObject:works];
+//    ------------------------------------------------------------------------
+    photoList = @[@"https://cdn.hair-map.com/post/photo/normal/71029.jpg",
+                  @"https://cdn.hair-map.com/post/photo/normal/71030.jpg",
+                  @"https://cdn.hair-map.com/post/photo/normal/71031.jpg"
+                  ];
+    works = @{PhotoList : photoList,
+              PhotoDescription :
+                  @"#冷色調#男生短髮#孔劉髮型"};
+    [fackGirlWorks addObject:works];
+//    ------------------------------------------------------------------------
+    
+    photoList = @[@"https://cdn.hair-map.com/post/photo/normal/86971.jpg",
+                  @"https://cdn.hair-map.com/post/photo/normal/86972.jpg",
+                  @"https://cdn.hair-map.com/post/photo/normal/86973.jpg"
+                  ];
+    works = @{PhotoList : photoList,
+              PhotoDescription :
+                  @"#極短髮#蓬鬆感#男生捲髮"};
+    [fackGirlWorks addObject:works];
+//    ------------------------------------------------------------------------
+    photoList = @[@"https://cdn.hair-map.com/post/photo/normal/79851.jpg",
+                  @"https://cdn.hair-map.com/post/photo/normal/79852.jpg",
+                  @"https://cdn.hair-map.com/post/photo/normal/79853.jpg"
+                  ];
+    works = @{PhotoList : photoList,
+              PhotoDescription :
+                  @"#燙髮#韓式髮根燙#隨性撥乾"};
+    [fackGirlWorks addObject:works];
+//    ------------------------------------------------------------------------
+    
+    photoList = @[@"https://cdn.hair-map.com/post/photo/normal/78515.jpg",
+                  @"https://cdn.hair-map.com/post/photo/normal/78517.jpg",
+                  @"https://cdn.hair-map.com/post/photo/normal/78516.jpg"
+                  ];
+    works = @{PhotoList : photoList,
+              PhotoDescription :
+                  @"#韓系文青捲#超好整理吹乾就有型#蓬度100%"};
+    [fackGirlWorks addObject:works];
+//    ------------------------------------------------------------------------
+    photoList = @[@"https://cdn.hair-map.com/post/photo/normal/44040.jpg",
+                  @"https://cdn.hair-map.com/post/photo/normal/44041.jpg"
+                  ];
+    works = @{PhotoList : photoList,
+              PhotoDescription :
+                  @"#個人剪裁#蓬鬆感#男生捲髮"};
+    [fackGirlWorks addObject:works];
+//    ------------------------------------------------------------------------
+    photoList = @[@"https://cdn.hair-map.com/post/photo/normal/72196.jpg",
+                  @"https://cdn.hair-map.com/post/photo/normal/72195.jpg",
+                  @"https://cdn.hair-map.com/post/photo/normal/72197.jpg"
+                  ];
+    works = @{PhotoList : photoList,
+              PhotoDescription :
+                  @"#男仕油頭#男仕燙髮#鬆亂感微捲髮"};
+    [fackGirlWorks addObject:works];
+//    ------------------------------------------------------------------------
+    
+    photoList = @[@"https://cdn.hair-map.com/post/photo/normal/4143.jpg",
+                  @"https://cdn.hair-map.com/post/photo/normal/4144.jpg",
+                  @"https://cdn.hair-map.com/post/photo/normal/4145.jpg"
+                  ];
+    works = @{PhotoList : photoList,
+              PhotoDescription :
+                  @"#微燙#微染#綠棕色"};
+    [fackGirlWorks addObject:works];
+//    ------------------------------------------------------------------------
+    
+    photoList = @[@"https://cdn.hair-map.com/post/photo/normal/83444.jpg",
+                  @"https://cdn.hair-map.com/post/photo/normal/83445.jpg",
+                  @"https://cdn.hair-map.com/post/photo/normal/83443.jpg"
+                  ];
+    works = @{PhotoList : photoList,
+              PhotoDescription :
+                  @"#型男必備#微染#時尚運動風"};
+    [fackGirlWorks addObject:works];
+//    ------------------------------------------------------------------------
+    
+    photoList = @[@"https://cdn.hair-map.com/post/photo/normal/70342.jpg",
+                  @"https://cdn.hair-map.com/post/photo/normal/70344.jpg",
+                  @"https://cdn.hair-map.com/post/photo/normal/70343.jpg"
+                  ];
+    works = @{PhotoList : photoList,
+              PhotoDescription :
+                  @"#型男必備#霧面#超好整理"};
+    [fackGirlWorks addObject:works];
+//    ------------------------------------------------------------------------
+    photoList = @[@"https://cdn.hair-map.com/post/photo/normal/83883.jpg",
+                  @"https://cdn.hair-map.com/post/photo/normal/83884.jpg",
+                  @"https://cdn.hair-map.com/post/photo/normal/83885.jpg"
+                  ];
+    works = @{PhotoList : photoList,
+              PhotoDescription :
+                  @"#型男必備#歐美感#特殊色"};
+    [fackGirlWorks addObject:works];
+//    ------------------------------------------------------------------------
+    
+    photoList = @[@"https://cdn.hair-map.com/post/photo/normal/4797.jpg",
+                  @"https://cdn.hair-map.com/post/photo/normal/4798.jpg",
+                  @"https://cdn.hair-map.com/post/photo/normal/4799.jpg"
+                  ];
+    works = @{PhotoList : photoList,
+              PhotoDescription :
+                  @"#型男必備#男生短髮#運動風"};
+    [fackGirlWorks addObject:works];
+//    ------------------------------------------------------------------------
+    
+    photoList = @[@"https://cdn.hair-map.com/post/photo/normal/4797.jpg",
+                  @"https://cdn.hair-map.com/post/photo/normal/4798.jpg",
+                  @"https://cdn.hair-map.com/post/photo/normal/4799.jpg"
+                  ];
+    works = @{PhotoList : photoList,
+              PhotoDescription :
+                  @"#型男必備#男生短髮#運動風"};
+    [fackGirlWorks addObject:works];
+//    ------------------------------------------------------------------------
+    
+    photoList = @[@"https://cdn.hair-map.com/post/photo/normal/9341.jpg",
+                  @"https://cdn.hair-map.com/post/photo/normal/9340.jpg",
+                  @"https://cdn.hair-map.com/post/photo/normal/9339.jpg"
+                  ];
+    works = @{PhotoList : photoList,
+              PhotoDescription :
+                  @"#剪髮造型#層次款油頭#油頭"};
+    [fackGirlWorks addObject:works];
+//    ------------------------------------------------------------------------
+    
+    photoList = @[@"https://cdn.hair-map.com/post/photo/normal/70664.jpg",
+                  @"https://cdn.hair-map.com/post/photo/normal/70665.jpg"
+                  ];
+    works = @{PhotoList : photoList,
+              PhotoDescription :
+                  @"#韓系低層次#蓬鬆感#線條感"};
+    [fackGirlWorks addObject:works];
+//    ------------------------------------------------------------------------
+    photoList = @[@"https://cdn.hair-map.com/post/photo/normal/86597.jpg",
+                  @"https://cdn.hair-map.com/post/photo/normal/86600.jpg",
+                  @"https://cdn.hair-map.com/post/photo/normal/86598.jpg"
+                  ];
+    works = @{PhotoList : photoList,
+              PhotoDescription :
+                  @"#超級好整理#男生短髮#清爽"};
+    [fackGirlWorks addObject:works];
+//    ------------------------------------------------------------------------
+    
+    photoList = @[@"https://cdn.hair-map.com/post/photo/normal/58882.jpg",
+                  @"https://cdn.hair-map.com/post/photo/normal/58883.jpg",
+                  @"https://cdn.hair-map.com/post/photo/normal/58884.jpg"
+                  ];
+    works = @{PhotoList : photoList,
+              PhotoDescription :
+                  @"#霧灰棕#微線條剪裁#帥到掉渣"};
+    [fackGirlWorks addObject:works];
+//    ------------------------------------------------------------------------
+    
+    photoList = @[@"https://cdn.hair-map.com/post/photo/normal/74958.jpg",
+                  @"https://cdn.hair-map.com/post/photo/normal/74959.jpg",
+                  @"https://cdn.hair-map.com/post/photo/normal/74961.jpg"
+                  ];
+    works = @{PhotoList : photoList,
+              PhotoDescription :
+                  @"#男生短髮#微線條剪裁#韓系歐巴頭"};
+    [fackGirlWorks addObject:works];
+//    ------------------------------------------------------------------------
+    
+    photoList = @[@"https://cdn.hair-map.com/post/photo/normal/84597.jpg",
+                  @"https://cdn.hair-map.com/post/photo/normal/84598.jpg",
+                  @"https://cdn.hair-map.com/post/photo/normal/84599.jpg"
+                  ];
+    works = @{PhotoList : photoList,
+              PhotoDescription :
+                  @"#運動風#漸層推#割線"};
+    [fackGirlWorks addObject:works];
+//    ------------------------------------------------------------------------
+    photoList = @[@"https://cdn.hair-map.com/post/photo/normal/70139.jpg",
+                  @"https://cdn.hair-map.com/post/photo/normal/70140.jpg"
+                  ];
+    works = @{PhotoList : photoList,
+              PhotoDescription :
+                  @"#韓系髮#空氣瀏海微捲頭#線條感"};
+    [fackGirlWorks addObject:works];
+//    ------------------------------------------------------------------------
+    photoList = @[@"https://cdn.hair-map.com/post/photo/normal/14263.jpg",
+                  @"https://cdn.hair-map.com/post/photo/normal/14264.jpg"
+                  ];
+    works = @{PhotoList : photoList,
+              PhotoDescription :
+                  @"#乾淨利落#藍色挑染#男生短髮"};
+    [fackGirlWorks addObject:works];
+//    ------------------------------------------------------------------------
+    photoList = @[@"https://cdn.hair-map.com/post/photo/normal/9777.jpg",
+                  @"https://cdn.hair-map.com/post/photo/normal/9778.jpg",
+                  @"https://cdn.hair-map.com/post/photo/normal/9779.jpg"
+                  ];
+    works = @{PhotoList : photoList,
+              PhotoDescription :
+                  @"#油頭#英倫紳士風#型男短髮"};
+    [fackGirlWorks addObject:works];
+//    ------------------------------------------------------------------------
+    
+    photoList = @[@"https://cdn.hair-map.com/post/photo/normal/83058.jpg",
+                  @"https://cdn.hair-map.com/post/photo/normal/83057.jpg",
+                  @"https://cdn.hair-map.com/post/photo/normal/83059.jpg"
+                  ];
+    works = @{PhotoList : photoList,
+              PhotoDescription :
+                  @"#手撥成型#英倫紳士風#短瀏海"};
+    [fackGirlWorks addObject:works];
+//    ------------------------------------------------------------------------
+    
+    photoList = @[@"https://cdn.hair-map.com/post/photo/normal/54816.jpg",
+                  @"https://cdn.hair-map.com/post/photo/normal/54818.jpg",
+                  @"https://cdn.hair-map.com/post/photo/normal/54817.jpg"
+                  ];
+    works = @{PhotoList : photoList,
+              PhotoDescription :
+                  @"#乾淨俐落#運動風#小鮮肉"};
+    [fackGirlWorks addObject:works];
+//    ------------------------------------------------------------------------
+    
+    photoList = @[@"https://cdn.hair-map.com/post/photo/normal/89530.jpg",
+                  @"https://cdn.hair-map.com/post/photo/normal/89532.jpg"
+                  ];
+    works = @{PhotoList : photoList,
+              PhotoDescription :
+                  @"#v特條#運動風#男生短髮"};
+    [fackGirlWorks addObject:works];
+//    ------------------------------------------------------------------------
+    
+    photoList = @[@"https://cdn.hair-map.com/post/photo/normal/74997.jpg",
+                  @"https://cdn.hair-map.com/post/photo/normal/74998.jpg",
+                  @"https://cdn.hair-map.com/post/photo/normal/75000.jpg"
+                  ];
+    works = @{PhotoList : photoList,
+              PhotoDescription :
+                  @"#夏天陽光男孩#奶茶霧冷色特調#漸層推"};
+    [fackGirlWorks addObject:works];
+//    ------------------------------------------------------------------------
+    
+    photoList = @[@"https://cdn.hair-map.com/post/photo/normal/82506.jpg",
+                  @"https://cdn.hair-map.com/post/photo/normal/82507.jpg"
+                  ];
+    works = @{PhotoList : photoList,
+              PhotoDescription :
+                  @"#歐美感#運動風#男生短髮"};
+    [fackGirlWorks addObject:works];
+//    ------------------------------------------------------------------------
+    photoList = @[@"https://cdn.hair-map.com/post/photo/normal/89924.jpg",
+                  @"https://cdn.hair-map.com/post/photo/normal/89926.jpg",
+                  @"https://cdn.hair-map.com/post/photo/normal/89923.jpg"
+                  ];
+    works = @{PhotoList : photoList,
+              PhotoDescription :
+                  @"#不連接裁剪#線條感#運動風"};
+    [fackGirlWorks addObject:works];
+//    ------------------------------------------------------------------------
+    photoList = @[@"https://cdn.hair-map.com/post/photo/normal/78731.jpg",
+                  @"https://cdn.hair-map.com/post/photo/normal/78730.jpg",
+                  @"https://cdn.hair-map.com/post/photo/normal/78732.jpg"
+                  ];
+    works = @{PhotoList : photoList,
+              PhotoDescription :
+                  @"#刻線#漸層推#運動風"};
+    [fackGirlWorks addObject:works];
+//    ------------------------------------------------------------------------
+    photoList = @[@"https://cdn.hair-map.com/post/photo/normal/77616.jpg",
+                  @"https://cdn.hair-map.com/post/photo/normal/78448.jpg",
+                  @"https://cdn.hair-map.com/post/photo/normal/78447.jpg"
+                  ];
+    works = @{PhotoList : photoList,
+              PhotoDescription :
+                  @"#運動系#俐落#型男必備"};
+    [fackGirlWorks addObject:works];
+//    ------------------------------------------------------------------------
+    
+    photoList = @[@"https://cdn.hair-map.com/post/photo/normal/82830.jpg",
+                  @"https://cdn.hair-map.com/post/photo/normal/82831.jpg"
+                  ];
+    works = @{PhotoList : photoList,
+              PhotoDescription :
+                  @"#運動系短髮#歐美感#男生短髮"};
+    [fackGirlWorks addObject:works];
+//    ------------------------------------------------------------------------
+    
+    photoList = @[@"https://cdn.hair-map.com/post/photo/normal/82503.jpg",
+                  @"https://cdn.hair-map.com/post/photo/normal/82505.jpg",
+                  @"https://cdn.hair-map.com/post/photo/normal/82504.jpg"
+                  ];
+    works = @{PhotoList : photoList,
+              PhotoDescription :
+                  @"#漸層推#質感#型男必備"};
+    [fackGirlWorks addObject:works];
+//    ------------------------------------------------------------------------
+    
+    photoList = @[@"https://cdn.hair-map.com/post/photo/normal/82593.jpg",
+                  @"https://cdn.hair-map.com/post/photo/normal/82594.jpg"
+                  ];
+    works = @{PhotoList : photoList,
+              PhotoDescription :
+                  @"#極短油頭款#髮參角#男生短髮"};
+    [fackGirlWorks addObject:works];
+//    ------------------------------------------------------------------------
+    
+    photoList = @[@"https://cdn.hair-map.com/post/photo/normal/78871.jpg",
+                  @"https://cdn.hair-map.com/post/photo/normal/78872.jpg",
+                  @"https://cdn.hair-map.com/post/photo/normal/78873.jpg"
+                  ];
+    works = @{PhotoList : photoList,
+              PhotoDescription :
+                  @"#油頭#質感#時尚運動風"};
+    [fackGirlWorks addObject:works];
+//    ------------------------------------------------------------------------
+    
+    photoList = @[@"https://cdn.hair-map.com/post/photo/normal/85088.jpg",
+                  @"https://cdn.hair-map.com/post/photo/normal/85089.jpg"
+                  ];
+    works = @{PhotoList : photoList,
+              PhotoDescription :
+                  @"#韓系#多層次剪裁#夏日輕爽感"};
+    [fackGirlWorks addObject:works];
+//    ------------------------------------------------------------------------
+    
+    photoList = @[@"https://cdn.hair-map.com/post/photo/normal/89259.jpg",
+                  @"https://cdn.hair-map.com/post/photo/normal/89262.jpg",
+                  @"https://cdn.hair-map.com/post/photo/normal/89264.jpg"
+                  ];
+    works = @{PhotoList : photoList,
+              PhotoDescription :
+                  @"#油頭#粗硬髮#時尚運動風"};
+    [fackGirlWorks addObject:works];
+//    ------------------------------------------------------------------------
+    
+    photoList = @[@"https://cdn.hair-map.com/post/photo/normal/87648.jpg",
+                  @"https://cdn.hair-map.com/post/photo/normal/87650.jpg",
+                  @"https://cdn.hair-map.com/post/photo/normal/87649.jpg"
+                  ];
+    works = @{PhotoList : photoList,
+              PhotoDescription :
+                  @"#短髮微捲#燙捲#蓬鬆感"};
+    [fackGirlWorks addObject:works];
+//    ------------------------------------------------------------------------
+    photoList = @[@"https://cdn.hair-map.com/post/photo/normal/88096.jpg",
+                  @"https://cdn.hair-map.com/post/photo/normal/88097.jpg",
+                  @"https://cdn.hair-map.com/post/photo/normal/88098.jpg"
+                  ];
+    works = @{PhotoList : photoList,
+              PhotoDescription :
+                  @"#霧灰#燙捲#蓬鬆感"};
+    [fackGirlWorks addObject:works];
+//    ------------------------------------------------------------------------
+    
+    photoList = @[@"https://cdn.hair-map.com/post/photo/normal/82772.jpg",
+                  @"https://cdn.hair-map.com/post/photo/normal/82774.jpg",
+                  @"https://cdn.hair-map.com/post/photo/normal/82773.jpg"
+                  ];
+    works = @{PhotoList : photoList,
+              PhotoDescription :
+                  @"#俐落感#運動風#油頭"};
+    [fackGirlWorks addObject:works];
     
     return fackGirlWorks[arc4random_uniform((int)fackGirlWorks.count)];
     
