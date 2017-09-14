@@ -87,7 +87,7 @@
 didCompleteWithResult:(FBSDKLoginManagerLoginResult *)result
              error:(NSError *)error{
     
-    //    [self checkSignIn];
+    [self.navigationController popViewControllerAnimated:true];
 }
 
 //google 登入 拿資料
@@ -101,7 +101,7 @@ didCompleteWithResult:(FBSDKLoginManagerLoginResult *)result
     //    NSString *familyName = user.profile.familyName;
     //    NSString *email = user.profile.email;
     // ...
-    //    [self checkSignIn];
+    [self.navigationController popViewControllerAnimated:true];
 }
 
 //fb登出
