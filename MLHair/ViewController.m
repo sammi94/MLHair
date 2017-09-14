@@ -146,6 +146,9 @@
         NSMutableDictionary *designer = [NSMutableDictionary new];
         [designer setObject:@(i) forKey:DesignerId];
         [designer setObject:@(shopId) forKey:ShopId];
+        [designer setObject:@"https://www.facebook.com/hairdesignerlean/" forKey:DesignerFB];
+        [designer setObject:@"Masqurin" forKey:DesignerLine];
+        [designer setObject:[self fackWorksWith:i] forKey:DesignerWorksList];
         [designer setObject:@(arc4random_uniform(10000)) forKey:DesignerFollowed];
         int sex = arc4random_uniform(2);
         if (sex == 0) {
@@ -156,11 +159,11 @@
             [designer setObject:[self fackBoyImg] forKey:DesignerPhotoURL];
             [designer setObject:[self fackBoyName] forKey:DesignerName];
         }
-        [designer setObject:@"https://www.facebook.com/hairdesignerlean/" forKey:DesignerFB];
-        [designer setObject:@"Masqurin" forKey:DesignerLine];
-        [designer setObject:[self fackWorksWith:i] forKey:DesignerWorksList];
+        [designer addEntriesFromDictionary:[self fackGirlDesigner]];
         [designerList addObject:designer];
     }
+    
+    
     return designerList;
 }
 
@@ -171,8 +174,8 @@
         NSMutableDictionary *works = [NSMutableDictionary new];
         int sex = arc4random_uniform(2);
         [works setObject:@(sex) forKey:Gender];
-        NSMutableArray <NSString*>*photoList = [NSMutableArray new];
-        int photoNumber = arc4random_uniform(100) + 1;
+//        NSMutableArray <NSString*>*photoList = [NSMutableArray new];
+//        int photoNumber = arc4random_uniform(100) + 1;
         if (sex == 0) {
             [works addEntriesFromDictionary:[self fackGirlWorks]];
 
@@ -181,13 +184,13 @@
 //            }
 //            [works setObject:[self fackGirlName] forKey:PhotoDescription];
         } else {
-            for (int i = 0; i < photoNumber; i++) {
-                [photoList addObject:[self fackBoyImg]];
-            }
-            [works setObject:[self fackBoyName] forKey:PhotoDescription];
-            [works setObject:photoList forKey:PhotoList];
+            [works addEntriesFromDictionary:[self fackBoyWorks]];
+//            for (int i = 0; i < photoNumber; i++) {
+//                [photoList addObject:[self fackBoyImg]];
+//            }
+//            [works setObject:[self fackBoyName] forKey:PhotoDescription];
+//            [works setObject:photoList forKey:PhotoList];
         }
-        
         [works setObject:@(arc4random_uniform(10000)) forKey:ModelId];
         [works setObject:@(1) forKey:ModelAuthority];
         [works setObject:@(designerId) forKey:DesignerId];
@@ -428,79 +431,237 @@
     
 }
 
--(void) designer {
-    NSDictionary *dssigner1 = @{@"name" : @"Q號妤韓設計師",
-                                @"tel" : @"0927977966",
-                                @"phtoURL" : @"http://www.ml-hair.com.tw/upload/designer/%EF%BC%B1%E8%99%9F1.jpg",
-                                @"lineID" : @"abc",
-                                @"fb" : @"URL",
+-(NSDictionary*) fackBoyWorks {
+    
+    NSMutableArray <NSDictionary*>*fackGirlWorks = [NSMutableArray new];
+    
+    NSArray *photoList = @[@"https://cdn2-mf-techbang.pixfs.net/system/images/57274/medium/5c1b06608a94101a057c75aae42e527e.jpg?1491895286"
+                           ];
+    NSDictionary *works = @{PhotoList : photoList,
+                            PhotoDescription : @"清爽男"};
+    [fackGirlWorks addObject:works];
+    
+    //  新增造型
+    //放照片表 記得最後一個不要逗號
+    photoList = @[@"https://cdn1-mf-techbang.pixfs.net/system/images/57277/medium/b943444919635a41cdc95525bb746f2f.jpg?1491895288"
+                  ];
+    //放描述
+    works = @{PhotoList : photoList,
+              PhotoDescription :
+                  @"簡單男"};
+    [fackGirlWorks addObject:works];
+    //新增造型 完成
+    
+    
+    
+    return fackGirlWorks[arc4random_uniform((int)fackGirlWorks.count)];
+    
+}
+
+-(NSDictionary*) fackGirlDesigner {
+    NSMutableArray *designerList = [NSMutableArray new];
+    
+    NSDictionary *designer = @{DesignerName : @"Q號妤韓設計師",
+                               DesignerPhone : @"0927977966",
+                               DesignerPhotoURL : @"http://www.ml-hair.com.tw/upload/designer/%EF%BC%B1%E8%99%9F1.jpg",
+                               DesignerLine : @"abc",
+                               DesignerFB : @"URL",
+                               @"shopName" : @"林森"};
+    [designerList addObject:designer];
+    
+    designer = @{DesignerName : @"9號于瑄設計師",
+                 DesignerPhone : @"0930757009",
+                 DesignerPhotoURL : @"http://www.ml-hair.com.tw/upload/designer/IMG_2589_%E5%89%AF%E6%9C%AC.jpg",
+                 DesignerLine : @"abc",
+                 DesignerFB : @"URL",
+                 @"shopName" : @"林森"};
+    [designerList addObject:designer];
+    
+    
+    designer = @{DesignerName : @"6號阿龔設計師",
+                 DesignerPhone : @"0923803231",
+                 DesignerPhotoURL : @"http://www.ml-hair.com.tw/upload/designer/%E9%98%BF%E9%BE%941.JPG",
+                 DesignerLine : @"abc",
+                 DesignerFB : @"URL",
+                 @"shopName" : @"林森"};
+    [designerList addObject:designer];
+    
+    designer = @{DesignerName : @"12佳穎號設計師",
+                 DesignerPhone : @"0922290635",
+                 DesignerPhotoURL : @"http://www.ml-hair.com.tw/upload/designer/%E5%8F%B0%EF%BC%A11.jpg",
+                 DesignerLine : @"abc",
+                 DesignerFB: @"URL",
+                 @"shopName" : @"林森"};
+    [designerList addObject:designer];
+    
+    designer = @{DesignerName : @"7號妹妹設計師",
+                 DesignerPhone: @"0926893841",
+                 DesignerPhotoURL : @"http://www.ml-hair.com.tw/upload/designer/%E5%A6%B9%E5%A6%B9.JPG",
+                 DesignerLine : @"abc",
+                 DesignerFB : @"URL",
+                 @"shopName" : @"林森"};
+    [designerList addObject:designer];
+    
+    designer = @{DesignerName : @"1號Joyce設計師",
+                 DesignerPhone : @"0937006052",
+                 DesignerPhotoURL : @"http://www.ml-hair.com.tw/upload/designer/%E7%8E%89%E4%BD%A91.jpg",
+                 DesignerLine : @"abc",
+                 DesignerFB : @"URL",
+                 @"shopName" : @"林森"};
+    [designerList addObject:designer];
+    
+    designer = @{DesignerName : @"15號妙妙設計師",
+                 DesignerPhone : @"0932502930",
+                 DesignerPhotoURL : @"http://www.ml-hair.com.tw/upload/designer/%E5%A6%99%E5%A6%991.jpg",
+                 DesignerLine : @"abc",
+                 DesignerFB : @"URL",
+                 @"shopName" : @"林森"};
+    [designerList addObject:designer];
+    
+    designer = @{DesignerName : @"16號A-Ki設計師",
+                 DesignerPhone : @"0989413869",
+                 DesignerPhotoURL : @"http://www.ml-hair.com.tw/upload/designer/%E6%84%8F%E5%A6%821.jpg",
+                 DesignerLine : @"abc",
+                 DesignerFB : @"URL",
+                 @"shopName" : @"林森"};
+    [designerList addObject:designer];
+    
+    designer = @{DesignerName : @"B號月月設計師",
+                 DesignerPhone : @"0989135639",
+                 DesignerPhotoURL : @"http://www.ml-hair.com.tw/upload/designer/%E6%9C%88%E6%9C%881.jpg",
+                 DesignerLine : @"abc",
+                 DesignerFB : @"URL",
+                 @"shopName" : @"林森"};
+    [designerList addObject:designer];
+    
+    designer = @{DesignerName : @"10號歐麥設計師",
+                 DesignerPhone : @"0967025878",
+                 DesignerPhotoURL : @"http://www.ml-hair.com.tw/upload/designer/%E6%AD%90%E9%BA%A51.jpg",
+                 DesignerLine : @"abc",
+                 DesignerFB : @"URL",
+                 @"shopName" : @"林森"};
+    [designerList addObject:designer];
+    
+    designer = @{DesignerName : @"2號Apple設計師",
+                 DesignerPhone : @"0981570203",
+                 DesignerPhotoURL : @"http://www.ml-hair.com.tw/upload/designer/apple.JPG",
+                 DesignerLine : @"abc",
+                 DesignerFB : @"URL",
+                 @"shopName" : @"林森"};
+    [designerList addObject:designer];
+    
+    designer = @{DesignerName : @"4號貴珍設計師",
+                 DesignerPhone : @"0937010319",
+                 DesignerPhotoURL : @"http://www.ml-hair.com.tw/upload/designer/%E8%B2%B4%E7%8F%8D1.jpg",
+                 DesignerLine : @"abc",
+                 DesignerFB : @"URL",
+                 @"shopName" : @"林森"};
+    [designerList addObject:designer];
+    
+    return designerList[arc4random_uniform((int)designerList.count)];
+}
+
+-(NSDictionary*) fackBoyDesigner {
+    
+    NSMutableArray *designerList = [NSMutableArray new];
+    NSDictionary *designer = @{DesignerName : @"Q號妤韓設計師",
+                               DesignerPhone : @"0927977966",
+                               DesignerPhotoURL : @"http://www.ml-hair.com.tw/upload/designer/%EF%BC%B1%E8%99%9F1.jpg",
+                               DesignerLine : @"abc",
+                               DesignerFB : @"URL",
                                 @"shopName" : @"林森"};
-    NSDictionary *dssigner2 = @{@"name" : @"9號于瑄設計師",
-                                @"tel" : @"0930757009",
-                                @"phtoURL" : @"http://www.ml-hair.com.tw/upload/designer/IMG_2589_%E5%89%AF%E6%9C%AC.jpg",
-                                @"lineID" : @"abc",
-                                @"fb" : @"URL",
-                                @"shopName" : @"林森"};
-    NSDictionary *dssigner3 = @{@"name" : @"6號阿龔設計師",
-                                @"tel" : @"0923803231",
-                                @"phtoURL" : @"http://www.ml-hair.com.tw/upload/designer/%E9%98%BF%E9%BE%941.JPG",
-                                @"lineID" : @"abc",
-                                @"fb" : @"URL",
-                                @"shopName" : @"林森"};
-    NSDictionary *dssigner4 = @{@"name" : @"12佳穎號設計師",
-                                @"tel" : @"0922290635",
-                                @"phtoURL" : @"http://www.ml-hair.com.tw/upload/designer/%E5%8F%B0%EF%BC%A11.jpg",
-                                @"lineID" : @"abc",
-                                @"fb" : @"URL",
-                                @"shopName" : @"林森"};
-    NSDictionary *dssigner5 = @{@"name" : @"7號妹妹設計師",
-                                @"tel" : @"0926893841",
-                                @"phtoURL" : @"http://www.ml-hair.com.tw/upload/designer/%E5%A6%B9%E5%A6%B9.JPG",
-                                @"lineID" : @"abc",
-                                @"fb" : @"URL",
-                                @"shopName" : @"林森"};
-    NSDictionary *dssigner6 = @{@"name" : @"1號Joyce設計師",
-                                @"tel" : @"0937006052",
-                                @"phtoURL" : @"http://www.ml-hair.com.tw/upload/designer/%E7%8E%89%E4%BD%A91.jpg",
-                                @"lineID" : @"abc",
-                                @"fb" : @"URL",
-                                @"shopName" : @"林森"};
-    NSDictionary *dssigner7 = @{@"name" : @"15號妙妙設計師",
-                                @"tel" : @"0932502930",
-                                @"phtoURL" : @"http://www.ml-hair.com.tw/upload/designer/%E5%A6%99%E5%A6%991.jpg",
-                                @"lineID" : @"abc",
-                                @"fb" : @"URL",
-                                @"shopName" : @"林森"};
-    NSDictionary *dssigner8 = @{@"name" : @"16號A-Ki設計師",
-                                @"tel" : @"0989413869",
-                                @"phtoURL" : @"http://www.ml-hair.com.tw/upload/designer/%E6%84%8F%E5%A6%821.jpg",
-                                @"lineID" : @"abc",
-                                @"fb" : @"URL",
-                                @"shopName" : @"林森"};
-    NSDictionary *dssigner9 = @{@"name" : @"B號月月設計師",
-                                @"tel" : @"0989135639",
-                                @"phtoURL" : @"http://www.ml-hair.com.tw/upload/designer/%E6%9C%88%E6%9C%881.jpg",
-                                @"lineID" : @"abc",
-                                @"fb" : @"URL",
-                                @"shopName" : @"林森"};
-    NSDictionary *dssigner10 = @{@"name" : @"10號歐麥設計師",
-                                 @"tel" : @"0967025878",
-                                 @"phtoURL" : @"http://www.ml-hair.com.tw/upload/designer/%E6%AD%90%E9%BA%A51.jpg",
-                                 @"lineID" : @"abc",
-                                 @"fb" : @"URL",
-                                 @"shopName" : @"林森"};
-    NSDictionary *dssigner11 = @{@"name" : @"2號Apple設計師",
-                                 @"tel" : @"0981570203",
-                                 @"phtoURL" : @"http://www.ml-hair.com.tw/upload/designer/apple.JPG",
-                                 @"lineID" : @"abc",
-                                 @"fb" : @"URL",
-                                 @"shopName" : @"林森"};
-    NSDictionary *dssigner12 = @{@"name" : @"4號貴珍設計師",
-                                 @"tel" : @"0937010319",
-                                 @"phtoURL" : @"http://www.ml-hair.com.tw/upload/designer/%E8%B2%B4%E7%8F%8D1.jpg",
-                                 @"lineID" : @"abc",
-                                 @"fb" : @"URL",
-                                 @"shopName" : @"林森"};
+    [designerList addObject:designer];
+    
+    designer = @{DesignerName : @"9號于瑄設計師",
+                 DesignerPhone : @"0930757009",
+                 DesignerPhotoURL : @"http://www.ml-hair.com.tw/upload/designer/IMG_2589_%E5%89%AF%E6%9C%AC.jpg",
+                 DesignerLine : @"abc",
+                 DesignerFB : @"URL",
+                 @"shopName" : @"林森"};
+    [designerList addObject:designer];
+    
+    
+    designer = @{DesignerName : @"6號阿龔設計師",
+                 DesignerPhone : @"0923803231",
+                 DesignerPhotoURL : @"http://www.ml-hair.com.tw/upload/designer/%E9%98%BF%E9%BE%941.JPG",
+                 DesignerLine : @"abc",
+                 DesignerFB : @"URL",
+                 @"shopName" : @"林森"};
+    [designerList addObject:designer];
+    
+    designer = @{DesignerName : @"12佳穎號設計師",
+                 DesignerPhone : @"0922290635",
+                 DesignerPhotoURL : @"http://www.ml-hair.com.tw/upload/designer/%E5%8F%B0%EF%BC%A11.jpg",
+                 DesignerLine : @"abc",
+                 DesignerFB: @"URL",
+                 @"shopName" : @"林森"};
+    [designerList addObject:designer];
+    
+    designer = @{DesignerName : @"7號妹妹設計師",
+                 DesignerPhone: @"0926893841",
+                 DesignerPhotoURL : @"http://www.ml-hair.com.tw/upload/designer/%E5%A6%B9%E5%A6%B9.JPG",
+                 DesignerLine : @"abc",
+                 DesignerFB : @"URL",
+                 @"shopName" : @"林森"};
+    [designerList addObject:designer];
+    
+    designer = @{DesignerName : @"1號Joyce設計師",
+                 DesignerPhone : @"0937006052",
+                 DesignerPhotoURL : @"http://www.ml-hair.com.tw/upload/designer/%E7%8E%89%E4%BD%A91.jpg",
+                 DesignerLine : @"abc",
+                 DesignerFB : @"URL",
+                 @"shopName" : @"林森"};
+    [designerList addObject:designer];
+    
+    designer = @{DesignerName : @"15號妙妙設計師",
+                 DesignerPhone : @"0932502930",
+                 DesignerPhotoURL : @"http://www.ml-hair.com.tw/upload/designer/%E5%A6%99%E5%A6%991.jpg",
+                 DesignerLine : @"abc",
+                 DesignerFB : @"URL",
+                 @"shopName" : @"林森"};
+    [designerList addObject:designer];
+    
+    designer = @{DesignerName : @"16號A-Ki設計師",
+                 DesignerPhone : @"0989413869",
+                 DesignerPhotoURL : @"http://www.ml-hair.com.tw/upload/designer/%E6%84%8F%E5%A6%821.jpg",
+                 DesignerLine : @"abc",
+                 DesignerFB : @"URL",
+                 @"shopName" : @"林森"};
+    [designerList addObject:designer];
+    
+    designer = @{DesignerName : @"B號月月設計師",
+                 DesignerPhone : @"0989135639",
+                 DesignerPhotoURL : @"http://www.ml-hair.com.tw/upload/designer/%E6%9C%88%E6%9C%881.jpg",
+                 DesignerLine : @"abc",
+                 DesignerFB : @"URL",
+                 @"shopName" : @"林森"};
+    [designerList addObject:designer];
+    
+    designer = @{DesignerName : @"10號歐麥設計師",
+                 DesignerPhone : @"0967025878",
+                 DesignerPhotoURL : @"http://www.ml-hair.com.tw/upload/designer/%E6%AD%90%E9%BA%A51.jpg",
+                 DesignerLine : @"abc",
+                 DesignerFB : @"URL",
+                 @"shopName" : @"林森"};
+    [designerList addObject:designer];
+    
+    designer = @{DesignerName : @"2號Apple設計師",
+                 DesignerPhone : @"0981570203",
+                 DesignerPhotoURL : @"http://www.ml-hair.com.tw/upload/designer/apple.JPG",
+                 DesignerLine : @"abc",
+                 DesignerFB : @"URL",
+                 @"shopName" : @"林森"};
+    [designerList addObject:designer];
+    
+    designer = @{DesignerName : @"4號貴珍設計師",
+                 DesignerPhone : @"0937010319",
+                 DesignerPhotoURL : @"http://www.ml-hair.com.tw/upload/designer/%E8%B2%B4%E7%8F%8D1.jpg",
+                 DesignerLine : @"abc",
+                 DesignerFB : @"URL",
+                 @"shopName" : @"林森"};
+    [designerList addObject:designer];
+    
+    return designerList[arc4random_uniform((int)designerList.count)];
 }
 
 //fb 登入 拿資料
