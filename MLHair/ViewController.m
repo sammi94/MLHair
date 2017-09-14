@@ -558,13 +558,13 @@
                  @"shopName" : @"林森"};
     [designerList addObject:designer];
     
-    designer = @{DesignerName : @"新增設計師",
-                 DesignerPhone : @"0937010319",
-                 DesignerPhotoURL : @"http://www.ml-hair.com.tw/upload/designer/%E8%B2%B4%E7%8F%8D1.jpg",
-                 DesignerLine : @"abc",
-                 DesignerFB : @"URL",
-                 @"shopName" : @"林森"};
-    [designerList addObject:designer];
+//    designer = @{DesignerName : @"新增設計師",
+//                 DesignerPhone : @"0937010319",
+//                 DesignerPhotoURL : @"http://www.ml-hair.com.tw/upload/designer/%E8%B2%B4%E7%8F%8D1.jpg",
+//                 DesignerLine : @"abc",
+//                 DesignerFB : @"URL",
+//                 @"shopName" : @"林森"};
+//    [designerList addObject:designer];
     
     
     return designerList[arc4random_uniform((int)designerList.count)];
