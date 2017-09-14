@@ -10,6 +10,7 @@
 		452858181F6909C500934AF9 /* FindShopPickerDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 452858171F6909C500934AF9 /* FindShopPickerDelegate.m */; };
 		4528581F1F6A520F00934AF9 /* BookingVO.m in Sources */ = {isa = PBXBuildFile; fileRef = 4528581E1F6A520F00934AF9 /* BookingVO.m */; };
 		452858221F6AC9A100934AF9 /* WorksCVCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 452858211F6AC9A100934AF9 /* WorksCVCell.m */; };
+		452858251F6AE69E00934AF9 /* SignInController.m in Sources */ = {isa = PBXBuildFile; fileRef = 452858241F6AE69E00934AF9 /* SignInController.m */; };
 		45834E5F1F5D794600B9B28A /* DesignerVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 45834E5E1F5D794600B9B28A /* DesignerVC.m */; };
 		45834E651F5D7E0900B9B28A /* DesignerVCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 45834E641F5D7E0900B9B28A /* DesignerVCell.m */; };
 		45834E6B1F5D837700B9B28A /* MLHairDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = 45834E6A1F5D837700B9B28A /* MLHairDatabase.m */; };
@@ -69,6 +70,8 @@
 		4528581E1F6A520F00934AF9 /* BookingVO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BookingVO.m; sourceTree = "<group>"; };
 		452858201F6AC9A100934AF9 /* WorksCVCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WorksCVCell.h; sourceTree = "<group>"; };
 		452858211F6AC9A100934AF9 /* WorksCVCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WorksCVCell.m; sourceTree = "<group>"; };
+		452858231F6AE69E00934AF9 /* SignInController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignInController.h; sourceTree = "<group>"; };
+		452858241F6AE69E00934AF9 /* SignInController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignInController.m; sourceTree = "<group>"; };
 		45834E5D1F5D794600B9B28A /* DesignerVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DesignerVC.h; sourceTree = "<group>"; };
 		45834E5E1F5D794600B9B28A /* DesignerVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DesignerVC.m; sourceTree = "<group>"; };
 		45834E631F5D7E0900B9B28A /* DesignerVCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DesignerVCell.h; sourceTree = "<group>"; };
@@ -263,6 +266,8 @@
 				4528581C1F6A515B00934AF9 /* ShopVO */,
 				45834E901F62A75300B9B28A /* Location.h */,
 				45834E911F62A75300B9B28A /* Location.m */,
+				452858231F6AE69E00934AF9 /* SignInController.h */,
+				452858241F6AE69E00934AF9 /* SignInController.m */,
 				45834E8A1F62849D00B9B28A /* AdvanceImageView.h */,
 				45834E8B1F62849D00B9B28A /* AdvanceImageView.m */,
 				45834E871F627C8700B9B28A /* Http.h */,
@@ -379,12 +384,12 @@
 				45834EB71F653A4A00B9B28A /* SignUpVC.h */,
 				45834EB81F653A4A00B9B28A /* SignUpVC.m */,
 				45834E711F60266D00B9B28A /* my.storyboard */,
+				A4F741561F55ACF800949287 /* MyTableViewController.h */,
+				A4F741571F55ACF800949287 /* MyTableViewController.m */,
 				45834E741F602A5F00B9B28A /* AvatorTViCell.h */,
 				45834E751F602A5F00B9B28A /* AvatorTViCell.m */,
 				A4F741591F55AE0200949287 /* MyTableViewCell.h */,
 				A4F7415A1F55AE0200949287 /* MyTableViewCell.m */,
-				A4F741561F55ACF800949287 /* MyTableViewController.h */,
-				A4F741571F55ACF800949287 /* MyTableViewController.m */,
 			);
 			name = My;
 			sourceTree = "<group>";
@@ -433,7 +438,7 @@
 				TargetAttributes = {
 					A4AC97361F25AFDA002A376B = {
 						CreatedOnToolsVersion = 8.3.2;
-						DevelopmentTeam = 7Z26T3ZJ8X;
+						DevelopmentTeam = J46ZPGV247;
 						LastSwiftMigration = 0830;
 						ProvisioningStyle = Automatic;
 					};
@@ -572,6 +577,7 @@
 				A4AC97FB1F40F2C0002A376B /* RSSParserDelegate.m in Sources */,
 				45834E951F62C0F400B9B28A /* MLHairShopVO.m in Sources */,
 				452858181F6909C500934AF9 /* FindShopPickerDelegate.m in Sources */,
+				452858251F6AE69E00934AF9 /* SignInController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -743,7 +749,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				DEVELOPMENT_TEAM = 7Z26T3ZJ8X;
+				DEVELOPMENT_TEAM = J46ZPGV247;
 				INFOPLIST_FILE = MLHair/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.sammi.MLHair;
@@ -760,7 +766,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				DEVELOPMENT_TEAM = 7Z26T3ZJ8X;
+				DEVELOPMENT_TEAM = J46ZPGV247;
 				INFOPLIST_FILE = MLHair/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.sammi.MLHair;

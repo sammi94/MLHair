@@ -14,7 +14,7 @@
         <!--Sign InVC-->
         <scene sceneID="7hi-rY-3xE">
             <objects>
-                <viewController id="fKb-J1-40C" customClass="SignInVC" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SignInVC" id="fKb-J1-40C" customClass="SignInVC" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="fUG-Hh-Zi1"/>
                         <viewControllerLayoutGuide type="bottom" id="8zQ-5h-t8x"/>
@@ -30,7 +30,7 @@
                                 <rect key="frame" x="0.0" y="577" width="375" height="90"/>
                                 <color key="tintColor" red="0.39471524953842163" green="0.66152185201644897" blue="0.76868635416030884" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </imageView>
-                            <view contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="W85-EC-TWY">
+                            <view contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="W85-EC-TWY" userLabel="background">
                                 <rect key="frame" x="5.5" y="20" width="364" height="647"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="OR" translatesAutoresizingMaskIntoConstraints="NO" id="f76-FD-26a">
@@ -43,19 +43,28 @@
                                             <action selector="signIn:" destination="fKb-J1-40C" eventType="touchUpInside" id="7Uv-AP-iiK"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jSM-gF-JNI">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JFX-Ej-gt3" customClass="GIDSignInButton">
+                                        <rect key="frame" x="49.5" y="457" width="264" height="36"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="264" id="0Ci-Cr-Hih"/>
+                                            <constraint firstAttribute="height" constant="36" id="e6a-dE-3qS"/>
+                                        </constraints>
+                                    </view>
+                                    <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jSM-gF-JNI">
                                         <rect key="frame" x="50" y="457" width="264" height="36"/>
-                                        <state key="normal" image="Google"/>
+                                        <state key="normal" image="googleSignIn"/>
                                         <connections>
                                             <action selector="google:" destination="fKb-J1-40C" eventType="touchUpInside" id="I8P-Ay-mz9"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8pC-0L-tr1">
-                                        <rect key="frame" x="0.0" y="399" width="364" height="36"/>
-                                        <state key="normal" image="FB"/>
-                                        <connections>
-                                            <action selector="fb:" destination="fKb-J1-40C" eventType="touchUpInside" id="bbr-84-DOR"/>
-                                        </connections>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n7a-L8-Ptf" userLabel="fbb" customClass="FBSDKLoginButton">
+                                        <rect key="frame" x="158.5" y="402" width="46" height="30"/>
+                                        <state key="normal" title="Button"/>
+                                    </button>
+                                    <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8pC-0L-tr1" userLabel="Fb">
+                                        <rect key="frame" x="50" y="399" width="264" height="36"/>
+                                        <state key="normal" image="fbSignIn"/>
                                     </button>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="請輸入密碼" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bqd-3O-RVo">
                                         <rect key="frame" x="50" y="255" width="264" height="36"/>
@@ -103,9 +112,10 @@
                                     </view>
                                 </subviews>
                                 <constraints>
+                                    <constraint firstItem="8pC-0L-tr1" firstAttribute="centerX" secondItem="W85-EC-TWY" secondAttribute="centerX" id="0ni-dx-jOw"/>
                                     <constraint firstItem="rhl-YY-jEa" firstAttribute="centerX" secondItem="W85-EC-TWY" secondAttribute="centerX" id="3CX-qG-FhB"/>
-                                    <constraint firstItem="8pC-0L-tr1" firstAttribute="leading" secondItem="W85-EC-TWY" secondAttribute="leading" id="3zD-Y5-N7D"/>
-                                    <constraint firstAttribute="trailing" secondItem="8pC-0L-tr1" secondAttribute="trailing" id="9sT-Rx-le6"/>
+                                    <constraint firstItem="n7a-L8-Ptf" firstAttribute="centerY" secondItem="8pC-0L-tr1" secondAttribute="centerY" id="4Aa-hq-OnI"/>
+                                    <constraint firstItem="n7a-L8-Ptf" firstAttribute="centerX" secondItem="W85-EC-TWY" secondAttribute="centerX" id="6gU-3x-cp0"/>
                                     <constraint firstItem="jSM-gF-JNI" firstAttribute="centerX" secondItem="W85-EC-TWY" secondAttribute="centerX" id="Cj1-5z-8Bw"/>
                                     <constraint firstAttribute="width" secondItem="W85-EC-TWY" secondAttribute="height" multiplier="9:16" id="FMi-vm-XE3"/>
                                     <constraint firstItem="rhl-YY-jEa" firstAttribute="width" secondItem="bqd-3O-RVo" secondAttribute="width" id="Faq-Cq-KpG"/>
@@ -123,8 +133,10 @@
                                     <constraint firstItem="q4z-e7-2cl" firstAttribute="centerX" secondItem="W85-EC-TWY" secondAttribute="centerX" id="blv-6z-1SE"/>
                                     <constraint firstItem="bqd-3O-RVo" firstAttribute="centerX" secondItem="W85-EC-TWY" secondAttribute="centerX" id="cLe-QI-97k"/>
                                     <constraint firstItem="Vdm-tO-l1Z" firstAttribute="centerX" secondItem="W85-EC-TWY" secondAttribute="centerX" id="dcw-32-7uP"/>
+                                    <constraint firstItem="JFX-Ej-gt3" firstAttribute="centerY" secondItem="jSM-gF-JNI" secondAttribute="centerY" id="giG-Oj-edA"/>
                                     <constraint firstItem="bqd-3O-RVo" firstAttribute="top" secondItem="rhl-YY-jEa" secondAttribute="bottom" multiplier="42/40" id="hvC-Us-9F3"/>
                                     <constraint firstItem="Vdm-tO-l1Z" firstAttribute="top" secondItem="bqd-3O-RVo" secondAttribute="bottom" multiplier="42/40" id="jnA-CX-U81"/>
+                                    <constraint firstItem="JFX-Ej-gt3" firstAttribute="centerX" secondItem="W85-EC-TWY" secondAttribute="centerX" id="vpQ-tO-5lA"/>
                                     <constraint firstItem="rhl-YY-jEa" firstAttribute="height" secondItem="bqd-3O-RVo" secondAttribute="height" id="zfY-xz-sAt"/>
                                 </constraints>
                             </view>
@@ -143,7 +155,10 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="background" destination="W85-EC-TWY" id="ffm-ow-PCK"/>
                         <outlet property="botton" destination="dwj-rp-FHl" id="2yx-m1-Wm1"/>
+                        <outlet property="fbb" destination="n7a-L8-Ptf" id="CLa-Dl-qiF"/>
+                        <outlet property="googleSignInView" destination="JFX-Ej-gt3" id="YSA-39-XCx"/>
                         <outlet property="mail" destination="rhl-YY-jEa" id="wzB-JZ-Rc1"/>
                         <outlet property="password" destination="bqd-3O-RVo" id="snc-iH-a1L"/>
                     </connections>
@@ -152,13 +167,21 @@
             </objects>
             <point key="canvasLocation" x="-1903" y="132"/>
         </scene>
+        <!--SignUp-->
+        <scene sceneID="aq6-In-4Fs">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="SignUpVC" storyboardName="SignUp" id="7V8-Cg-7sV" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cuR-ir-1lR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1509" y="-180"/>
+        </scene>
     </scenes>
     <resources>
-        <image name="FB" width="268" height="36"/>
-        <image name="Google" width="264" height="36"/>
         <image name="Logo_1" width="112" height="113"/>
         <image name="OR" width="272" height="22"/>
         <image name="SignIn" width="264" height="36"/>
+        <image name="fbSignIn" width="264" height="36"/>
+        <image name="googleSignIn" width="264" height="36"/>
         <image name="登入刷毛" width="367" height="90"/>
     </resources>
 </document>

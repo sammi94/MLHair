@@ -90,6 +90,14 @@
             </objects>
             <point key="canvasLocation" x="1076" y="919.79010494752629"/>
         </scene>
+        <!--SignIn-->
+        <scene sceneID="H64-bK-vdm">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="SignInVC" storyboardName="SignIn" id="JFb-Ql-g5E" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PWs-mA-rh5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1596" y="612"/>
+        </scene>
         <!--個人專區-->
         <scene sceneID="naY-90-pL3">
             <objects>
