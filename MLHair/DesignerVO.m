@@ -22,6 +22,7 @@
     _phone = data[DesignerPhone];
     _facebook = data[DesignerFB];
     _line = data[DesignerLine];
+    _shopName = data[ShopName];
     
     NSArray *worksList = data[DesignerWorksList];
     NSMutableArray <StyleVO*>*scapegoat = [NSMutableArray new];

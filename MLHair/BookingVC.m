@@ -8,11 +8,14 @@
 
 #import "BookingVC.h"
 
+
 @interface BookingVC ()
 {
     
 }
-@property (weak, nonatomic) IBOutlet UIImageView *avatar;
+
+
+
 
 
 

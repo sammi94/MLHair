@@ -28,7 +28,6 @@
 @property (weak, nonatomic) IBOutlet UIButton *bookingBtn;
 @property (weak, nonatomic) IBOutlet UITextField *chooseDay;
 @property (weak, nonatomic) IBOutlet UITextField *chooseTime;
-@property (weak, nonatomic) IBOutlet UITextField *chooseShop;
 @property (weak, nonatomic) IBOutlet UITextField *chooseDesigner;
 
 
@@ -50,6 +49,7 @@
     picker.delegate = (id)pickerDelegate;
     picker.dataSource = (id)pickerDelegate;
     _findShop.inputView = picker;
+    _chooseShop.inputView = picker;
     
     UIDatePicker *dayPicker = [UIDatePicker new];
     dayPicker.datePickerMode = UIDatePickerModeDate;
@@ -73,6 +73,7 @@
     NSDateFormatter *df = [NSDateFormatter new];
     [df setDateFormat:@"yyyy/MM/dd"];
     _chooseDay.text = [df stringFromDate:date];
+    [self.view endEditing:true];
 }
 
 -(void)chooseTime:(UIDatePicker*)time {
@@ -80,6 +81,7 @@
     NSDateFormatter *df = [NSDateFormatter new];
     [df setDateFormat:@"HH:mm"];
     _chooseTime.text = [df stringFromDate:date];
+    [self.view endEditing:true];
 }
 
 -(void)viewDidLayoutSubviews {
@@ -147,6 +149,17 @@
 -(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
     
     BookingVC *booking = [self.storyboard instantiateViewControllerWithIdentifier:@"BookingVC"];
+    
+    DesignerVO *designer = data.shopList[indexPath.section].designerList[indexPath.row];
+    
+    booking.data = designer;
+    booking.designer.text = designer.name;
+    NSURL *url = [NSURL URLWithString:designer.photoURL];
+    [booking.photo loadImageWithURL:url];
+    booking.shop.text = designer.shopName;
+    booking.phoneNumber.text = designer.phone;
+    
+    
     [self.navigationController pushViewController:booking animated:true];
     
 }

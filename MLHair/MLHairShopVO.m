@@ -27,7 +27,10 @@
     
     NSMutableArray <DesignerVO*>*designerData = [NSMutableArray new];
     for (NSDictionary *data in _designerList) {
-        DesignerVO *designer = [[DesignerVO alloc] initWithData:data];
+        NSMutableDictionary *data1 = [NSMutableDictionary new];
+        [data1 setObject:_name forKey:ShopName];
+        [data1 addEntriesFromDictionary:data];
+        DesignerVO *designer = [[DesignerVO alloc] initWithData:data1];
         [designerData addObject:designer];
     }
     _designerList = designerData;

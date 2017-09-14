@@ -47,6 +47,10 @@ didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
                            instantiateViewControllerWithIdentifier:@"BookingVC"];
     
     designer.data = _designerList[indexPath.row];
+    designer.designer.text = designer.data.name;
+    designer.shop.text = designer.data.shopName;
+    designer.phoneNumber.text = designer.data.phone;
+    
     [_VC.navigationController
      pushViewController:designer
      animated:true];

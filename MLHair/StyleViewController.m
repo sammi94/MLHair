@@ -62,7 +62,7 @@
                   layout:(UICollectionViewLayout*)collectionViewLayout
   sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
     
-    return CGSizeMake((self.view.frame.size.width - 50) / 2, self.view.frame.size.height * .4);
+    return CGSizeMake(self.view.frame.size.width *.49, self.view.frame.size.height * .4);
 }
 
 

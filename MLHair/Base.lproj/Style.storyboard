@@ -24,10 +24,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="oLy-mD-vnd">
-                                <rect key="frame" x="16" y="229" width="343" height="389"/>
+                                <rect key="frame" x="0.0" y="229" width="375" height="389"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <inset key="scrollIndicatorInsets" minX="0.0" minY="0.0" maxX="8" maxY="0.0"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="5" minimumInteritemSpacing="5" id="0x8-gM-iBr">
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="15" minimumInteritemSpacing="5" id="0x8-gM-iBr">
                                     <size key="itemSize" width="150" height="150"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
@@ -130,7 +130,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="f3f-Dr-KnW">
-                                <rect key="frame" x="16" y="201" width="343" height="29"/>
+                                <rect key="frame" x="0.0" y="201" width="375" height="29"/>
                                 <segments>
                                     <segment title="女生"/>
                                     <segment title="男生"/>
@@ -144,14 +144,14 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="oLy-mD-vnd" firstAttribute="top" secondItem="f3f-Dr-KnW" secondAttribute="bottom" id="2Rc-We-fVA"/>
-                            <constraint firstItem="oLy-mD-vnd" firstAttribute="leading" secondItem="Rgr-FR-beU" secondAttribute="leadingMargin" id="5NZ-n7-v4i"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="oLy-mD-vnd" secondAttribute="trailing" id="7GS-He-5eQ"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="f3f-Dr-KnW" secondAttribute="trailing" id="9xz-yl-gjD"/>
+                            <constraint firstItem="oLy-mD-vnd" firstAttribute="leading" secondItem="Rgr-FR-beU" secondAttribute="leading" id="5NZ-n7-v4i"/>
+                            <constraint firstAttribute="trailing" secondItem="oLy-mD-vnd" secondAttribute="trailing" id="7GS-He-5eQ"/>
+                            <constraint firstAttribute="trailing" secondItem="f3f-Dr-KnW" secondAttribute="trailing" id="9xz-yl-gjD"/>
                             <constraint firstItem="Ogd-n4-57i" firstAttribute="leading" secondItem="Rgr-FR-beU" secondAttribute="leading" id="Bas-gd-lBx"/>
                             <constraint firstItem="oLy-mD-vnd" firstAttribute="bottom" secondItem="IfF-AQ-yGm" secondAttribute="top" id="NEK-kU-j9Z"/>
                             <constraint firstItem="f3f-Dr-KnW" firstAttribute="top" secondItem="Ogd-n4-57i" secondAttribute="bottom" id="NwT-oV-eHb"/>
                             <constraint firstItem="Ogd-n4-57i" firstAttribute="top" secondItem="He0-0b-fEc" secondAttribute="bottom" constant="8" id="SiG-3o-zEQ"/>
-                            <constraint firstItem="f3f-Dr-KnW" firstAttribute="leading" secondItem="Rgr-FR-beU" secondAttribute="leadingMargin" id="X9Y-1O-iDm"/>
+                            <constraint firstItem="f3f-Dr-KnW" firstAttribute="leading" secondItem="Rgr-FR-beU" secondAttribute="leading" id="X9Y-1O-iDm"/>
                             <constraint firstItem="Ogd-n4-57i" firstAttribute="trailing" secondItem="Rgr-FR-beU" secondAttribute="trailing" id="bDz-zB-1MV"/>
                             <constraint firstItem="He0-0b-fEc" firstAttribute="top" secondItem="QfY-vg-Ocb" secondAttribute="bottom" constant="8" id="f1K-AL-qPs"/>
                             <constraint firstItem="He0-0b-fEc" firstAttribute="centerX" secondItem="Rgr-FR-beU" secondAttribute="centerX" id="ruW-hh-yG4"/>

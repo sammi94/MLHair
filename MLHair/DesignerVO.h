@@ -14,6 +14,7 @@
 @property (nonatomic,assign) int designerId;
 @property (nonatomic,assign) int shopId;
 @property (nonatomic,assign) int followed;
+@property (nonatomic,strong) NSString *shopName;
 @property (nonatomic,assign) NSString *photoURL;
 @property (nonatomic,strong) NSString *name;
 @property (nonatomic,strong) NSString *phone;

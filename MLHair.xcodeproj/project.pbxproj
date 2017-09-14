@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		452858181F6909C500934AF9 /* FindShopPickerDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 452858171F6909C500934AF9 /* FindShopPickerDelegate.m */; };
+		4528581F1F6A520F00934AF9 /* BookingVO.m in Sources */ = {isa = PBXBuildFile; fileRef = 4528581E1F6A520F00934AF9 /* BookingVO.m */; };
 		45834E5F1F5D794600B9B28A /* DesignerVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 45834E5E1F5D794600B9B28A /* DesignerVC.m */; };
 		45834E651F5D7E0900B9B28A /* DesignerVCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 45834E641F5D7E0900B9B28A /* DesignerVCell.m */; };
 		45834E6B1F5D837700B9B28A /* MLHairDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = 45834E6A1F5D837700B9B28A /* MLHairDatabase.m */; };
@@ -63,6 +64,8 @@
 /* Begin PBXFileReference section */
 		452858161F6909C500934AF9 /* FindShopPickerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FindShopPickerDelegate.h; sourceTree = "<group>"; };
 		452858171F6909C500934AF9 /* FindShopPickerDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FindShopPickerDelegate.m; sourceTree = "<group>"; };
+		4528581D1F6A520F00934AF9 /* BookingVO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BookingVO.h; sourceTree = "<group>"; };
+		4528581E1F6A520F00934AF9 /* BookingVO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BookingVO.m; sourceTree = "<group>"; };
 		45834E5D1F5D794600B9B28A /* DesignerVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DesignerVC.h; sourceTree = "<group>"; };
 		45834E5E1F5D794600B9B28A /* DesignerVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DesignerVC.m; sourceTree = "<group>"; };
 		45834E631F5D7E0900B9B28A /* DesignerVCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DesignerVCell.h; sourceTree = "<group>"; };
@@ -169,6 +172,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4528581C1F6A515B00934AF9 /* ShopVO */ = {
+			isa = PBXGroup;
+			children = (
+				45834E931F62C0F400B9B28A /* MLHairShopVO.h */,
+				45834E941F62C0F400B9B28A /* MLHairShopVO.m */,
+				45834E841F62683E00B9B28A /* DesignerVO.h */,
+				45834E851F62683E00B9B28A /* DesignerVO.m */,
+				45834E771F61631300B9B28A /* StyleVO.h */,
+				45834E781F61631300B9B28A /* StyleVO.m */,
+			);
+			name = ShopVO;
+			sourceTree = "<group>";
+		};
 		9A968BCC8B37D02FD85D010F /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -239,12 +255,9 @@
 				45834E6A1F5D837700B9B28A /* MLHairDatabase.m */,
 				45834E7E1F62509D00B9B28A /* MemberVO.h */,
 				45834E7F1F62509D00B9B28A /* MemberVO.m */,
-				45834E931F62C0F400B9B28A /* MLHairShopVO.h */,
-				45834E941F62C0F400B9B28A /* MLHairShopVO.m */,
-				45834E841F62683E00B9B28A /* DesignerVO.h */,
-				45834E851F62683E00B9B28A /* DesignerVO.m */,
-				45834E771F61631300B9B28A /* StyleVO.h */,
-				45834E781F61631300B9B28A /* StyleVO.m */,
+				4528581D1F6A520F00934AF9 /* BookingVO.h */,
+				4528581E1F6A520F00934AF9 /* BookingVO.m */,
+				4528581C1F6A515B00934AF9 /* ShopVO */,
 				45834E901F62A75300B9B28A /* Location.h */,
 				45834E911F62A75300B9B28A /* Location.m */,
 				45834E8A1F62849D00B9B28A /* AdvanceImageView.h */,
@@ -535,6 +548,7 @@
 				45834EA71F64233200B9B28A /* MLAnnotion.m in Sources */,
 				45834EBF1F661BF700B9B28A /* NewsTVC.m in Sources */,
 				45834E921F62A75300B9B28A /* Location.m in Sources */,
+				4528581F1F6A520F00934AF9 /* BookingVO.m in Sources */,
 				45834E791F61631300B9B28A /* StyleVO.m in Sources */,
 				45834ECD1F66D06300B9B28A /* WorksTVCell.m in Sources */,
 				45834E6B1F5D837700B9B28A /* MLHairDatabase.m in Sources */,

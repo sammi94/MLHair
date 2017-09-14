@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "StyleVO.h"
 #import "DesignerVO.h"
+#import "BookingVO.h"
 
 @interface MemberVO : NSObject
 
@@ -20,6 +21,8 @@
 @property (nonatomic,strong) NSString *mail;
 @property (nonatomic,strong) NSString *avatorURL;
 @property (nonatomic,strong) NSString *styleImageURL;
+@property (nonatomic,strong) NSArray <BookingVO*>*bookingList;
+
 @property (nonatomic,strong) NSArray <StyleVO*>*collectionStyle;
 @property (nonatomic,strong) NSArray <DesignerVO*>*likeDesigner;
 

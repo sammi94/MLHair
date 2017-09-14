@@ -29,6 +29,7 @@
 
 -(void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component {
     _data.findShop.text = _data.shopList[row].name;
+    _data.chooseShop.text = _data.shopList[row].name;
     #warning 待實作更換店家設計師
     [_data.designerCollectionView reloadData];
     [_data.view endEditing:true];
