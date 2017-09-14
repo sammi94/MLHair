@@ -101,7 +101,6 @@
                     </view>
                     <connections>
                         <outlet property="signInButton" destination="Azl-oo-JRR" id="1tv-i1-8ky"/>
-                        <segue destination="3GH-5h-SUC" kind="show" id="0OY-o8-pEW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fou-BN-uIR" userLabel="First Responder" sceneMemberID="firstResponder"/>

@@ -131,6 +131,14 @@
             </objects>
             <point key="canvasLocation" x="1460" y="-280.20989505247377"/>
         </scene>
+        <!--Works-->
+        <scene sceneID="iMw-Xa-Qja">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="WorksVC" storyboardName="Works" id="ZrG-Ff-rU9" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KvJ-62-tKU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1914" y="-596"/>
+        </scene>
     </scenes>
     <resources>
         <image name="FB-1" width="232" height="47"/>

@@ -58,6 +58,9 @@
      action:@selector(chooseDate:)
      forControlEvents:UIControlEventValueChanged];
     _chooseDay.inputView = dayPicker;
+    NSDateFormatter *df = [NSDateFormatter new];
+    [df setDateFormat:@"yyyy/MM/dd"];
+    _chooseDay.text = [df stringFromDate:dayPicker.date];
     
     UIDatePicker *timePicker = [UIDatePicker new];
     timePicker.datePickerMode = UIDatePickerModeTime;
@@ -66,6 +69,9 @@
                    action:@selector(chooseTime:)
          forControlEvents:UIControlEventValueChanged];
     _chooseTime.inputView = timePicker;
+    df = [NSDateFormatter new];
+    [df setDateFormat:@"HH:mm"];
+    _chooseTime.text = [df stringFromDate:timePicker.date];
 }
 
 -(void)chooseDate:(UIDatePicker *)datePicker {

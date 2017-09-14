@@ -7,6 +7,7 @@
 //
 
 #import "BookingVC.h"
+#import "WorksVC.h"
 
 
 @interface BookingVC ()
@@ -37,6 +38,9 @@
 }
 
 - (IBAction)works:(id)sender {
+    WorksVC *works = [self.storyboard instantiateViewControllerWithIdentifier:@"WorksVC"];
+    
+    [self.navigationController pushViewController:works animated:true];
     
 }
 
