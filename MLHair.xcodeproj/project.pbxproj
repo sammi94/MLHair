@@ -415,7 +415,7 @@
 				TargetAttributes = {
 					A4AC97361F25AFDA002A376B = {
 						CreatedOnToolsVersion = 8.3.2;
-						DevelopmentTeam = 7Z26T3ZJ8X;
+						DevelopmentTeam = J46ZPGV247;
 						LastSwiftMigration = 0830;
 						ProvisioningStyle = Automatic;
 					};
@@ -723,7 +723,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				DEVELOPMENT_TEAM = 7Z26T3ZJ8X;
+				DEVELOPMENT_TEAM = J46ZPGV247;
 				INFOPLIST_FILE = MLHair/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.sammi.MLHair;
@@ -740,7 +740,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				DEVELOPMENT_TEAM = 7Z26T3ZJ8X;
+				DEVELOPMENT_TEAM = J46ZPGV247;
 				INFOPLIST_FILE = MLHair/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.sammi.MLHair;

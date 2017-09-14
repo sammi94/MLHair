@@ -27,10 +27,9 @@
     
     _collection.delegate = self;
     _collection.dataSource = self;
-    NSLog(@"\n我遇到什麼%@",_data.photoList);
     NSURL *url = [NSURL URLWithString:_data.photoList[0]];
     [_photo loadImageWithURL:url];
-    _designer.text = _data.designerName;
+    _designer.text = [NSString stringWithFormat:@"設計師：%@",_data.designerName];
     
 }
 

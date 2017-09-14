@@ -174,19 +174,20 @@
         NSMutableArray <NSString*>*photoList = [NSMutableArray new];
         int photoNumber = arc4random_uniform(100) + 1;
         if (sex == 0) {
-            for (int i = 0; i < photoNumber; i++) {
-                [photoList addObject:[self fackGirlImg]];
-            }
-            [works setObject:[self fackGirlImg] forKey:PhotoURL];
-            [works setObject:[self fackGirlName] forKey:PhotoDescription];
+            [works addEntriesFromDictionary:[self fackGirlWorks]];
+
+//            for (int i = 0; i < photoNumber; i++) {
+//                [photoList addObject:[self fackGirlImg]];
+//            }
+//            [works setObject:[self fackGirlName] forKey:PhotoDescription];
         } else {
             for (int i = 0; i < photoNumber; i++) {
                 [photoList addObject:[self fackBoyImg]];
             }
-            [works setObject:[self fackBoyImg] forKey:PhotoURL];
             [works setObject:[self fackBoyName] forKey:PhotoDescription];
+            [works setObject:photoList forKey:PhotoList];
         }
-        [works setObject:photoList forKey:PhotoList];
+        
         [works setObject:@(arc4random_uniform(10000)) forKey:ModelId];
         [works setObject:@(1) forKey:ModelAuthority];
         [works setObject:@(designerId) forKey:DesignerId];
@@ -317,72 +318,114 @@
     return img;
 }
 
--(void) styles {
-    NSDictionary *style1 = @{@"name" : @"m1",
-                             @"discription" : @"蓬鬆捲度+霧面薰衣草紫灰",
-                             @"photo1" : @"https://cdn.hair-map.com/post/photo/normal/86051.jpg",
-                             @"photo2" : @"https://cdn.hair-map.com/post/photo/normal/86054.jpg",
-                             @"photo3" : @"https://cdn.hair-map.com/post/photo/normal/86052.jpg",
-                             };
-    NSDictionary *style2 = @{@"name" : @"m2",
-                             @"discription" : @"中長髮燙",
-                             @"photo1" : @"https://cdn.hair-map.com/post/photo/normal/77937.jpg",
-                             @"photo2" : @"https://cdn.hair-map.com/post/photo/normal/77938.jpg",
-                             @"photo3" : @"https://cdn.hair-map.com/post/photo/normal/77940.jpg",
-                             @"photo4" : @"https://cdn.hair-map.com/post/photo/normal/77939.jpg",
-                             };
-    NSDictionary *style3 = @{@"name" : @"m3",
-                             @"discription" : @"深棕挑染灰！",
-                             @"photo1" : @"https://cdn.hair-map.com/post/photo/normal/4399.jpg",
-                             @"photo2" : @"https://cdn.hair-map.com/post/photo/normal/6055.jpg",
-                             @"photo3" : @"https://cdn.hair-map.com/post/photo/normal/6056.jpg",
-                             };
-    NSDictionary *style4 = @{@"name" : @"m4",
-                             @"discription" : @"超好整理的浪漫燙髮、冷霧棕色",
-                             @"photo1" : @"https://cdn.hair-map.com/post/photo/normal/59557.jpg",
-                             };
-    NSDictionary *style5 = @{@"name" : @"m5",
-                             @"discription" : @"粉紫漸層灰藍x戀愛指數爆表的顏色",
-                             @"photo1" : @"https://cdn.hair-map.com/post/photo/normal/28689.jpg",
-                             @"photo2" : @"https://cdn.hair-map.com/post/photo/normal/28690.jpg",
-                             };
-    NSDictionary *style6 = @{@"name" : @"m6",
-                             @"discription" : @"個性短瀏海搭配霧霧的可可色",
-                             @"photo1" : @"https://cdn.hair-map.com/post/photo/normal/16641.jpg",
-                             @"photo2" : @"https://cdn.hair-map.com/post/photo/normal/16642.jpg",
-                             @"photo3" : @"https://cdn.hair-map.com/post/photo/normal/16644.jpg",
-                             @"photo4" : @"https://cdn.hair-map.com/post/photo/normal/16643.jpg",
-                             };
-    NSDictionary *style7 = @{@"name" : @"m7",
-                             @"discription" : @"韓式微卷髮",
-                             @"photo1" : @"https://cdn.hair-map.com/post/photo/normal/57682.jpg",
-                             @"photo2" : @"https://cdn.hair-map.com/post/photo/normal/57683.jpg",
-                             @"photo3" : @"https://cdn.hair-map.com/post/photo/normal/57684.jpg",
-                             @"photo4" : @"https://cdn.hair-map.com/post/photo/normal/57686.jpg",
-                             };
-    NSDictionary *style8 = @{@"name" : @"m8",
-                             @"discription" : @"歐美系挑染",
-                             @"photo1" : @"https://cdn.hair-map.com/post/photo/normal/81073.jpg",
-                             @"photo2" : @"https://cdn.hair-map.com/post/photo/normal/81075.jpg",
-                             @"photo3" : @"https://cdn.hair-map.com/post/photo/normal/81074.jpg",
-                             };
-    NSDictionary *style9 = @{@"name" : @"m9",
-                             @"discription" : @"灰棕摩卡手刷紫灰 藍灰",
-                             @"photo1" : @"https://cdn.hair-map.com/post/photo/normal/90330.jpg",
-                             @"photo2" : @"https://cdn.hair-map.com/post/photo/normal/90331.jpg",
-                             @"photo3" : @"https://cdn.hair-map.com/post/photo/normal/90332.jpg",
-                             };
-    NSDictionary *style10 = @{@"name" : @"m10",
-                              @"discription" : @"霧灰咖啡 加點不一樣的葡萄紫",
-                              @"photo1" : @"https://cdn.hair-map.com/post/photo/normal/73562.jpg",
-                              @"photo2" : @"https://cdn.hair-map.com/post/photo/normal/73563.jpg",
-                              };
-    NSDictionary *style11 = @{@"name" : @"m11",
-                              @"discription" : @"#韓式燙髮#手繞撥乾#電棒感覺",
-                              @"photo1" : @"https://cdn.hair-map.com/post/photo/normal/83761.jpg",
-                              @"photo2" : @"https://cdn.hair-map.com/post/photo/normal/83762.jpg",
-                              @"photo3" : @"https://cdn.hair-map.com/post/photo/normal/83763.jpg",
-                              };
+-(NSDictionary*) fackGirlWorks {
+    
+    NSMutableArray <NSDictionary*>*fackGirlWorks = [NSMutableArray new];
+    
+    NSArray *photoList = @[@"https://cdn.hair-map.com/post/photo/normal/86051.jpg",
+                           @"https://cdn.hair-map.com/post/photo/normal/86054.jpg",
+                           @"https://cdn.hair-map.com/post/photo/normal/86052.jpg"];
+    NSDictionary *works = @{PhotoList : photoList,
+                        PhotoDescription : @"蓬鬆捲度+霧面薰衣草紫灰"};
+    [fackGirlWorks addObject:works];
+    
+    
+    photoList = @[@"https://cdn.hair-map.com/post/photo/normal/77937.jpg",
+                  @"https://cdn.hair-map.com/post/photo/normal/77938.jpg",
+                  @"https://cdn.hair-map.com/post/photo/normal/77940.jpg",
+                  @"https://cdn.hair-map.com/post/photo/normal/77939.jpg"
+                  ];
+    works = @{PhotoList : photoList,
+              PhotoDescription :
+                  @"中長髮燙"};
+    [fackGirlWorks addObject:works];
+    
+    photoList = @[@"https://cdn.hair-map.com/post/photo/normal/4399.jpg",
+                  @"https://cdn.hair-map.com/post/photo/normal/6055.jpg",
+                  @"https://cdn.hair-map.com/post/photo/normal/6056.jpg"];
+    works = @{PhotoList : photoList,
+              PhotoDescription :
+                  @"深棕挑染灰！"};
+    [fackGirlWorks addObject:works];
+    
+    photoList = @[@"https://cdn.hair-map.com/post/photo/normal/59557.jpg"
+                  ];
+    works = @{PhotoList : photoList,
+              PhotoDescription :
+                  @"超好整理的浪漫燙髮、冷霧棕色"};
+    [fackGirlWorks addObject:works];
+
+    photoList = @[@"https://cdn.hair-map.com/post/photo/normal/28689.jpg",
+                  @"https://cdn.hair-map.com/post/photo/normal/28690.jpg"
+                  ];
+    works = @{PhotoList : photoList,
+              PhotoDescription :
+                  @"粉紫漸層灰藍x戀愛指數爆表的顏色"};
+    [fackGirlWorks addObject:works];
+    
+    photoList = @[@"https://cdn.hair-map.com/post/photo/normal/16641.jpg",
+                  @"https://cdn.hair-map.com/post/photo/normal/16642.jpg",
+                  @"https://cdn.hair-map.com/post/photo/normal/16644.jpg",
+                  @"https://cdn.hair-map.com/post/photo/normal/16643.jpg"
+                  ];
+    works = @{PhotoList : photoList,
+              PhotoDescription :
+                  @"個性短瀏海搭配霧霧的可可色"};
+    [fackGirlWorks addObject:works];
+    
+    photoList = @[@"https://cdn.hair-map.com/post/photo/normal/57682.jpg",
+                  @"https://cdn.hair-map.com/post/photo/normal/57683.jpg",
+                  @"https://cdn.hair-map.com/post/photo/normal/57684.jpg",
+                  @"https://cdn.hair-map.com/post/photo/normal/57686.jpg"
+                  ];
+    works = @{PhotoList : photoList,
+              PhotoDescription :
+                  @"韓式微卷髮"};
+    [fackGirlWorks addObject:works];
+    
+    photoList = @[@"https://cdn.hair-map.com/post/photo/normal/81073.jpg",
+                  @"https://cdn.hair-map.com/post/photo/normal/81075.jpg",
+                  @"https://cdn.hair-map.com/post/photo/normal/81074.jpg"
+                  ];
+    works = @{PhotoList : photoList,
+              PhotoDescription :
+                  @"歐美系挑染"};
+    [fackGirlWorks addObject:works];
+    
+    photoList = @[@"https://cdn.hair-map.com/post/photo/normal/90330.jpg",
+                  @"https://cdn.hair-map.com/post/photo/normal/90331.jpg",
+                  @"https://cdn.hair-map.com/post/photo/normal/90332.jpg"
+                  ];
+    works = @{PhotoList : photoList,
+              PhotoDescription :
+                  @"灰棕摩卡手刷紫灰 藍灰"};
+    [fackGirlWorks addObject:works];
+    
+    photoList = @[@"https://cdn.hair-map.com/post/photo/normal/73562.jpg",
+                  @"https://cdn.hair-map.com/post/photo/normal/73563.jpg"
+                  ];
+    works = @{PhotoList : photoList,
+              PhotoDescription :
+                  @"霧灰咖啡 加點不一樣的葡萄紫"};
+    [fackGirlWorks addObject:works];
+    
+    //  新增造型
+    //放照片表 記得最後一個不要逗號
+    photoList = @[@"https://cdn.hair-map.com/post/photo/normal/83761.jpg",
+                  @"https://cdn.hair-map.com/post/photo/normal/83762.jpg",
+                  @"https://cdn.hair-map.com/post/photo/normal/83763.jpg"
+                  ];
+    //放描述
+    works = @{PhotoList : photoList,
+              PhotoDescription :
+                  @"#韓式燙髮#手繞撥乾#電棒感覺"};
+    [fackGirlWorks addObject:works];
+    //新增造型 完成
+    
+    
+    
+    return fackGirlWorks[arc4random_uniform((int)fackGirlWorks.count)];
+    
 }
 
 -(void) designer {

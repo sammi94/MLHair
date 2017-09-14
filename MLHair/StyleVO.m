@@ -13,8 +13,8 @@
 
 -(instancetype) initWithData:(NSDictionary*)data {
     self = [super init];
-    _photoURL = data[PhotoURL];
     _photoList = data[PhotoList];
+    _photoURL = _photoList.firstObject;
     _photoDescription = data[PhotoDescription];
     _gender = [data[Gender] intValue];
     _modelId = [data[ModelId] intValue];
