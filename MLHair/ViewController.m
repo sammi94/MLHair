@@ -656,17 +656,7 @@
     [boyWorks addObject:works];
     //新增造型 完成
     
-    //新增
-    photoList = @[@"https://cdn.hair-map.com/post/photo/normal/83761.jpg",
-                  @"https://cdn.hair-map.com/post/photo/normal/83762.jpg",
-                  @"https://cdn.hair-map.com/post/photo/normal/83763.jpg"
-                  ];
-    works = @{PhotoList : photoList,
-              PhotoDescription :
-                  @"#韓式燙髮#手繞撥乾#電棒感覺"};
-    [fackGirlWorks addObject:works];
-    [boyWorks addObject:works];
-//    ------------------------------------------------------------------------
+    //    ------------------------------------------------------------------------
     
     photoList = @[@"https://cdn.hair-map.com/post/photo/normal/89023.jpg",
                   @"https://cdn.hair-map.com/post/photo/normal/89024.jpg"
