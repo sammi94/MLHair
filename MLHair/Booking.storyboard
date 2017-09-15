@@ -131,8 +131,10 @@
                     </view>
                     <connections>
                         <outlet property="designer" destination="fWM-i6-uyv" id="9wv-TC-m9g"/>
+                        <outlet property="followed" destination="xHR-p5-WbZ" id="NcQ-23-jhk"/>
                         <outlet property="phoneNumber" destination="jlB-0S-y0n" id="UHU-T1-7ZH"/>
                         <outlet property="photo" destination="GYI-hI-ggd" id="IC5-mW-lV2"/>
+                        <outlet property="shard" destination="KIX-tu-ybe" id="Poi-Gp-qz4"/>
                         <outlet property="shop" destination="nBY-2c-c5T" id="p7P-3f-HPd"/>
                     </connections>
                 </viewController>

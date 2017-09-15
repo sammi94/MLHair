@@ -14,6 +14,8 @@
 {
     
 }
+@property (weak, nonatomic) IBOutlet UIButton *followed;
+@property (weak, nonatomic) IBOutlet UIButton *shard;
 
 
 @end
@@ -29,7 +31,8 @@
     
     [_photo loadImageWithURL:[NSURL URLWithString:_data.photoURL]];
     
-    
+    _followed.hidden = true;
+    _shard.hidden = true;
     
     
 }
