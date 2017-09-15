@@ -12,6 +12,21 @@
 @interface ViewController ()
 {
     Location *loc;
+    
+    NSMutableArray <NSDictionary*>*ls;//林森
+    NSMutableArray <NSDictionary*>*mc;//民權
+    NSMutableArray <NSDictionary*>*my;//民楊
+    
+    NSMutableArray <NSDictionary*>*boyWorks;
+    NSMutableArray <NSDictionary*>*girlWorks;
+    
+    NSMutableArray <NSDictionary*>*boyDesigner;
+    NSMutableArray <NSDictionary*>*gilrDesdigner;
+    
+    
+    int worknumber;
+    int alldesignerNumber;
+    int avgDesignerWorks;
 }
 
 @end
@@ -23,6 +38,35 @@
     
     [self layout];
     loc = [Location stand];
+    
+    ls = [NSMutableArray new];
+    mc = [NSMutableArray new];
+    my = [NSMutableArray new];
+    
+    boyWorks = [NSMutableArray new];
+    girlWorks = [NSMutableArray new];
+    
+    NSDictionary *girl = [self fackGirlWorks];
+    NSLog(@"%@",girl);
+    NSDictionary * boy = [self fackBoyWorks];
+    NSLog(@"%@",boy);
+    
+    worknumber = (int)boyWorks.count + (int)girlWorks.count;
+    
+    boyDesigner = [NSMutableArray new];
+    gilrDesdigner = [NSMutableArray new];
+    
+    
+    NSDictionary *fab = [self fackBoyDesigner];
+    NSDictionary *fag = [self fackGirlDesigner];
+    NSLog(@"%@",fab);
+    NSLog(@"%@",fag);
+    
+    alldesignerNumber = (int)ls.count + (int)mc.count + (int)my.count;
+    
+    avgDesignerWorks = worknumber / alldesignerNumber;
+    
+    NSLog(@"\n男作品%lu\n女作品%lu\n林森%lu\n民權%lu\n民楊%lu\n平均%d",(unsigned long)boyWorks.count,(unsigned long)girlWorks.count,(unsigned long)ls.count,(unsigned long)mc.count,(unsigned long)my.count,avgDesignerWorks);
     
 }
 
@@ -293,7 +337,7 @@
     NSDictionary *works = @{PhotoList : photoList,
                         PhotoDescription : @"蓬鬆捲度+霧面薰衣草紫灰"};
     [fackGirlWorks addObject:works];
-    
+    [girlWorks addObject:works];
     
     photoList = @[@"https://cdn.hair-map.com/post/photo/normal/77937.jpg",
                   @"https://cdn.hair-map.com/post/photo/normal/77938.jpg",
@@ -304,6 +348,7 @@
               PhotoDescription :
                   @"中長髮燙"};
     [fackGirlWorks addObject:works];
+    [girlWorks addObject:works];
     
     photoList = @[@"https://cdn.hair-map.com/post/photo/normal/4399.jpg",
                   @"https://cdn.hair-map.com/post/photo/normal/6055.jpg",
@@ -312,6 +357,7 @@
               PhotoDescription :
                   @"深棕挑染灰！"};
     [fackGirlWorks addObject:works];
+    [girlWorks addObject:works];
     
     photoList = @[@"https://cdn.hair-map.com/post/photo/normal/59557.jpg"
                   ];
@@ -319,6 +365,7 @@
               PhotoDescription :
                   @"超好整理的浪漫燙髮、冷霧棕色"};
     [fackGirlWorks addObject:works];
+    [girlWorks addObject:works];
 
     photoList = @[@"https://cdn.hair-map.com/post/photo/normal/28689.jpg",
                   @"https://cdn.hair-map.com/post/photo/normal/28690.jpg"
@@ -327,6 +374,7 @@
               PhotoDescription :
                   @"粉紫漸層灰藍x戀愛指數爆表的顏色"};
     [fackGirlWorks addObject:works];
+    [girlWorks addObject:works];
     
     photoList = @[@"https://cdn.hair-map.com/post/photo/normal/16641.jpg",
                   @"https://cdn.hair-map.com/post/photo/normal/16642.jpg",
@@ -337,6 +385,7 @@
               PhotoDescription :
                   @"個性短瀏海搭配霧霧的可可色"};
     [fackGirlWorks addObject:works];
+    [girlWorks addObject:works];
     
     photoList = @[@"https://cdn.hair-map.com/post/photo/normal/57682.jpg",
                   @"https://cdn.hair-map.com/post/photo/normal/57683.jpg",
@@ -347,6 +396,7 @@
               PhotoDescription :
                   @"韓式微卷髮"};
     [fackGirlWorks addObject:works];
+    [girlWorks addObject:works];
     
     photoList = @[@"https://cdn.hair-map.com/post/photo/normal/81073.jpg",
                   @"https://cdn.hair-map.com/post/photo/normal/81075.jpg",
@@ -356,6 +406,7 @@
               PhotoDescription :
                   @"歐美系挑染"};
     [fackGirlWorks addObject:works];
+    [girlWorks addObject:works];
     
     photoList = @[@"https://cdn.hair-map.com/post/photo/normal/90330.jpg",
                   @"https://cdn.hair-map.com/post/photo/normal/90331.jpg",
@@ -365,6 +416,7 @@
               PhotoDescription :
                   @"灰棕摩卡手刷紫灰 藍灰"};
     [fackGirlWorks addObject:works];
+    [girlWorks addObject:works];
     
     photoList = @[@"https://cdn.hair-map.com/post/photo/normal/73562.jpg",
                   @"https://cdn.hair-map.com/post/photo/normal/73563.jpg"
@@ -373,6 +425,7 @@
               PhotoDescription :
                   @"霧灰咖啡 加點不一樣的葡萄紫"};
     [fackGirlWorks addObject:works];
+    [girlWorks addObject:works];
     
     //  新增造型
     //放照片表 記得最後一個不要逗號
@@ -385,6 +438,7 @@
               PhotoDescription :
                   @"#韓式燙髮#手繞撥乾#電棒感覺"};
     [fackGirlWorks addObject:works];
+    [girlWorks addObject:works];
     //新增造型 完成
     
 
@@ -396,6 +450,7 @@
               PhotoDescription :
                   @"OL個性短髮style"};
     [fackGirlWorks addObject:works];
+    [girlWorks addObject:works];
     
 //    -----------------------------------------------------------------------
     
@@ -407,6 +462,7 @@
               PhotoDescription :
                   @"低層次鮑伯搭配深藍髮色"};
     [fackGirlWorks addObject:works];
+    [girlWorks addObject:works];
     
     photoList = @[@"https://cdn.hair-map.com/post/photo/normal/9156.jpg",
                   @"https://cdn.hair-map.com/post/photo/normal/9157.jpg",
@@ -416,6 +472,7 @@
               PhotoDescription :
                   @"漸層美人魚綠藍色"};
     [fackGirlWorks addObject:works];
+    [girlWorks addObject:works];
     
     photoList = @[@"https://cdn.hair-map.com/post/photo/normal/8711.jpg",
                   @"https://cdn.hair-map.com/post/photo/normal/8712.jpg"
@@ -425,6 +482,7 @@
               PhotoDescription :
                   @"#貓系女孩x迷幻混血灰x夢幻感"};
     [fackGirlWorks addObject:works];
+    [girlWorks addObject:works];
     
     photoList = @[@"https://cdn.hair-map.com/post/photo/normal/20779.jpg",
                   @"https://cdn.hair-map.com/post/photo/normal/20778.jpg",
@@ -436,6 +494,7 @@
               PhotoDescription :
                   @"點綴的霧紫色是不是好美好美呀？"};
     [fackGirlWorks addObject:works];
+    [girlWorks addObject:works];
     
     photoList = @[@"https://cdn.hair-map.com/post/photo/normal/82962.jpg",
                   @"https://cdn.hair-map.com/post/photo/normal/82964.jpg",
@@ -446,6 +505,7 @@
               PhotoDescription :
                   @"#短髮燙歐美捲"};
     [fackGirlWorks addObject:works];
+    [girlWorks addObject:works];
     
     photoList = @[@"https://cdn.hair-map.com/post/photo/normal/50272.jpg",
                   @"https://cdn.hair-map.com/post/photo/normal/50273.jpg",
@@ -456,6 +516,7 @@
               PhotoDescription :
                   @"#韓系個性風格的女孩有福嘍"};
     [fackGirlWorks addObject:works];
+    [girlWorks addObject:works];
     
     photoList = @[@"https://cdn.hair-map.com/post/photo/normal/6048.jpg",
                   @"https://cdn.hair-map.com/post/photo/normal/6050.jpg",
@@ -467,6 +528,7 @@
               PhotoDescription :
                   @"粉色透明系Color"};
     [fackGirlWorks addObject:works];
+    [girlWorks addObject:works];
     
     photoList = @[@"https://cdn.hair-map.com/post/photo/normal/13624.jpg",
                   @"https://cdn.hair-map.com/post/photo/normal/13627.jpg",
@@ -478,6 +540,7 @@
               PhotoDescription :
                   @"經典包伯+眉上劉海"};
     [fackGirlWorks addObject:works];
+    [girlWorks addObject:works];
     
     photoList = @[@"https://cdn.hair-map.com/post/photo/normal/14036.jpg",
                   @"https://cdn.hair-map.com/post/photo/normal/14037.jpg",
@@ -490,6 +553,7 @@
               PhotoDescription :
                   @"#鮑伯頭 #剪短會上癮 #正妹就是要剪短"};
     [fackGirlWorks addObject:works];
+    [girlWorks addObject:works];
     
     photoList = @[@"https://cdn.hair-map.com/post/photo/normal/57705.jpg",
                   @"https://cdn.hair-map.com/post/photo/normal/57706.jpg",
@@ -500,6 +564,7 @@
               PhotoDescription :
                   @"可帥氣 可俏麗 當女神"};
     [fackGirlWorks addObject:works];
+    [girlWorks addObject:works];
     
     photoList = @[@"https://cdn.hair-map.com/post/photo/normal/58616.jpg",
                   @"https://cdn.hair-map.com/post/photo/normal/58617.jpg",
@@ -510,6 +575,7 @@
               PhotoDescription :
                   @"夏天到了就是要換個清爽舒服的不敗款髮型"};
     [fackGirlWorks addObject:works];
+    [girlWorks addObject:works];
     
     photoList = @[@"https://cdn.hair-map.com/post/photo/normal/42782.jpg",
                   @"https://cdn.hair-map.com/post/photo/normal/42783.jpg",
@@ -520,6 +586,7 @@
               PhotoDescription :
                   @"深色首選適合不喜歡褪色醜醜的妳們"};
     [fackGirlWorks addObject:works];
+    [girlWorks addObject:works];
     
     photoList = @[@"https://cdn.hair-map.com/post/photo/normal/61003.jpg",
                   @"https://cdn.hair-map.com/post/photo/normal/61004.jpg",
@@ -531,6 +598,7 @@
               PhotoDescription :
                   @"美人魚染~~~"};
     [fackGirlWorks addObject:works];
+    [girlWorks addObject:works];
     
     photoList = @[@"https://cdn.hair-map.com/post/photo/normal/70915.jpg",
                   @"https://cdn.hair-map.com/post/photo/normal/70918.jpg",
@@ -543,6 +611,7 @@
               PhotoDescription :
                   @"眉上瀏海+霧感髮色"};
     [fackGirlWorks addObject:works];
+    [girlWorks addObject:works];
     
     photoList = @[@"https://cdn.hair-map.com/post/photo/normal/1860.jpg",
                   @"https://cdn.hair-map.com/post/photo/normal/1861.jpg",
@@ -553,6 +622,7 @@
               PhotoDescription :
                   @"棉花糖霜雞蛋刨冰外加甜甜的島國女孩"};
     [fackGirlWorks addObject:works];
+    [girlWorks addObject:works];
     
     
 
@@ -572,6 +642,7 @@
     NSDictionary *works = @{PhotoList : photoList,
                             PhotoDescription : @"清爽男"};
     [fackGirlWorks addObject:works];
+    [boyWorks addObject:works];
     
     //  新增造型
     //放照片表 記得最後一個不要逗號
@@ -582,6 +653,7 @@
               PhotoDescription :
                   @"簡單男"};
     [fackGirlWorks addObject:works];
+    [boyWorks addObject:works];
     //新增造型 完成
     
     //新增
@@ -593,6 +665,7 @@
               PhotoDescription :
                   @"#韓式燙髮#手繞撥乾#電棒感覺"};
     [fackGirlWorks addObject:works];
+    [boyWorks addObject:works];
 //    ------------------------------------------------------------------------
     
     photoList = @[@"https://cdn.hair-map.com/post/photo/normal/89023.jpg",
@@ -602,6 +675,7 @@
               PhotoDescription :
                   @"#膨鬆感#男士剪髮#霧面深藍色"};
     [fackGirlWorks addObject:works];
+    [boyWorks addObject:works];
 //    ------------------------------------------------------------------------
     
     photoList = @[@"https://cdn.hair-map.com/post/photo/normal/84910.jpg",
@@ -612,6 +686,7 @@
               PhotoDescription :
                   @"#歐美感#男生燙染#霧面冷棕色系"};
     [fackGirlWorks addObject:works];
+    [boyWorks addObject:works];
 //    ------------------------------------------------------------------------
     
     photoList = @[@"https://cdn.hair-map.com/post/photo/normal/62984.jpg",
@@ -622,6 +697,7 @@
               PhotoDescription :
                   @"#經典不敗油頭款#男生捲髮#英倫紳士風"};
     [fackGirlWorks addObject:works];
+    [boyWorks addObject:works];
 //    ------------------------------------------------------------------------
     
     photoList = @[@"https://cdn.hair-map.com/post/photo/normal/17229.jpg",
@@ -632,6 +708,7 @@
               PhotoDescription :
                   @"#歐美油頭款#男生短髮#英倫紳士風"};
     [fackGirlWorks addObject:works];
+    [boyWorks addObject:works];
 //    ------------------------------------------------------------------------
     
     photoList = @[@"https://cdn.hair-map.com/post/photo/normal/13958.jpg",
@@ -642,6 +719,8 @@
               PhotoDescription :
                   @"#歐美油頭款#男生卷髮#超好整理"};
     [fackGirlWorks addObject:works];
+    [boyWorks addObject:works];
+    
 //    ------------------------------------------------------------------------
     photoList = @[@"https://cdn.hair-map.com/post/photo/normal/5630.jpg",
                   @"https://cdn.hair-map.com/post/photo/normal/5631.jpg"
@@ -650,6 +729,7 @@
               PhotoDescription :
                   @"#頹廢感#搖滾感#英倫紳士風"};
     [fackGirlWorks addObject:works];
+    [boyWorks addObject:works];
 //    ------------------------------------------------------------------------
     photoList = @[@"https://cdn.hair-map.com/post/photo/normal/80852.jpg",
                   @"https://cdn.hair-map.com/post/photo/normal/80853.jpg",
@@ -659,6 +739,7 @@
               PhotoDescription :
                   @"#歐美油頭款#男生短髮#英倫紳士風"};
     [fackGirlWorks addObject:works];
+    [boyWorks addObject:works];
 //    ------------------------------------------------------------------------
     photoList = @[@"https://cdn.hair-map.com/post/photo/normal/91533.jpg",
                   @"https://cdn.hair-map.com/post/photo/normal/91534.jpg"
@@ -667,6 +748,7 @@
               PhotoDescription :
                   @"#型男必備#蓬鬆感#男生剪裁"};
     [fackGirlWorks addObject:works];
+    [boyWorks addObject:works];
 //    ------------------------------------------------------------------------
     photoList = @[@"https://cdn.hair-map.com/post/photo/normal/90847.jpg",
                   @"https://cdn.hair-map.com/post/photo/normal/90848.jpg",
@@ -676,6 +758,7 @@
               PhotoDescription :
                   @"#蓬鬆感#型男必備#質感"};
     [fackGirlWorks addObject:works];
+    [boyWorks addObject:works];
 //    ------------------------------------------------------------------------
     photoList = @[@"https://cdn.hair-map.com/post/photo/normal/69171.jpg",
                   @"https://cdn.hair-map.com/post/photo/normal/69169.jpg",
@@ -685,6 +768,7 @@
               PhotoDescription :
                   @"#空氣感層次#清晰輪廓線條#二分區式剪裁"};
     [fackGirlWorks addObject:works];
+    [boyWorks addObject:works];
 //    ------------------------------------------------------------------------
     photoList = @[@"https://cdn.hair-map.com/post/photo/normal/77510.jpg",
                   @"https://cdn.hair-map.com/post/photo/normal/77511.jpg"
@@ -693,6 +777,7 @@
               PhotoDescription :
                   @"#型男必備#蓬鬆感#男生捲髮"};
     [fackGirlWorks addObject:works];
+    [boyWorks addObject:works];
 //    ------------------------------------------------------------------------
     photoList = @[@"https://cdn.hair-map.com/post/photo/normal/71029.jpg",
                   @"https://cdn.hair-map.com/post/photo/normal/71030.jpg",
@@ -702,6 +787,7 @@
               PhotoDescription :
                   @"#冷色調#男生短髮#孔劉髮型"};
     [fackGirlWorks addObject:works];
+    [boyWorks addObject:works];
 //    ------------------------------------------------------------------------
     
     photoList = @[@"https://cdn.hair-map.com/post/photo/normal/86971.jpg",
@@ -712,6 +798,7 @@
               PhotoDescription :
                   @"#極短髮#蓬鬆感#男生捲髮"};
     [fackGirlWorks addObject:works];
+    [boyWorks addObject:works];
 //    ------------------------------------------------------------------------
     photoList = @[@"https://cdn.hair-map.com/post/photo/normal/79851.jpg",
                   @"https://cdn.hair-map.com/post/photo/normal/79852.jpg",
@@ -721,6 +808,7 @@
               PhotoDescription :
                   @"#燙髮#韓式髮根燙#隨性撥乾"};
     [fackGirlWorks addObject:works];
+    [boyWorks addObject:works];
 //    ------------------------------------------------------------------------
     
     photoList = @[@"https://cdn.hair-map.com/post/photo/normal/78515.jpg",
@@ -731,6 +819,7 @@
               PhotoDescription :
                   @"#韓系文青捲#超好整理吹乾就有型#蓬度100%"};
     [fackGirlWorks addObject:works];
+    [boyWorks addObject:works];
 //    ------------------------------------------------------------------------
     photoList = @[@"https://cdn.hair-map.com/post/photo/normal/44040.jpg",
                   @"https://cdn.hair-map.com/post/photo/normal/44041.jpg"
@@ -739,6 +828,7 @@
               PhotoDescription :
                   @"#個人剪裁#蓬鬆感#男生捲髮"};
     [fackGirlWorks addObject:works];
+    [boyWorks addObject:works];
 //    ------------------------------------------------------------------------
     photoList = @[@"https://cdn.hair-map.com/post/photo/normal/72196.jpg",
                   @"https://cdn.hair-map.com/post/photo/normal/72195.jpg",
@@ -748,6 +838,7 @@
               PhotoDescription :
                   @"#男仕油頭#男仕燙髮#鬆亂感微捲髮"};
     [fackGirlWorks addObject:works];
+    [boyWorks addObject:works];
 //    ------------------------------------------------------------------------
     
     photoList = @[@"https://cdn.hair-map.com/post/photo/normal/4143.jpg",
@@ -758,6 +849,7 @@
               PhotoDescription :
                   @"#微燙#微染#綠棕色"};
     [fackGirlWorks addObject:works];
+    [boyWorks addObject:works];
 //    ------------------------------------------------------------------------
     
     photoList = @[@"https://cdn.hair-map.com/post/photo/normal/83444.jpg",
@@ -768,6 +860,7 @@
               PhotoDescription :
                   @"#型男必備#微染#時尚運動風"};
     [fackGirlWorks addObject:works];
+    [boyWorks addObject:works];
 //    ------------------------------------------------------------------------
     
     photoList = @[@"https://cdn.hair-map.com/post/photo/normal/70342.jpg",
@@ -778,6 +871,7 @@
               PhotoDescription :
                   @"#型男必備#霧面#超好整理"};
     [fackGirlWorks addObject:works];
+    [boyWorks addObject:works];
 //    ------------------------------------------------------------------------
     photoList = @[@"https://cdn.hair-map.com/post/photo/normal/83883.jpg",
                   @"https://cdn.hair-map.com/post/photo/normal/83884.jpg",
@@ -787,6 +881,7 @@
               PhotoDescription :
                   @"#型男必備#歐美感#特殊色"};
     [fackGirlWorks addObject:works];
+    [boyWorks addObject:works];
 //    ------------------------------------------------------------------------
     
     photoList = @[@"https://cdn.hair-map.com/post/photo/normal/4797.jpg",
@@ -797,6 +892,7 @@
               PhotoDescription :
                   @"#型男必備#男生短髮#運動風"};
     [fackGirlWorks addObject:works];
+    [boyWorks addObject:works];
 //    ------------------------------------------------------------------------
     
     photoList = @[@"https://cdn.hair-map.com/post/photo/normal/4797.jpg",
@@ -807,6 +903,7 @@
               PhotoDescription :
                   @"#型男必備#男生短髮#運動風"};
     [fackGirlWorks addObject:works];
+    [boyWorks addObject:works];
 //    ------------------------------------------------------------------------
     
     photoList = @[@"https://cdn.hair-map.com/post/photo/normal/9341.jpg",
@@ -817,6 +914,7 @@
               PhotoDescription :
                   @"#剪髮造型#層次款油頭#油頭"};
     [fackGirlWorks addObject:works];
+    [boyWorks addObject:works];
 //    ------------------------------------------------------------------------
     
     photoList = @[@"https://cdn.hair-map.com/post/photo/normal/70664.jpg",
@@ -826,6 +924,7 @@
               PhotoDescription :
                   @"#韓系低層次#蓬鬆感#線條感"};
     [fackGirlWorks addObject:works];
+    [boyWorks addObject:works];
 //    ------------------------------------------------------------------------
     photoList = @[@"https://cdn.hair-map.com/post/photo/normal/86597.jpg",
                   @"https://cdn.hair-map.com/post/photo/normal/86600.jpg",
@@ -835,6 +934,7 @@
               PhotoDescription :
                   @"#超級好整理#男生短髮#清爽"};
     [fackGirlWorks addObject:works];
+    [boyWorks addObject:works];
 //    ------------------------------------------------------------------------
     
     photoList = @[@"https://cdn.hair-map.com/post/photo/normal/58882.jpg",
@@ -845,6 +945,7 @@
               PhotoDescription :
                   @"#霧灰棕#微線條剪裁#帥到掉渣"};
     [fackGirlWorks addObject:works];
+    [boyWorks addObject:works];
 //    ------------------------------------------------------------------------
     
     photoList = @[@"https://cdn.hair-map.com/post/photo/normal/74958.jpg",
@@ -855,6 +956,7 @@
               PhotoDescription :
                   @"#男生短髮#微線條剪裁#韓系歐巴頭"};
     [fackGirlWorks addObject:works];
+    [boyWorks addObject:works];
 //    ------------------------------------------------------------------------
     
     photoList = @[@"https://cdn.hair-map.com/post/photo/normal/84597.jpg",
@@ -865,6 +967,7 @@
               PhotoDescription :
                   @"#運動風#漸層推#割線"};
     [fackGirlWorks addObject:works];
+    [boyWorks addObject:works];
 //    ------------------------------------------------------------------------
     photoList = @[@"https://cdn.hair-map.com/post/photo/normal/70139.jpg",
                   @"https://cdn.hair-map.com/post/photo/normal/70140.jpg"
@@ -873,6 +976,7 @@
               PhotoDescription :
                   @"#韓系髮#空氣瀏海微捲頭#線條感"};
     [fackGirlWorks addObject:works];
+    [boyWorks addObject:works];
 //    ------------------------------------------------------------------------
     photoList = @[@"https://cdn.hair-map.com/post/photo/normal/14263.jpg",
                   @"https://cdn.hair-map.com/post/photo/normal/14264.jpg"
@@ -881,6 +985,7 @@
               PhotoDescription :
                   @"#乾淨利落#藍色挑染#男生短髮"};
     [fackGirlWorks addObject:works];
+    [boyWorks addObject:works];
 //    ------------------------------------------------------------------------
     photoList = @[@"https://cdn.hair-map.com/post/photo/normal/9777.jpg",
                   @"https://cdn.hair-map.com/post/photo/normal/9778.jpg",
@@ -890,6 +995,7 @@
               PhotoDescription :
                   @"#油頭#英倫紳士風#型男短髮"};
     [fackGirlWorks addObject:works];
+    [boyWorks addObject:works];
 //    ------------------------------------------------------------------------
     
     photoList = @[@"https://cdn.hair-map.com/post/photo/normal/83058.jpg",
@@ -900,6 +1006,7 @@
               PhotoDescription :
                   @"#手撥成型#英倫紳士風#短瀏海"};
     [fackGirlWorks addObject:works];
+    [boyWorks addObject:works];
 //    ------------------------------------------------------------------------
     
     photoList = @[@"https://cdn.hair-map.com/post/photo/normal/54816.jpg",
@@ -910,6 +1017,7 @@
               PhotoDescription :
                   @"#乾淨俐落#運動風#小鮮肉"};
     [fackGirlWorks addObject:works];
+    [boyWorks addObject:works];
 //    ------------------------------------------------------------------------
     
     photoList = @[@"https://cdn.hair-map.com/post/photo/normal/89530.jpg",
@@ -919,6 +1027,7 @@
               PhotoDescription :
                   @"#v特條#運動風#男生短髮"};
     [fackGirlWorks addObject:works];
+    [boyWorks addObject:works];
 //    ------------------------------------------------------------------------
     
     photoList = @[@"https://cdn.hair-map.com/post/photo/normal/74997.jpg",
@@ -929,6 +1038,7 @@
               PhotoDescription :
                   @"#夏天陽光男孩#奶茶霧冷色特調#漸層推"};
     [fackGirlWorks addObject:works];
+    [boyWorks addObject:works];
 //    ------------------------------------------------------------------------
     
     photoList = @[@"https://cdn.hair-map.com/post/photo/normal/82506.jpg",
@@ -938,6 +1048,7 @@
               PhotoDescription :
                   @"#歐美感#運動風#男生短髮"};
     [fackGirlWorks addObject:works];
+    [boyWorks addObject:works];
 //    ------------------------------------------------------------------------
     photoList = @[@"https://cdn.hair-map.com/post/photo/normal/89924.jpg",
                   @"https://cdn.hair-map.com/post/photo/normal/89926.jpg",
@@ -947,6 +1058,7 @@
               PhotoDescription :
                   @"#不連接裁剪#線條感#運動風"};
     [fackGirlWorks addObject:works];
+    [boyWorks addObject:works];
 //    ------------------------------------------------------------------------
     photoList = @[@"https://cdn.hair-map.com/post/photo/normal/78731.jpg",
                   @"https://cdn.hair-map.com/post/photo/normal/78730.jpg",
@@ -956,6 +1068,7 @@
               PhotoDescription :
                   @"#刻線#漸層推#運動風"};
     [fackGirlWorks addObject:works];
+    [boyWorks addObject:works];
 //    ------------------------------------------------------------------------
     photoList = @[@"https://cdn.hair-map.com/post/photo/normal/77616.jpg",
                   @"https://cdn.hair-map.com/post/photo/normal/78448.jpg",
@@ -965,6 +1078,7 @@
               PhotoDescription :
                   @"#運動系#俐落#型男必備"};
     [fackGirlWorks addObject:works];
+    [boyWorks addObject:works];
 //    ------------------------------------------------------------------------
     
     photoList = @[@"https://cdn.hair-map.com/post/photo/normal/82830.jpg",
@@ -974,6 +1088,7 @@
               PhotoDescription :
                   @"#運動系短髮#歐美感#男生短髮"};
     [fackGirlWorks addObject:works];
+    [boyWorks addObject:works];
 //    ------------------------------------------------------------------------
     
     photoList = @[@"https://cdn.hair-map.com/post/photo/normal/82503.jpg",
@@ -984,6 +1099,7 @@
               PhotoDescription :
                   @"#漸層推#質感#型男必備"};
     [fackGirlWorks addObject:works];
+    [boyWorks addObject:works];
 //    ------------------------------------------------------------------------
     
     photoList = @[@"https://cdn.hair-map.com/post/photo/normal/82593.jpg",
@@ -993,6 +1109,7 @@
               PhotoDescription :
                   @"#極短油頭款#髮參角#男生短髮"};
     [fackGirlWorks addObject:works];
+    [boyWorks addObject:works];
 //    ------------------------------------------------------------------------
     
     photoList = @[@"https://cdn.hair-map.com/post/photo/normal/78871.jpg",
@@ -1003,6 +1120,7 @@
               PhotoDescription :
                   @"#油頭#質感#時尚運動風"};
     [fackGirlWorks addObject:works];
+    [boyWorks addObject:works];
 //    ------------------------------------------------------------------------
     
     photoList = @[@"https://cdn.hair-map.com/post/photo/normal/85088.jpg",
@@ -1012,6 +1130,7 @@
               PhotoDescription :
                   @"#韓系#多層次剪裁#夏日輕爽感"};
     [fackGirlWorks addObject:works];
+    [boyWorks addObject:works];
 //    ------------------------------------------------------------------------
     
     photoList = @[@"https://cdn.hair-map.com/post/photo/normal/89259.jpg",
@@ -1022,6 +1141,7 @@
               PhotoDescription :
                   @"#油頭#粗硬髮#時尚運動風"};
     [fackGirlWorks addObject:works];
+    [boyWorks addObject:works];
 //    ------------------------------------------------------------------------
     
     photoList = @[@"https://cdn.hair-map.com/post/photo/normal/87648.jpg",
@@ -1032,6 +1152,7 @@
               PhotoDescription :
                   @"#短髮微捲#燙捲#蓬鬆感"};
     [fackGirlWorks addObject:works];
+    [boyWorks addObject:works];
 //    ------------------------------------------------------------------------
     photoList = @[@"https://cdn.hair-map.com/post/photo/normal/88096.jpg",
                   @"https://cdn.hair-map.com/post/photo/normal/88097.jpg",
@@ -1041,6 +1162,7 @@
               PhotoDescription :
                   @"#霧灰#燙捲#蓬鬆感"};
     [fackGirlWorks addObject:works];
+    [boyWorks addObject:works];
 //    ------------------------------------------------------------------------
     
     photoList = @[@"https://cdn.hair-map.com/post/photo/normal/82772.jpg",
@@ -1051,6 +1173,7 @@
               PhotoDescription :
                   @"#俐落感#運動風#油頭"};
     [fackGirlWorks addObject:works];
+    [boyWorks addObject:works];
     
     return fackGirlWorks[arc4random_uniform((int)fackGirlWorks.count)];
     
@@ -1066,6 +1189,9 @@
                                DesignerFB : @"URL",
                                @"shopName" : @"林森"};
     [designerList addObject:designer];
+    [ls addObject:designer];
+    
+    
     
     designer = @{DesignerName : @"9號于瑄設計師",
                  DesignerPhone : @"0930757009",
@@ -1074,6 +1200,8 @@
                  DesignerFB : @"URL",
                  @"shopName" : @"林森"};
     [designerList addObject:designer];
+    [ls addObject:designer];
+    
     
     
     designer = @{DesignerName : @"6號阿龔設計師",
@@ -1083,6 +1211,8 @@
                  DesignerFB : @"URL",
                  @"shopName" : @"林森"};
     [designerList addObject:designer];
+    [ls addObject:designer];
+    
     
     designer = @{DesignerName : @"12佳穎號設計師",
                  DesignerPhone : @"0922290635",
@@ -1091,6 +1221,7 @@
                  DesignerFB: @"URL",
                  @"shopName" : @"林森"};
     [designerList addObject:designer];
+    [ls addObject:designer];
     
     designer = @{DesignerName : @"7號妹妹設計師",
                  DesignerPhone: @"0926893841",
@@ -1099,6 +1230,7 @@
                  DesignerFB : @"URL",
                  @"shopName" : @"林森"};
     [designerList addObject:designer];
+    [ls addObject:designer];
     
     designer = @{DesignerName : @"1號Joyce設計師",
                  DesignerPhone : @"0937006052",
@@ -1107,6 +1239,7 @@
                  DesignerFB : @"URL",
                  @"shopName" : @"林森"};
     [designerList addObject:designer];
+    [ls addObject:designer];
     
     designer = @{DesignerName : @"15號妙妙設計師",
                  DesignerPhone : @"0932502930",
@@ -1115,6 +1248,7 @@
                  DesignerFB : @"URL",
                  @"shopName" : @"林森"};
     [designerList addObject:designer];
+    [ls addObject:designer];
     
     designer = @{DesignerName : @"16號A-Ki設計師",
                  DesignerPhone : @"0989413869",
@@ -1123,6 +1257,7 @@
                  DesignerFB : @"URL",
                  @"shopName" : @"林森"};
     [designerList addObject:designer];
+    [ls addObject:designer];
     
     designer = @{DesignerName : @"B號月月設計師",
                  DesignerPhone : @"0989135639",
@@ -1131,6 +1266,7 @@
                  DesignerFB : @"URL",
                  @"shopName" : @"林森"};
     [designerList addObject:designer];
+    [ls addObject:designer];
     
     designer = @{DesignerName : @"10號歐麥設計師",
                  DesignerPhone : @"0967025878",
@@ -1139,6 +1275,7 @@
                  DesignerFB : @"URL",
                  @"shopName" : @"林森"};
     [designerList addObject:designer];
+    [ls addObject:designer];
     
     designer = @{DesignerName : @"2號Apple設計師",
                  DesignerPhone : @"0981570203",
@@ -1147,6 +1284,7 @@
                  DesignerFB : @"URL",
                  @"shopName" : @"林森"};
     [designerList addObject:designer];
+    [ls addObject:designer];
     
     designer = @{DesignerName : @"4號貴珍設計師",
                  DesignerPhone : @"0937010319",
@@ -1155,6 +1293,7 @@
                  DesignerFB : @"URL",
                  @"shopName" : @"林森"};
     [designerList addObject:designer];
+    [ls addObject:designer];
     
     
     //名揚
@@ -1165,6 +1304,7 @@
                  DesignerFB : @"URL",
                  @"shopName" : @"名揚"};
     [designerList addObject:designer];
+    [my addObject:designer];
     
     designer = @{DesignerName : @"黃于庭",
                  DesignerPhone : @"0937010319",
@@ -1173,6 +1313,7 @@
                  DesignerFB : @"URL",
                  @"shopName" : @"名揚"};
     [designerList addObject:designer];
+    [my addObject:designer];
     
     designer = @{DesignerName : @"joanna",
                  DesignerPhone : @"0937010319",
@@ -1181,6 +1322,7 @@
                  DesignerFB : @"URL",
                  @"shopName" : @"名揚"};
     [designerList addObject:designer];
+    [my addObject:designer];
     
     designer = @{DesignerName : @"Miko",
                  DesignerPhone : @"0937010319",
@@ -1189,6 +1331,7 @@
                  DesignerFB : @"URL",
                  @"shopName" : @"名揚"};
     [designerList addObject:designer];
+    [my addObject:designer];
     
     //民權
     designer = @{DesignerName : @"5號湘妮",
@@ -1199,6 +1342,7 @@
                  @"shopName" : @"民權"};
     
     [designerList addObject:designer];
+    [mc addObject:designer];
     
     designer = @{DesignerName : @"10號琳雅",
                  DesignerPhone : @"0937010319",
@@ -1208,6 +1352,7 @@
                  @"shopName" : @"民權"};
     
     [designerList addObject:designer];
+    [mc addObject:designer];
     
     designer = @{DesignerName : @"3號琪琪",
                  DesignerPhone : @"0937010319",
@@ -1217,6 +1362,7 @@
                  @"shopName" : @"民權"};
     
     [designerList addObject:designer];
+    [mc addObject:designer];
     
     designer = @{DesignerName : @"8號雯雯",
                  DesignerPhone : @"0937010319",
@@ -1226,6 +1372,7 @@
                  @"shopName" : @"民權"};
     
     [designerList addObject:designer];
+    [mc addObject:designer];
     
     designer = @{DesignerName : @"6號婷婷",
                  DesignerPhone : @"0937010319",
@@ -1235,6 +1382,7 @@
                  @"shopName" : @"民權"};
     
     [designerList addObject:designer];
+    [mc addObject:designer];
     
     
     designer = @{DesignerName : @"7號阿水",
@@ -1245,6 +1393,7 @@
                  @"shopName" : @"民權"};
     
     [designerList addObject:designer];
+    [mc addObject:designer];
     
     return designerList[arc4random_uniform((int)designerList.count)];
 }
@@ -1259,6 +1408,7 @@
                                DesignerFB : @"URL",
                                 @"shopName" : @"林森"};
     [designerList addObject:designer];
+    [ls addObject:designer];
     
     designer = @{DesignerName : @"9號于瑄設計師",
                  DesignerPhone : @"0930757009",
@@ -1267,6 +1417,7 @@
                  DesignerFB : @"URL",
                  @"shopName" : @"林森"};
     [designerList addObject:designer];
+    [ls addObject:designer];
     
     
     designer = @{DesignerName : @"6號阿龔設計師",
@@ -1276,6 +1427,7 @@
                  DesignerFB : @"URL",
                  @"shopName" : @"林森"};
     [designerList addObject:designer];
+    [ls addObject:designer];
     
     designer = @{DesignerName : @"12佳穎號設計師",
                  DesignerPhone : @"0922290635",
@@ -1284,6 +1436,7 @@
                  DesignerFB: @"URL",
                  @"shopName" : @"林森"};
     [designerList addObject:designer];
+    [ls addObject:designer];
     
     designer = @{DesignerName : @"7號妹妹設計師",
                  DesignerPhone: @"0926893841",
@@ -1292,6 +1445,7 @@
                  DesignerFB : @"URL",
                  @"shopName" : @"林森"};
     [designerList addObject:designer];
+    [ls addObject:designer];
     
     designer = @{DesignerName : @"1號Joyce設計師",
                  DesignerPhone : @"0937006052",
@@ -1300,6 +1454,7 @@
                  DesignerFB : @"URL",
                  @"shopName" : @"林森"};
     [designerList addObject:designer];
+    [ls addObject:designer];
     
     designer = @{DesignerName : @"15號妙妙設計師",
                  DesignerPhone : @"0932502930",
@@ -1308,6 +1463,7 @@
                  DesignerFB : @"URL",
                  @"shopName" : @"林森"};
     [designerList addObject:designer];
+    [ls addObject:designer];
     
     designer = @{DesignerName : @"16號A-Ki設計師",
                  DesignerPhone : @"0989413869",
@@ -1316,6 +1472,7 @@
                  DesignerFB : @"URL",
                  @"shopName" : @"林森"};
     [designerList addObject:designer];
+    [ls addObject:designer];
     
     designer = @{DesignerName : @"B號月月設計師",
                  DesignerPhone : @"0989135639",
@@ -1324,6 +1481,7 @@
                  DesignerFB : @"URL",
                  @"shopName" : @"林森"};
     [designerList addObject:designer];
+    [ls addObject:designer];
     
     designer = @{DesignerName : @"10號歐麥設計師",
                  DesignerPhone : @"0967025878",
@@ -1332,6 +1490,7 @@
                  DesignerFB : @"URL",
                  @"shopName" : @"林森"};
     [designerList addObject:designer];
+    [ls addObject:designer];
     
     designer = @{DesignerName : @"2號Apple設計師",
                  DesignerPhone : @"0981570203",
@@ -1340,6 +1499,7 @@
                  DesignerFB : @"URL",
                  @"shopName" : @"林森"};
     [designerList addObject:designer];
+    [ls addObject:designer];
     
     designer = @{DesignerName : @"4號貴珍設計師",
                  DesignerPhone : @"0937010319",
@@ -1348,6 +1508,7 @@
                  DesignerFB : @"URL",
                  @"shopName" : @"林森"};
     [designerList addObject:designer];
+    [ls addObject:designer];
     
     
     
@@ -1359,6 +1520,7 @@
                  DesignerFB : @"URL",
                  @"shopName" : @"名揚"};
     [designerList addObject:designer];
+    [my addObject:designer];
     
     designer = @{DesignerName : @"黃于庭",
                  DesignerPhone : @"0937010319",
@@ -1367,6 +1529,7 @@
                  DesignerFB : @"URL",
                  @"shopName" : @"名揚"};
     [designerList addObject:designer];
+    [my addObject:designer];
     
     designer = @{DesignerName : @"joanna",
                  DesignerPhone : @"0937010319",
@@ -1375,6 +1538,7 @@
                  DesignerFB : @"URL",
                  @"shopName" : @"名揚"};
     [designerList addObject:designer];
+    [my addObject:designer];
     
     designer = @{DesignerName : @"Miko",
                  DesignerPhone : @"0937010319",
@@ -1383,6 +1547,7 @@
                  DesignerFB : @"URL",
                  @"shopName" : @"名揚"};
     [designerList addObject:designer];
+    [my addObject:designer];
     
     //民權
     designer = @{DesignerName : @"5號湘妮",
@@ -1393,6 +1558,7 @@
                  @"shopName" : @"民權"};
     
     [designerList addObject:designer];
+    [mc addObject:designer];
     
     designer = @{DesignerName : @"10號琳雅",
                  DesignerPhone : @"0937010319",
@@ -1402,6 +1568,7 @@
                  @"shopName" : @"民權"};
     
     [designerList addObject:designer];
+    [mc addObject:designer];
     
     designer = @{DesignerName : @"3號琪琪",
                  DesignerPhone : @"0937010319",
@@ -1411,6 +1578,7 @@
                  @"shopName" : @"民權"};
     
     [designerList addObject:designer];
+    [mc addObject:designer];
     
     designer = @{DesignerName : @"8號雯雯",
                  DesignerPhone : @"0937010319",
@@ -1420,6 +1588,7 @@
                  @"shopName" : @"民權"};
     
     [designerList addObject:designer];
+    [mc addObject:designer];
     
     designer = @{DesignerName : @"6號婷婷",
                  DesignerPhone : @"0937010319",
@@ -1429,7 +1598,7 @@
                  @"shopName" : @"民權"};
     
     [designerList addObject:designer];
-    
+    [mc addObject:designer];
     
     designer = @{DesignerName : @"7號阿水",
                  DesignerPhone : @"0937010319",
@@ -1437,6 +1606,8 @@
                  DesignerLine : @"abc",
                  DesignerFB : @"URL",
                  @"shopName" : @"民權"};
+    [designerList addObject:designer];
+    [mc addObject:designer];
     
     return designerList[arc4random_uniform((int)designerList.count)];
 }

@@ -110,7 +110,23 @@ didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
     for (MLHairShopVO *shop in data.shopList) {
         for (DesignerVO *designer in shop.designerList) {
             for (StyleVO *style in designer.worksList) {
-                [styleList addObject:style];
+                
+                BOOL check = true;
+                if (styleList.count == 0) {
+                    [styleList addObject:style];
+                }
+                for (int i = 0; i < styleList.count; i++) {
+                    if (styleList[i].photoURL == style.photoURL) {
+                        check = false;
+                    }
+                    
+                    if (check && i == styleList.count-1) {
+                        [styleList addObject:style];
+                    }
+                }
+                
+                
+                
             }
             [designerList addObject:designer];
         }
