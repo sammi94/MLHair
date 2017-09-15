@@ -14,6 +14,8 @@
 {
     
 }
+@property (weak, nonatomic) IBOutlet UIButton *followed;
+@property (weak, nonatomic) IBOutlet UIButton *shard;
 
 
 @end
@@ -29,7 +31,8 @@
     
     [_photo loadImageWithURL:[NSURL URLWithString:_data.photoURL]];
     
-    
+    _followed.hidden = true;
+    _shard.hidden = true;
     
     
 }
@@ -52,7 +55,8 @@
 //    NSURL *appURL = [NSURL URLWithString:@"line://msg/text/IamHappyMan:)"];
 //    NSURL *appURL = [NSURL URLWithString:[NSString stringWithFormat:@"line://ti/p/%@",_data.line]];
 //    NSURL *appURL = [NSURL URLWithString:[NSString stringWithFormat:@"line://ti/p/zCG2juYsvX"]];
-    NSURL *appURL = [NSURL URLWithString:[NSString stringWithFormat:@"line://ti/p/adIBjrBLwR"]];
+//    NSURL *appURL = [NSURL URLWithString:[NSString stringWithFormat:@"line://ti/p/adIBjrBLwR"]];
+    NSURL *appURL = [NSURL URLWithString:[NSString stringWithFormat:@"line://ti/p/Cxwj5rLJe7"]];
     if ([[UIApplication sharedApplication] canOpenURL: appURL]) {
         [[UIApplication sharedApplication]
          openURL:appURL
