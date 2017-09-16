@@ -115,11 +115,11 @@
                                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="QE8-Lz-aRt">
                                         <rect key="frame" x="0.0" y="46" width="375" height="464"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="15" minimumInteritemSpacing="5" id="IvW-k3-wCo">
+                                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="5" minimumInteritemSpacing="5" id="IvW-k3-wCo">
                                             <size key="itemSize" width="193" height="185"/>
                                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="5"/>
                                         </collectionViewFlowLayout>
                                         <cells>
                                             <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="DesignerVCell" id="eNt-02-Mgl" customClass="DesignerVCell">
@@ -133,14 +133,14 @@
                                                             <rect key="frame" x="-8" y="-8" width="209" height="135"/>
                                                             <subviews>
                                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="9u3-af-G3x" customClass="AdvanceImageView">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="209" height="135"/>
+                                                                    <rect key="frame" x="8" y="16" width="193" height="111"/>
                                                                 </imageView>
                                                             </subviews>
                                                             <constraints>
-                                                                <constraint firstAttribute="trailing" secondItem="9u3-af-G3x" secondAttribute="trailing" id="7Yz-79-HVb"/>
-                                                                <constraint firstItem="9u3-af-G3x" firstAttribute="centerY" secondItem="YO2-RG-Svg" secondAttribute="centerY" id="7lB-mo-xiN"/>
-                                                                <constraint firstItem="9u3-af-G3x" firstAttribute="leading" secondItem="YO2-RG-Svg" secondAttribute="leading" id="8og-8x-wiu"/>
-                                                                <constraint firstItem="9u3-af-G3x" firstAttribute="height" secondItem="YO2-RG-Svg" secondAttribute="height" id="jJt-wc-yYD"/>
+                                                                <constraint firstItem="9u3-af-G3x" firstAttribute="leading" secondItem="YO2-RG-Svg" secondAttribute="leadingMargin" id="HQo-op-1Oy"/>
+                                                                <constraint firstAttribute="bottom" secondItem="9u3-af-G3x" secondAttribute="bottom" constant="8" id="JXv-FB-rmF"/>
+                                                                <constraint firstItem="9u3-af-G3x" firstAttribute="top" secondItem="YO2-RG-Svg" secondAttribute="topMargin" constant="8" id="oH8-G9-NmP"/>
+                                                                <constraint firstAttribute="trailingMargin" secondItem="9u3-af-G3x" secondAttribute="trailing" id="zp1-kf-JUO"/>
                                                             </constraints>
                                                         </view>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="設計師：周子榆" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YeS-Cw-diW">
@@ -151,7 +151,7 @@
                                                         </label>
                                                     </subviews>
                                                 </view>
-                                                <color key="backgroundColor" red="0.62352941176470589" green="0.396078431372549" blue="0.77647058823529413" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="backgroundColor" red="0.96475595240000001" green="0.753362596" blue="0.79738157990000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
                                                     <constraint firstItem="YeS-Cw-diW" firstAttribute="leading" secondItem="eNt-02-Mgl" secondAttribute="leadingMargin" id="4Eq-XS-v5G"/>
                                                     <constraint firstItem="YO2-RG-Svg" firstAttribute="topMargin" secondItem="eNt-02-Mgl" secondAttribute="top" id="APb-Z3-QqW"/>
@@ -164,6 +164,50 @@
                                                 <connections>
                                                     <outlet property="name" destination="YeS-Cw-diW" id="Gy4-RD-Rov"/>
                                                     <outlet property="photo" destination="9u3-af-G3x" id="Oz6-gm-ziJ"/>
+                                                </connections>
+                                            </collectionViewCell>
+                                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ShopInfoCVCell" id="hZc-fm-K5B" customClass="ShopInfoCVCell">
+                                                <rect key="frame" x="52.5" y="190" width="270" height="71"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                                    <rect key="frame" x="0.0" y="0.0" width="270" height="71"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <subviews>
+                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ml" translatesAutoresizingMaskIntoConstraints="NO" id="qCX-j4-vRD" customClass="AdvanceImageView">
+                                                            <rect key="frame" x="0.0" y="0.0" width="71" height="71"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" secondItem="qCX-j4-vRD" secondAttribute="height" multiplier="1:1" id="d1c-gw-uw2"/>
+                                                            </constraints>
+                                                        </imageView>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="名留林森" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="isC-yO-IHw">
+                                                            <rect key="frame" x="79" y="0.0" width="70" height="21"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="11位設計師" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="olX-eY-cbK">
+                                                            <rect key="frame" x="177" y="50" width="85" height="21"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                </view>
+                                                <color key="backgroundColor" red="0.96475595240000001" green="0.753362596" blue="0.79738157990000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstItem="olX-eY-cbK" firstAttribute="bottom" secondItem="qCX-j4-vRD" secondAttribute="bottom" id="FqB-fB-k0g"/>
+                                                    <constraint firstItem="isC-yO-IHw" firstAttribute="leading" secondItem="qCX-j4-vRD" secondAttribute="trailing" constant="8" id="Jj6-bx-rTr"/>
+                                                    <constraint firstAttribute="trailing" secondItem="olX-eY-cbK" secondAttribute="trailing" constant="8" id="c6R-b7-HQP"/>
+                                                    <constraint firstItem="qCX-j4-vRD" firstAttribute="leading" secondItem="hZc-fm-K5B" secondAttribute="leading" id="ffF-aK-Fwn"/>
+                                                    <constraint firstItem="isC-yO-IHw" firstAttribute="top" secondItem="qCX-j4-vRD" secondAttribute="top" id="inu-AA-70X"/>
+                                                    <constraint firstItem="qCX-j4-vRD" firstAttribute="top" secondItem="hZc-fm-K5B" secondAttribute="top" id="nha-j5-4lG"/>
+                                                    <constraint firstAttribute="bottom" secondItem="qCX-j4-vRD" secondAttribute="bottom" id="uug-SS-ixq"/>
+                                                </constraints>
+                                                <size key="customSize" width="270" height="71"/>
+                                                <connections>
+                                                    <outlet property="numberOfDesigner" destination="olX-eY-cbK" id="RKX-gZ-wbh"/>
+                                                    <outlet property="photo" destination="qCX-j4-vRD" id="cHi-MR-fgL"/>
+                                                    <outlet property="shopName" destination="isC-yO-IHw" id="cuZ-R8-puN"/>
                                                 </connections>
                                             </collectionViewCell>
                                         </cells>
@@ -257,6 +301,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="ml" width="140" height="140"/>
         <image name="確定送出" width="264" height="36"/>
         <image name="預約設計" width="23" height="21"/>
     </resources>

@@ -11,6 +11,7 @@
 #import "MLHairDatabase.h"
 #import "BookingVC.h"
 #import "FindShopPickerDelegate.h"
+#import "ShopInfoCVCell.h"
 
 
 
@@ -20,6 +21,7 @@
 {
     MLHairDatabase *data;
     FindShopPickerDelegate *pickerDelegate;
+    UICollectionViewCell *sessionCell;
 }
 @property (weak, nonatomic) IBOutlet UICollectionView *designerCV;
 @property (weak, nonatomic) IBOutlet UIView *findpage;
@@ -121,6 +123,10 @@
                   layout:(UICollectionViewLayout*)collectionViewLayout
   sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
     
+    if (indexPath.item == 0) {
+        return CGSizeMake(_designerCV.frame.size.width, 50);
+    }
+    
     return CGSizeMake(self.view.frame.size.width * .49, self.view.frame.size.height * .4);
 }
 
@@ -132,7 +138,7 @@
 - (NSInteger)collectionView:(UICollectionView *)collectionView
      numberOfItemsInSection:(NSInteger)section {
     
-    return _shopList[section].designerList.count;
+    return _shopList[section].designerList.count +1;
 }
 
 
@@ -140,23 +146,36 @@
 - (__kindof UICollectionViewCell *)collectionView:(UICollectionView *)collectionView
                            cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     
+    if (indexPath.item == 0) {
+        ShopInfoCVCell *shopInfo = [collectionView dequeueReusableCellWithReuseIdentifier:@"ShopInfoCVCell" forIndexPath:indexPath];
+        shopInfo.shopName.text = data.shopList[indexPath.section].name;
+        NSString *number = [NSString stringWithFormat:@"%lu位設計師",(unsigned long)data.shopList[indexPath.section].designerList.count];
+        shopInfo.numberOfDesigner.text = number;
+        return shopInfo;
+    }
+    
+    
     DesignerVCell *cell = [collectionView
                                   dequeueReusableCellWithReuseIdentifier:@"DesignerVCell"
                                   forIndexPath:indexPath];
     
-    NSString *urlString = data.shopList[indexPath.section].designerList[indexPath.row].photoURL;
+    NSString *urlString = data.shopList[indexPath.section].designerList[indexPath.row-1].photoURL;
     NSURL *url = [NSURL URLWithString:urlString];
     [cell.photo loadImageWithURL:url];
-    cell.name.text = data.shopList[indexPath.section].designerList[indexPath.item].name;
+    cell.name.text = data.shopList[indexPath.section].designerList[indexPath.item -1].name;
     
     return cell;
 }
 
 -(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
     
+    if (indexPath.item == 0) {
+        return;
+    }
+    
     BookingVC *booking = [self.storyboard instantiateViewControllerWithIdentifier:@"BookingVC"];
     
-    DesignerVO *designer = data.shopList[indexPath.section].designerList[indexPath.row];
+    DesignerVO *designer = data.shopList[indexPath.section].designerList[indexPath.row -1];
     
     booking.data = designer;
     
@@ -171,6 +190,17 @@
     
 }
 
+-(void)scrollViewDidScroll:(UIScrollView *)scrollView {
+    for (UICollectionViewCell *cell in [_designerCollectionView visibleCells]) {
+        
+        _findShop.text = _shopList[[_designerCollectionView indexPathForCell:cell].section].name;
+
+        
+//        if ([_designerCollectionView indexPathForCell:cell].item == 0) {
+//            sessionCell = cell;
+//        }
+    }
+}
 
 
 
