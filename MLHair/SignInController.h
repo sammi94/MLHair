@@ -11,5 +11,6 @@
 @interface SignInController : NSObject
 
 -(BOOL)isSignIn;
+-(void)signOut;
 
 @end

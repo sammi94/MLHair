@@ -57,13 +57,6 @@
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
-                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tfQ-Iz-Fqv">
-                                <rect key="frame" x="286" y="31.5" width="32" height="29"/>
-                                <state key="normal" image="添加喜愛"/>
-                                <connections>
-                                    <action selector="like:" destination="YRe-xf-btQ" eventType="touchUpInside" id="bV4-UF-cxS"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ak9-JB-fje">
                                 <rect key="frame" x="326" y="28" width="33" height="36"/>
                                 <state key="normal" image="分享"/>
@@ -94,6 +87,13 @@
                                     <constraint firstItem="Isn-Ub-btc" firstAttribute="top" secondItem="nP8-Bg-Jpk" secondAttribute="bottom" constant="8" id="xtm-oa-7gy"/>
                                 </constraints>
                             </view>
+                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tfQ-Iz-Fqv">
+                                <rect key="frame" x="286" y="32" width="32" height="29"/>
+                                <state key="normal" image="添加喜愛"/>
+                                <connections>
+                                    <action selector="like:" destination="YRe-xf-btQ" eventType="touchUpInside" id="bV4-UF-cxS"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -114,7 +114,9 @@
                     <connections>
                         <outlet property="collection" destination="QRi-IS-ddm" id="pDD-nB-p3L"/>
                         <outlet property="designer" destination="nP8-Bg-Jpk" id="HTx-v0-4bu"/>
+                        <outlet property="follow" destination="tfQ-Iz-Fqv" id="cZ5-JH-acx"/>
                         <outlet property="photo" destination="Isn-Ub-btc" id="zf2-jL-H52"/>
+                        <outlet property="shard" destination="Ak9-JB-fje" id="OLu-X7-xxT"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dT6-xx-KUE" userLabel="First Responder" sceneMemberID="firstResponder"/>

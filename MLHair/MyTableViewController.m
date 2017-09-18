@@ -27,6 +27,7 @@
     self.tableView.estimatedRowHeight = 200;
     Connection = [MLHairDatabase stand].connection;
     
+    [(NSMutableArray*)[MLHairDatabase stand].vcs addObject:self];
     
 }
 

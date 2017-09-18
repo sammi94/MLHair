@@ -21,6 +21,7 @@ typedef void (^Havedata)(bool havedat);
 @property (nonatomic,strong) NSArray <MLHairShopVO*>*shopList;
 @property (nonatomic,strong) MemberVO *member;
 @property (nonatomic,strong) SignInController *connection;
+@property (nonatomic,strong) NSArray <UIViewController*>*vcs;
 
 +(instancetype)stand;
 

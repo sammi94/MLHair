@@ -15,9 +15,6 @@
 #import "DesignerPickerDelegate.h"
 #import "BookingTableDelegate.h"
 
-
-
-
 @interface DesignerVC ()<UICollectionViewDelegate,
                         UICollectionViewDataSource,
                         UICollectionViewDelegateFlowLayout>
@@ -36,10 +33,6 @@
 @property (weak, nonatomic) IBOutlet UITextField *chooseDay;
 @property (weak, nonatomic) IBOutlet UITextField *chooseTime;
 
-
-
-
-
 @end
 
 @implementation DesignerVC
@@ -47,6 +40,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     data = [MLHairDatabase stand];
+    
+    [(NSMutableArray*)data.vcs addObject:self];
+    
     _shopList = data.shopList;
     _bookingPage.hidden = true;
     _bookingTable.hidden = true;

@@ -18,6 +18,7 @@ MLHairDatabase *data = nil;
     if (data == nil) {
         data = [MLHairDatabase new];
         data.shopList = [NSArray new];
+        data.vcs = [NSMutableArray new];
         data.connection = [SignInController new];
         NSData *member = [[NSUserDefaults
                              standardUserDefaults] objectForKey:Member];
