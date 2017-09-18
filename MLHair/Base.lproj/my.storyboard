@@ -8,7 +8,6 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
-        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -21,41 +20,57 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="AvatorTViCell" rowHeight="138" id="IF9-FF-Qhl" customClass="AvatorTViCell">
-                                <rect key="frame" x="0.0" y="28" width="375" height="138"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="AvatorTViCell" rowHeight="221" id="IF9-FF-Qhl" customClass="AvatorTViCell">
+                                <rect key="frame" x="0.0" y="28" width="375" height="221"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="IF9-FF-Qhl" id="Jz8-sI-8Vd">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="137.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="220.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="image2" translatesAutoresizingMaskIntoConstraints="NO" id="0AE-n7-jLM">
-                                            <rect key="frame" x="53.5" y="28" width="81" height="81"/>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="0AE-n7-jLM" customClass="AdvanceImageView">
+                                            <rect key="frame" x="137.5" y="16" width="100" height="100"/>
                                             <constraints>
-                                                <constraint firstAttribute="width" secondItem="0AE-n7-jLM" secondAttribute="height" multiplier="1:1" id="iUI-40-tIG"/>
+                                                <constraint firstAttribute="width" constant="100" id="SM8-gl-1t9"/>
+                                                <constraint firstAttribute="width" secondItem="0AE-n7-jLM" secondAttribute="height" multiplier="1:1" id="a5f-uj-JWK"/>
                                             </constraints>
                                         </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="多拉a夢" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vXD-Lh-hIQ">
-                                            <rect key="frame" x="164.5" y="58" width="61" height="21"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DoraAmon@ddd.com" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="An1-5q-asR">
+                                            <rect key="frame" x="105" y="153" width="165" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yax-D0-bSG">
+                                            <rect key="frame" x="245" y="94" width="15" height="22"/>
+                                            <state key="normal" image="鉛筆"/>
+                                        </button>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="多拉a夢" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vXD-Lh-hIQ">
+                                            <rect key="frame" x="157" y="124" width="61" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="0AE-n7-jLM" firstAttribute="top" secondItem="Jz8-sI-8Vd" secondAttribute="topMargin" constant="20" id="5OB-x6-fGf"/>
-                                        <constraint firstAttribute="bottomMargin" secondItem="0AE-n7-jLM" secondAttribute="bottom" constant="20" id="Eq1-eL-i1x"/>
-                                        <constraint firstItem="vXD-Lh-hIQ" firstAttribute="centerY" secondItem="0AE-n7-jLM" secondAttribute="centerY" id="efB-Kj-gmg"/>
-                                        <constraint firstItem="vXD-Lh-hIQ" firstAttribute="leading" secondItem="0AE-n7-jLM" secondAttribute="trailing" constant="30" id="xhz-BY-fDK"/>
-                                        <constraint firstItem="0AE-n7-jLM" firstAttribute="centerX" secondItem="Jz8-sI-8Vd" secondAttribute="centerX" multiplier="1/2" id="zpa-le-xZ5"/>
+                                        <constraint firstItem="yax-D0-bSG" firstAttribute="bottom" secondItem="0AE-n7-jLM" secondAttribute="bottom" id="7En-oU-cy2"/>
+                                        <constraint firstItem="vXD-Lh-hIQ" firstAttribute="top" secondItem="0AE-n7-jLM" secondAttribute="bottom" constant="8" id="Br9-xd-Sna"/>
+                                        <constraint firstAttribute="bottomMargin" relation="greaterThanOrEqual" secondItem="An1-5q-asR" secondAttribute="bottom" constant="8" id="Dta-XL-6cz"/>
+                                        <constraint firstItem="0AE-n7-jLM" firstAttribute="top" secondItem="Jz8-sI-8Vd" secondAttribute="topMargin" constant="8" id="NBc-P8-q25"/>
+                                        <constraint firstItem="An1-5q-asR" firstAttribute="top" secondItem="vXD-Lh-hIQ" secondAttribute="bottom" constant="8" id="Sda-hR-X6X"/>
+                                        <constraint firstItem="0AE-n7-jLM" firstAttribute="centerX" secondItem="Jz8-sI-8Vd" secondAttribute="centerX" id="k53-vm-8np"/>
+                                        <constraint firstItem="yax-D0-bSG" firstAttribute="leading" secondItem="0AE-n7-jLM" secondAttribute="trailing" constant="7.5" id="rAy-ta-l4N"/>
+                                        <constraint firstItem="An1-5q-asR" firstAttribute="centerX" secondItem="Jz8-sI-8Vd" secondAttribute="centerX" id="seR-H7-BwY"/>
+                                        <constraint firstItem="vXD-Lh-hIQ" firstAttribute="centerX" secondItem="Jz8-sI-8Vd" secondAttribute="centerX" id="uXW-as-kTc"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <outlet property="avator" destination="0AE-n7-jLM" id="iO6-Ya-DwB"/>
+                                    <outlet property="avator" destination="0AE-n7-jLM" id="boX-fs-bmI"/>
+                                    <outlet property="mail" destination="An1-5q-asR" id="Xvn-Pc-fmO"/>
                                     <outlet property="name" destination="vXD-Lh-hIQ" id="Nbg-1j-54A"/>
                                 </connections>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="MyTableViewCell" rowHeight="50" id="W2w-A2-UpL" customClass="MyTableViewCell">
-                                <rect key="frame" x="0.0" y="166" width="375" height="50"/>
+                                <rect key="frame" x="0.0" y="249" width="375" height="50"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="W2w-A2-UpL" id="aIK-ua-48C">
                                     <rect key="frame" x="0.0" y="0.0" width="342" height="49.5"/>
@@ -67,13 +82,23 @@
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
+                                        <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cY3-1K-WX3">
+                                            <rect key="frame" x="123" y="7" width="97" height="36"/>
+                                            <state key="normal" image="登出"/>
+                                            <connections>
+                                                <action selector="signOut:" destination="W2w-A2-UpL" eventType="touchUpInside" id="VKS-fV-3WW"/>
+                                            </connections>
+                                        </button>
                                     </subviews>
                                     <constraints>
                                         <constraint firstItem="nEk-LL-Gwj" firstAttribute="centerY" secondItem="aIK-ua-48C" secondAttribute="centerY" id="MPh-GT-0WU"/>
+                                        <constraint firstItem="cY3-1K-WX3" firstAttribute="centerX" secondItem="aIK-ua-48C" secondAttribute="centerX" id="RKn-uM-OWF"/>
                                         <constraint firstItem="nEk-LL-Gwj" firstAttribute="centerX" secondItem="aIK-ua-48C" secondAttribute="centerX" id="baP-1z-DNi"/>
+                                        <constraint firstItem="cY3-1K-WX3" firstAttribute="centerY" secondItem="aIK-ua-48C" secondAttribute="centerY" id="tLf-Ms-vfJ"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
+                                    <outlet property="signOutBtn" destination="cY3-1K-WX3" id="KZN-kX-DI7"/>
                                     <outlet property="titleLabel" destination="nEk-LL-Gwj" id="ypb-Go-Zwy"/>
                                 </connections>
                             </tableViewCell>
@@ -88,7 +113,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sKc-F8-ojk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1076" y="919.79010494752629"/>
+            <point key="canvasLocation" x="901.60000000000002" y="919.79010494752629"/>
         </scene>
         <!--SignIn-->
         <scene sceneID="H64-bK-vdm">
@@ -119,7 +144,8 @@
         </scene>
     </scenes>
     <resources>
-        <image name="image2" width="300" height="168"/>
         <image name="個人專區" width="23" height="17"/>
+        <image name="登出" width="97" height="36"/>
+        <image name="鉛筆" width="15" height="15"/>
     </resources>
 </document>

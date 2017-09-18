@@ -9,6 +9,9 @@
 #ifndef Define_h
 #define Define_h
 
+//userdefault
+#define Member @"member"
+
 // http exchange
 #define HttpExchange @"ML_Hair"
 
@@ -52,15 +55,16 @@
 
 
 // Member
+#define MemberId @"memberId"
 #define SignInType @"signInType"
 #define Account @"account"
 #define Password @"password"
-#define MemberId @"memberId"
 #define Nickname @"nickName"
 #define Mail @"mail"
 #define AvatorURL @"avatorURL"
 #define StyleImageURL @"styleImageURL"
 #define CollectionStyle @"collectionStyle"
+#define BookingList @"bookingList"
 #define LikeDesigner @"likeDesigner"
 
 #endif /* Define_h */

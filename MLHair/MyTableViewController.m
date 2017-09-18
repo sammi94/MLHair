@@ -9,12 +9,13 @@
 #import "MyTableViewController.h"
 #import "MyTableViewCell.h"
 #import "AvatorTViCell.h"
+#import "MLHairDatabase.h"
 #import "SignInVC.h"
-#import "SignInController.h"
+
 
 @interface MyTableViewController ()
 {
-    SignInController *MLhair;
+    SignInController *Connection;
 }
 @end
 
@@ -22,17 +23,20 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    MLhair = [SignInController new];
+    self.tableView.rowHeight = UITableViewAutomaticDimension;
+    self.tableView.estimatedRowHeight = 200;
+    Connection = [MLHairDatabase stand].connection;
     
     
 }
 
 -(void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
-    if (!MLhair.isSignIn) {
+    
+    [self.tableView reloadData];
+    if (!Connection.isSignIn) {
         SignInVC *signInVC = [self.storyboard instantiateViewControllerWithIdentifier:@"SignInVC"];
-        [self.navigationController pushViewController:signInVC animated:false];
+        [self.navigationController pushViewController:signInVC animated:true];
     }
 }
 
@@ -50,30 +54,49 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     
-    return 4;
+    return 8;
 }
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
+    MemberVO *member = [MLHairDatabase stand].member;
+    
     UITableViewCell *cell;
     if (indexPath.row == 0) {
         AvatorTViCell *mytablecell = [self.tableView dequeueReusableCellWithIdentifier:@"AvatorTViCell" forIndexPath:indexPath];
+        [mytablecell.avator
+         loadImageWithURL:[NSURL
+                           URLWithString:member.avatorURL]];
+        if (!member.avatorURL) {
+            [mytablecell.avator setImage:[UIImage imageNamed:@"Logo_1.png"]];
+        }
+        mytablecell.name.text = member.nickName;
+        mytablecell.mail.text = member.mail;
         cell = mytablecell;
     } else {
     MyTableViewCell *mytablecell = [self.tableView dequeueReusableCellWithIdentifier:@"MyTableViewCell" forIndexPath:indexPath];
         
+        mytablecell.titleLabel.text = @"";
+        mytablecell.signOutBtn.hidden = true;
+        mytablecell.vc = self;
+        
         switch (indexPath.row) {
             case 1:
-                mytablecell.titleLabel.text = @"修改密碼";
-                break;
-            case 2:
-                mytablecell.titleLabel.text = @"收藏造型";
+                mytablecell.titleLabel.text = @"我的收藏";
                 break;
             case 3:
-                mytablecell.titleLabel.text = @"喜愛設計";
+                mytablecell.titleLabel.text = @"我的髮型";
+                break;
+            case 5:
+                mytablecell.titleLabel.text = @"美髮有約";
+                break;
+            case 7:
+                mytablecell.signOutBtn.hidden = false;
+                mytablecell.accessoryType = UITableViewCellAccessoryNone;
                 break;
             default:
+                mytablecell.accessoryType = UITableViewCellAccessoryNone;
                 break;
         }
         cell = mytablecell;

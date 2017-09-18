@@ -9,8 +9,8 @@
 #import <Foundation/Foundation.h>
 
 #import "MemberVO.h"
-#import "StyleVO.h"
 #import "MLHairShopVO.h"
+#import "SignInController.h"
 #import "Define.h"
 #import "Location.h"
 
@@ -20,6 +20,7 @@ typedef void (^Havedata)(bool havedat);
 
 @property (nonatomic,strong) NSArray <MLHairShopVO*>*shopList;
 @property (nonatomic,strong) MemberVO *member;
+@property (nonatomic,strong) SignInController *connection;
 
 +(instancetype)stand;
 

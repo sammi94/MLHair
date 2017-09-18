@@ -7,13 +7,14 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "DesignerVO.h"
 
 @interface BookingVO : NSObject
 
 @property (nonatomic,strong) NSString *createTime;
 @property (nonatomic,strong) NSString *bookingTime;
-@property (nonatomic,strong) NSString *shop;
-@property (nonatomic,strong) NSString *designer;
+@property (nonatomic,strong) NSString *endTime;
+@property (nonatomic,strong) DesignerVO *designer;
 
 
 @end

@@ -12,6 +12,9 @@
 #import "BookingVC.h"
 #import "FindShopPickerDelegate.h"
 #import "ShopInfoCVCell.h"
+#import "DesignerPickerDelegate.h"
+#import "BookingTableDelegate.h"
+
 
 
 
@@ -21,6 +24,8 @@
 {
     MLHairDatabase *data;
     FindShopPickerDelegate *pickerDelegate;
+    DesignerPickerDelegate *designerDesignerDelegate;
+    BookingTableDelegate *bookingTableDelegate;
     UICollectionViewCell *sessionCell;
 }
 @property (weak, nonatomic) IBOutlet UICollectionView *designerCV;
@@ -30,7 +35,7 @@
 @property (weak, nonatomic) IBOutlet UIButton *bookingBtn;
 @property (weak, nonatomic) IBOutlet UITextField *chooseDay;
 @property (weak, nonatomic) IBOutlet UITextField *chooseTime;
-@property (weak, nonatomic) IBOutlet UITextField *chooseDesigner;
+
 
 
 
@@ -44,6 +49,7 @@
     data = [MLHairDatabase stand];
     _shopList = data.shopList;
     _bookingPage.hidden = true;
+    _bookingTable.hidden = true;
     
     UIPickerView *picker = [UIPickerView new];
     pickerDelegate = [FindShopPickerDelegate new];
@@ -74,6 +80,18 @@
     df = [NSDateFormatter new];
     [df setDateFormat:@"HH:mm"];
     _chooseTime.text = [df stringFromDate:timePicker.date];
+    
+    designerDesignerDelegate = [DesignerPickerDelegate new];
+    _designerList = _shopList.firstObject.designerList;
+    designerDesignerDelegate.data = self;
+    UIPickerView *designerPicker = [UIPickerView new];
+    designerPicker.delegate = (id)designerDesignerDelegate;
+    designerPicker.dataSource = (id)designerDesignerDelegate;
+    _chooseDesigner.inputView = designerPicker;
+    
+    bookingTableDelegate = [BookingTableDelegate new];
+    _bookingTable.delegate = (id)bookingTableDelegate;
+    _bookingTable.dataSource = (id)bookingTableDelegate;
 }
 
 -(void)chooseDate:(UIDatePicker *)datePicker {
@@ -102,9 +120,15 @@
     if ([sender selectedSegmentIndex] == 0) {
         _bookingPage.hidden = true;
         _findpage.hidden = false;
-    } else {
+        _bookingTable.hidden = true;
+    } else if([sender selectedSegmentIndex] == 1) {
         _bookingPage.hidden = false;
         _findpage.hidden = true;
+        _bookingTable.hidden = true;
+    }else if ([sender selectedSegmentIndex] == 2) {
+        _bookingPage.hidden = true;
+        _findpage.hidden = true;
+        _bookingTable.hidden = false;
     }
 }
 
@@ -200,6 +224,23 @@
 //            sessionCell = cell;
 //        }
     }
+}
+
+- (IBAction)presentBooking:(id)sender {
+    BookingVO *booking = [BookingVO new];
+//    booking.createTime = [[NSDateFormatter alloc] stringFromDate:[NSDate new]];
+    booking.designer = data.shopList[1].designerList[1];
+    booking.bookingTime = _chooseTime.text;
+    booking.designer.shopName = _chooseShop.text;
+    booking.designer.name = _chooseDesigner.text;
+    
+    NSMutableArray <BookingVO*>*bookingList = [NSMutableArray new];
+    [bookingList addObject:booking];
+    NSLog(@"\nML=%@\ndata=%@",data.member.bookingList,bookingList);
+    data.member.bookingList = [bookingList arrayByAddingObjectsFromArray:data.member.bookingList];
+    
+    NSLog(@"\nML=%@\ndata=%@",data.member.bookingList,bookingList);
+    [_bookingTable reloadData];
 }
 
 

@@ -15,6 +15,10 @@
 		4528582A1F6B063500934AF9 /* BookingData.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 452858291F6B063500934AF9 /* BookingData.storyboard */; };
 		4528582D1F6B0B7F00934AF9 /* BookingDataTVCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4528582C1F6B0B7F00934AF9 /* BookingDataTVCell.m */; };
 		452858301F6CF71700934AF9 /* ShopInfoCVCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4528582F1F6CF71700934AF9 /* ShopInfoCVCell.m */; };
+		452858331F6D333500934AF9 /* DesignerPickerDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 452858321F6D333500934AF9 /* DesignerPickerDelegate.m */; };
+		452858361F6E534F00934AF9 /* BookingTableDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 452858351F6E534F00934AF9 /* BookingTableDelegate.m */; };
+		452858391F6E55F200934AF9 /* BookingTVCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 452858381F6E55F200934AF9 /* BookingTVCell.m */; };
+		4528583C1F6E581F00934AF9 /* IndexPathBtn.m in Sources */ = {isa = PBXBuildFile; fileRef = 4528583B1F6E581F00934AF9 /* IndexPathBtn.m */; };
 		45834E5F1F5D794600B9B28A /* DesignerVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 45834E5E1F5D794600B9B28A /* DesignerVC.m */; };
 		45834E651F5D7E0900B9B28A /* DesignerVCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 45834E641F5D7E0900B9B28A /* DesignerVCell.m */; };
 		45834E6B1F5D837700B9B28A /* MLHairDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = 45834E6A1F5D837700B9B28A /* MLHairDatabase.m */; };
@@ -83,6 +87,14 @@
 		4528582C1F6B0B7F00934AF9 /* BookingDataTVCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BookingDataTVCell.m; sourceTree = "<group>"; };
 		4528582E1F6CF71700934AF9 /* ShopInfoCVCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShopInfoCVCell.h; sourceTree = "<group>"; };
 		4528582F1F6CF71700934AF9 /* ShopInfoCVCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShopInfoCVCell.m; sourceTree = "<group>"; };
+		452858311F6D333500934AF9 /* DesignerPickerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DesignerPickerDelegate.h; sourceTree = "<group>"; };
+		452858321F6D333500934AF9 /* DesignerPickerDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DesignerPickerDelegate.m; sourceTree = "<group>"; };
+		452858341F6E534F00934AF9 /* BookingTableDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BookingTableDelegate.h; sourceTree = "<group>"; };
+		452858351F6E534F00934AF9 /* BookingTableDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BookingTableDelegate.m; sourceTree = "<group>"; };
+		452858371F6E55F200934AF9 /* BookingTVCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BookingTVCell.h; sourceTree = "<group>"; };
+		452858381F6E55F200934AF9 /* BookingTVCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BookingTVCell.m; sourceTree = "<group>"; };
+		4528583A1F6E581F00934AF9 /* IndexPathBtn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IndexPathBtn.h; sourceTree = "<group>"; };
+		4528583B1F6E581F00934AF9 /* IndexPathBtn.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IndexPathBtn.m; sourceTree = "<group>"; };
 		45834E5D1F5D794600B9B28A /* DesignerVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DesignerVC.h; sourceTree = "<group>"; };
 		45834E5E1F5D794600B9B28A /* DesignerVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DesignerVC.m; sourceTree = "<group>"; };
 		45834E631F5D7E0900B9B28A /* DesignerVCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DesignerVCell.h; sourceTree = "<group>"; };
@@ -281,6 +293,8 @@
 				452858241F6AE69E00934AF9 /* SignInController.m */,
 				45834E8A1F62849D00B9B28A /* AdvanceImageView.h */,
 				45834E8B1F62849D00B9B28A /* AdvanceImageView.m */,
+				4528583A1F6E581F00934AF9 /* IndexPathBtn.h */,
+				4528583B1F6E581F00934AF9 /* IndexPathBtn.m */,
 				45834E871F627C8700B9B28A /* Http.h */,
 				45834E881F627C8700B9B28A /* Http.m */,
 			);
@@ -339,12 +353,20 @@
 				A4D97F131F5D5D4B00D37FD7 /* Designer.storyboard */,
 				45834E5D1F5D794600B9B28A /* DesignerVC.h */,
 				45834E5E1F5D794600B9B28A /* DesignerVC.m */,
+				452858341F6E534F00934AF9 /* BookingTableDelegate.h */,
+				452858351F6E534F00934AF9 /* BookingTableDelegate.m */,
+				452858371F6E55F200934AF9 /* BookingTVCell.h */,
+				452858381F6E55F200934AF9 /* BookingTVCell.m */,
 				452858161F6909C500934AF9 /* FindShopPickerDelegate.h */,
 				452858171F6909C500934AF9 /* FindShopPickerDelegate.m */,
+				452858311F6D333500934AF9 /* DesignerPickerDelegate.h */,
+				452858321F6D333500934AF9 /* DesignerPickerDelegate.m */,
 				45834E631F5D7E0900B9B28A /* DesignerVCell.h */,
 				45834E641F5D7E0900B9B28A /* DesignerVCell.m */,
 				4528582E1F6CF71700934AF9 /* ShopInfoCVCell.h */,
 				4528582F1F6CF71700934AF9 /* ShopInfoCVCell.m */,
+				4528582B1F6B0B7F00934AF9 /* BookingDataTVCell.h */,
+				4528582C1F6B0B7F00934AF9 /* BookingDataTVCell.m */,
 				45834E6F1F5D87B300B9B28A /* Booking.storyboard */,
 				45834E6C1F5D875600B9B28A /* BookingVC.h */,
 				45834E6D1F5D875600B9B28A /* BookingVC.m */,
@@ -358,8 +380,6 @@
 				452858291F6B063500934AF9 /* BookingData.storyboard */,
 				452858261F6B061500934AF9 /* BookingDataVC.h */,
 				452858271F6B061500934AF9 /* BookingDataVC.m */,
-				4528582B1F6B0B7F00934AF9 /* BookingDataTVCell.h */,
-				4528582C1F6B0B7F00934AF9 /* BookingDataTVCell.m */,
 			);
 			name = Designer;
 			sourceTree = "<group>";
@@ -559,6 +579,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				45834E761F602A5F00B9B28A /* AvatorTViCell.m in Sources */,
+				452858331F6D333500934AF9 /* DesignerPickerDelegate.m in Sources */,
 				45834E801F62509D00B9B28A /* MemberVO.m in Sources */,
 				45834EB31F65309E00B9B28A /* SignInVC.m in Sources */,
 				45834E5F1F5D794600B9B28A /* DesignerVC.m in Sources */,
@@ -572,8 +593,10 @@
 				A4AC973F1F25AFDA002A376B /* AppDelegate.m in Sources */,
 				45834EC21F66746500B9B28A /* Model'sVC.m in Sources */,
 				A4AC97FF1F40F691002A376B /* DetailViewController.m in Sources */,
+				452858391F6E55F200934AF9 /* BookingTVCell.m in Sources */,
 				452858281F6B061500934AF9 /* BookingDataVC.m in Sources */,
 				45834EB91F653A4A00B9B28A /* SignUpVC.m in Sources */,
+				452858361F6E534F00934AF9 /* BookingTableDelegate.m in Sources */,
 				A4F7415B1F55AE0200949287 /* MyTableViewCell.m in Sources */,
 				45834EA71F64233200B9B28A /* MLAnnotion.m in Sources */,
 				45834EBF1F661BF700B9B28A /* NewsTVC.m in Sources */,
@@ -597,6 +620,7 @@
 				45834E651F5D7E0900B9B28A /* DesignerVCell.m in Sources */,
 				A4F740B81F41D72800949287 /* StyleViewController.m in Sources */,
 				A4AC97FB1F40F2C0002A376B /* RSSParserDelegate.m in Sources */,
+				4528583C1F6E581F00934AF9 /* IndexPathBtn.m in Sources */,
 				45834E951F62C0F400B9B28A /* MLHairShopVO.m in Sources */,
 				452858181F6909C500934AF9 /* FindShopPickerDelegate.m in Sources */,
 				452858251F6AE69E00934AF9 /* SignInController.m in Sources */,

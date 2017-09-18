@@ -8,6 +8,7 @@
 
 #import "MLHairDatabase.h"
 #import "Http.h"
+#import "Define.h"
 
 MLHairDatabase *data = nil;
 
@@ -17,6 +18,15 @@ MLHairDatabase *data = nil;
     if (data == nil) {
         data = [MLHairDatabase new];
         data.shopList = [NSArray new];
+        data.connection = [SignInController new];
+        NSData *member = [[NSUserDefaults
+                             standardUserDefaults] objectForKey:Member];
+        if (member) {
+            //archiver儲存服務 檔案
+            data.member = [NSKeyedUnarchiver unarchiveObjectWithData:member];
+        } else {
+            data.member = [MemberVO new];
+        }
         
     }
     return data;

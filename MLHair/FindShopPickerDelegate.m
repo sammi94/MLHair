@@ -30,6 +30,12 @@
 -(void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component {
     _data.findShop.text = _data.shopList[row].name;
     _data.chooseShop.text = _data.shopList[row].name;
+    _data.designerList = _data.shopList[row].designerList;
+    _data.shopWithSectionAndDesignerWithRow =
+    [NSIndexPath
+     indexPathForRow:_data.shopWithSectionAndDesignerWithRow.row
+     inSection:row];
+    _data.chooseDesigner.text = _data.designerList.firstObject.name;
     
     NSIndexPath *indexPath = [NSIndexPath indexPathForItem:0 inSection:row];
     

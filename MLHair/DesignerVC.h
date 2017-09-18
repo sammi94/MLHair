@@ -13,10 +13,14 @@
 
 @property (nonatomic,strong) NSArray <MLHairShopVO*>*shopList;
 @property (nonatomic,strong) NSArray <DesignerVO*>*designerList;
+@property (nonatomic,strong) NSIndexPath *shopWithSectionAndDesignerWithRow;
+
 @property (weak, nonatomic) IBOutlet UITextField *findShop;
 @property (weak, nonatomic) IBOutlet UITextField *chooseShop;
+@property (weak, nonatomic) IBOutlet UITextField *chooseDesigner;
 
 @property (weak, nonatomic) IBOutlet UICollectionView *designerCollectionView;
+@property (weak, nonatomic) IBOutlet UITableView *bookingTable;
 
 
 

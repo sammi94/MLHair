@@ -11,7 +11,7 @@
 #import "DesignerVO.h"
 #import "BookingVO.h"
 
-@interface MemberVO : NSObject
+@interface MemberVO : NSObject <NSCoding>
 
 @property (nonatomic,assign) int signType;
 @property (nonatomic,assign) int memberId;
@@ -22,7 +22,6 @@
 @property (nonatomic,strong) NSString *avatorURL;
 @property (nonatomic,strong) NSString *styleImageURL;
 @property (nonatomic,strong) NSArray <BookingVO*>*bookingList;
-
 @property (nonatomic,strong) NSArray <StyleVO*>*collectionStyle;
 @property (nonatomic,strong) NSArray <DesignerVO*>*likeDesigner;
 

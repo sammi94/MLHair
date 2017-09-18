@@ -29,6 +29,7 @@
                                 <segments>
                                     <segment title="找設計師"/>
                                     <segment title="直接預約"/>
+                                    <segment title="預約記錄"/>
                                 </segments>
                                 <color key="tintColor" red="0.39471524949999998" green="0.66152185200000002" blue="0.76868635419999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <connections>
@@ -36,10 +37,10 @@
                                 </connections>
                             </segmentedControl>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZEo-tu-UBN" userLabel="Booking">
-                                <rect key="frame" x="43.5" y="108" width="287" height="510"/>
+                                <rect key="frame" x="44" y="108" width="287" height="510"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalCentering" translatesAutoresizingMaskIntoConstraints="NO" id="e96-MN-Jj6">
-                                        <rect key="frame" x="-6.5" y="132.5" width="300" height="143"/>
+                                        <rect key="frame" x="-6.5" y="132" width="300" height="144"/>
                                         <subviews>
                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="日期" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9YK-tU-scY">
                                                 <rect key="frame" x="0.0" y="0.0" width="300" height="36"/>
@@ -48,19 +49,19 @@
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="時間" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XQd-iJ-Zaw">
-                                                <rect key="frame" x="0.0" y="36" width="300" height="35.5"/>
+                                                <rect key="frame" x="0.0" y="36" width="300" height="36"/>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="店家" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pOJ-ET-nkG">
-                                                <rect key="frame" x="0.0" y="71.5" width="300" height="36"/>
+                                                <rect key="frame" x="0.0" y="72" width="300" height="36"/>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="設計師" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Oc0-cn-iV3">
-                                                <rect key="frame" x="0.0" y="107.5" width="300" height="35.5"/>
+                                                <rect key="frame" x="0.0" y="108" width="300" height="36"/>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
@@ -76,11 +77,14 @@
                                         </constraints>
                                     </stackView>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DKh-h1-h6y">
-                                        <rect key="frame" x="0.0" y="275.5" width="287" height="234.5"/>
+                                        <rect key="frame" x="0.0" y="276" width="287" height="234"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T4d-4E-jeQ">
-                                                <rect key="frame" x="28" y="39.5" width="231" height="36"/>
+                                                <rect key="frame" x="28" y="39" width="231" height="36"/>
                                                 <state key="normal" image="確定送出"/>
+                                                <connections>
+                                                    <action selector="presentBooking:" destination="fM5-Td-UXu" eventType="touchUpInside" id="Jrh-4S-EQe"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -228,19 +232,139 @@
                                     <constraint firstAttribute="trailing" secondItem="QE8-Lz-aRt" secondAttribute="trailing" id="uOj-A2-L19"/>
                                 </constraints>
                             </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="202" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="5Gr-NU-wue">
+                                <rect key="frame" x="0.0" y="108" width="375" height="510"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="BookingTVCell" rowHeight="202" id="gWP-Dn-fFu" customClass="BookingTVCell">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="202"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="gWP-Dn-fFu" id="BpB-EO-UAg">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="201.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="已預約（callBack）" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cdd-Nc-mNy">
+                                                    <rect key="frame" x="8" y="16" width="151" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="成立時間2017/09/25 13:45" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Kb-gA-3Up">
+                                                    <rect key="frame" x="8" y="45" width="206" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BDi-DK-pur">
+                                                    <rect key="frame" x="8" y="74" width="359" height="2"/>
+                                                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="2" id="8xf-re-buW"/>
+                                                    </constraints>
+                                                </view>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="林森店" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oEq-ZV-Ae7">
+                                                    <rect key="frame" x="96" y="84" width="52" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="預約日期:2234/08/30" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gbw-sN-LbL">
+                                                    <rect key="frame" x="96" y="113" width="168" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="預約時間:13:45" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hPv-ew-Pft">
+                                                    <rect key="frame" x="96" y="142" width="118" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="設計師:Rouge" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uwu-FJ-IWp">
+                                                    <rect key="frame" x="96" y="171" width="106" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FAU-GJ-n0B" customClass="IndexPathBtn">
+                                                    <rect key="frame" x="305" y="166.5" width="62" height="30"/>
+                                                    <state key="normal" title="完成造型"/>
+                                                    <connections>
+                                                        <action selector="done:" destination="gWP-Dn-fFu" eventType="touchUpInside" id="v9l-Ym-kz9"/>
+                                                    </connections>
+                                                </button>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tlt-KG-wIV">
+                                                    <rect key="frame" x="8" y="84" width="80" height="101.5"/>
+                                                    <subviews>
+                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="txH-Za-Ut6" customClass="AdvanceImageView">
+                                                            <rect key="frame" x="0.0" y="11" width="80" height="80"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="80" id="7x2-Uc-efy"/>
+                                                                <constraint firstAttribute="width" secondItem="txH-Za-Ut6" secondAttribute="height" multiplier="1:1" id="cI0-9x-m2x"/>
+                                                            </constraints>
+                                                        </imageView>
+                                                    </subviews>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" secondItem="txH-Za-Ut6" secondAttribute="width" id="89m-RU-7ca"/>
+                                                        <constraint firstItem="txH-Za-Ut6" firstAttribute="centerX" secondItem="tlt-KG-wIV" secondAttribute="centerX" id="Byq-de-eJu"/>
+                                                        <constraint firstItem="txH-Za-Ut6" firstAttribute="centerY" secondItem="tlt-KG-wIV" secondAttribute="centerY" id="g30-66-35u"/>
+                                                    </constraints>
+                                                </view>
+                                            </subviews>
+                                            <color key="backgroundColor" red="0.96475595240000001" green="0.753362596" blue="0.79738157990000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <constraints>
+                                                <constraint firstItem="tlt-KG-wIV" firstAttribute="leading" secondItem="BpB-EO-UAg" secondAttribute="leadingMargin" id="0xF-UX-hxE"/>
+                                                <constraint firstItem="oEq-ZV-Ae7" firstAttribute="leading" secondItem="tlt-KG-wIV" secondAttribute="trailing" constant="8" id="1AQ-mt-8Z5"/>
+                                                <constraint firstItem="cdd-Nc-mNy" firstAttribute="leading" secondItem="BpB-EO-UAg" secondAttribute="leadingMargin" id="2EB-5U-uaz"/>
+                                                <constraint firstItem="gbw-sN-LbL" firstAttribute="top" secondItem="oEq-ZV-Ae7" secondAttribute="bottom" constant="8" id="2V5-el-TDk"/>
+                                                <constraint firstItem="oEq-ZV-Ae7" firstAttribute="top" secondItem="BDi-DK-pur" secondAttribute="bottom" constant="8" id="2b3-UU-NXm"/>
+                                                <constraint firstItem="tlt-KG-wIV" firstAttribute="top" secondItem="BDi-DK-pur" secondAttribute="bottom" constant="8" id="5uT-dE-66e"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="tlt-KG-wIV" secondAttribute="bottom" constant="8" id="Ihr-Y0-RzE"/>
+                                                <constraint firstItem="FAU-GJ-n0B" firstAttribute="centerY" secondItem="uwu-FJ-IWp" secondAttribute="centerY" id="Na8-f5-TpD"/>
+                                                <constraint firstItem="BDi-DK-pur" firstAttribute="leading" secondItem="BpB-EO-UAg" secondAttribute="leadingMargin" id="RCs-7D-A7X"/>
+                                                <constraint firstItem="BDi-DK-pur" firstAttribute="top" secondItem="4Kb-gA-3Up" secondAttribute="bottom" constant="8" id="WzY-ZI-P3s"/>
+                                                <constraint firstItem="4Kb-gA-3Up" firstAttribute="leading" secondItem="cdd-Nc-mNy" secondAttribute="leading" id="ZB1-Fc-g0w"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="BDi-DK-pur" secondAttribute="trailing" id="aQQ-36-eFN"/>
+                                                <constraint firstItem="uwu-FJ-IWp" firstAttribute="leading" secondItem="hPv-ew-Pft" secondAttribute="leading" id="cBG-Yg-dzs"/>
+                                                <constraint firstItem="gbw-sN-LbL" firstAttribute="leading" secondItem="oEq-ZV-Ae7" secondAttribute="leading" id="cSB-03-Z6s"/>
+                                                <constraint firstItem="4Kb-gA-3Up" firstAttribute="top" secondItem="cdd-Nc-mNy" secondAttribute="bottom" constant="8" id="cbw-JY-iNn"/>
+                                                <constraint firstItem="hPv-ew-Pft" firstAttribute="top" secondItem="gbw-sN-LbL" secondAttribute="bottom" constant="8" id="dqr-Nm-BJg"/>
+                                                <constraint firstAttribute="trailing" secondItem="FAU-GJ-n0B" secondAttribute="trailing" constant="8" id="jSI-4K-BOt"/>
+                                                <constraint firstItem="hPv-ew-Pft" firstAttribute="leading" secondItem="gbw-sN-LbL" secondAttribute="leading" id="mqO-yE-A4c"/>
+                                                <constraint firstItem="uwu-FJ-IWp" firstAttribute="top" secondItem="hPv-ew-Pft" secondAttribute="bottom" constant="8" id="uTk-vq-hbb"/>
+                                                <constraint firstItem="cdd-Nc-mNy" firstAttribute="top" secondItem="BpB-EO-UAg" secondAttribute="topMargin" constant="8" id="uxB-RJ-Qfh"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="bookingDay" destination="gbw-sN-LbL" id="MZX-G0-V9b"/>
+                                            <outlet property="bookingTime" destination="hPv-ew-Pft" id="W0J-Gf-AAu"/>
+                                            <outlet property="createTime" destination="4Kb-gA-3Up" id="Qtq-ex-85R"/>
+                                            <outlet property="designerName" destination="uwu-FJ-IWp" id="fSn-BC-hzX"/>
+                                            <outlet property="designerPhoto" destination="txH-Za-Ut6" id="gFj-ng-5K1"/>
+                                            <outlet property="doneBtn" destination="FAU-GJ-n0B" id="y23-xf-oQu"/>
+                                            <outlet property="shop" destination="oEq-ZV-Ae7" id="OVs-ti-QwB"/>
+                                            <outlet property="status" destination="cdd-Nc-mNy" id="GXE-vd-WAq"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="rOl-9a-653" firstAttribute="top" secondItem="Asp-cS-fHr" secondAttribute="bottom" constant="8" id="4rQ-6o-2k5"/>
                             <constraint firstAttribute="trailing" secondItem="VCa-GX-sCM" secondAttribute="trailing" id="BGx-M2-Iv9"/>
                             <constraint firstItem="GAS-SG-BK2" firstAttribute="top" secondItem="VCa-GX-sCM" secondAttribute="bottom" id="C9T-ES-uNc"/>
+                            <constraint firstItem="5Gr-NU-wue" firstAttribute="top" secondItem="rOl-9a-653" secondAttribute="bottom" constant="8" id="GAr-0N-gbb"/>
                             <constraint firstItem="ZEo-tu-UBN" firstAttribute="top" secondItem="rOl-9a-653" secondAttribute="bottom" constant="8" id="J7B-Qf-ttX"/>
                             <constraint firstItem="GAS-SG-BK2" firstAttribute="top" secondItem="ZEo-tu-UBN" secondAttribute="bottom" id="JaI-d8-4Dh"/>
                             <constraint firstItem="rOl-9a-653" firstAttribute="leading" secondItem="ucp-gc-g1R" secondAttribute="leading" id="MDy-RC-Sho"/>
+                            <constraint firstItem="5Gr-NU-wue" firstAttribute="leading" secondItem="ucp-gc-g1R" secondAttribute="leading" id="VND-v4-13V"/>
                             <constraint firstItem="VCa-GX-sCM" firstAttribute="top" secondItem="rOl-9a-653" secondAttribute="bottom" constant="8" id="VuZ-0h-Lgg"/>
                             <constraint firstItem="ZEo-tu-UBN" firstAttribute="centerX" secondItem="ucp-gc-g1R" secondAttribute="centerX" id="ZEs-12-djT"/>
+                            <constraint firstAttribute="trailing" secondItem="5Gr-NU-wue" secondAttribute="trailing" id="c23-tI-guY"/>
                             <constraint firstItem="VCa-GX-sCM" firstAttribute="leading" secondItem="ucp-gc-g1R" secondAttribute="leading" id="cXw-dH-z7Y"/>
                             <constraint firstItem="9YK-tU-scY" firstAttribute="width" relation="lessThanOrEqual" secondItem="ucp-gc-g1R" secondAttribute="width" multiplier="8/10" id="dpx-LS-GQG"/>
+                            <constraint firstItem="GAS-SG-BK2" firstAttribute="top" secondItem="5Gr-NU-wue" secondAttribute="bottom" id="nxd-Jc-Aiz"/>
                             <constraint firstAttribute="trailing" secondItem="rOl-9a-653" secondAttribute="trailing" id="pOh-dp-Rv3"/>
                         </constraints>
                     </view>
@@ -248,8 +372,9 @@
                     <connections>
                         <outlet property="bookingBtn" destination="T4d-4E-jeQ" id="ATA-LT-6WO"/>
                         <outlet property="bookingPage" destination="ZEo-tu-UBN" id="e9U-p3-CUL"/>
+                        <outlet property="bookingTable" destination="5Gr-NU-wue" id="gB0-n4-VS5"/>
                         <outlet property="chooseDay" destination="9YK-tU-scY" id="bnu-Xh-jS7"/>
-                        <outlet property="chooseDesigner" destination="Oc0-cn-iV3" id="Hzk-lA-FDZ"/>
+                        <outlet property="chooseDesigner" destination="Oc0-cn-iV3" id="65Z-DK-OY9"/>
                         <outlet property="chooseShop" destination="pOJ-ET-nkG" id="Q6L-S2-xCO"/>
                         <outlet property="chooseTime" destination="XQd-iJ-Zaw" id="ZGf-MY-Z2z"/>
                         <outlet property="designerCV" destination="QE8-Lz-aRt" id="oEJ-10-KZ4"/>
@@ -278,7 +403,7 @@
                     <tabBarItem key="tabBarItem" title="預約設計" image="預約設計" id="Xrq-9V-cXy"/>
                     <toolbarItems/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="OnQ-7X-Qia">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="OnQ-7X-Qia">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>

@@ -11,6 +11,7 @@
 #import <FBSDKCoreKit/FBSDKCoreKit.h>
 #import <FBSDKLoginKit/FBSDKLoginKit.h>
 #import <GoogleSignIn/GoogleSignIn.h>
+#import "MLHairDatabase.h"
 
 @interface SignInVC ()<FBSDKLoginButtonDelegate,GIDSignInUIDelegate>
 {
@@ -87,20 +88,57 @@
 didCompleteWithResult:(FBSDKLoginManagerLoginResult *)result
              error:(NSError *)error{
     
+    if ([FBSDKAccessToken currentAccessToken] == false) {
+        
+        return;
+    }
+    
+    loginButton.readPermissions =@[@"public_profile",
+                                   @"email",
+                                   @"user_friends"];
+    FBSDKGraphRequest *request = [[FBSDKGraphRequest alloc]
+                                  initWithGraphPath:@"me"
+                                  parameters:@{@"fields" : @"gender,picture,email, name, first_name, last_name"}
+                                  HTTPMethod:@"GET"];
+    
+    [request startWithCompletionHandler:^(FBSDKGraphRequestConnection *connection,
+                                          id result,
+                                          NSError *error) {
+        NSDictionary *fbMemo = (NSDictionary*)result;
+        MemberVO *member = [MLHairDatabase stand].member;
+        member.account = fbMemo[@"id"];
+        member.password = @"none";
+        member.nickName = fbMemo[@"name"];
+        member.avatorURL = fbMemo[@"picture"][@"data"][@"url"];
+        member.mail = fbMemo[@"email"];
+        member.signType = 1;
+    }];
+    
     [self.navigationController popViewControllerAnimated:true];
 }
 
 //google 登入 拿資料
 - (void)signIn:(GIDSignIn *)signIn didSignInForUser:(GIDGoogleUser *)user
      withError:(NSError *)error {
-    // Perform any operations on signed in user here.
-    //    NSString *userId = user.userID;                  // For client-side use only!
-    //    NSString *idToken = user.authentication.idToken; // Safe to send to the server
-    //        NSString *fullName = user.profile.name;
+    
+    if (user == nil) {
+        
+        return;
+    }
+    
+    MemberVO *member = [MLHairDatabase stand].member;
+    member.account = user.userID;
+    member.password = user.authentication.idToken;
+    member.nickName = user.profile.name;
+    member.mail= user.profile.email;
+    member.signType = 2;
+    if ([GIDSignIn sharedInstance].currentUser.profile.hasImage) {
+        member.avatorURL = [[user.profile imageURLWithDimension:100] absoluteString];
+    }
     //    NSString *givenName = user.profile.givenName;
     //    NSString *familyName = user.profile.familyName;
-    //    NSString *email = user.profile.email;
-    // ...
+    
+    
     [self.navigationController popViewControllerAnimated:true];
 }
 

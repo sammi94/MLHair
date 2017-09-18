@@ -17,7 +17,8 @@
 
 - (void)awakeFromNib {
     [super awakeFromNib];
-    // Initialization code
+    _avator.layer.cornerRadius = _avator.frame.size.height/2;
+    
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
