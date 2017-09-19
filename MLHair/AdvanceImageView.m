@@ -64,79 +64,47 @@
         UIImage *input = [UIImage imageWithData:data];
         
         
-        CGFloat maxLength = 1024.0;
-        CGSize targetSize;
-        UIImage *finalImage;
-        if (input.size.width<=maxLength&&input.size.height<=maxLength) {
-            finalImage = input;
-            targetSize = input.size;
-        }else{
-            if (input.size.width>=input.size.height) {
-                CGFloat ratio = input.size.width / maxLength;
-                targetSize = CGSizeMake(maxLength, input.size.height*ratio);
-            }else{
-                CGFloat ratio = input.size.height / maxLength;
-                targetSize = CGSizeMake(input.size.width / ratio, maxLength);
-            }
-            
+//        CGFloat maxLength = 1024.0;
+//        CGSize targetSize;
+//        UIImage *finalImage;
+//        if (input.size.width<=maxLength&&input.size.height<=maxLength) {
+//            finalImage = input;
+//            targetSize = input.size;
+//        }else{
+//            if (input.size.width>=input.size.height) {
+//                CGFloat ratio = input.size.width / maxLength;
+//                targetSize = CGSizeMake(maxLength, input.size.height*ratio);
+//            }else{
+//                CGFloat ratio = input.size.height / maxLength;
+//                targetSize = CGSizeMake(input.size.width / ratio, maxLength);
+//            }
+//            
+//        }
+//        
+//        UIGraphicsBeginImageContext(targetSize);
+//        [input drawInRect:CGRectMake(0,
+//                                     0,
+//                                     targetSize.width,
+//                                     targetSize.height)];
+//        UIImage *frameImage = [UIImage new];
+//        [frameImage drawInRect:CGRectMake(0,
+//                                          0,
+//                                          targetSize.width,
+//                                          targetSize.height)];
+//        
+//        finalImage = UIGraphicsGetImageFromCurrentImageContext();
+//        UIGraphicsEndImageContext();
+        NSData *zipImgData = data;
+        
+        if (data.length > 1000000) {
+            zipImgData = UIImageJPEGRepresentation(input, .8);
         }
         
-        UIGraphicsBeginImageContext(targetSize);
-        [input drawInRect:CGRectMake(0,
-                                     0,
-                                     targetSize.width,
-                                     targetSize.height)];
-        UIImage *frameImage = [UIImage new];
-        [frameImage drawInRect:CGRectMake(0,
-                                          0,
-                                          targetSize.width,
-                                          targetSize.height)];
-//        NSString *text = @"認同請分享🎊";
-//        UIColor *color = [UIColor redColor];
-//        UIFont *font = [UIFont systemFontOfSize:70];
-//        //文字進階改變 單行物同大小自行圖片.....
-//        NSDictionary *attributes = @{NSFontAttributeName:font,NSForegroundColorAttributeName:color};
-//        //計算文字 配合此吋 要多大的畫面
-//        CGSize textSize = [text sizeWithAttributes:attributes];
-//        CGFloat xOffset = (targetSize.width - textSize.width)/2;
-//        CGFloat yOffset = (targetSize.height)*.8;
-//        [text drawAtPoint:CGPointMake(xOffset, yOffset)
-//           withAttributes:attributes];
-        //.import.94
-        
-        
-        
-        
-        finalImage = UIGraphicsGetImageFromCurrentImageContext();
-        UIGraphicsEndImageContext();    //Important!
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         dispatch_async(dispatch_get_main_queue(), ^{
-            self.image = finalImage;
+            self.image = [UIImage imageWithData:zipImgData];
         });
         // 把資料存到cache file   XXX 寫入OOO atomically y先寫一個備份 檔案寫入正常 更改備份檔名成一般檔名寫入 n不管寫入是否正常都寫入檔案「可能檔存在但是檔案是壞的」
-        [data writeToFile:fullFilePathname atomically:true];
+        [zipImgData writeToFile:fullFilePathname atomically:true];
         
         //注意cache要設定自動定期清理
     }];

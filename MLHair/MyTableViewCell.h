@@ -15,5 +15,4 @@
 @property (weak, nonatomic) IBOutlet UIButton *signOutBtn;
 @property (weak, nonatomic) MyTableViewController *vc;
 
-
 @end

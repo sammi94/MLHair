@@ -43,6 +43,9 @@
                                         <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yax-D0-bSG">
                                             <rect key="frame" x="245" y="94" width="15" height="22"/>
                                             <state key="normal" image="鉛筆"/>
+                                            <connections>
+                                                <action selector="fix:" destination="wIN-K8-dQ4" eventType="touchUpInside" id="pJL-W3-VAK"/>
+                                            </connections>
                                         </button>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="多拉a夢" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vXD-Lh-hIQ">
                                             <rect key="frame" x="157" y="124" width="61" height="21"/>
@@ -77,13 +80,13 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nEk-LL-Gwj">
-                                            <rect key="frame" x="150" y="14.5" width="42" height="20.5"/>
+                                            <rect key="frame" x="150.5" y="14.5" width="42" height="20.5"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cY3-1K-WX3">
-                                            <rect key="frame" x="123" y="7" width="97" height="36"/>
+                                            <rect key="frame" x="122.5" y="7" width="97" height="36"/>
                                             <state key="normal" image="登出"/>
                                             <connections>
                                                 <action selector="signOut:" destination="W2w-A2-UpL" eventType="touchUpInside" id="VKS-fV-3WW"/>
@@ -121,7 +124,15 @@
                 <viewControllerPlaceholder storyboardIdentifier="SignInVC" storyboardName="SignIn" id="JFb-Ql-g5E" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PWs-mA-rh5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1596" y="612"/>
+            <point key="canvasLocation" x="1314" y="605"/>
+        </scene>
+        <!--FixInfo-->
+        <scene sceneID="dpk-gk-uJK">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="FixInfoVC" storyboardName="FixInfo" id="bUo-ef-TKC" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Zo1-cv-Dhk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1315" y="652"/>
         </scene>
         <!--個人專區-->
         <scene sceneID="naY-90-pL3">

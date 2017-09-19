@@ -19,6 +19,9 @@
 		452858361F6E534F00934AF9 /* BookingTableDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 452858351F6E534F00934AF9 /* BookingTableDelegate.m */; };
 		452858391F6E55F200934AF9 /* BookingTVCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 452858381F6E55F200934AF9 /* BookingTVCell.m */; };
 		4528583C1F6E581F00934AF9 /* IndexPathBtn.m in Sources */ = {isa = PBXBuildFile; fileRef = 4528583B1F6E581F00934AF9 /* IndexPathBtn.m */; };
+		4528583F1F70BFE600934AF9 /* FixInfoVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 4528583E1F70BFE600934AF9 /* FixInfoVC.m */; };
+		452858421F70BFFB00934AF9 /* FixInfo.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 452858401F70BFFB00934AF9 /* FixInfo.storyboard */; };
+		452858451F70D00F00934AF9 /* ModelCamara.m in Sources */ = {isa = PBXBuildFile; fileRef = 452858441F70D00F00934AF9 /* ModelCamara.m */; };
 		45834E5F1F5D794600B9B28A /* DesignerVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 45834E5E1F5D794600B9B28A /* DesignerVC.m */; };
 		45834E651F5D7E0900B9B28A /* DesignerVCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 45834E641F5D7E0900B9B28A /* DesignerVCell.m */; };
 		45834E6B1F5D837700B9B28A /* MLHairDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = 45834E6A1F5D837700B9B28A /* MLHairDatabase.m */; };
@@ -95,6 +98,11 @@
 		452858381F6E55F200934AF9 /* BookingTVCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BookingTVCell.m; sourceTree = "<group>"; };
 		4528583A1F6E581F00934AF9 /* IndexPathBtn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IndexPathBtn.h; sourceTree = "<group>"; };
 		4528583B1F6E581F00934AF9 /* IndexPathBtn.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IndexPathBtn.m; sourceTree = "<group>"; };
+		4528583D1F70BFE600934AF9 /* FixInfoVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FixInfoVC.h; sourceTree = "<group>"; };
+		4528583E1F70BFE600934AF9 /* FixInfoVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FixInfoVC.m; sourceTree = "<group>"; };
+		452858411F70BFFB00934AF9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/FixInfo.storyboard; sourceTree = "<group>"; };
+		452858431F70D00F00934AF9 /* ModelCamara.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ModelCamara.h; sourceTree = "<group>"; };
+		452858441F70D00F00934AF9 /* ModelCamara.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ModelCamara.m; sourceTree = "<group>"; };
 		45834E5D1F5D794600B9B28A /* DesignerVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DesignerVC.h; sourceTree = "<group>"; };
 		45834E5E1F5D794600B9B28A /* DesignerVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DesignerVC.m; sourceTree = "<group>"; };
 		45834E631F5D7E0900B9B28A /* DesignerVCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DesignerVCell.h; sourceTree = "<group>"; };
@@ -289,6 +297,8 @@
 				4528581C1F6A515B00934AF9 /* ShopVO */,
 				45834E901F62A75300B9B28A /* Location.h */,
 				45834E911F62A75300B9B28A /* Location.m */,
+				452858431F70D00F00934AF9 /* ModelCamara.h */,
+				452858441F70D00F00934AF9 /* ModelCamara.m */,
 				452858231F6AE69E00934AF9 /* SignInController.h */,
 				452858241F6AE69E00934AF9 /* SignInController.m */,
 				45834E8A1F62849D00B9B28A /* AdvanceImageView.h */,
@@ -428,6 +438,9 @@
 				45834E751F602A5F00B9B28A /* AvatorTViCell.m */,
 				A4F741591F55AE0200949287 /* MyTableViewCell.h */,
 				A4F7415A1F55AE0200949287 /* MyTableViewCell.m */,
+				452858401F70BFFB00934AF9 /* FixInfo.storyboard */,
+				4528583D1F70BFE600934AF9 /* FixInfoVC.h */,
+				4528583E1F70BFE600934AF9 /* FixInfoVC.m */,
 			);
 			name = My;
 			sourceTree = "<group>";
@@ -517,6 +530,7 @@
 				A4AC97F81F40F2C0002A376B /* News.storyboard in Resources */,
 				45834EB61F65398300B9B28A /* SignIn.storyboard in Resources */,
 				A4AC97471F25AFDA002A376B /* Assets.xcassets in Resources */,
+				452858421F70BFFB00934AF9 /* FixInfo.storyboard in Resources */,
 				45834E8F1F62A67500B9B28A /* Shop.storyboard in Resources */,
 				A4AC97451F25AFDA002A376B /* Main.storyboard in Resources */,
 				A4D97F141F5D5D4B00D37FD7 /* Designer.storyboard in Resources */,
@@ -608,6 +622,7 @@
 				45834EAD1F644FF900B9B28A /* HotCVCell.m in Sources */,
 				45834E8C1F62849D00B9B28A /* AdvanceImageView.m in Sources */,
 				4528582D1F6B0B7F00934AF9 /* BookingDataTVCell.m in Sources */,
+				452858451F70D00F00934AF9 /* ModelCamara.m in Sources */,
 				A4F741581F55ACF800949287 /* MyTableViewController.m in Sources */,
 				A4AC97FA1F40F2C0002A376B /* Reachability.m in Sources */,
 				45834ECA1F66CCD900B9B28A /* WorksVC.m in Sources */,
@@ -624,12 +639,21 @@
 				45834E951F62C0F400B9B28A /* MLHairShopVO.m in Sources */,
 				452858181F6909C500934AF9 /* FindShopPickerDelegate.m in Sources */,
 				452858251F6AE69E00934AF9 /* SignInController.m in Sources */,
+				4528583F1F70BFE600934AF9 /* FixInfoVC.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		452858401F70BFFB00934AF9 /* FixInfo.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				452858411F70BFFB00934AF9 /* Base */,
+			);
+			name = FixInfo.storyboard;
+			sourceTree = "<group>";
+		};
 		45834E711F60266D00B9B28A /* my.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (

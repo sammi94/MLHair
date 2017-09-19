@@ -11,6 +11,7 @@
 #import "AvatorTViCell.h"
 #import "MLHairDatabase.h"
 #import "SignInVC.h"
+#import "FixInfoVC.h"
 
 
 @interface MyTableViewController ()
@@ -43,7 +44,6 @@
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 #pragma mark - Table view data source
@@ -104,6 +104,11 @@
     }
 
     return cell;
+}
+
+- (IBAction)fix:(id)sender {
+    FixInfoVC *fixVC = [self.storyboard instantiateViewControllerWithIdentifier:@"FixInfoVC"];
+    [self.navigationController pushViewController:fixVC animated:true];
 }
 
 
