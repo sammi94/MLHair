@@ -16,5 +16,4 @@
 @property (nonatomic,strong) NSString *endTime;
 @property (nonatomic,strong) DesignerVO *designer;
 
-
 @end

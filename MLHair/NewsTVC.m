@@ -51,7 +51,7 @@ didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     if(status == NotReachable){
         NSLog(@"Network is not reachable.");
     }else{
-        NSLog(@"Network is reachable with: %ld",status);
+        NSLog(@"Network is reachable with: %ld",(long)status);
         [self downloadNewsList];//切換到有網路就刷新
     }
     

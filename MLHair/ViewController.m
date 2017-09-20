@@ -83,7 +83,7 @@
     [[MLHairDatabase stand] getRemoteData:^(bool havedat) {
         
         if (!havedat) {
-        #warning test only
+        
             [self setDummyData];
         }
         
