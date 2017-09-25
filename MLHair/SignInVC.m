@@ -112,9 +112,9 @@ didCompleteWithResult:(FBSDKLoginManagerLoginResult *)result
         member.avatorURL = fbMemo[@"picture"][@"data"][@"url"];
         member.mail = fbMemo[@"email"];
         member.signType = 1;
+        [self.navigationController popViewControllerAnimated:true];
     }];
     
-    [self.navigationController popViewControllerAnimated:true];
 }
 
 //google 登入 拿資料
