@@ -32,6 +32,7 @@
 @property (weak, nonatomic) IBOutlet UIButton *bookingBtn;
 @property (weak, nonatomic) IBOutlet UITextField *chooseDay;
 @property (weak, nonatomic) IBOutlet UITextField *chooseTime;
+@property (weak, nonatomic) IBOutlet UISegmentedControl *chooseMode;
 
 @end
 
@@ -111,17 +112,24 @@
     _stack.spacing = _bookingBtn.frame.size.height;
 }
 
-- (IBAction)chooseMode:(id)sender {
+- (IBAction)chooseMode:(UISegmentedControl *)sender {
     [self.view endEditing:true];
-    if ([sender selectedSegmentIndex] == 0) {
+    [self setChooseMode:sender];
+}
+
+-(void)setChooseMode:(UISegmentedControl *)chooseMode {
+    
+    _chooseMode = chooseMode;
+    
+    if ([chooseMode selectedSegmentIndex] == 0) {
         _bookingPage.hidden = true;
         _findpage.hidden = false;
         _bookingTable.hidden = true;
-    } else if([sender selectedSegmentIndex] == 1) {
+    } else if([chooseMode selectedSegmentIndex] == 1) {
         _bookingPage.hidden = false;
         _findpage.hidden = true;
         _bookingTable.hidden = true;
-    }else if ([sender selectedSegmentIndex] == 2) {
+    }else if ([chooseMode selectedSegmentIndex] == 2) {
         _bookingPage.hidden = true;
         _findpage.hidden = true;
         _bookingTable.hidden = false;
@@ -237,6 +245,9 @@
     
     NSLog(@"\nML=%@\ndata=%@",data.member.bookingList,bookingList);
     [_bookingTable reloadData];
+    [_chooseMode setSelectedSegmentIndex:2];
+    [self setChooseMode:_chooseMode];
+    
 }
 
 
