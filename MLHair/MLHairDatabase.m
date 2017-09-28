@@ -33,6 +33,15 @@ MLHairDatabase *data = nil;
     return data;
 }
 
+-(void)setMember:(MemberVO *)member {
+    _member = member;
+    [[NSUserDefaults standardUserDefaults]
+     setObject:[NSKeyedArchiver
+                archivedDataWithRootObject:member]
+     forKey:Member];
+    [[NSUserDefaults standardUserDefaults] synchronize];
+}
+
 -(void)getRemoteData:(Havedata)done {
     if (done) {
         done(false);
