@@ -51,9 +51,9 @@
     NSURLSessionDataTask *task = [sesstion dataTaskWithURL:url completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
         
         // 不管前一個下載成功或失敗 都清除暫存
-        existTask = nil;
+        self->existTask = nil;
         dispatch_async(dispatch_get_main_queue(), ^{
-            [loadingView stopAnimating];
+            [self->loadingView stopAnimating];
         });
         
         if(error){

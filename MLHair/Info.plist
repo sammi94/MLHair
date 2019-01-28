@@ -64,6 +64,8 @@
 	</dict>
 	<key>NSCameraUsageDescription</key>
 	<string>麥克風</string>
+	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+	<string>為了規劃到店家的路線需要gps權限</string>
 	<key>NSLocationAlwaysUsageDescription</key>
 	<string>為了規劃到店家的路線需要gps權限</string>
 	<key>NSMicrophoneUsageDescription</key>
