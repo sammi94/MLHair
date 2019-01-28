@@ -17,14 +17,17 @@ static Location *location = nil;
 @implementation Location
 
 +(instancetype)stand {
-    if (location == nil) {
-        location = [Location new];
-        location.manager = [CLLocationManager new];
-        location.manager.delegate = (id)location;
-        [location.manager requestAlwaysAuthorization];
-        [location.manager startUpdatingLocation];
-        
+    
+    if (location != nil) {
+        return location;
     }
+    location = [Location new];
+    location.manager = [CLLocationManager new];
+    location.manager.delegate = (id)location;
+    //[location.manager requestAlwaysAuthorization];
+    [location.manager requestWhenInUseAuthorization];
+    [location.manager startUpdatingLocation];
+    
     return location;
 }
 
@@ -133,7 +136,7 @@ static Location *location = nil;
 -(void)getRouteWithAddress:(NSString *)address
                      route:(GetRoute)done {
     [self getPlacemarkWithAddress:address placemark:^(NSError *error, CLPlacemark *placemark) {
-        MKMapItem *start = [self getMapItemWithClPlacemark:_userPlacemark];
+        MKMapItem *start = [self getMapItemWithClPlacemark:self->_userPlacemark];
         MKMapItem *end = [self getMapItemWithClPlacemark:placemark];
         MKDirectionsRequest *request = [MKDirectionsRequest new];
         request.source = start;
@@ -173,7 +176,7 @@ static Location *location = nil;
          if (!placemarks) {
              return;
          }
-         _userPlacemark = placemarks.lastObject;
+         self->_userPlacemark = placemarks.lastObject;
          
      }];
 }
